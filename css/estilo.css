@@ -1,0 +1,19 @@
+*,::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imgcasal {
+    margin-top: -50px;
+    background: #05F2DB;
+    color: #021D40;
+}
+
+.btn-outline-marinho {
+    background: #021D40;
+    color: #05F2DB;
+    font-size: 16px;
+    font-weight: 700;
+}
+

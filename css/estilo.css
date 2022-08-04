@@ -1,27 +1,59 @@
+/* Configurações gerais */
 *,::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+/* Final configurações gerais */
+
+/* Color para titulos */
+    /* Botão COMEÇA AGORA! - configurações */
+    .color-text-title-marinho {
+        color: #021D40;
+        font-weight: bold;
+    }
+
+    .color-text-title-marinho:hover {
+        color: #15354d;
+        text-decoration: underline;
+    }
+
+    /* Botão SAIBA + configurações */
+    .btn-outline-marinho {
+        background: #021D40;
+        color: #05F2DB;
+        font-size: 16px;
+        font-weight: 700;
+    }
+/* Final color para titulos */
+
+/* Configurações da img gerais */
 .imgcasal {
     margin-top: -50px;
     background: #05F2DB;
     color: #021D40;
 }
+/* Final img gerais */
 
-.btn-outline-marinho {
-    background: #021D40;
-    color: #05F2DB;
-    font-size: 16px;
-    font-weight: 700;
-}
 
+/* Footer Configurações */
 .bg-marinho {
     background: #021d40;
     color: #fff;
 }
 
-.bg-marinho-secondary {
-    background: #021D40;
-}
+    .bg-marinho-secondary {
+        background: #021D40;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .bg-marinho-secondary a {
+        color: #fff;
+        text-decoration: none;
+    }
+/* Footer Configurações final */

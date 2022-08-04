@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto - back end</title>
-
-    <!-- Css includes -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Css proprio -->
-    <link rel="stylesheet" href="css/estilo.css">
-
-    <!-- Icons Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-</head>
-<body>
-    <header class="d-flex justify-content-around">
-        <h1>
-            <img src="#" alt="logo" title="">
-        </h1>
-
-        <nav class="navbar">
-            <button class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</button>
-            <button class="btn btn-sm btn-outline-secondary mx-1" type="button">Cadastro</button>
-        </nav>
-    </header>
+<?php 
+require_once 'inc/cabecalho_externo.php'
+ 
+?>
 
     <section class="container my-5 justify-content-center">
         <picture class="d-flex justify-content-center">
@@ -41,14 +16,14 @@
             </h1>
 
             <h2>
-                Lorem ipsum dolor.
+                Ola mundo
             </h2>
 
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium nesciunt aliquam atque similique inventore quibusdam, consequuntur esse unde rem quae ducimus distinctio nostrum ad rerum.
             </p>
         
-            <button class="btn btn-sm btn-outline-secondary mt-3 px-5 align-center rounded-pill" type="button">Começa agora!</button>
+            <button class="btn btn-sm btn-info mt-3 px-5 py-2 fs-2 align-center rounded-pill color-text-title-marinho" type="button">Começa agora!</button>
         </div>
     </section>
 
@@ -64,7 +39,7 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
             </p>
         
-            <button class="btn btn-sm btn-outline-marinho mt-3 px-5 align-center rounded-pill" type="button">Saiba +</button>
+            <button class="btn btn-sm btn-outline-marinho px-5 py-2 fs-2 align-center rounded-pill" type="button">Saiba +</button>
         </article>
     </section>
 
@@ -135,39 +110,4 @@
         </div>
     </section>
 
-    <footer class="container-flex">
-        <img class="d-flex w-75 m-auto" src="img/img-job-anotacao.png" alt="banner tudo o que você precisa esta aqui">
-
-        <article class="align-center p-3 text-center bg-marinho pt-5 imgcasal">
-            <h2>
-                Nome da empresa
-            </h2>
-            
-            <article class="align-center p-3 text-center bg-marinho pt-5 imgcasal">
-                <h4>
-                    Redes sociais
-                </h4>
-
-                <span>
-                    <i class="bi bi-instagram"></i>
-                </span>
-
-                <span>
-                    <i class="bi bi-twitter"></i>
-                </span>
-            </article>
-        
-            
-        </article>
-        <article class="align-center p-3 text-center bg-marinho-secondary pt-5 imgcasal">
-            <h2>
-                Comece agora!
-            </h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-            </p>
-        </article>
-    </footer>
-
-</body>
-</html>
+   <?php require_once 'inc/footer_externo.php'; ?>

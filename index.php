@@ -73,7 +73,7 @@
 
             <h2 class="text-center my-5">Encontre Freelancers</h2>
 
-            <div class="col-6">
+            <div class="col-6 col-lg-4 mb-2">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-6 col-lg-4 mb-2">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-6 col-lg-4 mb-2">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
@@ -103,7 +103,27 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-6 col-lg-4 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-4 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-4 mb-2">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
@@ -114,5 +134,40 @@
             </div>
         </div>
     </section>
+
+    <footer class="container-flex">
+        <img class="d-flex w-75 m-auto" src="img/img-job-anotacao.png" alt="banner tudo o que você precisa esta aqui">
+
+        <article class="align-center p-3 text-center bg-marinho pt-5 imgcasal">
+            <h2>
+                Nome da empresa
+            </h2>
+            
+            <article class="align-center p-3 text-center bg-marinho pt-5 imgcasal">
+                <h4>
+                    Redes sociais
+                </h4>
+
+                <span>
+                    <i class="bi bi-instagram"></i>
+                </span>
+
+                <span>
+                    <i class="bi bi-twitter"></i>
+                </span>
+            </article>
+        
+            
+        </article>
+        <article class="align-center p-3 text-center bg-marinho-secondary pt-5 imgcasal">
+            <h2>
+                Comece agora!
+            </h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+        </article>
+    </footer>
+
 </body>
 </html>

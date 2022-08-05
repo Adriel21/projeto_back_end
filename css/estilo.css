@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 /* Configurações gerais */
 *,::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
 
 a {
@@ -10,50 +12,56 @@ a {
 }
 /* Final configurações gerais */
 
-/* Color para titulos */
-    /* Botão COMEÇA AGORA! - configurações */
-    .color-text-title-marinho {
-        color: #021D40;
-        font-weight: bold;
+    /* Bold dos bottons */
+    .bold-button, h1, h2 {
+        font-weight: 600;
     }
 
-    .color-text-title-marinho:hover {
-        color: #15354d;
-        text-decoration: underline;
+    /* botton cards */
+    #teste a {
+        font-weight: 600;
     }
+    /* final botton cards */
 
-    /* Botão SAIBA + configurações */
-    .btn-outline-marinho {
-        background: #021D40;
-        color: #05F2DB;
-        font-size: 16px;
-        font-weight: 700;
-    }
-/* Final color para titulos */
 
 /* Configurações da img gerais */
-.imgcasal {
+.img-dois-avatar {
     margin-top: -50px;
-    background: #05F2DB;
     color: #021D40;
 }
 /* Final img gerais */
 
+/* Button saiba configurações */
+.btn-marinho {
+    background: #021d40;
+    color: #0dcaf0
+}
+
+    .btn-marinho:hover {
+        background: #021057;
+        color: #0dcaf0
+    }
+/* Final button saiba configurações */
+
 
 /* Footer Configurações */
-.bg-marinho {
+.bg-marinho-footer {
     background: #021d40;
     color: #fff;
 }
 
-    .bg-marinho-secondary {
-        background: #021D40;
+    /* segundo footer cor mais clara */
+    .bg-marinho-secondary-footer {
+        background: #02224D;
         color: #fff;
         font-size: 20px;
     }
 
-    .bg-marinho-secondary a {
+    .bg-marinho-secondary-footer a {
         color: #fff;
         text-decoration: none;
     }
+    /* Final Footer Cor mais clara */
+
+
 /* Footer Configurações final */

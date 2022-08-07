@@ -26,7 +26,7 @@ CREATE TABLE projeto(
     imagem VARCHAR(45),
     descricao VARCHAR(246) NULL,
     cliente_id INT NOT NULL,
-    categoria_id INT NOT NULL
+    categoria_id TINYINT NOT NULL
 );
 ```
 ---
@@ -45,7 +45,7 @@ FOREIGN KEY (cliente_id) REFERENCES cliente(id);
 
 ```sql
 CREATE TABLE categoria(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL
 );
 ```
@@ -65,8 +65,9 @@ Caso tenha dados e precise esvaziá-la para criar o relacionamento, utilize o tr
 - Criando tabela de subcategorias
 ```sql
 CREATE TABLE subcategorias(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL
+    id TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL,
+     categoria_id TINYINT NOT NULL
 );
 ```
 
@@ -87,28 +88,41 @@ CREATE TABLE freelancer(
     email VARCHAR(45) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     perfil VARCHAR(45) NULL,
-    profissao_id INT NOT NULL
-);
-```
-
-- Criando tabela de profissão
-
-```sql
-CREATE TABLE profissao(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL,
-    categoria_id INT NOT NULL
+    profissao VARCHAR(45) NOT NULL,
+    categoria_id TINYINT NOT NULL
 );
 ```
 
 ---
-### Relacionamento da tabela de profissão com categorias
+### Relacionamento da tabela freelancer e categoria
 ```sql
-ALTER TABLE profissao
-ADD CONSTRAINT fk_profissao_categoria
-FOREIGN KEY (categoria_id) REFERENCES categoria (id);
+ALTER TABLE freelancer
+ADD CONSTRAINT
+fk_freelancer_categoria
+FOREIGN KEY(categoria_id)
+REFERENCES categoria(id);
+```
+---
+
+### Criando a tabela Porftfólio
+```sql 
+CREATE TABLE portfolio(
+    id TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    link VARCHAR(45) NULL,
+    freelancer_id INT NOT NULL
+);
 ```
 
-
+---
+### Relacionamento entre tabela Portfólio e Freelancer
+```sql
+ALTER TABLE portfolio(
+ADD CONSTRAINT 
+fk_portfolio_freelancer
+FOREIGN KEY(freelancer_id)
+REFERENCES freelancer(id);
+);
+```
+---
 
 

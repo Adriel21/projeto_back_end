@@ -49,12 +49,12 @@ $listadeclientes = $cliente->listar();
 						<td>naosei</td>
 						<td class="text-center">
 							<a class="btn btn-warning" 
-				href="usuario-atualiza.php?>">
+				href="usuario-atualiza.php?=<?=$cliente->getId()?>">
 							<i class="bi bi-pencil"></i> Atualizar
 							</a>
 						
 							<a class="btn btn-danger excluir" 
-				href="usuario-exclui.php">
+				href="cliente_exclui.php?id=<?=$cliente->getId()?>">
 							<i class="bi bi-trash"></i> Excluir
 							</a>
 						</td>

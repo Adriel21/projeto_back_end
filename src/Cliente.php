@@ -8,6 +8,9 @@ final class Cliente {
     private string $email;
     private string $senha;
     private string $perfil;
+    private string $tipo = "cliente";
+
+
     private PDO $conexao;
 
     public function __construct()
@@ -31,18 +34,58 @@ final class Cliente {
         return $resultado;
     }
 
-    public function getId()
+    public function cadastrar():void {
+        $sql = "INSERT INTO cliente(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";
+        
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+    }
+
+    public function atualizarCadastro():void {
+        $sql = "UPDATE cliente SET nome = :nome, email = :email, senha = :senha, perfil = :perfil WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+    }
+
+    public function excluirCadastro():void {
+        $sql = "DELETE FROM cliente WHERE id = :id";
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+    }
+
+
+    public function getId():int
     {
         return $this->id;
     }
 
     
 
-    public function setId($id)
+    public function setId(int $id)
     {
-        $this->id = $id;
-
-        return $this;
+        $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
     }
 
  
@@ -56,11 +99,10 @@ final class Cliente {
 
 
 
-    public function setNome($nome)
+    public function setNome(string $nome)
     {
-        $this->nome = $nome;
+        $this->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
     
@@ -72,11 +114,9 @@ final class Cliente {
 
 
 
-    public function setEmail($email)
+    public function setEmail(string $email)
     {
-        $this->email = $email;
-
-        return $this;
+        $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
     }
 
   
@@ -88,11 +128,10 @@ final class Cliente {
 
     
 
-    public function setSenha($senha)
+    public function setSenha(string 
+    $senha)
     {
-        $this->senha = $senha;
-
-        return $this;
+        $this->senha = filter_var($senha, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
     
@@ -105,11 +144,9 @@ final class Cliente {
 
 
 
-    public function setPerfil($perfil)
+    public function setPerfil(string $perfil)
     {
-        $this->perfil = $perfil;
-
-        return $this;
+        $this->perfil = filter_var($perfil, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
     

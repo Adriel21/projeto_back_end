@@ -8,6 +8,7 @@ final class Freelancer {
     private string $email;
     private string $senha;
     private string $perfil;
+    private string $profissao;
     private string $tipo = 'Freelancer';
     private int $categoriaId;
 
@@ -31,6 +32,22 @@ final class Freelancer {
             die("Erro: ". $erro->getMessage());
         }
         return $resultado;
+    }
+
+    public function cadastrar():void {
+        $sql = "INSERT INTO cliente(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";
+        
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+            $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
     }
 
     /**

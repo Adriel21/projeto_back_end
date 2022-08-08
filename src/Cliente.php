@@ -150,6 +150,14 @@ final class Cliente {
     }
 
     
+
+    /**
+     * Get the value of tipo
+     */ 
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
 }
 
 

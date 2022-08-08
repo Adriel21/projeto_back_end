@@ -21,7 +21,7 @@ final class Cliente {
   
     
     public function listar():array {
-        $sql = "SELECT id, nome, email
+        $sql = "SELECT id, nome, email, perfil
         FROM cliente ORDER BY nome";
 
         try {
@@ -33,6 +33,21 @@ final class Cliente {
         }
         return $resultado;
     }
+
+
+    public function listarUm():array {
+        $sql = "SELECT id, nome, email, perfil FROM cliente ORDER BY nome";
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+        $consulta->execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+    return $resultado;
+}
+
 
     public function cadastrar():void {
         $sql = "INSERT INTO cliente(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";

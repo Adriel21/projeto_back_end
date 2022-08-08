@@ -4,12 +4,29 @@ require_once 'inc/cabecalho_externo.php'
 ?>
 
     <!-- Primeiro destaque -->
-    <section class="container my-5 justify-content-center">
-        <picture class="d-flex justify-content-center">
-            <source media="(min-width:650px)" srcset="img/img-projetando.png">
-              
-            <img class="d-flex w-75 m-auto" src="img/img-projetando.png" alt="banner tudo o que você precisa esta aqui">
+    
+    <section class="container my-5 justify-content-center media-break-point sm">
+
+        <picture class="d-sm-none justify-content-center">
+           <p> 
+               <img class="d-flex w-75 m-auto" src="img/img-projetando.png" alt="banner tudo o que você precisa esta aqui">
+           </p>
         </picture>
+
+    <main class="container text-center">
+  
+        <div class="row align-items-center ">
+            
+        <div class="col d-none d-md-block d-print-block col-md-8">
+            One of three columns
+        </div>
+        
+        <aside class="col d-none d-md-block d-print-block col-md-4">
+            <p><img src="img/img-job-anotacao.png" alt=""></p>
+        </aside>
+    </div>
+  
+    </main>
 
         <div class="align-center p-3 text-center">
             <h1>

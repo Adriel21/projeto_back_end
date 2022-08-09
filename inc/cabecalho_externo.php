@@ -26,7 +26,7 @@ $users = ['Cliente', 'Freelancer'];?>
         <nav class="navbar">
             <button class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</button>
             <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
-                <option value="">Cadatro</option>
+                <option value="">Cadastro</option>
                 <?php foreach ($users as $user): ?>
                     <option value="register"><?=$user?></option>
                 <?php endforeach; ?>

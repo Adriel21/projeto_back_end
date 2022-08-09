@@ -24,12 +24,17 @@
 <?php 
 $users = ['Cliente', 'Freelancer'];?>
         <nav class="navbar">
+            <ul>
             <button class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</button>
-            <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
-                <option value="">Cadatro</option>
-                <?php foreach ($users as $user): ?>
-                    <option value="register"><?=$user?></option>
-                <?php endforeach; ?>
+                <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
+                    <option value="">Cadatro</option>
+                    <?php foreach ($users as $user): ?>
+                        <ul>
+                            <li>Login</li>
+                            <li>Cadastro</li>
+                        </ul>
+                    <?php endforeach; ?>
                 </select>
+            </ul>
         </nav>
     </header>

@@ -50,7 +50,6 @@ a {
     color: #fff;
 }
 
-<<<<<<< Updated upstream
     /* segundo footer cor mais clara */
     .bg-marinho-secondary-footer {
         background: #02224D;
@@ -66,7 +65,7 @@ a {
 
 
 /* Footer Configurações final */
-=======
+
 .bg-marinho-secondary {
     background: #021D40;
 }
@@ -75,11 +74,9 @@ a {
     background-color: #021D40;
 }
 
-.faixa-meio h2, p, a{
-    color: #fff;
-}
+
 
 .bg-footer {
 background-color: #021F59;
 }
->>>>>>> Stashed changes
+

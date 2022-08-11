@@ -16,7 +16,8 @@ if(isset($_POST['inserir'])) {
     $cliente = new Cliente;
     $cliente->setNome($_POST['nome']);
     $cliente->setEmail($_POST['email']);
-    $cliente->setSenha($_POST['senha']);
+	$cliente->setSenha($cliente->codificaSenha($_POST['senha'])  );
+	$cliente->setPerfil('teste');
     $cliente->cadastrar();
 
     // header("location:login.php");

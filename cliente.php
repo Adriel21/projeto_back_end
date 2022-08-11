@@ -24,7 +24,7 @@ $listadeclientes = $cliente->listar();
 		</h2>
 
 		<p class="text-center mt-5">
-			<a class="btn btn-primary" href="usuario-insere.php">
+			<a class="btn btn-primary" href="cliente_insere.php">
 			<i class="bi bi-plus-circle"></i>	
 			Inserir novo usuário</a>
 		</p>
@@ -49,12 +49,12 @@ $listadeclientes = $cliente->listar();
 						<td>naosei</td>
 						<td class="text-center">
 							<a class="btn btn-warning" 
-				href="usuario-atualiza.php?=<?=$cliente->getId()?>">
+				href="cliente-atualiza.php?id=<?=$clientes['id']?>">
 							<i class="bi bi-pencil"></i> Atualizar
 							</a>
 						
 							<a class="btn btn-danger excluir" 
-				href="cliente_exclui.php?id=<?=$cliente->getId()?>">
+				href="cliente_exclui.php?id=<?=$clientes['id']?>">
 							<i class="bi bi-trash"></i> Excluir
 							</a>
 						</td>

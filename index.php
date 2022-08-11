@@ -90,63 +90,73 @@ require_once 'inc/cabecalho_externo.php'
     <!-- Fim terceiro destaque mobile/desktop -->
 
     <!-- Cards  -->
-    <section class="container content-center text-center" id="">
-        <div class="row m-1">
+    <section class="container py-5 bg-info">
+        <div class="row">
 
             <h2 class="text-center my-5">Encontre Freelancers</h2>
 
-            <div class="card col-6 col-lg-4 mb-2" style="width: 18rem;">
+            <div class="col-md-4 mt-2 mb-5">
+           <div class="card align-items-center h-100">
                 <img src="img/img-notebook-cima-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-muted text-center">
                         <h5 class="card-title">Programação</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
+                    </div>
             </div>
-
-            <div class="card col-6 col-lg-4 mb-2" style="width: 18rem;">
-                <img src="img/img-mulher-designer.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Design</h5>
+            <div class="col-md-4 mt-2 mb-5">
+           <div class="card align-items-center h-100">
+                <img src="img/img-notebook-cima-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-muted text-center">
+                        <h5 class="card-title">Programação</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
+                    </div>
             </div>
-
-            <div class="card col-6 col-lg-4 mb-2" style="width: 18rem;">
-                <img src="img/img-programadora-de-costas.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Segurança da Informação</h5>
+            <div class="col-md-4 mt-2 mb-5">
+           <div class="card align-items-center h-100">
+                <img src="img/img-notebook-cima-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-muted text-center">
+                        <h5 class="card-title">Programação</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
-            </div>
-
-            <div class="card col-6 col-lg-4 mb-2" style="width: 18rem;">
-                <img src="img/img-seguranca-informacao.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Ciência de dados</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
             </div>
 
-            <div class="card col-6 col-lg-4 mb-2" style="width: 18rem;">
-                <img src="img/img-equipe.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Coordenação de Equipe</h5>
+            <div class="col-md-4 mt-2 mb-5">
+           <div class="card align-items-center h-100">
+                <img src="img/img-notebook-cima-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-muted text-center">
+                        <h5 class="card-title">Programação</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
+                    </div>
             </div>
 
-            <div class="card col-6 col-lg-4 mb-2" style="width: 18rem;">
-            <img src="img/img-contadora.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Finanças</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-md-4 mt-2 mb-5">
+           <div class="card align-items-center h-100">
+                <img src="img/img-notebook-cima-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-muted text-center">
+                        <h5 class="card-title">Programação</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    </div>
             </div>
+
+            <div class="col-md-4 mt-2 mb-5">
+           <div class="card align-items-center h-100">
+                <img src="img/img-notebook-cima-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-muted text-center">
+                        <h5 class="card-title">Programação</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    </div>
             </div>
 
         </div>
@@ -155,29 +165,7 @@ require_once 'inc/cabecalho_externo.php'
 
    <?php require_once 'inc/footer_externo.php'; ?>
 
-    <footer class="container-flex bg-footer">
-
-    <div class="container text-center bg-footer">
-  <div class="row">
-    <div class="col">
-      <ul>
-          <li><a href="#">Como fazer um portfólio</a></li>
-          <li><a href="#">Conte conosco</a></li>
-          <li><a href="#">Sobre-nós</a></li>
-      </ul>
-    </div>
-    <div class="col">
-     <p><img class="d-flex w-75 m-auto" src="img/img-job-anotacao.png" alt="banner tudo o que você precisa esta aqui"></p>
-    </div>
-    <div class="col">
-    <ul>
-          <li><a href="#">Turbine seu projeto</a></li>
-          <li><a href="#">Resolva seus problemas</a></li>
-          <li><a href="#">Suporte Técnico</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+    
         
 
         

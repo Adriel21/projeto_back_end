@@ -44,4 +44,32 @@
     </footer>
 
 </body>
+<!-- Footer
+
+
 </html>
+<footer class="container-flex bg-footer">
+
+    <div class="container text-center bg-footer">
+  <div class="row">
+    <div class="col">
+      <ul>
+          <li><a href="#">Como fazer um portfólio</a></li>
+          <li><a href="#">Conte conosco</a></li>
+          <li><a href="#">Sobre-nós</a></li>
+      </ul>
+    </div>
+    <div class="col">
+     <p><img class="d-flex w-75 m-auto" src="img/img-job-anotacao.png" alt="banner tudo o que você precisa esta aqui"></p>
+    </div>
+    <div class="col">
+    <ul>
+          <li><a href="#">Turbine seu projeto</a></li>
+          <li><a href="#">Resolva seus problemas</a></li>
+          <li><a href="#">Suporte Técnico</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer>-->
+

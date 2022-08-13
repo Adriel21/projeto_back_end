@@ -115,6 +115,28 @@ final class Cliente {
         }
     }
 
+    // Testado e funcionando
+    public function upload(array $arquivo) {
+        $tiposAceitos = [
+            "image/png",
+            "image/jpeg",
+            "image/gif",
+            "image/svg+xml"
+        ];
+
+        if(!in_array($arquivo['type'], $tiposAceitos)) {
+            die("<script>alert('formato válido');</script>");
+        }
+            $nome = $arquivo['name'];
+
+            $temporario = $arquivo['tmp_name'];
+
+            $destino = "./imagem/".$nome;
+
+            move_uploaded_file($temporario, $destino);
+        }
+    
+
 
     public function getId():int
     {

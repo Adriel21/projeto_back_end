@@ -36,7 +36,8 @@ $listadeclientes = $cliente->listar();
 					<tr>
 						<th>Nome</th>
 						<th>E-mail</th>
-						<th>Tipo</th>
+						<th>Perfil</th>
+						<th>Categoria</th>
 						<th class="text-center">Operações</th>
 					</tr>
 				</thead>

@@ -220,6 +220,14 @@ final class Cliente {
     {
         return $this->tipo;
     }
+
+    /**
+     * Get the value of conexao
+     */ 
+    public function getConexao()
+    {
+        return $this->conexao;
+    }
 }
 
 

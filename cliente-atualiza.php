@@ -10,7 +10,13 @@ if(isset($_POST['atualizar'])) {
     $cliente->setNome($_POST['nome']);
     $cliente->setEmail($_POST['email']);
     $cliente->setSenha($_POST['senha']);
-    $cliente->setPerfil($_POST['teste']);
+   
+
+	if(empty($_POST['perfil'])) {
+        $cliente->setPerfil($dados['perfil']);
+     } else {
+        $cliente->setPerfil($_POST['perfil']);
+     }
     if(empty($_POST['senha'])) {
         $cliente->setSenha($dados['senha']);
     } else {
@@ -75,10 +81,10 @@ a senha. -->
 				 class="form-control" type="email" id="email" name="email" required>
 			</div>
 
-            <div class="mb-3">
-				<label class="form-label" for="email">E-mail:</label>
-				<input value="<?=$dados['perfil']?>"
-				 class="form-control"  id="email" name="teste" required>
+			<div class="mb-3">
+                <label class="form-label" for="imagem" class="form-label">Selecione uma imagem:</label>
+                <input class="form-control" type="file" id="imagem" name="perfil"
+                accept="image/png, image/jpeg, image/gif, image/svg+xml">
 			</div>
 
 			<div class="mb-3">

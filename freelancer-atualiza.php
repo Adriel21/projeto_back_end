@@ -13,12 +13,14 @@ $dados = $freelancer->listarUm();
 if(isset($_POST['atualizar'])) {
     $freelancer->setNome($_POST['nome']);
     $freelancer->setEmail($_POST['email']);
-    $freelancer->setSenha($_POST['senha']);
+    $freelancer->setProfissao($_POST['profissao']);
+    $freelancer->setCategoriaId($_POST['categoria']);
+    $freelancer->setPerfil($_POST['perfil']);
     if(empty($_POST['perfil'])) {
         $freelancer->setPerfil($dados['perfil']);
-    } else {
+     } else {
         $freelancer->setPerfil($_POST['perfil']);
-    }
+     }
 
     if(empty($_POST['senha'])) {
         $freelancer->setSenha($dados['senha']);
@@ -86,15 +88,17 @@ a senha. -->
 				 class="form-control" type="email" id="email" name="email" required>
 			</div>
 
-            <div class="mb-3">
-				<label class="form-label" for="email">Perfil:</label>
-				<input value="<?=$dados['perfil']?>"
-				 class="form-control"  id="email" name="teste" required>
-			</div>
+            
 
 			<div class="mb-3">
 				<label class="form-label" for="senha">Senha:</label>
 				<input class="form-control" type="password" id="senha" name="senha" placeholder="Preencha apenas se for alterar">
+			</div>
+
+            
+            <div class="mb-3">
+				<label class="form-label" for="nome">Profissão:</label>
+				<input class="form-control" type="text" id="nome" value="<?=$dados['profissao']?>" name="profissao" required>
 			</div>
 
             <div class="mb-3">

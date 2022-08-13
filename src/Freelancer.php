@@ -63,21 +63,42 @@ final class Freelancer {
         }
     }
 
-    public function atualizarCadastro():void {
-        $sql = "UPDATE freelancer SET nome = :nome, email = :email, senha = :senha, perfil = :perfil, profissao = :profissao WHERE id = :id";
+    // public function atualizarCadastro():void {
+    //     $sql = "UPDATE freelancer SET nome = :nome, email = :email, senha = :senha, 
+    //     profissao = :profissao WHERE id = :id";
 
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
-            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
-            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
-            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
-            $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
-            $consulta->execute();
-        } catch (Exception $erro) {
-            die("Erro: ". $erro->getMessage());
+    //     try {
+    //         $consulta = $this->conexao->prepare($sql);
+    //         $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+    //         $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+    //         $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+    //         // $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+    //         $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
+    //         // $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
+    //         $consulta->execute();
+    //     } catch (Exception $erro) {
+    //         die("Erro: ". $erro->getMessage());
+    //     }
+    // }
+
+        // Testado e funcionando
+        public function atualizarCadastro():void {
+            $sql = "UPDATE freelancer SET nome = :nome, email = :email, senha = :senha, perfil = :perfil, profissao = :profissao, categoria_id = :categoria_id WHERE id = :id";
+    
+            try {
+                $consulta = $this->conexao->prepare($sql);
+                $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+                $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+                $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+                $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+                $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+                $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
+                $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
+                $consulta->execute();
+            } catch (Exception $erro) {
+                die("Erro: ". $erro->getMessage());
+            }
         }
-    }
 
     public function excluirCadastro():void {
         $sql = "DELETE FROM freelancer WHERE id = :id";
@@ -224,7 +245,6 @@ final class Freelancer {
     {
         $this->perfil = filter_var($perfil, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
     /**
@@ -251,8 +271,6 @@ final class Freelancer {
     public function setCategoriaId(int $categoriaId)
     {
         $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
-
-        return $this;
     }
 
     /**

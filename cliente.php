@@ -12,6 +12,7 @@ $listadeclientes = $cliente->listar();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
@@ -45,9 +46,9 @@ $listadeclientes = $cliente->listar();
 				<tbody>
 <?php foreach ($listadeclientes as $clientes) { ?>
 					<tr>
-						<td><?=$clientes['nome']?></td>
-						<td><?=$clientes['email']?></td>
-						<td>naosei</td>
+						<td class="text-center"><?=$clientes['nome']?></td>
+						<td class="text-center"><?=$clientes['email']?></td>
+						<td><?=$clientes['perfil']?></td>
 						<td class="text-center">
 							<a class="btn btn-warning" 
 				href="cliente-atualiza.php?id=<?=$clientes['id']?>">

@@ -21,8 +21,7 @@ final class Freelancer {
     }
 
     public function listar():array {
-        $sql = "SELECT id, nome, email, perfil, profissao, categoria_id
-        FROM freelancer ORDER BY nome";
+        $sql = "SELECT freelancer.id, freelancer.nome, freelancer.email, freelancer.perfil, freelancer.profissao, categoria.nome AS categoria FROM freelancer LEFT JOIN categoria ON freelancer.categoria_id = categoria.id ORDER BY nome";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -35,7 +34,7 @@ final class Freelancer {
     }
 
     public function listarUm():array {
-        $sql = "SELECT id, nome, email, perfil, profissao FROM freelancer ORDER BY nome";
+        $sql = "SELECT id, nome, email, senha,  perfil, profissao, categoria_id FROM freelancer WHERE id = :id";
     try {
         $consulta = $this->conexao->prepare($sql);
         $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
@@ -48,7 +47,7 @@ final class Freelancer {
 }
 
     public function cadastrar():void {
-        $sql = "INSERT INTO freelancer(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";
+        $sql = "INSERT INTO freelancer(nome, email, senha, perfil, profissao, categoria_id) VALUES(:nome, :email, :senha, :perfil, :profissao, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -57,6 +56,7 @@ final class Freelancer {
             $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
             $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
             $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
+            $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: ". $erro->getMessage());
@@ -64,7 +64,7 @@ final class Freelancer {
     }
 
     public function atualizarCadastro():void {
-        $sql = "UPDATE freelancer SET nome = :nome, email = :email, senha = :senha, perfil = :perfil WHERE id = :id";
+        $sql = "UPDATE freelancer SET nome = :nome, email = :email, senha = :senha, perfil = :perfil, profissao = :profissao WHERE id = :id";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -78,6 +78,59 @@ final class Freelancer {
             die("Erro: ". $erro->getMessage());
         }
     }
+
+    public function excluirCadastro():void {
+        $sql = "DELETE FROM freelancer WHERE id = :id";
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+    }
+
+    // Testado e funcionando
+    public function codificaSenha(string $senha):string {
+        return password_hash($senha, PASSWORD_DEFAULT);
+    }
+
+    // Testado e funcionando
+    public function verificaSenha(
+        string $senhaFormulario, string $senhaBanco):string {
+
+        /* Usamos a password_verify para COMPARAR as duas senhas:
+        a digitada no formulário e a existente no banco */
+        if ( password_verify($senhaFormulario, $senhaBanco) ) {
+            // Se forem iguais, mantemos a senha existente no banco
+            return $senhaBanco;
+        } else {
+            // Se forem diferentes, então codificamos esta nova senha
+            return $this->codificaSenha($senhaFormulario);
+        }
+    }
+
+
+     // Testado e funcionando
+     public function upload(array $arquivo) {
+        $tiposAceitos = [
+            "image/png",
+            "image/jpeg",
+            "image/gif",
+            "image/svg+xml"
+        ];
+
+        if(!in_array($arquivo['type'], $tiposAceitos)) {
+            die("<script>alert('formato válido');</script>");
+        }
+            $nome = $arquivo['name'];
+
+            $temporario = $arquivo['tmp_name'];
+
+            $destino = "./imagem/".$nome;
+
+            move_uploaded_file($temporario, $destino);
+        }
 
     /**
      * Get the value of id

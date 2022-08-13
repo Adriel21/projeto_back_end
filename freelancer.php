@@ -26,7 +26,7 @@ $listadefreelancer = $freelancer->listar();
 		</h2>
 
 		<p class="text-center mt-5">
-			<a class="btn btn-primary" href="usuario-insere.php">
+			<a class="btn btn-primary" href="freelancer_insere.php">
 			<i class="bi bi-plus-circle"></i>	
 			Inserir novo usuário</a>
 		</p>
@@ -40,6 +40,7 @@ $listadefreelancer = $freelancer->listar();
 						<th>E-mail</th>
 						<th>Profissao</th>
 						<th class="text-center">Categoria</th>
+						<th class="text-center">Operações</th>
 					</tr>
 				</thead>
 
@@ -49,15 +50,15 @@ $listadefreelancer = $freelancer->listar();
 						<td><?=$freelancers['nome']?></td>
 						<td><?=$freelancers['email']?></td>
 						<td><?=$freelancers['profissao']?></td>
-                        <td><?=$freelancers['categoria_id  ']?></td>
+                        <td><?=$freelancers['categoria']?></td>
 						<td class="text-center">
 							<a class="btn btn-warning" 
-				href="usuario-atualiza.php?=<?=$cliente->getId()?>">
+				href="freelancer-atualiza.php?id=<?=$freelancers['id']?>">
 							<i class="bi bi-pencil"></i> Atualizar
 							</a>
 						
 							<a class="btn btn-danger excluir" 
-				href="cliente_exclui.php?id=<?=$cliente->getId()?>">
+				href="freelancer_exclui.php?id=<?=$freelancers['id']?>">
 							<i class="bi bi-trash"></i> Excluir
 							</a>
 						</td>

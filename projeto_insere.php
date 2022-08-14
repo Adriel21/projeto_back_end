@@ -23,7 +23,7 @@ if(isset($_POST['inserir'])) {
     $projeto->setNome($_POST['nome']);
     $projeto->setDescricao($_POST['descricao']);
     $projeto->setCategoriaId($_POST['categoria']);
-    $projeto->setCategoriaId($_POST['categoria']);
+    // $projeto->setCategoriaId($_POST['categoria']);
     
 	$imagem = $_FILES["imagem"];
 	$projeto->setImagem($imagem['name']);
@@ -37,12 +37,6 @@ if(isset($_POST['inserir'])) {
 ?>
 
 
-<div class="row">
-	<article class="col-12 bg-white rounded shadow my-1 py-4">
-		
-		<h2 class="text-center">
-		Inserir novo Projeto
-		</h2>
 				
 		<form enctype="multipart/form-data" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">
 
@@ -52,8 +46,8 @@ if(isset($_POST['inserir'])) {
 			</div>
 
 			<div class="mb-3">
-				<label class="form-label" for="email">E-mail:</label>
-				<input class="form-control" type="email" id="email" name="email" required>
+				<label class="form-label" for="email">Descricao</label>
+				<input class="form-control" name="descricao" required>
 			</div>
 
 			<div class="mb-3">

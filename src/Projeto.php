@@ -44,7 +44,7 @@ final class Projeto{
     }
 
     public function cadastrar():void {
-        $sql = "INSERT INTO projeto(nome, , senha, perfil, profissao, categoria_id) VALUES(:nome, :email, :senha, :perfil, :profissao, :categoria_id)";
+        $sql = "INSERT INTO projeto(nome, , senha, perfil, profissao, categoria_id) VALUES(:nome, :email, :senha, :perfil, :profissao, :categoria_id) WHERE cliente_id = :cliente_id";
         
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -54,6 +54,7 @@ final class Projeto{
             $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
             $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
+            $consulta->bindValue(":cliente_id", $this->cliente->getId(), PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: ". $erro->getMessage());

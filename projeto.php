@@ -23,14 +23,14 @@ $listaDeProjetos = $projeto->listar();
 	<article class="col-12 bg-white rounded shadow my-1 py-4">
 		
 		<h2 class="text-center">
-		Usuários 
+		Projetos 
 		<span class="badge bg-dark">  </span>
 		</h2>
 
 		<p class="text-center mt-5">
-			<a class="btn btn-primary" href="cliente_insere.php">
+			<a class="btn btn-primary" href="projeto_insere.php">
 			<i class="bi bi-plus-circle"></i>	
-			Inserir novo usuário</a>
+			Inserir novo projeto</a>
 		</p>
 				
 		<div class="table-responsive">

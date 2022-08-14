@@ -8,7 +8,7 @@ final class Cliente {
     private string $email;
     private string $senha;
     private string $perfil;
-    private string $tipo = "cliente";
+    public static string $tipo = "Cliente";
 
 
     private PDO $conexao;
@@ -134,6 +134,19 @@ final class Cliente {
             $destino = "./imagem/".$nome;
 
             move_uploaded_file($temporario, $destino);
+        }
+
+        public function buscar() {
+            $sql = "SELECT * FROM cliente WHERE email = :email";
+            try {
+                $consulta = $this->conexao->prepare($sql);
+                $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+                $consulta->execute();
+                $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+            } catch (Exception $erro) {
+                die("Erro: ". $erro->getMessage());
+            }
+            return $resultado;
         }
     
 

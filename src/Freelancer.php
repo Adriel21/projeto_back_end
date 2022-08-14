@@ -9,7 +9,7 @@ final class Freelancer {
     private string $senha;
     private string $perfil;
     private string $profissao;
-    private string $tipo = 'Freelancer';
+    public static string $tipo = 'Freelancer';
     private int $categoriaId;
 
     
@@ -151,6 +151,19 @@ final class Freelancer {
             $destino = "./imagem/".$nome;
 
             move_uploaded_file($temporario, $destino);
+        }
+
+        public function buscar() {
+            $sql = "SELECT * FROM freelancer WHERE email = :email";
+            try {
+                $consulta = $this->conexao->prepare($sql);
+                $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+                $consulta->execute();
+                $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+            } catch (Exception $erro) {
+                die("Erro: ". $erro->getMessage());
+            }
+            return $resultado;
         }
 
     /**

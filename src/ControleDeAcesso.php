@@ -1,6 +1,8 @@
 <?php
+namespace Projeto;
+use PDO, Exception;
 
-final class ControleDeAcesso{
+final class ControleDeAcesso {
     
     public function __construct() {
         if( !isset($_SESSION) ){
@@ -10,21 +12,20 @@ final class ControleDeAcesso{
 
 
 
-public function verificaAcesso():void {
+// public function verificaAcesso():void {
 
-    if (!isset($_SESSION['id'])) {
-        session_destroy();
-        // header("location:")
-        die();
-    }
-}
+//     if (!isset($_SESSION['id'])) {
+//         session_destroy();
+//         // header("location:")
+//         die();
+//     }
+// }
 
 
 
-public function login (int $id, string $nome, string $tipo): void {
+public function login (int $id, string $nome): void {
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
-    $_SESSION['tipo'] = $tipo;
 }
 
 

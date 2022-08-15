@@ -47,13 +47,11 @@ final class Freelancer {
 }
 
     public function cadastrar():void {
-        $sql = "INSERT INTO freelancer(nome, email, senha, perfil, profissao, categoria_id) VALUES(:nome, :email, :senha, :perfil, :profissao, :categoria_id)";
+        $sql = "INSERT INTO freelancer(nome, perfil, profissao, categoria_id) VALUES(:nome, :perfil, :profissao, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
-            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
-            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
             $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
             $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);

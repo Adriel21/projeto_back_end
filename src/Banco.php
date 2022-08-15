@@ -6,7 +6,7 @@ abstract class Banco {
     private static string $servidor = "localhost";
     private static string $usuario = "root";
     private static string $senha = "";
-    private static string $banco = "projeto_back_end";
+    private static string $banco = "projeto";
     private static PDO $conexao;
 
     public static function conecta():PDO {
@@ -27,5 +27,5 @@ abstract class Banco {
         return self::$conexao;
     }
 }
-// Banco::conecta(); // teste
+Banco::conecta(); // teste
         

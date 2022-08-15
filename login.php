@@ -3,6 +3,7 @@
 use Projeto\Cliente;
 use Projeto\ControleDeAcesso;
 use Projeto\Freelancer;
+use Projeto\Usuario;
 
 require "./vendor/autoload.php";
 ?>
@@ -57,25 +58,6 @@ if(isset($_GET['acesso_proibido']) ){
 					<input class="form-control" type="password" id="senha" name="senha">
 				</div>
 
-				<div class="mb-3">
-                <label class="form-label" for="categoria">Categoria:</label>
-                <select class="form-select" name="tipo" id="categoria" required>
-                    <option value=""></option>
-					<option 
-                    value="Cliente"> 
-						Cliente
-					</option>
-
-					<option 
-                    value="Freelancer"> 
-						Freelancer
-					</option>
-
-					
-				
-                </select>
-            </div>
-
 				<button class="btn btn-primary btn-lg" name="entrar" type="submit">Entrar</button>
 
 			</form>
@@ -87,18 +69,12 @@ if(isset($_GET['acesso_proibido']) ){
 			if(empty($_POST['email']) || empty($_POST['senha'])){
 				header("location:login.php?campos_obrigatorios");
 			} else {
-				if($_POST['tipo'] == Cliente::$tipo) {
-					$cliente = new Cliente;
-					$cliente->setEmail($_POST['email']);
+				
+					$usuario = new Usuario;
+					$usuario->setEmail($_POST['email']);
 	
 					// Buscando um usuário no banco a partir do e-mail
-					$dados = $cliente->buscar();
-				} else if ($_POST['tipo'] == Freelancer::$tipo) {
-					$freelancer = new Freelancer;
-					$freelancer->setEmail($_POST['email']);
-	
-					// Buscando um usuário no banco a partir do e-mail
-					$dados = $freelancer->buscar();
+					$dados = $usuario->buscar();
 				}
 				// Capturamos o email informado
 			
@@ -111,8 +87,9 @@ if(isset($_GET['acesso_proibido']) ){
 					// Verificação da senha e login
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
-						$sessao->login($dados['id'], $dados['nome']);
-						echo 'Deu certo';
+						$sessao->login($dados['id'], $dados['email']);
+						header('location:index.php');
+						// echo "Deu certo";
 					} else {
 						header("location:login.php?senha_incorreta");
 					}
@@ -120,7 +97,7 @@ if(isset($_GET['acesso_proibido']) ){
 				
 				// Utilitarios::dump($dados);
 			}
-		}
+		
 		?>
     </div>
     

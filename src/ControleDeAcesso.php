@@ -23,9 +23,9 @@ final class ControleDeAcesso {
 
 
 
-public function login (int $id, string $nome): void {
+public function login (int $id, string $email): void {
     $_SESSION['id'] = $id;
-    $_SESSION['nome'] = $nome;
+    $_SESSION['email'] = $email;
 }
 
 
@@ -33,7 +33,8 @@ public function login (int $id, string $nome): void {
 public function logout():void {
     session_start();
     session_destroy();
-    die(); // exit
+    header("location:./usuario_insere.php?logout");
+    die(); // exit;
 }
 
 }

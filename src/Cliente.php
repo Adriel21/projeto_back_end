@@ -5,10 +5,9 @@ use PDO, Exception;
 final class Cliente {
     private int $id;
     private string $nome;
-    private string $email;
-    private string $senha;
     private string $perfil;
-    public static string $tipo = "Cliente";
+    private string $usuarioId;
+
 
 
     private PDO $conexao;
@@ -21,7 +20,7 @@ final class Cliente {
   
     // Testado e funcionando
     public function listar():array {
-        $sql = "SELECT id, nome, email, perfil
+        $sql = "SELECT id, nome, perfil, usuario_id
         FROM cliente ORDER BY nome";
 
         try {
@@ -36,7 +35,7 @@ final class Cliente {
 
 
     public function listarUm():array {
-        $sql = "SELECT id, nome, email, perfil, senha FROM cliente WHERE id = :id ORDER BY nome";
+        $sql = "SELECT id, nome, perfil, usuario_id AS usuario FROM cliente WHERE id = :id ORDER BY nome";
     try {
         $consulta = $this->conexao->prepare($sql);
         $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
@@ -50,14 +49,13 @@ final class Cliente {
 
 // Testado e funcionando
     public function cadastrar():void {
-        $sql = "INSERT INTO cliente(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";
+        $sql = "INSERT INTO cliente(nome, perfil, usuario_id) VALUES(:nome, :perfil, :usuario_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
-            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
-            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
             $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+            $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: ". $erro->getMessage());
@@ -240,6 +238,24 @@ final class Cliente {
     public function getConexao()
     {
         return $this->conexao;
+    }
+
+    /**
+     * Get the value of usuarioId
+     */ 
+    public function getUsuarioId()
+    {
+        return $this->usuarioId;
+    }
+
+    /**
+     * Set the value of usuarioId
+     *
+     * @return  self
+     */ 
+    public function setUsuarioId($usuarioId)
+    {
+        $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
     }
 }
 

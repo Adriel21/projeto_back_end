@@ -33,7 +33,8 @@ public function login (int $id, string $nome): void {
 public function logout():void {
     session_start();
     session_destroy();
-    die(); // exit
+    header("location:./login.php?logout");
+    die(); // exit;
 }
 
 }

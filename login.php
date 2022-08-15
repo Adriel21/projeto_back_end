@@ -112,7 +112,8 @@ if(isset($_GET['acesso_proibido']) ){
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
 						$sessao->login($dados['id'], $dados['nome']);
-						echo 'Deu certo';
+						// echo 'Deu certo';
+						header("location:index.php");
 					} else {
 						header("location:login.php?senha_incorreta");
 					}

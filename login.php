@@ -18,7 +18,7 @@
 </head>
 <body>
     <main class="container text-center">
-            <div class="row align-items-center">
+            <div class="row align-items-center ">
             <div class="col">
                 <h1>XPTO.com</h1>
                 <h4>Entre na XPTO, e contemple nossos beneficíos</h4>
@@ -28,12 +28,14 @@
             
                 
 
-                <p><img src="img/img-equip-desenvolvendo.png" alt=""></p>
+                <p class="col-3"><img src="img/img-escrevendo-de-costas.png" alt=""></p>
             </div>
+            
             <div class="col">
-            <form>
+            <form class="formulario">
                 <div class="mb-3">
-                <p><a href="#">Google</a></p>
+                <p class="botao-google"><a href="#">Google</a></p>
+                <p class="botao-linkedin"><a href="#">LinkedIn</a></p>
                 <p><a href="#"></a></p>
                 </div>
                 <div class="mb-3">

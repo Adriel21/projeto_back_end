@@ -2,14 +2,11 @@
 namespace Projeto;
 use PDO, Exception;
 
-final class Freelancer {
+final class Profissao {
     private int $id;
-    private string $nome;
-    private string $email;
-    private string $senha;
-    private string $perfil;
-    private string $profissao;
-    public static string $tipo = 'Freelancer';
+    private string $titulo;
+    private string $descricao;
+    private string $usuarioId;
     private int $categoriaId;
 
     
@@ -21,7 +18,7 @@ final class Freelancer {
     }
 
     public function listar():array {
-        $sql = "SELECT freelancer.id, freelancer.nome, freelancer.email, freelancer.perfil, freelancer.profissao, categoria.nome AS categoria FROM freelancer LEFT JOIN categoria ON freelancer.categoria_id = categoria.id ORDER BY nome";
+        $sql = "SELECT id, usuario_id FROM profissao";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -34,10 +31,10 @@ final class Freelancer {
     }
 
     public function listarUm():array {
-        $sql = "SELECT id, nome, email, senha,  perfil, profissao, categoria_id FROM freelancer WHERE id = :id";
+        $sql = "SELECT id, titulo, descricao, usuario_id, categoria_id FROM profissao WHERE usuario_id = :usuario_id";
     try {
         $consulta = $this->conexao->prepare($sql);
-        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+        $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
         $consulta->execute();
         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     } catch (Exception $erro) {
@@ -46,14 +43,14 @@ final class Freelancer {
     return $resultado;
 }
 
-    public function cadastrar():void {
-        $sql = "INSERT INTO freelancer(nome, perfil, profissao, categoria_id) VALUES(:nome, :perfil, :profissao, :categoria_id)";
+    public function cadastrarFreela():void {
+        $sql = "INSERT INTO profissao(titulo, descricao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :usuario_id, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
-            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
-            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
-            $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
+            $consulta->bindParam(":titulo", $this->titulo, PDO::PARAM_STR);
+            $consulta->bindParam(":descricao", $this->descricao, PDO::PARAM_STR);
+            $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
@@ -182,88 +179,60 @@ final class Freelancer {
         $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
     }
 
+
+
     /**
-     * Get the value of nome
+     * Get the value of titulo
      */ 
-    public function getNome()
+    public function getTitulo()
     {
-        return $this->nome;
+        return $this->titulo;
     }
 
     /**
-     * Set the value of nome
+     * Set the value of titulo
      *
      * @return  self
      */ 
-    public function setNome(string $nome)
+    public function setTitulo($titulo)
     {
-        $this->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
-
+        $this->titulo = filter_var($titulo, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
     /**
-     * Get the value of email
+     * Get the value of descricao
      */ 
-    public function getEmail()
+    public function getDescricao()
     {
-        return $this->email;
+        return $this->descricao;
     }
 
     /**
-     * Set the value of email
+     * Set the value of descricao
      *
      * @return  self
      */ 
-    public function setEmail(string $email)
+    public function setDescricao($descricao)
     {
-        $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
+        $this->descricao = filter_var($descricao, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
     /**
-     * Get the value of senha
+     * Get the value of usuarioId
      */ 
-    public function getSenha()
+    public function getUsuarioId()
     {
-        return $this->senha;
+        return $this->usuarioId;
     }
 
     /**
-     * Set the value of senha
+     * Set the value of usuarioId
      *
      * @return  self
      */ 
-    public function setSenha(string $senha)
+    public function setUsuarioId($usuarioId)
     {
-        $this->senha = filter_var($senha, FILTER_SANITIZE_SPECIAL_CHARS);
-
-    }
-
-    /**
-     * Get the value of perfil
-     */ 
-    public function getPerfil()
-    {
-        return $this->perfil;
-    }
-
-    /**
-     * Set the value of perfil
-     *
-     * @return  self
-     */ 
-    public function setPerfil(string $perfil)
-    {
-        $this->perfil = filter_var($perfil, FILTER_SANITIZE_SPECIAL_CHARS);
-
-    }
-
-    /**
-     * Get the value of tipo
-     */ 
-    public function getTipo()
-    {
-        return $this->tipo;
+        $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
     }
 
     /**
@@ -279,22 +248,8 @@ final class Freelancer {
      *
      * @return  self
      */ 
-    public function setCategoriaId(int $categoriaId)
+    public function setCategoriaId($categoriaId)
     {
         $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
-    }
-
-    /**
-     * Get the value of profissao
-     */ 
-    public function getProfissao()
-    {
-        return $this->profissao;
-    }
-
-  
-    public function setProfissao(string $profissao)
-    {
-        $this->profissao = filter_var($profissao, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 }

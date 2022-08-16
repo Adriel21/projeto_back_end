@@ -16,10 +16,14 @@ require_once './vendor/autoload.php';
 // }
 if(isset($_POST['inserir'])) {
     $usuario = new Usuario;
-    $usuario->setEmail($_POST['email']);
+	$usuario->setNome($_POST['nome']);
+	$usuario->setEmail($_POST['email']);
+	$usuario->setTelefone($_POST['telefone']);
 	$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
-
-
+	
+	$perfil = $_FILES["perfil"];
+	$usuario->setPerfil($perfil['name']);
+	$usuario->upload($perfil);
     // header("location:login.php");
 
 
@@ -40,6 +44,11 @@ if(isset($_POST['inserir'])) {
 				
 		<form enctype="multipart/form-data" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">
 
+			
+			<div class="mb-3">
+				<label class="form-label" for="nome">Nome:</label>
+				<input class="form-control" type="text" id="nome" name="nome" required>
+			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="email">E-mail:</label>
@@ -47,9 +56,21 @@ if(isset($_POST['inserir'])) {
 			</div>
 
 			<div class="mb-3">
+				<label class="form-label" for="telefone">Telefone:</label>
+				<input class="form-control" type="telefone" id="telefone" name="telefone" required>
+			</div>
+
+			<div class="mb-3">
 				<label class="form-label" for="senha">Senha:</label>
 				<input class="form-control" type="password" id="senha" name="senha" required>
 			</div>
+
+			<div class="mb-3">
+                <label class="form-label" for="imagem" class="form-label">Selecione uma imagem:</label>
+                <input required class="form-control" type="file" id="imagem" name="perfil"
+                accept="image/png, image/jpeg, image/gif, image/svg+xml">
+			</div>
+			
 
             <!-- <div class="mb-3">
                 <label class="form-label" for="categoria">Categoria:</label>

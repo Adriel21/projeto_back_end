@@ -12,19 +12,21 @@ final class ControleDeAcesso {
 
 
 
-// public function verificaAcesso():void {
+ public function verificaAcesso():void {
 
-//     if (!isset($_SESSION['id'])) {
-//         session_destroy();
-//         // header("location:")
-//         die();
-//     }
-// }
-
+     if (!isset($_SESSION['id'])) {
+         session_destroy();
+        header("location:../login.php");
+        die();
+             } }
 
 
-public function login (int $id, string $email): void {
+
+public function login (int $id, string $nome, string $email, string $perfil, string $telefone): void {
     $_SESSION['id'] = $id;
+    $_SESSION['nome'] = $nome;
+    $_SESSION['perfil'] = $perfil;
+    $_SESSION['telefone'] = $telefone;
     $_SESSION['email'] = $email;
 }
 

@@ -1,21 +1,15 @@
 
-<?php
-
-use Projeto\Cliente;
-use Projeto\ControleDeAcesso;
-use Projeto\Freelancer;
-use Projeto\Usuario;
-
-require_once "./vendor/autoload.php";
-
+<?php 
 // Criamos objeto para acessar os recursos de sessão PHP na classe ControleDeAcesso
+
+use Projeto\ControleDeAcesso;
+use Projeto\Profissao;
+
+require_once './vendor/autoload.php';
 $sessao = new ControleDeAcesso;
-
+$profissao = new Profissao;
 // Executamos verificaAcesso para checar se tem alguém logado
-$cliente = new Cliente;
-$freelancer = new Freelancer;
-$usuario = new Usuario;
-
+ $sessao->verificaAcesso();
 
 // Se o parâmetro ?sair existir, então faça o logout
 if(isset($_GET['sair'])) $sessao->logout();
@@ -29,14 +23,12 @@ $pagina = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <title>Document</title>
 </head>
 <body>
     
-</body>
-</html>
 
 <header id="topo" class="border-bottom sticky-top">
 
@@ -54,16 +46,19 @@ $pagina = basename($_SERVER['PHP_SELF']);
                 <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="cliente-insere.php?id=<?=$_SESSION['id']?> ">Cadastrar como Cliente</a>
+                <a class="nav-link" href="meu-perfil.php">Meu perfil</a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" href="categorias.php">Cadastrar Projeto</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="freelancer-insere.php">Cadastrar como Freelancer</a>
+                <a class="nav-link" href="profissao-insere.php?id=<?=$_SESSION['id']?>">Ver perfil Freelancer</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="usuarios.php">Usuários</a>
+                <a class="nav-link" href="profissao-insere.php?id=<?=$_SESSION['id']?>">Perfil Freelancer</a>
             </li>
-           
 
             <li class="nav-item">
                 <a class="nav-link" href="noticias.php">Notícias</a>
@@ -83,9 +78,10 @@ $pagina = basename($_SERVER['PHP_SELF']);
 
 </header>
 
+
 <article class="p-5 my-4 rounded-3 bg-white shadow">
     <div class="container-fluid py-1">        
-        <h2 class="display-4">Olá <?=$_SESSION['email']?>!</h2>
+        <h2 class="display-4">Olá <?=$_SESSION['nome']?>!</h2>
 
         <?php if( isset($_GET['perfil-atualizado']) ){ ?>
             <p class="alert alert-primary">
@@ -102,5 +98,23 @@ $pagina = basename($_SERVER['PHP_SELF']);
                 <i class="bi bi-person"></i> <br>
                 Meu perfil
             </a>
+          
+			<a class="btn btn-dark bg-gradient btn-lg" href="categorias.php">
+                <i class="bi bi-tags"></i> <br>
+                Categorias
+            </a>
+			<a class="btn btn-dark bg-gradient btn-lg" href="usuarios.php">
+                <i class="bi bi-people"></i> <br>
+                Usuários
+            </a>
+       
+
+            <a class="btn btn-dark bg-gradient btn-lg" href="noticias.php">
+                <i class="bi bi-newspaper"></i> <br>
+                Notícias
+            </a>
         </div>
+    </div>
 </article>
+</body>
+</html>

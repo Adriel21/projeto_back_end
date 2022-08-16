@@ -9,57 +9,61 @@ CTER SET utf8mb4;
 ```sql
 CREATE TABLE usuario(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL 
-);
-```
-- Criando tabela cliente
-
-```sql
-CREATE TABLE cliente(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
-    perfil VARCHAR(45) NULL,
-    usuario_id INT NULL
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    telefone VARCHAR(25) NOT NULL,
+    perfil VARCHAR(45) NULL
 );
 ```
 
-### Relacionamento da tabela Usuário e Cliente
-- Criando relacionamento
-```sql
-ALTER TABLE cliente
-ADD CONSTRAINT fk_cliente_usuario
-FOREIGN KEY (usuario_id) REFERENCES usuario(id);
-```
-### Relacionamento da tabela Usuário e Freelancer
-- Criando relacionamento
-```sql
-ALTER TABLE usuario
-ADD CONSTRAINT fk_usuario_freelancer
-FOREIGN KEY (freelancer_id) REFERENCES freelancer(id);
-```
 
 - Criando tabela Projeto
 ```sql 
 CREATE TABLE projeto_cliente(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL,
+    titulo VARCHAR(45) NOT NULL,
     imagem VARCHAR(45),
-    descricao VARCHAR(246) NULL,
-    cliente_id INT NOT NULL,
+    descricao VARCHAR(255) NULL,
+    usuario_id INT NOT NULL,
+    categoria_id TINYINT NOT NULL
+);
+```
+
+- Criando tabela Profissoes
+```sql 
+CREATE TABLE profissao(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(45) NOT NULL,
+    descricao VARCHAR(255) NULL,
+    usuario_id INT NOT NULL,
     categoria_id TINYINT NOT NULL
 );
 ```
 ---
-### Relacionamento da tabela Cliente e Projeto
+### Relacionamento da tabela Usuario e Projeto
 
 - Criando relacionamento
 
 ```sql
 ALTER TABLE projeto_cliente
-ADD CONSTRAINT fk_projeto_cliente_cliente
-FOREIGN KEY (cliente_id) REFERENCES cliente(id);
+ADD CONSTRAINT fk_projeto_cliente_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuario(id);
 ```
+
+### Relacionamento da tabela Usuario e Profissoes
+
+- Criando relacionamento
+
+```sql
+ALTER TABLE profissao
+ADD CONSTRAINT fk_profissao_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+```
+```sql
+ALTER TABLE usuario
+ADD CONSTRAINT fk_usuario_profissao
+FOREIGN KEY (profissao_id) REFERENCES profissao(id);
 
 ----
 - Criando tabela de categorias
@@ -77,6 +81,19 @@ CREATE TABLE categoria(
 ```sql
 ALTER TABLE projeto_cliente
 ADD CONSTRAINT fk_projeto_cliente_categoria
+FOREIGN KEY (categoria_id) REFERENCES categoria(id); 
+# Para fazer o relacionamento, a tabela não pode possuir dados. 
+Caso tenha dados e precise esvaziá-la para criar o relacionamento, utilize o trunkate
+```
+
+---
+
+
+### Relacionamento da tabela de profissao e categoria
+
+```sql
+ALTER TABLE profissao
+ADD CONSTRAINT fk_profissao_categoria
 FOREIGN KEY (categoria_id) REFERENCES categoria(id); 
 # Para fazer o relacionamento, a tabela não pode possuir dados. 
 Caso tenha dados e precise esvaziá-la para criar o relacionamento, utilize o trunkate

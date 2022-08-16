@@ -11,6 +11,7 @@
 
     <!-- Css proprio -->
     <link rel="stylesheet" href="css/estilo.css">
+    
 
     <!-- Icons Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -24,8 +25,8 @@
 <?php 
 $users = ['Cliente', 'Freelancer'];?>
         <nav class="navbar">
-            <button class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</button>
-            <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
+            <button class="btn btn-sm mx-1 login" type="button">Login</button>
+            <select class="btn btn-sm mx-1 login" type="button">
                 <option value="">Cadastro</option>
                 <?php foreach ($users as $user): ?>
                     <option value="register"><?=$user?></option>

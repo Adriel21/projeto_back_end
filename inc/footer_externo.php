@@ -1,3 +1,12 @@
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Css proprio -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
 <footer class="container-flex">
 
     <section>
@@ -43,16 +52,11 @@
         </article>
     </footer>
 
-</body>
-<!-- Footer
+    <footer class="container-flex bg-footer col d-none d-md-block d-print-block  bg-marinho-secondary-footer ">
 
-
-</html>
-<footer class="container-flex bg-footer">
-
-    <div class="container text-center bg-footer">
+    <div class="container text-center">
   <div class="row">
-    <div class="col">
+    <div class="col coluna-rodape">
       <ul>
           <li><a href="#">Como fazer um portfólio</a></li>
           <li><a href="#">Conte conosco</a></li>
@@ -62,7 +66,7 @@
     <div class="col">
      <p><img class="d-flex w-75 m-auto" src="img/img-job-anotacao.png" alt="banner tudo o que você precisa esta aqui"></p>
     </div>
-    <div class="col">
+    <div class="col coluna-rodape">
     <ul>
           <li><a href="#">Turbine seu projeto</a></li>
           <li><a href="#">Resolva seus problemas</a></li>
@@ -71,5 +75,7 @@
     </div>
   </div>
 </div>
-<footer>-->
+<footer>
 
+
+</body>

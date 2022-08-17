@@ -90,14 +90,14 @@ require_once 'inc/cabecalho_externo.php'
     <!-- Fim terceiro destaque mobile/desktop -->
 
     <!-- Cards  -->
-    <section class="container py-5">
+    <section class="secao-cards container py-5">
         <div class="row">
 
             <h2 class="text-center my-5">Encontre Freelancers</h2>
 
-            <div class="col-md-4 mt-2 mb-5">
-           <div class="card align-items-center h-100">
-                <img src="img/img-designer.jpg" class="card-img-top" alt="...">
+            <div class="col-md-4 mt-2 mb-5 ">
+           <div class="card align-items-center h-100 cards">
+                <img src="img/img-designer.jpg" class=" card-img-top" alt="...">
                     <div class="card-body text-muted text-center">
                         <h5 class="card-title">Segurança da Informação</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -106,7 +106,7 @@ require_once 'inc/cabecalho_externo.php'
                     </div>
             </div>
             <div class="col-md-4 mt-2 mb-5">
-           <div class="card align-items-center h-100">
+           <div class="card align-items-center h-100 cards">
                 <img src="img/img-contadora.jpg" class="card-img-top" alt="...">
                     <div class="card-body text-muted text-center">
                         <h5 class="card-title">Contabilidade</h5>
@@ -116,7 +116,7 @@ require_once 'inc/cabecalho_externo.php'
                     </div>
             </div>
             <div class="col-md-4 mt-2 mb-5">
-           <div class="card align-items-center h-100">
+           <div class="card align-items-center h-100 cards">
                 <img src="img/img-duas-programadoras.jpg" class="card-img-top" alt="...">
                     <div class="card-body text-muted text-center">
                         <h5 class="card-title">Investimentos</h5>
@@ -127,7 +127,7 @@ require_once 'inc/cabecalho_externo.php'
             </div>
 
             <div class="col-md-4 mt-2 mb-5">
-           <div class="card align-items-center h-100">
+           <div class="card align-items-center h-100 cards">
                 <img src="img/notebook-fundo-branco.jpg" class="card-img-top" alt="...">
                     <div class="card-body text-muted text-center">
                         <h5 class="card-title">Contabilidade</h5>
@@ -138,7 +138,7 @@ require_once 'inc/cabecalho_externo.php'
             </div>
 
             <div class="col-md-4 mt-2 mb-5">
-           <div class="card align-items-center h-100">
+           <div class="card align-items-center h-100 cards">
                 <img src="img/img-seguranca-informacao.jpg" class="card-img-top" alt="...">
                     <div class="card-body text-muted text-center">
                         <h5 class="card-title">Programação</h5>
@@ -149,7 +149,7 @@ require_once 'inc/cabecalho_externo.php'
             </div>
 
             <div class="col-md-4 mt-2 mb-5">
-           <div class="card align-items-center h-100">
+           <div class="card align-items-center h-100 cards">
                 <img src="img/img-mulher-designer.jpg" class="card-img-top" alt="...">
                     <div class="card-body text-muted text-center">
                         <h5 class="card-title">Design de Interiores</h5>

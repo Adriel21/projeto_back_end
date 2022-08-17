@@ -16,15 +16,15 @@
 
     <title>login</title>
 </head>
-<body>
+<body class="login-body">
     <main class="container text-center">
-            <div class="row align-items-center ">
-            <div class="col">
-                <h1>XPTO.com</h1>
-                <h4>Entre na XPTO, e contemple nossos beneficíos</h4>
-            
-             <p>Aqui você encontra a soluçao dos seus problemas</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
+            <div class="row mt-3">
+            <div class="col-4 align-self-end">
+                <h1 >XPTO.com</h1>
+                <br>
+                <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
+            <p class="text-start">Realize o login para uma melhor experiência</p>
+                <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
             
                 
 
@@ -33,25 +33,27 @@
             
             <div class="col">
             <form class="formulario">
-                <div class="mb-3">
-                <p class="botao-google"><a href="#">Google</a></p>
-                <p class="botao-linkedin"><a href="#">LinkedIn</a></p>
-                <p><a href="#"></a></p>
+                <div class="row">
+                    <p class="text-start"><strong> Fazer login com </strong></p>
+                    <br><br>
+                <p class="col botao-google"><a href="#">Google</a></p>
+                <p class="col botao-linkedin"><a href="#">LinkedIn</a></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <br>
+                    <label for="exampleInputEmail1" class="form-label ">Email </label>
+                    <input type="email" class="form-control rounded" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartilhe seu email com estranhos !</div>
                 </div>
+                <br>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="form-label">Senha</label>
+                    <input type="password" class="form-control rounded" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">ENTRAR</button>
             </form>
 
             </div>

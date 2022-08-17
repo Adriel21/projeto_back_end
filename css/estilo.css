@@ -29,6 +29,11 @@ a {
     margin-top: -50px;
     color: #021D40;
 }
+
+.login-body {
+    background: rgb(204,204,204);
+    background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(238,238,238,1) 35%, rgba(255,255,255,1) 100%);
+}
 /* Final img gerais */
 
 /* Botão destaque Desktop */
@@ -42,8 +47,20 @@ a {
     font-weight: bold;
 }
 
+.cards:hover
+{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+
+
 .botao:hover {
-    background-color: #8B0BD9;
+    background-color: #0518c2;
     transition: .2s;
 }
 /* Fim Botão Desktop */
@@ -89,6 +106,7 @@ a {
 .formulario {
     padding: 100px 30px 100px 30px;
     background-color: ghostwhite;
+    border-radius: 5px;
     
 }
 
@@ -96,7 +114,7 @@ a {
     color: #fff;
     text-decoration: none;
     background-color: #DB4A39;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 100px 20px 100px;
     border-radius: 5px;
     margin-bottom: 100px;
 }
@@ -108,7 +126,7 @@ a {
 
 .botao-linkedin a{
     border-radius: 5px;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 100px 20px 100px;
     color: #fff;
     background-color: #0E76A8;
 }

@@ -20,7 +20,7 @@ $listaDeCategorias = $categoria->listar();
 // 	header("location:usuarios.php");
 // }
 $profissao = new Profissao;
-$profissao->setUsuarioId($_GET['id']);
+
 
 
 
@@ -36,6 +36,7 @@ if(isset($_POST['inserir'])) {
 
 
 	$profissao->cadastrarFreela();
+	header("location:freelancer_exclui.php?id=" . $profissao->getId());
 
 }
 ?>

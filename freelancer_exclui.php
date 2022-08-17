@@ -1,11 +1,12 @@
 <?php
 
 use Projeto\Freelancer;
+use Projeto\Usuario;
 
 require_once './vendor/autoload.php';
-$freelancer = new Freelancer;
+$usuario = new Usuario;
 
-$freelancer->setId($_GET['id']);
+$usuario->setProfissaoId($_GET['id']);
 
 $freelancer->excluirCadastro();
 header("location:freelancer.php");

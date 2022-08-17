@@ -32,9 +32,14 @@ if(isset($_POST['inserir'])) {
 
 
 	$projeto->cadastrar();
+?>
+	<script> window.location.replace("http://freelancer_exclui.php/"); </script>
 
+<?php
 }
 ?>
+
+
 
 
 				

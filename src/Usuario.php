@@ -9,6 +9,7 @@ class Usuario {
     private string $senha;
     private string $perfil;
     private string $telefone;
+    private int $profissaoId;
     private PDO $conexao;
 
     
@@ -62,6 +63,19 @@ class Usuario {
             die("Erro: ". $erro->getMessage());
         }
     }
+
+    public function cadastrarPr():void {
+        $sql = "INSERT INTO usuario(profissao_id) VALUES(:profissao_id)";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":profissao_id", $this->profissaoId, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+    }
+    
 
     public function cadastrarFr():void {
         $sql = "INSERT INTO usuario(cliente_id AS cliente) VALUES(:cliente)";
@@ -278,5 +292,25 @@ class Usuario {
     public function setTelefone($telefone)
     {
         $this->telefone = filter_var($telefone, FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+
+    /**
+     * Get the value of profissaoId
+     */ 
+    public function getProfissaoId()
+    {
+        return $this->profissaoId;
+    }
+
+    /**
+     * Set the value of profissaoId
+     *
+     * @return  self
+     */ 
+    public function setProfissaoId($profissaoId)
+    {
+        $this->profissaoId = $profissaoId;
+
+        return $this;
     }
 }

@@ -18,8 +18,8 @@
 </head>
 <body class="login-body">
     <main class="container text-center">
-            <div class="row mt-3">
-            <div class="col-4 align-self-end">
+            <div class="row mt-3 ">
+            <div class="col-4 align-self-end destaque-login">
                 <h1 >XPTO.com</h1>
                 <br>
                 <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>

@@ -29,10 +29,20 @@ a {
     margin-top: -50px;
     color: #021D40;
 }
+
+
+/*  Background da página de login */
+.login-body {
+    background: rgb(204,204,204);
+    background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(238,238,238,1) 35%, rgba(255,255,255,1) 100%);
+}
+
+/* Fim Background página de login */
+
+
 /* Final img gerais */
 
 /* Botão destaque Desktop */
-
 .botao {
     padding: 20px 80px 20px 80px;
     background-color: #021F59;
@@ -41,17 +51,36 @@ a {
     text-transform: uppercase;
     font-weight: bold;
 }
+/* Fim do botao destaque desktop */
 
+
+/* Hover dos cards da página index */
+.cards:hover
+{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+/* Fim dos cards hover */
+
+
+/* Animação do botão pagina index */
 .botao:hover {
-    background-color: #8B0BD9;
+    background-color: #0518c2;
     transition: .2s;
 }
 /* Fim Botão Desktop */
+
 
 .login {
     font-weight: 500;
 }
 
+
+/* Animação destaque index */
 .destaque {
     animation-duration: 2s;
     animation-name: slideIn;
@@ -86,19 +115,34 @@ a {
     }
 }
 
+/* Fim animação destaque index */
+
+/* Formulário de login */
+
 .formulario {
     padding: 100px 30px 100px 30px;
     background-color: ghostwhite;
+    border-radius: 5px;
     
 }
+
+/* fim formulário */
+
+
+/* Botao login google */
 
 .botao-google a{
     color: #fff;
     text-decoration: none;
     background-color: #DB4A39;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 100px 20px 100px;
     border-radius: 5px;
     margin-bottom: 100px;
+}
+
+.botao-google :hover {
+    background-color: #fa3c1afb;
+    transition: .3s;
 }
 
 .botao-google {
@@ -106,12 +150,23 @@ a {
     margin-bottom: 50px;
 }
 
+/* Fim botao login google */
+
+/* Botão LinkedIn */
+
 .botao-linkedin a{
     border-radius: 5px;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 100px 20px 100px;
     color: #fff;
-    background-color: #0E76A8;
+    background-color: #198abe;
 }
+
+.botao-linkedin a:hover {
+    background-color: #0E76A8;
+    transition: .3s;
+}
+
+/* Fim botão login linkedIn */
 
 /* Button saiba configurações */
 .btn-marinho {
@@ -168,3 +223,25 @@ background: linear-gradient(0deg, rgba(2,34,77,1) 0%, rgba(2,31,89,1) 35%, rgba(
     background: rgb(2,29,64);
 background: linear-gradient(0deg, rgba(2,29,64,1) 0%, rgba(2,34,77,1) 35%, rgba(2,34,77,1) 100%);
 }
+
+
+/* Animação login-formulario */
+.destaque-login, h1, h4 p{
+    animation: animacao 5.1s ease 0s  alternate;
+}
+
+@keyframes animacao {
+	from {
+	  
+	  opacity: 0;
+	}
+
+	to {
+	  
+	  opacity: 1;
+	}
+}
+
+/* Fim animação formulário */
+  
+

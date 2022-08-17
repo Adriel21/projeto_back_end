@@ -9,3 +9,4 @@ $freelancer->setId($_GET['id']);
 
 $freelancer->excluirCadastro();
 header("location:freelancer.php");
+

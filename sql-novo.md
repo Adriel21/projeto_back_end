@@ -13,7 +13,9 @@ CREATE TABLE usuario(
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     telefone VARCHAR(25) NOT NULL,
-    perfil VARCHAR(45) NULL
+    perfil VARCHAR(45) NULL,
+    perfil_freela varchar(5) NULL,
+    profissao_id INT NULL
 );
 ```
 

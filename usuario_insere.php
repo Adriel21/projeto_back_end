@@ -18,7 +18,6 @@ if(isset($_POST['inserir'])) {
     $usuario = new Usuario;
 	$usuario->setNome($_POST['nome']);
 	$usuario->setEmail($_POST['email']);
-	$usuario->setTelefone($_POST['telefone']);
 	$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
 	
 	$perfil = $_FILES["perfil"];
@@ -55,10 +54,10 @@ if(isset($_POST['inserir'])) {
 				<input class="form-control" type="email" id="email" name="email" required>
 			</div>
 
-			<div class="mb-3">
+			<!-- <div class="mb-3">
 				<label class="form-label" for="telefone">Telefone:</label>
 				<input class="form-control" type="telefone" id="telefone" name="telefone" required>
-			</div>
+			</div> -->
 
 			<div class="mb-3">
 				<label class="form-label" for="senha">Senha:</label>

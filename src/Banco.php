@@ -6,7 +6,7 @@ abstract class Banco {
     private static string $servidor = "localhost";
     private static string $usuario = "root";
     private static string $senha = "";
-    private static string $banco = "projeto";
+    private static string $banco = "tentativa";
     private static PDO $conexao;
 
     public static function conecta():PDO {

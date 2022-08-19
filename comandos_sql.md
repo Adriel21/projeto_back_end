@@ -61,6 +61,14 @@ FOREIGN KEY (categoria_id) REFERENCES categoria(id);
 Caso tenha dados e precise esvaziá-la para criar o relacionamento, utilize o trunkate
 ```
 
+```sql
+ALTER TABLE usuario
+ADD CONSTRAINT fk_usuario_categoria
+FOREIGN KEY (categoria_id) REFERENCES categoria(id); 
+# Para fazer o relacionamento, a tabela não pode possuir dados. 
+Caso tenha dados e precise esvaziá-la para criar o relacionamento, utilize o trunkate
+```
+
 ---
 - Criando tabela de subcategorias
 ```sql

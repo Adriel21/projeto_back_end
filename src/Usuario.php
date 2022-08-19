@@ -7,10 +7,13 @@ class Usuario {
     private string $nome;
     private string $email;
     private string $senha;
-    private string $tipo;
+    private string $profissao;
+    private string $descricao_profissao;
+    // private string $perfil_freela;
     private string $perfil;
-    private string $telefone;
-    private int $profissaoId;
+    private int $categoriaId;
+    // private string $telefone;
+    // private int $profissaoId;
     private PDO $conexao;
 
     
@@ -50,20 +53,46 @@ class Usuario {
     
     // Testado e funcionando
     public function cadastrar():void {
-        $sql = "INSERT INTO usuario(nome, email, senha, telefone, perfil) VALUES(:nome, :email, :senha, :telefone, :perfil)";
+        $sql = "INSERT INTO usuario(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
             $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
             $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
-            $consulta->bindParam(":telefone", $this->telefone, PDO::PARAM_STR);
             $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: ". $erro->getMessage());
         }
     }
+
+    public function atualizar():void {
+        $sql = "UPDATE usuario SET profissao = :profissao, descricao_profissao = :descricao_profissao, categoria_id = :categoria_id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
+            $consulta->bindParam(":descricao_profissao", $this->descricao_profissao, PDO::PARAM_STR);
+            $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+    }
+    
+
+    // public function validaFreela():void {
+    //     $sql = "INSERT INTO usuario(perfil_freela) VALUES(:perfil_freela)";
+    //     try {
+    //         $consulta = $this->conexao->prepare($sql);
+    //         $consulta->bindParam(":perfil_freela", $this->perfil_freela, PDO::PARAM_STR);
+    //         $consulta->execute();
+    //     } catch (Exception $erro) {
+    //         die("Erro: ". $erro->getMessage());
+    //     }
+    // }
+    
 
     public function cadastrarPr():void {
         $sql = "INSERT INTO usuario(profissao_id) VALUES(:profissao_id)";
@@ -311,6 +340,85 @@ class Usuario {
     public function setProfissaoId($profissaoId)
     {
         $this->profissaoId = $profissaoId;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of perfil_freela
+     */ 
+    public function getPerfil_freela()
+    {
+        return $this->perfil_freela;
+    }
+
+    /**
+     * Set the value of perfil_freela
+     *
+     * @return  self
+     */ 
+    public function setPerfil_freela($perfil_freela)
+    {
+        $this->perfil_freela = filter_var($perfil_freela, FILTER_SANITIZE_SPECIAL_CHARS);
+
+    }
+
+    /**
+     * Get the value of profissao
+     */ 
+    public function getProfissao()
+    {
+        return $this->profissao;
+    }
+
+    /**
+     * Set the value of profissao
+     *
+     * @return  self
+     */ 
+    public function setProfissao($profissao)
+    {
+        $this->profissao = filter_var($profissao, FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+    }
+
+    /**
+     * Get the value of descricao_profissao
+     */ 
+    public function getDescricao_profissao()
+    {
+        return $this->descricao_profissao;
+    }
+
+    /**
+     * Set the value of descricao_profissao
+     *
+     * @return  self
+     */ 
+    public function setDescricao_profissao($descricao_profissao)
+    {
+        $this->descricao_profissao = $descricao_profissao;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of categoriaId
+     */ 
+    public function getCategoriaId()
+    {
+        return $this->categoriaId;
+    }
+
+    /**
+     * Set the value of categoriaId
+     *
+     * @return  self
+     */ 
+    public function setCategoriaId($categoriaId)
+    {
+        $this->categoriaId = $categoriaId;
 
         return $this;
     }

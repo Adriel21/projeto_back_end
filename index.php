@@ -4,12 +4,18 @@
 
 use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
+use Projeto\Usuario;
 
 require_once './vendor/autoload.php';
 $sessao = new ControleDeAcesso;
 $profissao = new Profissao;
+$usuario = new Usuario;
+
+// if ($usuario->getPerfil_freela() !== null) {
+//     $usuario->setProfissaoId()
+// }
 // Executamos verificaAcesso para checar se tem alguém logado
- $sessao->verificaAcesso();
+//  $sessao->verificaAcesso();
 
 // Se o parâmetro ?sair existir, então faça o logout
 if(isset($_GET['sair'])) $sessao->logout();

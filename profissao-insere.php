@@ -1,13 +1,14 @@
 <?php
 
 use Projeto\Categoria;
+use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
 use Projeto\Usuario;
 
 require_once './vendor/autoload.php';
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
-
+$sessao = new ControleDeAcesso;
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
 // 	$usuario->setNome($_POST['nome']);
@@ -19,24 +20,23 @@ $listaDeCategorias = $categoria->listar();
 // 	$usuario->inserir();
 // 	header("location:usuarios.php");
 // }
-$profissao = new Profissao;
 
-
+$usuario = new Usuario;
+$dados = $usuario->listar();
 
 
 
 if(isset($_POST['inserir'])) {
 
-    $profissao->setTitulo($_POST['titulo']);
-    $profissao->setDescricao($_POST['descricao']);
-    $profissao->setCategoriaId($_POST['categoria']);
-	$profissao->setUsuarioId($_GET['id']);
+    $usuario->setProfissao($_POST['titulo']);
+    $usuario->setDescricao_profissao($_POST['descricao']);
+    $usuario->setCategoriaId($_POST['categoria']);
+
     
 
 
-
-	$profissao->cadastrarFreela();
-	header("location:freelancer_exclui.php?id=" . $profissao->getId());
+	$usuario->atualizar();
+	header("location:freela_valida.php?id=".$dados['id']);
 
 }
 ?>

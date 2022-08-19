@@ -22,11 +22,10 @@ final class ControleDeAcesso {
 
 
 
-public function login (int $id, string $nome, string $email, string $perfil, string $telefone): void {
+public function login (int $id, string $nome, string $email, string $perfil): void {
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['perfil'] = $perfil;
-    $_SESSION['telefone'] = $telefone;
     $_SESSION['email'] = $email;
 }
 

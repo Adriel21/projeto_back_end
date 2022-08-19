@@ -41,7 +41,7 @@ require_once 'inc/cabecalho_externo.php'
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium nesciunt aliquam atque similique inventore quibusdam, consequuntur esse unde rem quae ducimus distinctio nostrum ad rerum.
             </p>
         
-            <button class="btn btn-sm btn-info mt-3 px-5 fs-5 align-center bold-button rounded-pill" type="button">Começa agora!</button>
+            <button class="btn btn-sm btn-saibamais mt-3 px-5 fs-5 align-center bold-button rounded-pill" type="button">Começa agora!</button>
         </div>
     </section>
     <!-- Final Primeiro destaque -->
@@ -50,7 +50,7 @@ require_once 'inc/cabecalho_externo.php'
     <section class="container-flex">
         <img class="d-flex w-75 m-auto" src="img/img-equip-desenvolvendo.png" alt="banner tudo o que você precisa esta aqui">
 
-        <article class="align-center p-3 text-center bg-info pt-5 img-dois-avatar">
+        <article class="align-center text-center py-5 img-dois-avatar">
             <h2>
                 Comece agora!
             </h2>
@@ -58,7 +58,7 @@ require_once 'inc/cabecalho_externo.php'
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
             </p>
         
-            <button class="btn btn-sm btn-marinho mt-3 px-5 fs-5 align-center bold-button rounded-pill" type="button">Saiba +</button>
+            <button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Saiba +</button>
         </article>
     </section>
     <!-- Final segundo destaque -->
@@ -74,7 +74,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info rounded-pill">Go somewhere</a>
+                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info rounded-pill">Go somewhere</a>
+                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info rounded-pill">Go somewhere</a>
+                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info rounded-pill">Go somewhere</a>
+                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info rounded-pill">Go somewhere</a>
+                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info rounded-pill">Go somewhere</a>
+                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
                     </div>
                 </div>
             </div>

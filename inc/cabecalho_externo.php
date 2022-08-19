@@ -25,15 +25,14 @@
 $users = ['Cliente', 'Freelancer'];?>
         <nav class="navbar">
             <ul>
-            <button class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</button>
+            <li class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</li>
                 <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
-                    <option value="">Cadatro</option>
-                    <?php foreach ($users as $user): ?>
+                    <option value="">Cadastro</option>
                         <ul>
-                            <li>Login</li>
-                            <li>Cadastro</li>
+                            <?php foreach($users as $user): ?>
+                                <li><a href="index.php?user=<?php echo $user; ?>"><?php echo $user; ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
-                    <?php endforeach; ?>
                 </select>
             </ul>
         </nav>

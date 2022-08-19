@@ -29,17 +29,26 @@ a {
     margin-top: -50px;
     color: #021D40;
 }
-/* Final img gerais */
+
+article, .btn-saibamais {
+    background: #05C7F2;
+}
+    /* Final img gerais */
 
 /* Button saiba configurações */
 .btn-marinho {
     background: #021d40;
-    color: #0dcaf0
+    color: #ffffff
 }
 
     .btn-marinho:hover {
         background: #021057;
-        color: #0dcaf0
+        color: #ffffff;
+    }
+
+    .btn-saibamais:hover {
+        background: #05C7F2;
+        color: #ffffff;
     }
 /* Final button saiba configurações */
 

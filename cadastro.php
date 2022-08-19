@@ -18,7 +18,7 @@
 </head>
 <body class="login-body">
     <main class="container text-center">
-            <div class="row mt-3">
+            <div class="row mt-3 ">
             <div class="col-4 align-self-end destaque-login">
                 <h1 >XPTO.com</h1>
                 <br>
@@ -28,15 +28,14 @@
             
                 
 
-                <p class="col-3"><img src="img/img-escrevendo-de-costas.png" alt=""></p>
+                <p class="col-3"><img src="img/img-projetando.png" alt=""></p>
             </div>
             
             <div class="col">
             <form class="formulario">
                 <div class="row">
-                    <p class="text"><strong> Fazer login com </strong></p>
+                    <p class="text-start"><strong> Fazer login com </strong></p>
                     <br><br>
-                    <br>
                 <p class="col botao-google"><a href="#">Google</a></p>
                 <p class="col botao-linkedin"><a href="#">LinkedIn</a></p>
                 </div>

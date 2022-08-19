@@ -33,8 +33,9 @@ a {
 
 /*  Background da página de login */
 .login-body {
+    height: 100vh;
     background: rgb(204,204,204);
-    background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(238,238,238,1) 35%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(238,238,238,1) 35%, rgba(255,255,255,1) 100%)no-repeat;
 }
 
 /* Fim Background página de login */

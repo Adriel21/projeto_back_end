@@ -36,7 +36,7 @@ if(isset($_POST['inserir'])) {
 
 
 	$usuario->atualizar();
-	header("location:freela_valida.php?id=".$dados['id']);
+	header("location:freela_valida.php?id=".$_SESSION['id']);
 
 }
 ?>

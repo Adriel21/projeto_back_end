@@ -7,6 +7,7 @@ CTER SET utf8mb4;
 ```sql
 CREATE TABLE usuario(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR (45) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     profissao VARCHAR(45) NULL,
@@ -23,3 +24,10 @@ CREATE TABLE freelancer(
     senha VARCHAR(255) NOT NULL,   
 );
 ```
+
+```sql
+ALTER TABLE usuario
+ADD CONSTRAINT fk_usuario_categoria
+FOREIGN KEY (categoria_id) REFERENCES categoria(id);
+
+----

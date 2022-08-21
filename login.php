@@ -86,9 +86,15 @@ if(isset($_GET['acesso_proibido']) ){
 					// Verificação da senha e login
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
-						$sessao->login($dados['id'], $dados['email'], $dados['nome'], $dados['perfil']);
-								header('location:index.php');
-							// echo "Deu certo";
+						if($dados['categoria_id'] !== null){
+							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
+								 header('location:index.php');
+						} else {
+							$sessao->login($dados['id'], $dados['email'], $dados['nome'], $dados['perfil']);
+								 header('location:index.php?id=' . $_SESSION['id']);
+						}
+						
+								// echo "Deu certo";
 					} else {
 						header("location:login.php?senha_incorreta");
 					}

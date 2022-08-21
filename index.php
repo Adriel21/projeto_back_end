@@ -10,13 +10,23 @@ require_once './vendor/autoload.php';
 $sessao = new ControleDeAcesso;
 $profissao = new Profissao;
 $usuario = new Usuario;
+// $usuario->getId($_GET['id']);
+// $dados = $usuario->listarUm();
+
+// if($dados['categoria_id'] !== null) {
+//     echo 'Certo';
+// } else {
+//     echo 'Tente dnv';
+// }
 
 // if ($usuario->getPerfil_freela() !== null) {
 //     $usuario->setProfissaoId()
 // }
 // Executamos verificaAcesso para checar se tem alguém logado
 //  $sessao->verificaAcesso();
-
+// if ($_SESSION['categoria_id'] !== null ){
+//     echo 'alo';
+// }
 // Se o parâmetro ?sair existir, então faça o logout
 if(isset($_GET['sair'])) $sessao->logout();
 
@@ -58,14 +68,15 @@ $pagina = basename($_SERVER['PHP_SELF']);
             <li class="nav-item">
                 <a class="nav-link" href="categorias.php">Cadastrar Projeto</a>
             </li>
-
+            <?php if($_SESSION['categoria_id'] !== null) { ?>
+                 <li class="nav-item">
+                 <a class="nav-link" href="visualizar.php?id=<?=$_SESSION['id']?>">Visualizar perfil Freelancer</a>
+             </li>
+           <?php } else { ?>
             <li class="nav-item">
-                <a class="nav-link" href="profissao-insere.php?id=<?=$_SESSION['id']?>">Ver perfil Freelancer</a>
+                <a class="nav-link" href="profissao-insere.php?id=<?=$_SESSION['id']?>">Cadastrar perfil Freelancer</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="profissao-insere.php?id=<?=$_SESSION['id']?>">Perfil Freelancer</a>
-            </li>
-
+            <?php } ?>
             <li class="nav-item">
                 <a class="nav-link" href="noticias.php">Notícias</a>
             </li>

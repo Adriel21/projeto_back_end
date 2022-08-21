@@ -39,10 +39,10 @@ class Usuario {
     }
 
     public function listarUm():array {
-        $sql = "SELECT id, email, nome, perfil, FROM usuario WHERE email = :email";
+        $sql = "SELECT id, email, nome, perfil, categoria_id FROM usuario WHERE id = :id";
     try {
         $consulta = $this->conexao->prepare($sql);
-        $consulta->bindParam(':email', $this->email, PDO::PARAM_INT);
+        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
         $consulta->execute();
         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     } catch (Exception $erro) {

@@ -7,9 +7,10 @@ use Projeto\Usuario;
 require_once './vendor/autoload.php';
 $sessao = new ControleDeAcesso;
 $usuario = new Usuario;
-
-$usuario->setPerfil_freela('sim');
+$usuario->setId($_GET['id']);
+$dados = $usuario->listarUm();
 
 // $usuario->validaFreela();
-header("location:index.php");
+$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
+header('location:index.php');
 

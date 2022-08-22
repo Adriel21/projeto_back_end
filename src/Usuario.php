@@ -38,6 +38,7 @@ class Usuario {
         return $resultado;
     }
 
+// testado e funcionando 
     public function listarUm():array {
         $sql = "SELECT id, email, nome, perfil, categoria_id FROM usuario WHERE id = :id";
     try {
@@ -67,6 +68,7 @@ class Usuario {
         }
     }
 
+    //testado e funcionando 
     public function atualizar():void {
         $sql = "UPDATE usuario SET profissao = :profissao, descricao_profissao = :descricao_profissao, categoria_id = :categoria_id WHERE id = :id";
 
@@ -83,58 +85,9 @@ class Usuario {
     }
     
 
-    // public function validaFreela():void {
-    //     $sql = "INSERT INTO usuario(perfil_freela) VALUES(:perfil_freela)";
-    //     try {
-    //         $consulta = $this->conexao->prepare($sql);
-    //         $consulta->bindParam(":perfil_freela", $this->perfil_freela, PDO::PARAM_STR);
-    //         $consulta->execute();
-    //     } catch (Exception $erro) {
-    //         die("Erro: ". $erro->getMessage());
-    //     }
-    // }
-    
+ 
 
-    // public function cadastrarPr():void {
-    //     $sql = "INSERT INTO usuario(profissao_id) VALUES(:profissao_id)";
-
-    //     try {
-    //         $consulta = $this->conexao->prepare($sql);
-    //         $consulta->bindParam(":profissao_id", $this->profissaoId, PDO::PARAM_INT);
-    //         $consulta->execute();
-    //     } catch (Exception $erro) {
-    //         die("Erro: ". $erro->getMessage());
-    //     }
-    // }
-    
-
-    // public function cadastrarFr():void {
-    //     $sql = "INSERT INTO usuario(cliente_id AS cliente) VALUES(:cliente)";
-
-    //     try{
-    //         $consulta = $this->conexao->prepare($sql);
-    //         $consulta->bindParam(":cliente", $this->clienteId, PDO::PARAM_INT);
-    //         $consulta->execute();
-    //     } catch (Exception $erro) {
-    //         die("Erro: ". $erro->getMessage());
-    //     }
-    // }
-
-        // Testado e funcionando
-        // public function atualizarCadastro():void {
-        //     $sql = "UPDATE usuario SET cliente_id = :cliente_id WHERE usuario.id = :usuario.id";
-            
-    
-        //     try {
-        //         $consulta = $this->conexao->prepare($sql);
-        //         $consulta->bindParam(":usuario.id", $this->id, PDO::PARAM_INT);
-        //         $consulta->bindParam(":cliente_id", $this->clienteId, PDO::PARAM_INT);
-        //         $consulta->execute();
-        //     } catch (Exception $erro) {
-        //         die("Erro: ". $erro->getMessage());
-        //     }
-        // }
-
+ 
         // Testado e funcionando
         public function codificaSenha(string $senha):string {
             return password_hash($senha, PASSWORD_DEFAULT);

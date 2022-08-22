@@ -37,9 +37,8 @@ if(isset($_POST['inserir'])) {
 <!--criando formulario de cadastro -->
 <section class="cadastro-bloco-azul-marinho"></section>
 	<main class="container">
-		<div>
-			<h1 class="text-center my-2">Cadastro</h1>
-
+				<h1 class="text-center my-2">Cadastro</h1>	
+			<div class="column-content d-flex">
                 <div class="col d-none d-md-block">
                     <h1 >XPTO.com</h1>
                     <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
@@ -48,7 +47,7 @@ if(isset($_POST['inserir'])) {
                     <p class="col-3"><img src="img/img-projetando.png" alt=""></p>
                 </div>
 
-                <form class="container-fluid col-sm-6 m-auto shadow p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
+                <form class="col-sm-6 m-auto p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
                     <div class="d-grid gap-2 text-center">
                         <button class="btn btn-primary google-button" type="button">Google</button>
                         <button class="btn btn-primary" type="button">LinkedIn</button>
@@ -82,7 +81,7 @@ if(isset($_POST['inserir'])) {
                         <a href="login.php">Você já está registrado? Login</a>
                     </div>
 				</form>
-		</div>
+			</div>
 	</main>
-	
+
 <section class="cadastro-bloco-azul-marinho"></section>

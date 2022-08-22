@@ -52,6 +52,21 @@ article, .btn-saibamais {
     }
 /* Final button saiba configurações */
 
+/* Tela de Cadastro usuario */
+.cadastro-bloco-azul-marinho {
+    width: 100%;
+    height: 150px;
+    background: #021d40;
+}
+
+    .google-button {
+        background: #DB4A39;
+        border: none;
+    }
+
+    .google-button:hover{
+        background: #DB4A39;
+    }
 
 /* Footer Configurações */
 .bg-marinho-footer {
@@ -74,3 +89,5 @@ article, .btn-saibamais {
 
 
 /* Footer Configurações final */
+
+

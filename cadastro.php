@@ -27,75 +27,45 @@ if(isset($_POST['inserir'])) {
 
 	$usuario->cadastrar();
 
-    header('location:login.php');
+    header('location:cadastro.php');
 
 }
 ?>
 
-<?php require_once './inc/cabecalho_externo.php'; ?>
+<?php require_once './inc/cabecalho-cadastro.php'; ?>
 
+<!--criando formulario de cadastro -->
+<section class="cadastro-bloco-azul-marinho"></section>
+	<main class="container">
+		<div>
+			<h1 class="text-center my-2">Cadastro</h1>
+				<form class="container-fluid col-sm-6 m-auto shadow p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
 
-<div class="row">
-	<article class="col-12 bg-white rounded shadow my-1 py-4">
-		
-		<h2 class="text-center">
-		Inserir novo usuário
-		</h2>
-				
-		<form enctype="multipart/form-data" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">
+				<div class="d-grid gap-2 text-center">
+					<button class="btn btn-primary google-button" type="button">Google</button>
+					<button class="btn btn-primary" type="button">LinkedIn</button>
+					<p class="my-2">OU</p>
+				</div>
 
-			
-			<div class="mb-3">
-				<label class="form-label" for="nome">Nome:</label>
-				<input class="form-control" type="text" id="nome" name="nome" required>
-			</div>
-
-			<div class="mb-3">
-				<label class="form-label" for="email">E-mail:</label>
-				<input class="form-control" type="email" id="email" name="email" required>
-			</div>
-
-			<!-- <div class="mb-3">
-				<label class="form-label" for="telefone">Telefone:</label>
-				<input class="form-control" type="telefone" id="telefone" name="telefone" required>
-			</div> -->
-
-			<div class="mb-3">
-				<label class="form-label" for="senha">Senha:</label>
-				<input class="form-control" type="password" id="senha" name="senha" required>
-			</div>
-
-			<div class="mb-3">
-                <label class="form-label" for="imagem" class="form-label">Selecione uma imagem:</label>
-                <input required class="form-control" type="file" id="imagem" name="perfil"
-                accept="image/png, image/jpeg, image/gif, image/svg+xml">
-			</div>
-			
-
-            <!-- <div class="mb-3">
-                <label class="form-label" for="categoria">Categoria:</label>
-                <select class="form-select" name="tipo" id="categoria" required>
-                    <option value=""></option>
-					<option 
-                    value="Cliente"> 
-						Cliente
-					</option>
-
-					<option 
-                    value="Freelancer"> 
-						Freelancer
-					</option>
-
-					
-				
-                </select>
-            </div> -->
-			
-
-			<button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
-		</form>
-		
-	</article>
-</div>
-
-<?php require_once './inc/footer_externo.php'; ?>
+					<div class="form-group mt-2">
+						<label for="nome">Nome</label>
+						<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+					</div>
+					<div class="form-group mt-2">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					</div>
+					<div class="form-group mt-2">
+						<label for="senha">Senha</label>
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+					</div>
+					<div class="form-group mt-2">
+						<label for="perfil">Foto Perfil</label>
+						<input type="file" class="form-control" id="perfil" name="perfil" placeholder="Perfil">
+					</div>
+					<button type="submit" class="btn btn-primary mt-3 mb-5" name="inserir">Cadastrar</button>
+				</form>
+		</div>
+	</main>
+	
+<section class="cadastro-bloco-azul-marinho"></section>

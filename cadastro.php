@@ -40,15 +40,11 @@ if(isset($_POST['inserir'])) {
 		<div>
 			<h1 class="text-center my-2">Cadastro</h1>
 
-                <div class="col-4 align-self-end destaque-login">
+                <div class="col d-none d-md-block">
                     <h1 >XPTO.com</h1>
-                    <br>
                     <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
                     <p class="text-start">Realize o login para uma melhor experiência</p>
                     <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
-                
-                    
-
                     <p class="col-3"><img src="img/img-projetando.png" alt=""></p>
                 </div>
 

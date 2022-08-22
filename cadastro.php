@@ -1,5 +1,4 @@
 <?php
-use Projeto\Cliente;
 use Projeto\Usuario;
 
 require_once './vendor/autoload.php';
@@ -96,3 +95,5 @@ if(isset($_POST['inserir'])) {
 		
 	</article>
 </div>
+
+<?php require_once './inc/footer_externo.php'; ?>

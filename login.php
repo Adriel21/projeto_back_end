@@ -50,16 +50,15 @@ require "./vendor/autoload.php";
 <?php require_once 'inc/cabecalho-cadastro.php' ?>
 
 <section class="cadastro-bloco-azul-marinho"></section>
-    <main class="container">
+    <main class="container-md">
 		<div>
 			<h1 class="text-center my-2">Login</h1>
 				<form class="container-fluid col-sm-6 m-auto p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
-
-				<div class="d-grid gap-2 text-center">
-					<button class="btn btn-primary google-button" type="button">Google</button>
-					<button class="btn btn-primary" type="button">LinkedIn</button>
-					<p class="my-2">OU</p>
-				</div>
+					<div class="d-grid gap-2 text-center">
+						<button class="btn btn-primary google-button" type="button">Google</button>
+						<button class="btn btn-primary" type="button">LinkedIn</button>
+						<p class="my-2">OU</p>
+					</div>
 					<div class="form-group mt-2">
 						<label for="email">Email</label>
 						<input type="email" class="form-control" id="email" name="email" placeholder="Email">

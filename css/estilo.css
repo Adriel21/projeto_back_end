@@ -41,6 +41,14 @@ article, .btn-saibamais {
     color: #ffffff
 }
 
+    .azulmarinho{
+        background: #021d40;
+    }
+
+    .bg-form{
+        background: #EAEAFF;
+    }
+
     .btn-marinho:hover {
         background: #021057;
         color: #ffffff;

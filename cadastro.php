@@ -31,24 +31,23 @@ if(isset($_POST['inserir'])) {
 
 }
 ?>
-
 <?php require_once './inc/cabecalho-cadastro.php'; ?>
 
 <!--criando formulario de cadastro -->
-<section class="cadastro-bloco-azul-marinho"></section>
-	<main class="container">
-				<h1 class="text-center my-2">Cadastro</h1>	
-			<div class="column-content d-flex">
-                <div class="col d-none d-md-block">
-                    <h1 >XPTO.com</h1>
+	<div class="container marketing">
+		<div class="row featurette mt-5 m-auto">
+
+			<div class="col-md-6 d-none d-md-block">
+				<h1 >XPTO.com</h1>
                     <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
                     <p class="text-start">Realize o login para uma melhor experiência</p>
                     <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
-                    <p class="col-3"><img src="img/img-projetando.png" alt=""></p>
-                </div>
+					<img class="d-flex w-100 m-auto" src="img/img-projetando.png">
+			</div>
 
-                <form class="col-sm-6 m-auto p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
-                    <div class="d-grid gap-2 text-center">
+			<div class="col-md-6 p-sm-5 p-2 azulmarinho">
+				<form class="form-horizontal bg-form p-sm-5 p-2 rounded" role="form" action="#">
+					<div class="d-grid gap-2 text-center">
                         <button class="btn btn-primary google-button" type="button">Google</button>
                         <button class="btn btn-primary" type="button">LinkedIn</button>
                         <p class="my-2">OU</p>
@@ -82,6 +81,5 @@ if(isset($_POST['inserir'])) {
                     </div>
 				</form>
 			</div>
-	</main>
-
-<section class="cadastro-bloco-azul-marinho"></section>
+		</div>
+	</div>

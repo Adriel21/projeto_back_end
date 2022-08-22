@@ -25,7 +25,7 @@
 $users = ['Cliente', 'Freelancer'];?>
         <nav class="navbar">
             <ul>
-            <li class="btn btn-sm btn-outline-secondary mx-1" type="button">Login</li>
+            <li class="btn btn-sm btn-outline-secondary mx-1" type="button">Logout</li>
                 <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
                     <option value="">Cadastro</option>
                         <ul>

@@ -28,6 +28,7 @@ $dados = $usuario->listar();
 
 if(isset($_POST['inserir'])) {
 
+	$usuario->setId($_GET['id']);
     $usuario->setProfissao($_POST['titulo']);
     $usuario->setDescricao_profissao($_POST['descricao']);
     $usuario->setCategoriaId($_POST['categoria']);

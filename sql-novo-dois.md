@@ -17,11 +17,15 @@ CREATE TABLE usuario(
 );
 ```
 
-```sql
-CREATE TABLE freelancer(
+- Criando tabela Projeto
+```sql 
+CREATE TABLE projeto_cliente(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL,   
+    titulo VARCHAR(45) NOT NULL,
+    imagem VARCHAR(45),
+    descricao VARCHAR(255) NULL,
+    usuario_id INT NOT NULL,
+    categoria_id TINYINT NOT NULL
 );
 ```
 
@@ -30,4 +34,18 @@ ALTER TABLE usuario
 ADD CONSTRAINT fk_usuario_categoria
 FOREIGN KEY (categoria_id) REFERENCES categoria(id);
 
-----
+```
+
+```sql
+ALTER TABLE projeto
+ADD CONSTRAINT fk_projeto_categoria
+FOREIGN KEY (categoria_id) REFERENCES categoria(id);
+
+```
+
+```sql
+ALTER TABLE projeto
+ADD CONSTRAINT fk_projeto_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+
+```

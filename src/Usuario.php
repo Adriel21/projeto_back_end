@@ -68,10 +68,11 @@ class Usuario {
     }
 
     public function atualizar():void {
-        $sql = "UPDATE usuario SET profissao = :profissao, descricao_profissao = :descricao_profissao, categoria_id = :categoria_id";
+        $sql = "UPDATE usuario SET profissao = :profissao, descricao_profissao = :descricao_profissao, categoria_id = :categoria_id WHERE id = :id";
 
         try {
             $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
             $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
             $consulta->bindParam(":descricao_profissao", $this->descricao_profissao, PDO::PARAM_STR);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
@@ -94,45 +95,45 @@ class Usuario {
     // }
     
 
-    public function cadastrarPr():void {
-        $sql = "INSERT INTO usuario(profissao_id) VALUES(:profissao_id)";
+    // public function cadastrarPr():void {
+    //     $sql = "INSERT INTO usuario(profissao_id) VALUES(:profissao_id)";
 
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindParam(":profissao_id", $this->profissaoId, PDO::PARAM_INT);
-            $consulta->execute();
-        } catch (Exception $erro) {
-            die("Erro: ". $erro->getMessage());
-        }
-    }
+    //     try {
+    //         $consulta = $this->conexao->prepare($sql);
+    //         $consulta->bindParam(":profissao_id", $this->profissaoId, PDO::PARAM_INT);
+    //         $consulta->execute();
+    //     } catch (Exception $erro) {
+    //         die("Erro: ". $erro->getMessage());
+    //     }
+    // }
     
 
-    public function cadastrarFr():void {
-        $sql = "INSERT INTO usuario(cliente_id AS cliente) VALUES(:cliente)";
+    // public function cadastrarFr():void {
+    //     $sql = "INSERT INTO usuario(cliente_id AS cliente) VALUES(:cliente)";
 
-        try{
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindParam(":cliente", $this->clienteId, PDO::PARAM_INT);
-            $consulta->execute();
-        } catch (Exception $erro) {
-            die("Erro: ". $erro->getMessage());
-        }
-    }
+    //     try{
+    //         $consulta = $this->conexao->prepare($sql);
+    //         $consulta->bindParam(":cliente", $this->clienteId, PDO::PARAM_INT);
+    //         $consulta->execute();
+    //     } catch (Exception $erro) {
+    //         die("Erro: ". $erro->getMessage());
+    //     }
+    // }
 
         // Testado e funcionando
-        public function atualizarCadastro():void {
-            $sql = "UPDATE usuario SET cliente_id = :cliente_id WHERE usuario.id = :usuario.id";
+        // public function atualizarCadastro():void {
+        //     $sql = "UPDATE usuario SET cliente_id = :cliente_id WHERE usuario.id = :usuario.id";
             
     
-            try {
-                $consulta = $this->conexao->prepare($sql);
-                $consulta->bindParam(":usuario.id", $this->id, PDO::PARAM_INT);
-                $consulta->bindParam(":cliente_id", $this->clienteId, PDO::PARAM_INT);
-                $consulta->execute();
-            } catch (Exception $erro) {
-                die("Erro: ". $erro->getMessage());
-            }
-        }
+        //     try {
+        //         $consulta = $this->conexao->prepare($sql);
+        //         $consulta->bindParam(":usuario.id", $this->id, PDO::PARAM_INT);
+        //         $consulta->bindParam(":cliente_id", $this->clienteId, PDO::PARAM_INT);
+        //         $consulta->execute();
+        //     } catch (Exception $erro) {
+        //         die("Erro: ". $erro->getMessage());
+        //     }
+        // }
 
         // Testado e funcionando
         public function codificaSenha(string $senha):string {

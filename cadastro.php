@@ -32,6 +32,8 @@ if(isset($_POST['inserir'])) {
 }
 ?>
 
+<?php require_once './inc/cabecalho_externo.php'; ?>
+
 
 <div class="row">
 	<article class="col-12 bg-white rounded shadow my-1 py-4">

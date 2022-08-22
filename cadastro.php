@@ -39,13 +39,25 @@ if(isset($_POST['inserir'])) {
 	<main class="container">
 		<div>
 			<h1 class="text-center my-2">Cadastro</h1>
-				<form class="container-fluid col-sm-6 m-auto shadow p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
 
-				<div class="d-grid gap-2 text-center">
-					<button class="btn btn-primary google-button" type="button">Google</button>
-					<button class="btn btn-primary" type="button">LinkedIn</button>
-					<p class="my-2">OU</p>
-				</div>
+                <div class="col-4 align-self-end destaque-login">
+                    <h1 >XPTO.com</h1>
+                    <br>
+                    <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
+                    <p class="text-start">Realize o login para uma melhor experiência</p>
+                    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
+                
+                    
+
+                    <p class="col-3"><img src="img/img-projetando.png" alt=""></p>
+                </div>
+
+                <form class="container-fluid col-sm-6 m-auto shadow p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
+                    <div class="d-grid gap-2 text-center">
+                        <button class="btn btn-primary google-button" type="button">Google</button>
+                        <button class="btn btn-primary" type="button">LinkedIn</button>
+                        <p class="my-2">OU</p>
+                    </div>
 
 					<div class="form-group mt-2">
 						<label for="nome">Nome</label>

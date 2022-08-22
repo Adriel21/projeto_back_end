@@ -63,7 +63,16 @@ if(isset($_POST['inserir'])) {
 						<label for="perfil">Foto Perfil</label>
 						<input type="file" class="form-control" id="perfil" name="perfil" placeholder="Perfil">
 					</div>
-					<button type="submit" class="btn btn-primary mt-3 mb-5" name="inserir">Cadastrar</button>
+
+					<div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                            <label class="form-check-label" for="form2Example34"> ao criar sua conta, você está aceitando os termos de serviço e a politica de privacidade </label>
+                    </div>
+
+					<div class="d-grid gap-2 text-center">
+					    <button type="submit" class="btn btn-primary mt-3" name="inserir">Cadastra</button>
+                        <a href="login.php">Você já está registrado? Login</a>
+                    </div>
 				</form>
 		</div>
 	</main>

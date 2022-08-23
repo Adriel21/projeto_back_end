@@ -34,8 +34,8 @@ if(isset($_POST['inserir'])) {
 <?php require_once './inc/cabecalho-cadastro.php'; ?>
 
 <!--criando formulario de cadastro -->
-	<div class="container marketing">
-		<div class="row featurette mt-5 m-auto">
+	<div class="container marketing shadow">
+		<div class="row featurette my-5 p-sm-5">
 
 			<div class="col-md-6 d-none d-md-block">
 				<h1 >XPTO.com</h1>
@@ -45,8 +45,8 @@ if(isset($_POST['inserir'])) {
 					<img class="d-flex w-100 m-auto" src="img/img-projetando.png">
 			</div>
 
-			<div class="col-md-6 p-sm-5 p-2 azulmarinho">
-				<form class="form-horizontal bg-form p-sm-5 p-2 rounded" role="form" action="#">
+			<div class="col-md-6 p-sm-5 p-4 azulmarinho">
+				<form class="form-horizontal bg-form p-sm-5 p-3 rounded" role="form" action="#">
 					<div class="d-grid gap-2 text-center">
                         <button class="btn btn-primary google-button" type="button">Google</button>
                         <button class="btn btn-primary" type="button">LinkedIn</button>

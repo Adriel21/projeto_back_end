@@ -45,7 +45,7 @@ if(isset($_POST['inserir'])) {
 					<img class="d-flex w-100 m-auto" src="img/img-projetando.png">
 			</div>
 
-			<div class="col-md-6 p-sm-5 p-4 azulmarinho">
+			<div class="col-md-6 p-sm-5 p-4">
 				<form class="form-horizontal bg-form p-sm-5 p-3 rounded" role="form" action="#">
 					<div class="d-grid gap-2 text-center">
                         <button class="btn btn-primary google-button" type="button">Google</button>

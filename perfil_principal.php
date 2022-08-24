@@ -1,8 +1,8 @@
-<?php require_once './inc/cabecalho_externo.php'; ?>
+<?php require_once './inc/cabecalho_admin.php'; ?>
 
 
 <section aria-label="Seção de Perfil" class="text-center">
-    <h2 class="text-center">Bem-Vindo, Maicon!</h2>
+    <h2 class="text-center titulo-apresentacao">Bem-Vindo, Maicon!</h2>
     
    
 
@@ -22,4 +22,45 @@
     <div class="row g-5">
     <div class="col-md-5 col-lg-4 order-md-last">
     </section>
-<?php require_once './inc/footer_externo.php'; ?>
+
+    <main>
+      <h2 class="text-center titulo-projeto">Precisa de um Freelancer?<br>Então, <span>cadastre</span> seu projeto!</h2>
+      <section class="d-flex justify-content-center">
+        <article class="metricaUm mt-4"> 
+          <a href="">
+            <div class="contador">5</div>
+            <p >Projetos<br>Cadastrados</p>
+          </a>
+        </article>
+      </section>
+
+      <section class="d-flex justify-content-center mt-5">
+        <article class="metricaUm b-shadow"> 
+          <a href="">
+            <div class="contador">2</div>
+            <p >Projetos<br>Concluídos</p>
+          </a>
+        </article>
+      </section>
+
+      <section class="d-flex justify-content-center mt-5">
+        <article class="metricaUm b-shadow"> 
+          <a href="">
+            <div class="contador">2</div>
+            <p >Projetos<br>Cancelados</p>
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <section class="projetos-por-categoria mt-5 pb-4">
+        <h3 class="text-center pt-2 mb-3 titulo-meus-projetos pb-2">Meus Projetos</h3>
+      <div class="d-flex justify-content-center">
+        <select name="categorias" id="" class="">
+          <option value="" class="">Filtrar por categoria</option>
+          <option value="" class="">Web, Software & Mobile</option>
+        </select>
+      </div>
+      
+    </section>
+<?php require_once './inc/footer_admin.php'; ?>

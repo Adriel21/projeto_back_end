@@ -49,12 +49,20 @@ require "./vendor/autoload.php";
 
 <?php require_once 'inc/cabecalho-cadastro.php' ?>
 
-<section class="cadastro-bloco-azul-marinho"></section>
-    <main class="container-md">
-		<div>
-			<h1 class="text-center my-2">Login</h1>
-				<form class="container-fluid col-sm-6 m-auto p-3 rounded" action="cadastro.php" method="post" enctype="multipart/form-data">
-					<div class="d-grid gap-2 text-center">
+	<div class="container marketing shadow">
+		<div class="row featurette my-5 p-sm-5">
+
+			<div class="col-md-6 d-none d-md-block">
+				<h1 >XPTO.com</h1>
+                    <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
+                    <p class="text-start">Realize o login para uma melhor experiência</p>
+                    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
+					<img class="d-flex w-100 m-auto" src="img/img-projetando.png">
+			</div>
+
+			<div class="col-md-6 p-sm-5 p-4">
+				<form class="form-horizontal bg-form p-sm-5 p-3 rounded" role="form" action="#">
+				<div class="d-grid gap-2 text-center">
 						<button class="btn btn-primary google-button" type="button">Google</button>
 						<button class="btn btn-primary" type="button">LinkedIn</button>
 						<p class="my-2">OU</p>
@@ -90,6 +98,6 @@ require "./vendor/autoload.php";
                         <a href="cadastro.php">Ainda não criou sua conta? Cadastre-se</a>
                     </div>
 				</form>
+			</div>
 		</div>
-	</main>
-<section class="cadastro-bloco-azul-marinho"></section>
+	</div>

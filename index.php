@@ -1,135 +1,61 @@
 <?php 
 require_once 'inc/cabecalho_externo.php'
- 
 ?>
 
-    <!-- Primeiro destaque -->
-    
-    <section class="container my-5 justify-content-center media-break-point sm">
+<main class="container marketing mt-5">
 
-        <picture class="d-sm-none justify-content-center">
-           <p> 
-               <img class="d-flex w-75 m-auto" src="img/img-projetando.png" alt="banner tudo o que você precisa esta aqui">
-           </p>
+    <!-- Primeiro Blaco -->
+    <section class="row featurette pb-5">
+        <picture class="col-md-5">
+            <img src="img/img-projetando.png" alt="">
+        </picture>
+    
+        <div class="col-md-7 m-auto py-5 mb-5">
+            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary rounded" type="button">Cadastra-se</button>
+            </div>
+        </div>
+    </section>
+    <!-- Primeiro finalizado -->
+
+    <!-- Segundo Bloco -->
+    <hr class="featurette-divider d-none d-lg-block">
+
+    <div class="row featurette py-5">    
+        
+        <picture class="col-md-5 img-margin-nagativa">
+            <img src="img/img-projetando.png" alt="">
         </picture>
 
-    <main class="container text-center">
-  
-        <div class="row align-items-center ">
-            
-        <div class="col d-none d-md-block d-print-block col-md-8">
-            One of three columns
+        <div class="col-md-7 m-auto bg-info p-5">
+            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
         </div>
-        
-        <aside class="col d-none d-md-block d-print-block col-md-4">
-            <p><img src="img/img-job-anotacao.png" alt=""></p>
-        </aside>
     </div>
-  
-    </main>
+    <!-- Segundo bloco Finalizado -->
 
-        <div class="align-center p-3 text-center">
-            <h1>
-                Lorem ipsum dolor sit amet.
-            </h1>
+    <hr class="featurette-divider d-none d-lg-block">
 
-            <h2>
-                Ola mundo
-            </h2>
-
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium nesciunt aliquam atque similique inventore quibusdam, consequuntur esse unde rem quae ducimus distinctio nostrum ad rerum.
-            </p>
-        
-            <button class="btn btn-sm btn-saibamais mt-3 px-5 fs-5 align-center bold-button rounded-pill" type="button">Começa agora!</button>
+    <div class="row featurette mt-5">
+        <picture class="col-md-5">
+            <img src="img/img-projetando.png" alt="">
+        </picture>
+    
+        <div class="col-md-7 m-auto">
+            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
         </div>
-    </section>
-    <!-- Final Primeiro destaque -->
+    </div>
 
-    <!-- Segunda destaque -->
-    <section class="container-flex">
-        <img class="d-flex w-75 m-auto" src="img/img-equip-desenvolvendo.png" alt="banner tudo o que você precisa esta aqui">
+    <hr class="featurette-divider d-none d-lg-block">
 
-        <article class="align-center text-center py-5 img-dois-avatar">
-            <h2>
-                Comece agora!
-            </h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-            </p>
-        
-            <button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Saiba +</button>
-        </article>
-    </section>
-    <!-- Final segundo destaque -->
+    <!-- /END THE FEATURETTES -->
 
-    <!-- Cards  -->
-    <section class="container" id="teste">
-        <div class="row m-1">
+  </div><!-- /.container -->
+</main>
+   
 
-            <h2 class="text-center my-5">Encontre Freelancers</h2>
-
-            <div class="col-6 col-lg-4 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-4 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-4 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-4 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-4 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-laptop mx-2"></i>Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-4 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-saibamais rounded-pill">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Final cards -->
-
-   <?php require_once 'inc/footer_externo.php'; ?>
+<?php require_once 'inc/footer_externo.php'; ?>

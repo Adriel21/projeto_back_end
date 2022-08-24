@@ -10,58 +10,27 @@
 a {
     text-decoration: none;
 }
-/* Final configurações gerais */
 
-    /* Bold dos bottons */
-    .bold-button, h1, h2 {
-        font-weight: 600;
-    }
-
-    /* botton cards */
-    #teste a {
-        font-weight: 600;
-    }
-    /* final botton cards */
-
-
-/* Configurações da img gerais */
-.img-dois-avatar {
-    margin-top: -50px;
-    color: #021D40;
+/* configurações das imagens index */
+picture img {
+    width: 100%;
 }
-
-article, .btn-saibamais {
-    background: #05C7F2;
-}
-    /* Final img gerais */
-
-/* Button saiba configurações */
-.btn-marinho {
-    background: #021d40;
-    color: #ffffff
-}
-
-    .bg-form{
-        background: #EAEAFF;
+    .img-margin-nagativa {
+        margin-bottom: -40px;
+        position: relative;
     }
 
-    .btn-marinho:hover {
-        background: #021057;
-        color: #ffffff;
-    }
-
-    .btn-saibamais:hover {
-        background: #05C7F2;
-        color: #ffffff;
-    }
-/* Final button saiba configurações */
 
 /* Tela de Cadastro usuario */
-.cadastro-bloco-azul-marinho {
-    width: 100%;
-    height: 150px;
-    background: #021d40;
+.bg-form{
+    background: #EAEAFF;
 }
+
+    .cadastro-bloco-azul-marinho {
+        width: 100%;
+        height: 150px;
+        background: #021d40;
+    }
 
     .google-button {
         background: #DB4A39;
@@ -90,8 +59,6 @@ article, .btn-saibamais {
         text-decoration: none;
     }
     /* Final Footer Cor mais clara */
-
-
 /* Footer Configurações final */
 
 

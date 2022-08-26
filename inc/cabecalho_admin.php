@@ -14,11 +14,22 @@
 
     <!-- Icons Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<!-- 
+    <style>
+    @media (min-width: 960px) {
+    .section_detalhes{
+        width: 500% !important;
+    }
+} -->
+
+
+
+    </style>
 
 </head>
 <body>
     <header class="d-flex justify-content-around">
-    <h1><a class="navbar-brand pt-2" href="index.html"><img src="imagens/logo-e-favicon/Logo-sem-fundo-2.png"  alt="logo" width="80px"></a></h1>
+    <h1><a class="navbar-brand pt-2" href="index.html">ColaJob</a></h1>
     <nav class="navbar navbar-expand-md text-center ">
             <div class="container mxe-md-5">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

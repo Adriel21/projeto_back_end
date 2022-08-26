@@ -1,11 +1,23 @@
+
+/* Início do css de perfil apresentação */
+.titulo-apresentacao{
+    color: #021D40;
+    font-weight: bold;
+}
+/* fim do css de perfil apresentação */
+
+
+
+/* início do Css do main - mobile*/
 .metricaUm{
-    width: 30%;
+    
     /* border: 2px solid black; */
     text-align: center;
-    padding-top: 7px;
-    box-shadow: -1px 0px 4px 5px #010a1a81;
+    /* padding-top: 7px; */
+     /* box-shadow: -2px 7px #010a1a81;   */
 
 }
+
 
 .metricaUm a {
     text-decoration: none;
@@ -14,25 +26,21 @@
 .contador{
     background-color: #032F59;
     color: white;
-    width: 35%;
+    width: 25%;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bolder;
     margin: 0 auto;
-    font-size: 23px;
+    font-size: 26px;
     border-radius: 5px;
 }
 
 .metricaUm p {
     font-weight: bold;
     color: black;
-}
-
-.titulo-apresentacao{
-    color: #021D40;
-    font-weight: bold;
+    font-size: 24px;
 }
 
 .titulo-projeto{
@@ -40,17 +48,47 @@
     font-weight: bold;
 }
 
-.titulo-meus-projetos{
-    color: #314864;
-    font-weight: normal;
-    background-color: hsl(0, 0%, 85%, 50%);
-}
+/* Fim do css do main - mobile*/
+
+/* Início do css do main - desktop */
+/* @media (min-width: 960px) {
+    .section_detalhes{
+        width: 1000px !important;
+    }
+} */
+
+/* @media (min-width: 960px) {
+    .section_principal{
+        /* box-shadow: -1px 0px 4px 5px #010a1a81; */
+       
+    
+/* fim do css do main - desktop */
 
 
+
+
+
+
+/* css do botão */
 .btn-marinho {
     background: #021d40;
     color: #ffffff;
     font-weight: bold;
+}
+
+.btn{
+    width: 30%;
+    font-size: 18px;
+}
+/* fim do css do botão */
+
+
+/* Início do css de projetos */
+
+.titulo-meus-projetos{
+    color: #314864;
+    font-weight: normal;
+    background-color: hsl(0, 0%, 85%, 50%);
 }
 
 .projetos-por-categoria{
@@ -59,7 +97,11 @@
 
 }
 
-/* Final button saiba configurações */
+/* fim do css de projetos */
+
+
+
+
 
 
 /* Footer Configurações */

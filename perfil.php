@@ -2,7 +2,8 @@
 use Projeto\Usuario;
 
 
- require_once './inc/cabecalho-cadastro.php'; ?>
+require_once './inc/cabecalho-cadastro.php';
+?>
 
 <div class="container">
 
@@ -10,7 +11,7 @@ use Projeto\Usuario;
     <div class="row vh-100 overflow-auto">
         <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-dark d-flex sticky-top">
             <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
-                <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <a href="#" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-5">B<span class="d-none d-sm-inline">rand</span></span>
                 </a>
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">

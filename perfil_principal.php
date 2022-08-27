@@ -132,7 +132,7 @@ $sessao = new ControleDeAcesso?>
         <section class="projetos pt-3 pb-4">
         <h1>Meus Projetos</h1>
         <hr>
-        <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Cadastrar Projeto</button></div>
+        <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php">Cadastrar Projeto</a></button></div>
         <hr>
         <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
         <p class="mt-3">Filtrar por categoria:</p>
@@ -175,7 +175,7 @@ $sessao = new ControleDeAcesso?>
         <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
           <h1 class="me-5">Meus Projetos</h1>
           <hr>
-          <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Cadastrar Projeto</button></div>
+          <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php?id=<?=$_SESSION['id']?>">Cadastrar Projeto</a></button></div>
         <hr>
         <div class="ls-custom-select d-flex gap-4 align-items-center">
         <p class="mt-3">Filtrar por categoria:</p>

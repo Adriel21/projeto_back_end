@@ -22,14 +22,14 @@ require_once 'inc/cabecalho_externo.php'
         </div>
 
         <picture class="col-md-5 text-center">
-            <img class="img-responsive m-auto" src="img/img-pessoas-olhando-celular.png" alt="" width="100%" height="100%">
+            <img class="img-responsive m-auto" src="img/img-pessoas-sinalizando.png" alt="" width="100%" height="100%">
         </picture>
     </section>
     <!-- Primeiro finalizado -->
 
 
     <!-- Segundo Bloco -->
-    <section class="segna-bloco bg-primary py-5">
+    <section class="segna-bloco bg-primary py-2">
         <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-sm-row-reverse">
             <div class="col-md-7 m-auto pt-5">
                 <h2 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design</h2>
@@ -46,8 +46,8 @@ require_once 'inc/cabecalho_externo.php'
                     </div>
             </div>
 
-            <picture class="col-md-5 text-lg-end text-center pt-5">
-                <img class="img-responsive m-auto" src="img/img-equipe-conversando.png" alt="" width="100%" height="100%">
+            <picture class="col-md-5 text-lg-end text-center">
+                <img class="img-responsive m-auto" src="img/img-pessoas-olhando-celular.png" alt="" width="100%" height="100%">
             </picture>
         </section>
     </section>

@@ -14,6 +14,8 @@ require_once './vendor/autoload.php';
 // 	$usuario->inserir();
 // 	header("location:usuarios.php");
 // }
+$categoria = new ;
+$listaDeCategorias = $categoria->listar();
 if(isset($_POST['inserir'])) {
     $projeto = new Projeto;
 	$projeto->setTitulo($_POST['nome']);

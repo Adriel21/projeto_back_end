@@ -27,4 +27,4 @@ abstract class Banco {
         return self::$conexao;
     }
 }
-Banco::conecta(); // teste
+// Banco::conecta(); // teste

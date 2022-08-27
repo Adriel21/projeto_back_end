@@ -27,7 +27,7 @@ if(isset($_POST['inserir'])) {
 
 	$usuario->cadastrar();
 
-    header('location:cadastro.php');
+    header('location:login.php');
 
 }
 ?>
@@ -76,7 +76,7 @@ if(isset($_POST['inserir'])) {
                     </div>
 
 					<div class="d-grid gap-2 text-center">
-					    <button type="submit" class="btn btn-primary mt-3" name="inserir">Cadastra</button>
+					    <button type="submit" class="btn btn-primary mt-3" name="inserir">Cadastrar</button>
                         <a href="login.php">Você já está registrado? Login</a>
                     </div>
 				</form>

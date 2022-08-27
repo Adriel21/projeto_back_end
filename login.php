@@ -32,7 +32,8 @@ require "./vendor/autoload.php";
 						$sessao = new ControleDeAcesso;
 						if($dados['categoria_id'] !== null){
 							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
-								header('location:index.php');
+								// header('location:index.php');
+								echo 'errou';
 						} else {
 							$sessao->login($dados['id'], $dados['email'], $dados['nome'], $dados['perfil']);
 								header('location:index.php?id=' . $_SESSION['id']);
@@ -94,7 +95,7 @@ require "./vendor/autoload.php";
 
           
                     <div class="d-grid gap-2 text-center">
-					    <button type="submit" class="btn btn-primary mt-3" name="inserir">Entra</button>
+					    <button type="submit" class="btn btn-primary mt-3" name="entrar">Entra</button>
                         <a href="cadastro.php">Ainda não criou sua conta? Cadastre-se</a>
                     </div>
 				</form>

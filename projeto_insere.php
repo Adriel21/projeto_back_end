@@ -23,14 +23,14 @@ if(isset($_POST['inserir'])) {
 	$projeto->setResumo($_POST['resumo']);
     $projeto->setDescricao($_POST['descricao']);
     $projeto->setCategoriaId($_POST['categoria']);
-    $projeto->setusuar
+    $projeto->setUsuarioId($_GET['id']);
 
     // header("location:login.php");
 
 
 	$projeto->cadastrar();
 
-    header('location:login.php');
+    header('location:perfil_principal.php');
 
 }
 
@@ -45,7 +45,7 @@ if(isset($_POST['inserir'])) {
     <title>Projeto Insere</title>
 </head>
 <body>
-    <form action="">
+    <form action="" method="POST">
         <label for="nome">Título do Projeto</label>
         <input type="text" name="nome">
         <hr>

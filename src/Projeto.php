@@ -12,14 +12,16 @@ final class Projeto{
     private PDO $conexao;
 
     
+   
+
+    
+
+    
     public function __construct()
     {
-
-
-        /* Reaproveitando a conexão já existente
-        a partir da classe de Usuario */
-        $this->conexao = $this->cliente->getConexao();
+        $this->conexao = Banco::conecta();
     }
+
 
      // Testado e funcionando
      public function listar():array {
@@ -179,7 +181,7 @@ final class Projeto{
      */ 
     public function setUsuarioId($usuarioId)
     {
-        $this->usuarioId = $usuarioId;
+        $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
 
     
     }

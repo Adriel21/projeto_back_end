@@ -16,7 +16,7 @@ require_once 'inc/cabecalho_externo.php'
         </div>
 
         <picture class="col-md-5">
-            <img src="img/img-projetando.png" alt="">
+            <img src="img/img-projetando.png" alt=""  width="100%" height="100%">
         </picture>
     </section>
     <!-- Primeiro finalizado -->
@@ -35,7 +35,7 @@ require_once 'inc/cabecalho_externo.php'
             </div>
 
             <picture class="col-md-5">
-                <img src="img/img-projetando.png" alt="">
+                <img src="img/img-projetando.png" alt=""  width="100%" height="100%">
             </picture>
         </section>
     </section>

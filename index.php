@@ -11,12 +11,12 @@ require_once 'inc/cabecalho_externo.php'
             <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
 
             <div class="d-grid gap-2 col-6 m-auto mt-5 rounded">
-                <button class="rounded-5" type="button">Cadastra-se</button>
+                <button button class="rounded-5 py-3 border-none" type="button">Cadastra-se</button>
             </div>
         </div>
 
-        <picture class="col-md-5">
-            <img src="img/img-projetando.png" alt=""  width="100%" height="100%">
+        <picture class="col-md-5 text-center">
+            <img class="img-responsive w-75 m-auto" src="img/img-pessoas-olhando-celular.png" alt=""  width="100%" height="100%">
         </picture>
     </section>
     <!-- Primeiro finalizado -->
@@ -30,12 +30,12 @@ require_once 'inc/cabecalho_externo.php'
                 <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
 
                 <div class="d-grid gap-2 col-6 m-auto mt-5 rounded">
-                    <button button class="rounded-5" type="button">Cadastra-se</button>
+                    <button button class="rounded-5 py-3 border-none" type="button">Cadastra-se</button>
                 </div>
             </div>
 
-            <picture class="col-md-5">
-                <img src="img/img-projetando.png" alt=""  width="100%" height="100%">
+            <picture class="col-md-5 text-center">
+                <img class="img-responsive w-75 m-auto" src="img/img-equipe-conversando.png" alt=""  width="100%" height="100%">
             </picture>
         </section>
     </section>
@@ -106,6 +106,32 @@ require_once 'inc/cabecalho_externo.php'
                     </div>
                 </div>
             </section>
+    </section>
+
+    <section class="bg-primary">
+        <div class="container py-5">
+            <!-- row -->
+            <div class="row align-items-center g-0">
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                    <!-- heading -->
+                    <div>
+                    <h1 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design
+                    </h1>
+                    <!-- text -->
+                    <p class="text-white-50 mb-4 lead">
+                        If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                        employee professional development and well-being.
+                    </p>
+                    <!-- btn -->
+                    <a href="#" class="btn btn-dark">View opportunities</a>
+                    </div>
+                </div>
+                <!-- img -->
+                <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
+                    <img src="img/img-equipe-conversando.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
     </section>
 
 </main>

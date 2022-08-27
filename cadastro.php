@@ -46,7 +46,7 @@ if(isset($_POST['inserir'])) {
 			</div>
 
 			<div class="col-md-6 p-sm-5 p-4">
-				<form class="form-horizontal bg-form p-sm-5 p-3 rounded" role="form" action="#">
+				<form class="form-horizontal bg-form p-sm-5 p-3 rounded" action="" method="POST">
 					<div class="d-grid gap-2 text-center">
                         <button class="btn btn-primary google-button" type="button">Google</button>
                         <button class="btn btn-primary" type="button">LinkedIn</button>
@@ -76,7 +76,7 @@ if(isset($_POST['inserir'])) {
                     </div>
 
 					<div class="d-grid gap-2 text-center">
-					    <button type="submit" class="btn btn-primary mt-3" name="inserir">Cadastrar</button>
+					    <button type="submit" class="btn btn-primary mt-3" id="inserir" name="inserir">Cadastrar</button>
                         <a href="login.php">Você já está registrado? Login</a>
                     </div>
 				</form>

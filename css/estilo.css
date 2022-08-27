@@ -29,6 +29,7 @@ picture img {
         background: #021d40;
         color: #fff;
         padding: 5px 0;
+        border: none;
     }
 
     button:hover {

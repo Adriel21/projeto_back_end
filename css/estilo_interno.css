@@ -72,3 +72,17 @@ aside{
 
 
 /* fim do css da barra lateral */
+
+
+/* Footer Configurações */
+.bg-marinho-footer {
+    background: #021d40;
+    color: #fff;
+    clear: both;
+}
+/* Footer Configurações final */
+
+
+@media (min-width: 576px) {
+  
+}

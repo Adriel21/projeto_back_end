@@ -112,7 +112,7 @@
 
       
     </section>  -->
-    <main class="mt-4">
+    <main class="mt-4 mb-4">
       <section class="text-center d-lg-none">
         <section class="perfil pt-3 pb-3 mb-4">
           <img src="./img//gabriel_genovez.jfif" alt="" width="150">
@@ -165,7 +165,7 @@
         </aside>
 
 
-        <section class="projetos_desktop pt-3 pb-4 float-end d-none d-lg-block ps-3 me-3">
+        <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
         <h1>Meus Projetos</h1>
         <hr>
         <div class="ls-custom-select d-flex gap-4 align-items-center">
@@ -177,7 +177,7 @@
         <option value="4"> Opção 4 </option>
     </select>
     </div>
-        <div class="col-12 px-md-1 mt-4">
+        <div class="col-12 px-md-1 mt-2">
                   <div class="list-group">
                       <div class="list-group-item list-group-item-action">
                         <h4 class="">Título: Desenvolvimento de aplicativo</h4>
@@ -189,4 +189,31 @@
               </div>
         </section>
     </main>
+
+    <footer class="bg-marinho-footer text-center text-white mt-5">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1 fs-5" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1 fs-5" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+      <p class="copyright">
+        © 2022 Copyright:<a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </p>
+      
+      <p class="copyright">
+        <a class="text-white" href="https://mdbootstrap.com/">Politica de Privacidade</a>
+      </p>
+    </div>
+    <!-- Copyright -->
+  </footer>
     

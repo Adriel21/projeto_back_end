@@ -1,0 +1,16 @@
+<?php
+
+use Projeto\ControleDeAcesso;
+use Projeto\Projeto;
+use Projeto\Usuario;
+
+require_once './vendor/autoload.php';
+$sessao = new ControleDeAcesso;
+$projeto = new Projeto;
+$projeto->setUsuarioId($_GET['id']);
+$dados = $projeto->listarDetalhes();
+
+// $usuario->validaFreela();
+$sessao->loginTres($dados['usuario_id'], $dados['nome'], $dados['perfil'], $dados['email'], $dados['categoria_id'], $dados['titulo']);
+header('location:perfil_principal.php');
+

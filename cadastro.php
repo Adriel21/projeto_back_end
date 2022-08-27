@@ -67,7 +67,7 @@ if(isset($_POST['inserir'])) {
 					</div>
 					<div class="form-group mt-2">
 						<label for="perfil">Foto Perfil</label>
-						<input type="file" class="form-control" id="perfil" name="perfil" placeholder="Perfil">
+						<input type="file" class="form-control" id="perfil" name="perfil" placeholder="Perfil"  accept="image/png, image/jpeg, image/gif, image/svg+xml">
 					</div>
 
 					<div class="form-check mt-2">

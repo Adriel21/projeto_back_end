@@ -30,7 +30,7 @@
 </head>
 <body>
     <header class="d-flex justify-content-around">
-    <h1><img src="../img/" alt="" width="200" height="80"></h1>
+    <h1><picture><img src="./logo_colajob.png" alt="" width="200" height="80"></picture></h1>
     <nav class="navbar navbar-expand-md text-center ">
             <div class="container mxe-md-5">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

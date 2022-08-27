@@ -1,5 +1,6 @@
 <?php
 
+use Projeto\Categoria;
 use Projeto\Projeto;
 
 require_once './vendor/autoload.php';
@@ -14,7 +15,7 @@ require_once './vendor/autoload.php';
 // 	$usuario->inserir();
 // 	header("location:usuarios.php");
 // }
-$categoria = new ;
+$categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 if(isset($_POST['inserir'])) {
     $projeto = new Projeto;
@@ -66,6 +67,8 @@ if(isset($_POST['inserir'])) {
 					
 				</select>
 			</div>
+
+            <button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
     </form>
 </body>
 </html>

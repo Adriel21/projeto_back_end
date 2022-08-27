@@ -8,6 +8,7 @@ require "./vendor/autoload.php";
 ?>
 
 
+<?php require_once 'inc/cabecalho-cadastro.php' ?>
 
 	<div class="container marketing shadow">
 		<div class="row featurette my-5 p-sm-5">
@@ -21,7 +22,7 @@ require "./vendor/autoload.php";
 			</div>
 
 			<div class="col-md-6 p-sm-5 p-4">
-				<form class="form-horizontal bg-form p-sm-5 p-3 rounded" role="form" action="#">
+				<form class="form-horizontal bg-form p-sm-5 p-3 rounded"  action="" method="POST">
 				<div class="d-grid gap-2 text-center">
 						<button class="btn btn-primary google-button" type="button">Google</button>
 						<button class="btn btn-primary" type="button">LinkedIn</button>
@@ -48,13 +49,13 @@ require "./vendor/autoload.php";
 
                         <div class="col">
                         <!-- Simple link -->
-                        <a href="#!">Esqueci a senha?</a>
+                        <a href="">Esqueci a senha?</a>
                         </div>
                     </div>
 
           
                     <div class="d-grid gap-2 text-center">
-					    <button type="submit" class="btn btn-primary mt-3" name="entrar">Entra</button>
+					    <button  class="btn btn-primary mt-3" id="entrar" name="entrar">Entra</button>
                         <a href="cadastro.php">Ainda não criou sua conta? Cadastre-se</a>
                     </div>
 				</form>
@@ -103,4 +104,3 @@ require "./vendor/autoload.php";
 			}
 		
 		?>
-

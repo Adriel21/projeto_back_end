@@ -1,6 +1,7 @@
 <?php
 
 use Projeto\Categoria;
+use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
 require_once './vendor/autoload.php';
@@ -15,11 +16,13 @@ require_once './vendor/autoload.php';
 // 	$usuario->inserir();
 // 	header("location:usuarios.php");
 // }
+$sessao = new ControleDeAcesso;
+
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 if(isset($_POST['inserir'])) {
     $projeto = new Projeto;
-	$projeto->setTitulo($_POST['nome']);
+	$projeto->setTitulo($_POST['titulo']);
 	$projeto->setResumo($_POST['resumo']);
     $projeto->setDescricao($_POST['descricao']);
     $projeto->setCategoriaId($_POST['categoria']);
@@ -47,7 +50,7 @@ if(isset($_POST['inserir'])) {
 <body>
     <form action="" method="POST">
         <label for="nome">Título do Projeto</label>
-        <input type="text" name="nome">
+        <input type="text" name="titulo">
         <hr>
         <label for="resumo">Resumo do Projeto</label>
         <input type="text" name="resumo">

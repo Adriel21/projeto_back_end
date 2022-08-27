@@ -50,6 +50,20 @@ if(isset($_POST['inserir'])) {
         <hr>
         <label for="descricao">Descrição do projeto</label>
         <input type="text" name="descricao">
+
+        <div class="mb-3">
+                <label class="form-label" for="categoria">Categoria:</label>
+                <select class="form-select" name="categoria" id="categoria" required>
+					<option value=""></option>
+					
+					<?php foreach($listaDeCategorias as $categorias) { ?>
+					<option value="<?=$categorias['id']?>"> 
+						<?=$categorias['nome']?> 
+					</option>
+					<?php } ?>
+					
+				</select>
+			</div>
     </form>
 </body>
 </html>

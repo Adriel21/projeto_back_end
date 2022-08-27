@@ -49,7 +49,7 @@ if(isset($_POST['inserir'])) {
 </head>
 <body>
     <form action="" method="POST">
-        <label for="nome">Título do Projeto</label>
+        <label for="titulo">Título do Projeto</label>
         <input type="text" name="titulo">
         <hr>
         <label for="resumo">Resumo do Projeto</label>

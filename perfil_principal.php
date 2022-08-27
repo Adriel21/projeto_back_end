@@ -1,9 +1,14 @@
 <?php
 
 use Projeto\ControleDeAcesso;
+use Projeto\Projeto;
+
 require_once './vendor/autoload.php';
  require_once './inc/cabecalho_admin.php'; 
-$sessao = new ControleDeAcesso?>
+$sessao = new ControleDeAcesso;
+$projeto = new Projeto;
+$listaDeProjeto = $projeto->listarDetalhes();
+?>
 
 
 <!-- <section aria-label="Seção de Perfil" class="text-center">
@@ -189,7 +194,15 @@ $sessao = new ControleDeAcesso?>
         <div class="col-12 px-md-1 mt-2">
                   <div class="list-group">
                       <div class="list-group-item list-group-item-action">
-                        <h4 class="">Título: Desenvolvimento de aplicativo</h4>
+                        <?php foreach($listaDeProjeto as $projetos) { ?>
+                        <h4 class=""><?php
+                        if ($_SESSION['id'] === $projetos->getUsuarioId()) {
+                          $projetos['titulo'];
+                        }
+                        ?>
+                        <?php } ?>
+                      
+                      </h4>
                           <span><strong>Data:</strong> 25/08/2022</span>
                           <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
                           <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Visualizar projeto</button></div>

@@ -37,6 +37,14 @@ public function loginDois (int $id, string $nome, string $email, string $perfil,
     $_SESSION['categoria_id'] = $categoriaId;
 }
 
+public function loginTres (int $id, string $nome, string $email, string $perfil, int $categoriaId, int $usuarioId): void {
+    $_SESSION['id'] = $id;
+    $_SESSION['nome'] = $nome;
+    $_SESSION['perfil'] = $perfil;
+    $_SESSION['email'] = $email;
+    $_SESSION['categoria_id'] = $categoriaId;
+    $_SESSION['usuario_id'] = $usuarioId;
+}
 
 
 

@@ -39,7 +39,7 @@ final class Projeto{
     }
 
     public function cadastrar():void {
-        $sql = "INSERT INTO projeto(titulo, resumo, descricao, usuario_id, categoria_id) VALUES(:titulo, :resumo, :descricao, :resumo, :usuario_id, :categoria_id)";
+        $sql = "INSERT INTO projeto(titulo, resumo, descricao, usuario_id, categoria_id) VALUES(:titulo, :resumo, :descricao, :usuario_id, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -73,6 +73,20 @@ final class Projeto{
             $destino = "./imagem/".$nome;
 
             move_uploaded_file($temporario, $destino);
+        }
+
+        public function listarDetalhes():array {
+            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, usuario.nome AS autor, usuario.email AS email, usuario.perfil AS perfil FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id";
+    
+    
+             try {
+                $consulta = $this->conexao->prepare($sql);
+                $consulta->execute();
+                $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+            } catch (Exception $erro) {
+                die("Erro: ". $erro->getMessage());
+            }
+            return $resultado;
         }
 
 

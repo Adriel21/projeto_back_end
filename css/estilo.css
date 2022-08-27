@@ -36,9 +36,14 @@ picture img {
     }
 
 /* Tela de Cadastro usuario */
-.bg-form{
-    background: #EAEAFF;
-}
+    .bg-form{
+        background: #EAEAFF;
+    }
+
+   .coluna-vagas {
+       border: 1px solid color(0, 0, 0, 50%);
+       border-radius: 4px;
+   }
 
     .cadastro-bloco-azul-marinho {
         width: 100%;

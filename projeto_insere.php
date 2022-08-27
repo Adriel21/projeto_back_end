@@ -19,11 +19,11 @@ if(isset($_POST['inserir'])) {
 	$projeto->setTitulo($_POST['nome']);
 	$projeto->setResumo($_POST['resumo']);
     $projeto->setDescricao($_POST['descricao']);
-    
+
     // header("location:login.php");
 
 
-	$usuario->cadastrar();
+	$projeto->cadastrar();
 
     header('location:login.php');
 

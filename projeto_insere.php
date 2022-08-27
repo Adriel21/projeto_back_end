@@ -19,6 +19,7 @@ if(isset($_POST['inserir'])) {
 	$projeto->setTitulo($_POST['nome']);
 	$projeto->setResumo($_POST['resumo']);
     $projeto->setDescricao($_POST['descricao']);
+    $projeto->setCategoriaId($_POST['categoria']);
 
     // header("location:login.php");
 

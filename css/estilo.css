@@ -20,15 +20,10 @@ picture img {
         position: relative;
     }
 
-    .bg-action {
-        background: #05C7F2;
-    }
-
     /* button index */
     button {
         background: #021d40;
         color: #fff;
-        padding: 5px 0;
         border: none;
     }
 

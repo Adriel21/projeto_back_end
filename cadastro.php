@@ -42,7 +42,7 @@ if(isset($_POST['inserir'])) {
                     <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
                     <p class="text-start">Realize o login para uma melhor experiência</p>
                     <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo nostrum aliquam voluptatibus. Cumque, nulla?</p>
-					<img class="d-flex w-100 m-auto" src="img/img-projetando.png">
+					<img class="d-flex w-75 m-auto" src="img/img-pessoas-fazendo-cadastro.png">
 			</div>
 
 			<div class="col-md-6 p-sm-5 p-4">

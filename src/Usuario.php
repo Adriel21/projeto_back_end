@@ -307,8 +307,7 @@ class Usuario {
      */ 
     public function setCategoriaId($categoriaId)
     {
-        $this->categoriaId = $categoriaId;
+        $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
 
-        return $this;
     }
 }

@@ -1,3 +1,36 @@
+<?php
+
+use Projeto\Projeto;
+
+require_once './vendor/autoload.php';
+// if( isset($_POST['inserir']) ){
+// 	$usuario = new Usuario;
+// 	$usuario->setNome($_POST['nome']);
+// 	$usuario->setEmail($_POST['email']);
+// 	$usuario->setTipo($_POST['tipo']);
+// 	$usuario->setSenha(  $usuario->codificaSenha($_POST['senha'])  );
+// 	// echo $usuario->getSenha();
+
+// 	$usuario->inserir();
+// 	header("location:usuarios.php");
+// }
+if(isset($_POST['inserir'])) {
+    $projeto = new Projeto;
+	$projeto->setTitulo($_POST['nome']);
+	$projeto->setResumo($_POST['resumo']);
+    $projeto->setDescricao($_POST['descricao']);
+    
+    // header("location:login.php");
+
+
+	$usuario->cadastrar();
+
+    header('location:login.php');
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

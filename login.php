@@ -6,47 +6,6 @@ use Projeto\Usuario;
 
 require "./vendor/autoload.php";
 ?>
-<?php
-		if(isset($_POST['entrar'])){
-			//Verificação de campos do formulário
-			if(empty($_POST['email']) || empty($_POST['senha'])){
-				header("location:login.php?campos_obrigatorios");
-			} else {
-				
-					$usuario = new Usuario;
-					$usuario->setEmail($_POST['email']);
-	
-					// Buscando um usuário no banco a partir do e-mail
-					$dados = $usuario->buscar();
-				}
-				// Capturamos o email informado
-			
-
-				//if($dados === false){ - Se dados for false(ou seja, não tem dados de nenhum usuário cadastrado)
-				if(!$dados) {
-					//echo "Não tem ninguém nessa bagaça!";
-					header("location:login.php?nao_encontrado");
-				} else {
-					// Verificação da senha e login
-					if(password_verify($_POST['senha'], $dados['senha']) ) {
-						$sessao = new ControleDeAcesso;
-						if($dados['categoria_id'] !== null){
-							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
-								// header('location:index.php');
-								echo 'errou';
-						} else {
-							$sessao->login($dados['id'], $dados['email'], $dados['nome'], $dados['perfil']);
-								header('location:index.php?id=' . $_SESSION['id']);
-                        }
-					} else {
-						header("location:login.php?senha_incorreta");
-					}
-				}
-				
-				// Utilitarios::dump($dados);
-			}
-		
-		?>
 
 
 
@@ -102,3 +61,46 @@ require "./vendor/autoload.php";
 			</div>
 		</div>
 	</div>
+
+    <?php
+		if(isset($_POST['entrar'])){
+			//Verificação de campos do formulário
+			if(empty($_POST['email']) || empty($_POST['senha'])){
+				header("location:login.php?campos_obrigatorios");
+			} else {
+				
+					$usuario = new Usuario;
+					$usuario->setEmail($_POST['email']);
+	
+					// Buscando um usuário no banco a partir do e-mail
+					$dados = $usuario->buscar();
+				}
+				// Capturamos o email informado
+			
+
+				//if($dados === false){ - Se dados for false(ou seja, não tem dados de nenhum usuário cadastrado)
+				if(!$dados) {
+					//echo "Não tem ninguém nessa bagaça!";
+					header("location:login.php?nao_encontrado");
+				} else {
+					// Verificação da senha e login
+					if(password_verify($_POST['senha'], $dados['senha']) ) {
+						$sessao = new ControleDeAcesso;
+						if($dados['categoria_id'] !== null){
+							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
+								// header('location:index.php');
+								echo 'errou';
+						} else {
+							$sessao->login($dados['id'], $dados['email'], $dados['nome'], $dados['perfil']);
+								header('location:index.php?id=' . $_SESSION['id']);
+                        }
+					} else {
+						header("location:login.php?senha_incorreta");
+					}
+				}
+				
+				// Utilitarios::dump($dados);
+			}
+		
+		?>
+

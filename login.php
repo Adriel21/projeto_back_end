@@ -89,11 +89,11 @@ require "./vendor/autoload.php";
 						$sessao = new ControleDeAcesso;
 						if($dados['categoria_id'] !== null){
 							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
-								// header('location:index.php');
-								echo 'errou';
+                            header('location:perfil_principal.php?id=' . $_SESSION['id']);;
+								///echo 'errou';
 						} else {
-							$sessao->login($dados['id'], $dados['email'], $dados['nome'], $dados['perfil']);
-								header('location:index.php?id=' . $_SESSION['id']);
+							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
+								header('location:perfil_principal.php?id=' . $_SESSION['id']);
                         }
 					} else {
 						header("location:login.php?senha_incorreta");

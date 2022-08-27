@@ -1,4 +1,9 @@
-<?php require_once './inc/cabecalho_admin.php'; ?>
+<?php
+
+use Projeto\ControleDeAcesso;
+require_once './vendor/autoload.php';
+ require_once './inc/cabecalho_admin.php'; 
+$sessao = new ControleDeAcesso?>
 
 
 <!-- <section aria-label="Seção de Perfil" class="text-center">
@@ -116,8 +121,8 @@
     <main class="mt-4 mb-4">
       <section class="text-center d-lg-none">
         <section class="perfil pt-3 pb-3 mb-4">
-          <img src="./img//gabriel_genovez.jfif" alt="" width="150">
-          <p><strong>Gabriel Genovez</strong></p>
+          <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
+          <p><strong><?=$_SESSION['nome']?></strong></p>
           <button class="botao-perfil rounded-pill ">Editar Perfil</button>
           <hr>
           <h2>Projetos Publicados:</h2>
@@ -126,6 +131,8 @@
         </section>
         <section class="projetos pt-3 pb-4">
         <h1>Meus Projetos</h1>
+        <hr>
+        <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Cadastrar Projeto</button></div>
         <hr>
         <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
         <p class="mt-3">Filtrar por categoria:</p>
@@ -152,13 +159,12 @@
       
         <aside class="text-center d-lg-block d-none">
         <section class="perfil pt-3 pb-3 mb-4">
-          <img src="./img//gabriel_genovez.jfif" alt="" width="150">
-          <p><strong>Gabriel Genovez</strong></p>
+          <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
+          <p><strong><?=$_SESSION['nome']?></strong></p>
           <button class="botao-perfil rounded-pill ">Editar Perfil</button>
           <hr>
           <h2>Projetos Publicados:</h2>
           <p class="contador">5</p>
-        
         </section>
        
         
@@ -167,7 +173,9 @@
 
 
         <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
-        <h1>Meus Projetos</h1>
+          <h1 class="me-5">Meus Projetos</h1>
+          <hr>
+          <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Cadastrar Projeto</button></div>
         <hr>
         <div class="ls-custom-select d-flex gap-4 align-items-center">
         <p class="mt-3">Filtrar por categoria:</p>

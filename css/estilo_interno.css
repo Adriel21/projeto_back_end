@@ -54,6 +54,8 @@
     padding: 9px;
     width: 250px;
 }
+
+
 /* Fim projetos */
 /* Fim do css main início */
 
@@ -83,6 +85,6 @@ aside{
 /* Footer Configurações final */
 
 
-@media (min-width: 576px) {
-  
+footer{
+    margin-top: 4000px !important;
 }

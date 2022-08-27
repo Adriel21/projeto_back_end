@@ -1,21 +1,28 @@
+  <footer class="bg-marinho-footer text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1 fs-5" href="#!" role="button"><i class="bi bi-instagram"></i></a>
 
-<footer class="container-fluid bg-marinho-footer shadow">
-  <section class="container d-flex flex-wrap justify-content-between align-items-center p-5 ">
-
-    <div class="col-md-6 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-      </a>
-      <span class="mb-3 mb-md-0">&copy; 2022 Company, Inc</span>
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1 fs-5" href="#!" role="button"><i class="bi bi-twitter"></i></a>
     </div>
+    <!-- Grid container -->
 
-    <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="fs-1" href="#"><i class="bi bi-twitter"></i></a></li>
-      <li class="ms-3"><a class="fs-1" href="#"><i class="bi bi-instagram"></i></a></li>
-    </ul>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
 
-  </section>
-</footer>
-
+      <p class="copyright">
+        © 2022 Copyright:<a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </p>
+      
+      <p class="copyright">
+        <a class="text-white" href="https://mdbootstrap.com/">Politica de Privacidade</a>
+      </p>
+    </div>
+    <!-- Copyright -->
+  </footer>
 </body>
 </html>

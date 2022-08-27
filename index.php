@@ -6,36 +6,48 @@ require_once 'inc/cabecalho_externo.php'
 
     <!-- Primeiro Blaco -->
     <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-md-row">
-        <div class="col-md-7 m-auto pt-5">
-            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
+            <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
+                <h1 class="display-4 fw-bold pe-lg-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, architecto.</h1>
+                    <!-- text -->
+                    <p class="mb-4 lead">
+                        If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                         employee professional development and well-being.
+                    </p>
 
-            <div class="d-grid gap-2 col-6 m-auto mt-5 rounded">
-                <button class="rounded-5" type="button">Cadastra-se</button>
+                <div class="d-grid gap-2 col-4 mt-5 rounded">
+                    <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                        Cadastra-se
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <picture class="col-md-5">
-            <img src="img/img-projetando.png" alt=""  width="100%" height="100%">
+        <picture class="col-md-5 text-center">
+            <img class="img-responsive m-auto" src="img/img-pessoas-sinalizando.png" alt="" width="100%" height="100%">
         </picture>
     </section>
     <!-- Primeiro finalizado -->
 
 
     <!-- Segundo Bloco -->
-    <section class="segna-bloco bg-action py-5">
+    <section class="segna-bloco bg-primary py-2">
         <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-sm-row-reverse">
-            <div class="col-md-7 m-auto pt-5">
-                <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sit commodi praesentium placeat odit aperiam explicabo deleniti. Provident mollitia corporis, aliquam sequi, deserunt iusto at optio quas officiis totam molestiae, neque et sunt! Inventore, soluta.</p>
+            <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
+                <h2 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design</h2>
+                    <!-- text -->
+                    <p class="text-white mb-4 lead">
+                        If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                        employee professional development and well-being.
+                    </p>
 
-                <div class="d-grid gap-2 col-6 m-auto mt-5 rounded">
-                    <button button class="rounded-5" type="button">Cadastra-se</button>
-                </div>
+                    <div class="d-grid gap-2 col-4 mt-5 rounded">
+                        <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                            Cadastra-se
+                        </button>
+                    </div>
             </div>
 
-            <picture class="col-md-5">
-                <img src="img/img-projetando.png" alt=""  width="100%" height="100%">
+            <picture class="col-md-5 text-lg-end text-center">
+                <img class="img-responsive m-auto" src="img/img-pessoas-olhando-celular.png" alt="" width="100%" height="100%">
             </picture>
         </section>
     </section>
@@ -51,7 +63,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -61,7 +73,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -71,7 +83,7 @@ require_once 'inc/cabecalho_externo.php'
                     <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -81,7 +93,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -91,7 +103,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -101,11 +113,40 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
             </section>
+    </section>
+
+    <section class="bg-primary">
+        <div class="container py-5">
+            <!-- row -->
+            <div class="row align-items-center g-0">
+                <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
+                    <!-- heading -->
+                    <div>
+                        <h1 class="text-white display-4 fw-bold pe-lg-8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                        <!-- text -->
+                        <p class="text-white-50 mb-4 lead">
+                            If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                            employee professional development and well-being.
+                        </p>
+                        <!-- btn -->
+                        <div class="d-grid gap-2 col-4 mt-5 rounded">
+                            <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                                Cadastra-se
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- img -->
+                <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-5">
+                    <img class="img-responsive m-auto" src="img/img-equipe-conversando.png" alt="" width="100%" height="100%">
+                </picture>
+            </div>
+        </div>
     </section>
 
 </main>

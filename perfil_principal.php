@@ -83,14 +83,19 @@
 </div> -->
     </main>
 
+<<<<<<< Updated upstream
     <section class="projetos-por-categoria mt-5 mt-lg-3 pb-4">
+=======
+    <section class="projetos-por-categoria mt-5 pb-4 ps-2">
+>>>>>>> Stashed changes
         <h3 class="text-center pt-2 mb-3 titulo-meus-projetos pb-2">Meus Projetos</h3>
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center mb-2">
         <select name="categorias" id="" class="">
           <option value="" class="">Filtrar por categoria</option>
           <option value="" class="">Web, Software & Mobile</option>
         </select>
       </div>
+<<<<<<< Updated upstream
 
       <div class="col-12 px-md-1 mt-4">
                 <div class="list-group">
@@ -105,4 +110,10 @@
                 </div>
             </div>
       
+=======
+      <h4 class="">Título: Desenvolvimento de aplicativo</h4>
+      <span><strong>Data:</strong> 25/08/2022</span>
+      <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
+      <div class="d-flex justify-content-center"><button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Visualizar projeto</button></div>
+>>>>>>> Stashed changes
     </section>

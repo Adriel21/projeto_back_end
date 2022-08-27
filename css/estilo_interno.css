@@ -1,116 +1,74 @@
-
-/* Início do css de perfil apresentação */
-.titulo-apresentacao{
-    color: #021D40;
-    font-weight: bold;
-}
-/* fim do css de perfil apresentação */
-
-
-
-/* início do Css do main - mobile*/
-.metricaUm{
-    
-    /* border: 2px solid black; */
-    text-align: center;
-    /* padding-top: 7px; */
-     /* box-shadow: -2px 7px #010a1a81;   */
-
-}
-
-
-.metricaUm a {
-    text-decoration: none;
-}
-
-.contador{
-    background-color: #032F59;
-    color: white;
-    width: 25%;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bolder;
+/* Css main início */
+.perfil{
+    border: 1px solid hsl(0, 0%, 0%, 50%);
+    max-width: 90%;
     margin: 0 auto;
-    font-size: 26px;
+    border-radius: 12px;
+}
+
+.perfil img{
+    border-radius: 150px;
+}
+
+.perfil p {
+    font-size: 25px;
+    color: #021D40;;
+}
+
+.perfil h2{
+    font-size: 19px;
+}
+
+.perfil .contador{
+    background-color: #021D40;
+    color: white;
+    width: 70px;
+    margin: 0 auto;
     border-radius: 5px;
 }
 
-.metricaUm p {
-    font-weight: bold;
-    color: black;
+.botao-perfil{
+    background-color: #021D40;
+    color: white;
+    border: none;
+    padding: 9px;
+    width: 150px;
+}
+
+/* Projetos */
+.projetos{
+    border: 1px solid hsl(0, 0%, 0%, 50%);
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.projetos h1{
     font-size: 24px;
 }
 
-.titulo-projeto{
-    color: #032F59;
-    font-weight: bold;
-}
-
-/* Fim do css do main - mobile*/
-
-/* Início do css do main - desktop */
-/* @media (min-width: 960px) {
-    .section_detalhes{
-        width: 1000px !important;
-    }
-} */
-
-/* @media (min-width: 960px) {
-    .section_principal{
-        /* box-shadow: -1px 0px 4px 5px #010a1a81; */
-       
-    
-/* fim do css do main - desktop */
-
-
-
-
-
-
-/* css do botão */
-.btn-marinho {
-    background: #021d40;
-    color: #ffffff;
-    font-weight: bold;
+.btn-projeto{
+    background-color: #021D40;
+    color: white;
     border: none;
+    padding: 9px;
+    width: 250px;
+}
+/* Fim projetos */
+/* Fim do css main início */
+
+/* Css do menu lateral */
+aside{
+    width: 23%;
+    margin: 0; padding: 0;
+    float: left;
 }
 
-.btn{
-    width: 30%;
-    font-size: 18px;
-}
-/* fim do css do botão */
-
-
-/* Início do css de projetos */
-
-.titulo-meus-projetos{
-    color: #314864;
-    font-weight: normal;
-    background-color: hsl(0, 0%, 85%, 50%);
+.projetos_desktop{
+    width: 75%;
+    border: 1px solid hsl(0, 0%, 0%, 50%);
+    border-radius: 12px;
 }
 
-.projetos-por-categoria{
-    /* border: 2px black solid; */
-    box-shadow: -1px 0px 2px 3px #010a1a81;
 
-}
-
-/* fim do css de projetos */
-
-
-
-
-
-
-/* Footer Configurações */
-.bg-marinho-footer {
-    background: #021d40;
-    color: #fff;
-}
-
-    
-
-/* Footer Configurações final */
+/* fim do css da barra lateral */

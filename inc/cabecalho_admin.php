@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <title>Projeto - back end</title>
 
     <!-- Css includes -->
@@ -29,7 +30,7 @@
 </head>
 <body>
     <header class="d-flex justify-content-around">
-    <h1><a class="navbar-brand pt-2" href="index.html">ColaJob</a></h1>
+    <h1><img src="../img/" alt="" width="200" height="80"></h1>
     <nav class="navbar navbar-expand-md text-center ">
             <div class="container mxe-md-5">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -57,3 +58,4 @@
             </div>
         </nav>
     </header>
+  

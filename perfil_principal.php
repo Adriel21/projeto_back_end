@@ -1,7 +1,7 @@
 <?php require_once './inc/cabecalho_admin.php'; ?>
 
 
-<section aria-label="Seção de Perfil" class="text-center">
+<!-- <section aria-label="Seção de Perfil" class="text-center">
     <h2 class="text-center titulo-apresentacao">Bem-Vindo, Gabriel Genovez!</h2>
     
    
@@ -12,13 +12,13 @@
 <div class="container div-anuncio">
   <div>
     <div class="py-5 text-center">
-      <!-- <img style="border-radius: 50%;" class="d-block mx-auto mb-3 perfil" src="./img//gabriel_genovez.jfif" id="img"
+      <img style="border-radius: 50%;" class="d-block mx-auto mb-3 perfil" src="./img//gabriel_genovez.jfif" id="img"
         alt="" width="140" height="170"> -->
-        <img src="./img//gabriel_genovez.jfif" class="rounded-circle d-block mx-auto mb-3" alt="..." width="160" height="170">
+        <!-- <img src="./img//gabriel_genovez.jfif" class="rounded-circle d-block mx-auto mb-3" alt="..." width="160" height="170"> -->
       <!-- <img class="d-block mx-auto mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-      <button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Gerenciar Perfil</button>
-      
-    </div>
+      <!-- <button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Gerenciar Perfil</button>
+       -->
+    <!-- </div>
 
     <div class="row g-5">
     <div class="col-md-5 col-lg-4 order-md-last">
@@ -52,7 +52,7 @@
           </article>
         </section>
       </section> 
-      <!-- <div class="row">
+       <div class="row">
   <div class="col-sm-4 metricaUm">
     <div class="card">
       <div class="card-body">
@@ -81,8 +81,8 @@
     </div>
   </div>
 </div> -->
-    </main>
-
+    <!-- </main> -->
+<!-- 
 
     <section class="projetos-por-categoria mt-5 mt-lg-3 pb-4">
 
@@ -92,23 +92,101 @@
       <div class="d-flex justify-content-center mb-2">
         <select name="categorias" id="" class="">
           <option value="" class="">Filtrar por categoria</option>
-          <option value="" class="">Web, Software & Mobile</option>
-        </select>
-      </div>
+          <option value="" class="">Web, Software & Mobile</option> -->
+        <!-- </select>
+      </div> -->
 
 
-      <div class="col-12 px-md-1 mt-4">
+      <!-- <div class="col-12 px-md-1 mt-4">
                 <div class="list-group">
                     <a href="noticia.php" class="list-group-item list-group-item-action">
                     <h4 class="">Título: Desenvolvimento de aplicativo</h4>
       <span><strong>Data:</strong> 25/08/2022</span>
       <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
-      <div class="d-flex justify-content-center"><button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Visualizar projeto</button></div>
+      <div class="d-flex justify-content-center"><button class="btn-marinho rounded-pill px-5 py-1 mt-2 bold-button" type="button">Visualizar projeto</button></div> --> 
 
                    
-                </div>
+                <!-- </div>
             </div>
       
 
       
-    </section>
+    </section>  -->
+    <main class="mt-4">
+      <section class="text-center d-lg-none">
+        <section class="perfil pt-3 pb-3 mb-4">
+          <img src="./img//gabriel_genovez.jfif" alt="" width="150">
+          <p><strong>Gabriel Genovez</strong></p>
+          <button class="botao-perfil rounded-pill ">Editar Perfil</button>
+          <hr>
+          <h2>Projetos Publicados:</h2>
+          <p class="contador">5</p>
+        
+        </section>
+        <section class="projetos pt-3 pb-4">
+        <h1>Meus Projetos</h1>
+        <hr>
+        <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
+        <p class="mt-3">Filtrar por categoria:</p>
+    <select class="ls-select">
+        <option value="1">Todos Projetos</option>
+        <option value="2">Web, Software & Mobile</option>
+        <option value="3"> Opção 3 </option>
+        <option value="4"> Opção 4 </option>
+    </select>
+    </div>
+        <div class="col-12 px-md-1 mt-4">
+                  <div class="list-group">
+                      <h4 class="">Título: Desenvolvimento de aplicativo</h4>
+        <span><strong>Data:</strong> 25/08/2022</span>
+        <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
+        <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Visualizar projeto</button></div>
+                  </div>
+              </div>
+        </section>
+        
+      </section>
+      
+
+      
+        <aside class="text-center d-lg-block d-none">
+        <section class="perfil pt-3 pb-3 mb-4">
+          <img src="./img//gabriel_genovez.jfif" alt="" width="150">
+          <p><strong>Gabriel Genovez</strong></p>
+          <button class="botao-perfil rounded-pill ">Editar Perfil</button>
+          <hr>
+          <h2>Projetos Publicados:</h2>
+          <p class="contador">5</p>
+        
+        </section>
+       
+        
+      </section>
+        </aside>
+
+
+        <section class="projetos_desktop pt-3 pb-4 float-end d-none d-lg-block ps-3 me-3">
+        <h1>Meus Projetos</h1>
+        <hr>
+        <div class="ls-custom-select d-flex gap-4 align-items-center">
+        <p class="mt-3">Filtrar por categoria:</p>
+    <select class="ls-select">
+        <option value="1">Todos Projetos</option>
+        <option value="2">Web, Software & Mobile</option>
+        <option value="3"> Opção 3 </option>
+        <option value="4"> Opção 4 </option>
+    </select>
+    </div>
+        <div class="col-12 px-md-1 mt-4">
+                  <div class="list-group">
+                      <div class="list-group-item list-group-item-action">
+                        <h4 class="">Título: Desenvolvimento de aplicativo</h4>
+                          <span><strong>Data:</strong> 25/08/2022</span>
+                          <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
+                          <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Visualizar projeto</button></div>
+                      </div>
+                  </div>
+              </div>
+        </section>
+    </main>
+    

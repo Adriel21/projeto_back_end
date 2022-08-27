@@ -163,4 +163,24 @@ final class Projeto{
     {
         $this->resumo = filter_var($resumo, FILTER_SANITIZE_SPECIAL_CHARS);
     }
+
+    /**
+     * Get the value of usuarioId
+     */ 
+    public function getUsuarioId()
+    {
+        return $this->usuarioId;
+    }
+
+    /**
+     * Set the value of usuarioId
+     *
+     * @return  self
+     */ 
+    public function setUsuarioId($usuarioId)
+    {
+        $this->usuarioId = $usuarioId;
+
+    
+    }
 }

@@ -7,7 +7,21 @@ require_once './vendor/autoload.php';
  require_once './inc/cabecalho_admin.php'; 
 $sessao = new ControleDeAcesso;
 $projeto = new Projeto;
-$listaDeProjeto = $projeto->listarDetalhes();
+$projeto->usuario->setId($_SESSION['id']);
+$listaDeNoticias = $projeto->listarDetalhes();
+// if ($_SESSION['id'] == $dados['usuario_id']) {
+//   echo 'alo';
+// } else {
+//   echo 'não';
+// }
+
+// DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
+// date_default_timezone_set('America/Sao_Paulo');
+// // CRIA UMA VARIAVEL E ARMAZENA A HORA ATUAL DO FUSO-HORÀRIO DEFINIDO (BRASÍLIA)
+//     $dataLocal = date('d/m/Y', time());
+
+    // echo $dataLocal;
+
 ?>
 
 
@@ -131,7 +145,7 @@ $listaDeProjeto = $projeto->listarDetalhes();
           <button class="botao-perfil rounded-pill ">Editar Perfil</button>
           <hr>
           <h2>Projetos Publicados:</h2>
-          <p class="contador">5</p>
+          <p class="contador"><?=count($listaDeNoticias)?></p>
         
         </section>
         <section class="projetos pt-3 pb-4">
@@ -150,7 +164,7 @@ $listaDeProjeto = $projeto->listarDetalhes();
     </div>
         <div class="col-12 px-md-1 mt-4">
                   <div class="list-group">
-                      <h4 class="">Título: Desenvolvimento de aplicativo</h4>
+                      <h4 class="">Título: </h4>
         <span><strong>Data:</strong> 25/08/2022</span>
         <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
         <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Visualizar projeto</button></div>
@@ -169,7 +183,7 @@ $listaDeProjeto = $projeto->listarDetalhes();
           <button class="botao-perfil rounded-pill ">Editar Perfil</button>
           <hr>
           <h2>Projetos Publicados:</h2>
-          <p class="contador">5</p>
+          <p class="contador"><?=count($listaDeNoticias)?></p>
         </section>
        
         
@@ -191,24 +205,18 @@ $listaDeProjeto = $projeto->listarDetalhes();
         <option value="4"> Opção 4 </option>
     </select>
     </div>
+    <?php foreach ($listaDeNoticias as $noticia) {  ?> 
         <div class="col-12 px-md-1 mt-2">
                   <div class="list-group">
                       <div class="list-group-item list-group-item-action">
-                        <?php foreach($listaDeProjeto as $projetos) { ?>
-                        <h4 class=""><?php
-                        if ($_SESSION['id'] === $projetos->getUsuarioId()) {
-                          $projetos['titulo'];
-                        }
-                        ?>
-                        <?php } ?>
-                      
-                      </h4>
+                        <h4 class="">Título: <?=$noticia['titulo']?></h4>
                           <span><strong>Data:</strong> 25/08/2022</span>
-                          <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
+                          <p><strong>Resumo do projeto:</strong> <?=$noticia['resumo']?></p>
                           <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Visualizar projeto</button></div>
                       </div>
                   </div>
               </div>
+              <?php } ?>
         </section>
     </main>
 

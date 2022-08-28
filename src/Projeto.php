@@ -14,14 +14,22 @@ final class Projeto{
     
    
 
-    
+   
+    public Usuario $usuario;
 
+  
     
     public function __construct()
     {
-        $this->conexao = Banco::conecta();
-    }
+        /* No momento em que um objeto Noticia for instanciado
+        nas páginas, aproveitaremos para também instanciar um objeto
+        Usuario e com isso acessar recursos desta classe. */
+        $this->usuario = new Usuario;
 
+        /* Reaproveitando a conexão já existente
+        a partir da classe de Usuario */
+        $this->conexao = $this->usuario->getConexao();
+    }
 
      // Testado e funcionando
      public function listar():array {
@@ -75,22 +83,55 @@ final class Projeto{
             move_uploaded_file($temporario, $destino);
         }
 
+        //  public function listarDetalhes():array {
+        //      $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, usuario.email AS email, usuario.perfil AS perfil FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id";
+    
+    
+        //       try {
+        //          $consulta = $this->conexao->prepare($sql);
+        //         $consulta->execute();
+        //         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+        //     } catch (Exception $erro) {
+        //       die("Erro: ". $erro->getMessage());
+        //     }
+        //      return $resultado;
+        //  }
+
+        // public function listarDetalhes():array {
+        //     $sql = "SELECT titulo, resumo, descricao, usuario_id, categoria_id FROM projeto";
+    
+    
+        //      try {
+        //         $consulta = $this->conexao->prepare($sql);
+        //         $consulta->execute();
+        //         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+        //     } catch (Exception $erro) {
+        //         die("Erro: ". $erro->getMessage());
+        //     }
+        //     return $resultado;
+        // }
+
         public function listarDetalhes():array {
-            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, usuario.nome AS autor, usuario.email AS email, usuario.perfil AS perfil FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id";
-    
-    
-             try {
-                $consulta = $this->conexao->prepare($sql);
-                $consulta->execute();
-                $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-            } catch (Exception $erro) {
-                die("Erro: ". $erro->getMessage());
-            }
-            return $resultado;
-        }
+            $sql = "SELECT id, titulo, resumo, descricao 
+            FROM projeto WHERE usuario_id = :usuario_id";
+        
+        
+                  try {
+                     $consulta = $this->conexao->prepare($sql);
+                     $consulta->bindValue(
+                        ":usuario_id", 
+                        $this->usuario->getId(), 
+                        PDO::PARAM_INT
+                    );
+                     $consulta->execute();
+                     $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                 } catch (Exception $erro) {
+                     die("Erro: ". $erro->getMessage());
+                 }
+                 return $resultado;
 
 
-
+                }
     /**
      * Get the value of id
      */ 

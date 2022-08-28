@@ -33,7 +33,7 @@ if(isset($_POST['inserir'])) {
 
 	$projeto->cadastrar();
 
-    header('location:perfil_principal.php');
+    header('location:projeto_valida.php?id=' . $_SESSION['id']);
 
 }
 

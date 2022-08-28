@@ -55,10 +55,13 @@ $listaDeNoticias = $projeto->listarDetalhes();
     </aside>
   <!-- Desktop Table -->
 
+<!-- --------------------------------------------------------------------------------- -->
+
+
   <!-- Mobile Table -->
     <section class="text-center d-lg-none">
 
-        <!-- Perfil -->
+        <!-- Perfil mobile-->
           <section class="perfil pt-3 pb-3 mb-4">
             <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
               <p><strong><?=$_SESSION['nome']?></strong></p>
@@ -71,93 +74,117 @@ $listaDeNoticias = $projeto->listarDetalhes();
               <hr>
               <h2>Projetos Publicados:</h2>
           </section>
-        <!-- Perfil -->
+        <!-- Perfil mobile -->
 
-          <section class="projetos pt-3 pb-4">
-            <h1>Meus Projetos</h1>
-              <hr>
-                <div class="d-flex justify-content-center">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem deleniti facilis dolor aut cupiditate assumenda, impedit soluta, omnis possimus aliquam sequi dolores non necessitatibus. Alias aliquam dolorem quos tenetur? Assumenda rem blanditiis ipsum cum? Atque?
-                  </p>
-                  <button class="rounded-3 btn-projeto px-5 py-1 mt-2 text-decoration-none" type="button"><a href="projeto_insere.php" class="text-decoration-none">Cadastrar Projeto</a>
-                  </button>
+      <!-- --------------------------------------------------------------------------------- -->
+
+
+      <!-- Conteudo Mobile -->
+        <section class="projetos pt-3 pb-4">
+          <h1>Meus Projetos</h1>
+              <div class="py-14 bg-primary rounded m-2">
+                <div class="container">
+                  <div class="row">
+                    <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center p-1">
+                      <span class="fs-4 text-warning ls-md text-uppercase
+                        fw-semi-bold">get things done
+
+                      </span>
+                      <!-- heading  -->
+                      <h2 class="display-3 mt-4 mb-3 text-white fw-bold">Just try it out! You’ll
+                        fall in love</h2>
+                        <!-- para  -->
+                      <p class="lead text-white-50 px-lg-8 mb-6">Designed for modern
+                        companies looking to launch
+                        a simple, premium and modern website and apps.</p>
+                      <a href="#" class="btn btn-primary">Try For Free</a>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+
               <hr>
-              <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
-                <p class="mt-3">Filtrar por categoria:</p>
-                  <select class="ls-select">
+                
+              <div class="ls-custom-select d-flex gap-4 align-items-center">
+                    <p class="mt-3">Filtrar por categoria:</p>
+                <select class="ls-select">
                     <option value="1">Todos Projetos</option>
                     <option value="2">Web, Software & Mobile</option>
                     <option value="3"> Opção 3 </option>
                     <option value="4"> Opção 4 </option>
-                  </select>
-              </div>
+                </select>
+            </div>
+            
+            <?php foreach ($listaDeNoticias as $noticia) {  ?> 
+                <div class="col-12 px-md-1 mt-2">
+                    <div class="list-group">
+                          <div class="list-group-item list-group-item-action">
+                            <h4 class="">Título: <?=$noticia['titulo']?></h4>
+                              <span><strong>Data:</strong> 25/08/2022</span>
+                              <p><strong>Resumo do projeto:</strong> <?=$noticia['resumo']?></p>
+                          <div class="d-flex justify-content-center">
+                            <button class="botao-perfil rounded-3 px-5" type="button">Visualizar projeto</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                      <?php } ?>
+        </section>
+          <!-- Conteudo mobile -->
 
-              <div class="col-12 px-md-1 mt-4">
-                <div class="list-group">
-                  <h4 class="">Título: </h4>
-                    <span><strong>Data:</strong> 25/08/2022</span>
-                    <p><strong>Resumo do projeto:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur sed illum repellendus aut perspiciatis maiores exercitationem labore nisi necessitatibus facilis ratione numquam eum voluptatibus, facere enim modi incidunt corrupti!</p>
-                  <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="botao-perfil rounded-3" type="button">Visualizar projeto</button>
+    </section>
+
+    <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block px-2">
+            <h1>Meus Projetos</h1>
+              <div class="py-14 bg-primary rounded">
+                <div class="container">
+                  <div class="row">
+                    <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center p-1">
+                      <span class="fs-4 text-warning ls-md text-uppercase
+                        fw-semi-bold">get things done
+
+                      </span>
+                      <!-- heading  -->
+                      <h2 class="display-3 mt-4 mb-3 text-white fw-bold">Just try it out! You’ll
+                        fall in love</h2>
+                        <!-- para  -->
+                      <p class="lead text-white-50 px-lg-8 mb-6">Designed for modern
+                        companies looking to launch
+                        a simple, premium and modern website and apps.</p>
+                      <a href="#" class="btn btn-primary">Try For Free</a>
+                    </div>
                   </div>
-
                 </div>
               </div>
 
-          </section>
-    </section>
 
-    <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
-    <div class="py-14 bg-dark">
- <div class="container">
-   <div class="row">
-     <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
-       <span class="fs-4 text-warning ls-md text-uppercase
-         fw-semi-bold">get things done
-
-       </span>
-       <!-- heading  -->
-       <h2 class="display-3 mt-4 mb-3 text-white fw-bold">Just try it out! You’ll
-         fall in love</h2>
-         <!-- para  -->
-       <p class="lead text-white-50 px-lg-8 mb-6">Designed for modern
-         companies looking to launch
-         a simple, premium and modern website and apps.</p>
-       <a href="#" class="btn btn-primary">Try For Free</a>
-     </div>
-   </div>
-</div>
-</div>
-
-
-            <hr>
-              
-            <div class="ls-custom-select d-flex gap-4 align-items-center">
-                  <p class="mt-3">Filtrar por categoria:</p>
-              <select class="ls-select">
-                  <option value="1">Todos Projetos</option>
-                  <option value="2">Web, Software & Mobile</option>
-                  <option value="3"> Opção 3 </option>
-                  <option value="4"> Opção 4 </option>
-              </select>
-          </div>
-          
-          <?php foreach ($listaDeNoticias as $noticia) {  ?> 
-              <div class="col-12 px-md-1 mt-2">
-                  <div class="list-group">
-                        <div class="list-group-item list-group-item-action">
-                          <h4 class="">Título: <?=$noticia['titulo']?></h4>
-                            <span><strong>Data:</strong> 25/08/2022</span>
-                            <p><strong>Resumo do projeto:</strong> <?=$noticia['resumo']?></p>
-                        <div class="d-flex justify-content-center">
-                          <button class="botao-perfil rounded-3 px-5" type="button">Visualizar projeto</button>
+              <hr>
+                
+              <div class="ls-custom-select d-flex gap-4 align-items-center">
+                    <p class="mt-3">Filtrar por categoria:</p>
+                <select class="ls-select">
+                    <option value="1">Todos Projetos</option>
+                    <option value="2">Web, Software & Mobile</option>
+                    <option value="3"> Opção 3 </option>
+                    <option value="4"> Opção 4 </option>
+                </select>
+            </div>
+            
+            <?php foreach ($listaDeNoticias as $noticia) {  ?> 
+                <div class="col-12 px-md-1 mt-2">
+                    <div class="list-group">
+                          <div class="list-group-item list-group-item-action">
+                            <h4 class="">Título: <?=$noticia['titulo']?></h4>
+                              <span><strong>Data:</strong> 25/08/2022</span>
+                              <p><strong>Resumo do projeto:</strong> <?=$noticia['resumo']?></p>
+                          <div class="d-flex justify-content-center">
+                            <button class="botao-perfil rounded-3 px-5" type="button">Visualizar projeto</button>
+                          </div>
                         </div>
-                      </div>
-                  </div>
-              </div>
-                    <?php } ?>
+                    </div>
+                </div>
+                      <?php } ?>
       </section>
     <!-- Mobile Table -->   
   </main>

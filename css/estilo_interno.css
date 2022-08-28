@@ -38,7 +38,6 @@
 
 /* Projetos */
 .projetos{
-    border: 1px solid hsl(0, 0%, 0%, 50%);
     max-width: 90%;
     margin: 0 auto;
     border-radius: 12px;

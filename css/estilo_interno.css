@@ -31,7 +31,7 @@
     background-color: #021D40;
     color: white;
     border: none;
-    padding: 9px;
+    padding: 6px;
     width: 150px;
 }
 
@@ -49,10 +49,14 @@
 
 .btn-projeto{
     background-color: #021D40;
-    color: white;
     border: none;
     padding: 9px;
     width: 250px;
+}
+
+.btn-projeto a {
+    color: white;
+    text-decoration: none;
 }
 
 

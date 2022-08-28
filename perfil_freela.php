@@ -26,6 +26,25 @@ $listaDeNoticias = $projeto->listarDetalhes();
 
 
   <main class="mt-4 mb-4">
+
+  <!-- Desktop Table perfil lateral -->
+    <aside class="text-center d-lg-block d-none">
+      <section class="perfil pt-3 pb-3 mb-4">
+        <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
+            <p><strong><?=$_SESSION['nome']?></strong></p>
+
+            <div class="form-group columns">
+              <button class="botao-perfil rounded-pill">Editar Perfil</button>
+              <button class="botao-perfil rounded-pill">Encontre novo projetos</button>
+            </div>
+            <hr>
+           <h2>Projetos Publicados:</h2>
+          <p class="contador"><?=count($listaDeNoticias)?></p>
+      </section>
+    </aside>
+  <!-- Desktop Table -->
+
+  <!-- Mobile Table -->
     <section class="text-center d-lg-none">
           <section class="perfil pt-3 pb-3 mb-4">
             <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
@@ -40,7 +59,7 @@ $listaDeNoticias = $projeto->listarDetalhes();
             <h1>Meus Projetos</h1>
             <hr>
               <div class="d-flex justify-content-center">
-                <button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php" class="text-decoration-none">Cadastrar Projeto</a></button>
+                <button class="rounded-pill btn-projeto px-5 py-1 mt-2 text-decoration-none" type="button"><a href="projeto_insere.php" class="text-decoration-none">Cadastrar Projeto</a></button>
               </div>
             <hr>
               <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
@@ -66,25 +85,11 @@ $listaDeNoticias = $projeto->listarDetalhes();
 
           </section>
     </section>
-          
-
-          
-    <aside class="text-center d-lg-block d-none">
-      <section class="perfil pt-3 pb-3 mb-4">
-        <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
-            <p><strong><?=$_SESSION['nome']?></strong></p>
-            <button class="botao-perfil rounded-pill ">Editar Perfil</button>
-            <hr>
-           <h2>Projetos Publicados:</h2>
-          <p class="contador"><?=count($listaDeNoticias)?></p>
-      </section>
-    </aside>
-
 
     <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
                 <h1 class="me-5">Meus Projetos</h1>
                 <hr>
-                <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php?id=<?=$_SESSION['id']?>">Cadastrar Projeto</a></button></div>
+                <div class="d-flex justify-content-center text-decoration-none"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php?id=<?=$_SESSION['id']?>">Cadastrar Projeto</a></button></div>
               <hr>
               <div class="ls-custom-select d-flex gap-4 align-items-center">
               <p class="mt-3">Filtrar por categoria:</p>
@@ -109,6 +114,7 @@ $listaDeNoticias = $projeto->listarDetalhes();
               </div>
                     <?php } ?>
       </section>
+    <!-- Mobile Table -->   
   </main>
 
   <footer class="bg-marinho-footer text-center text-white mt-5">

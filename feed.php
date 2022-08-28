@@ -31,11 +31,10 @@ require_once './inc/cabecalho-cadastro.php';
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
                                 <span class="ms-1 d-none d-sm-inline">Categorias</span>
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     
-                                    <li><a class="dropdown-item" href="noticias-por-categoria.php?id="></a></li>
-                                    
-                                </ul> 
+                                 <li><a class="dropdown-item" href="noticias-por-categoria.php?id="></a></li>
+                             </ul> 
                             
                     </li>
                     <li>
@@ -161,12 +160,6 @@ require_once './inc/cabecalho-cadastro.php';
             </nav>
             <!-- Fim da paginação das vagas -->
 
-            <!-- Footer -->
-
-            
-            
-
-            <!-- Fim footer -->
         
 
                     

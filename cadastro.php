@@ -15,19 +15,30 @@ require_once './vendor/autoload.php';
 // }
 if(isset($_POST['inserir'])) {
     $usuario = new Usuario;
-	$usuario->setNome($_POST['nome']);
-	$usuario->setEmail($_POST['email']);
-	$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
 	
-	$perfil = $_FILES["perfil"];
-	$usuario->setPerfil($perfil['name']);
-	$usuario->upload($perfil);
-    // header("location:login.php");
+			$usuario->setEmail($_POST['email']);
+	
+			// Buscando um usuário no banco a partir do e-mail
+			$dados = $usuario->buscar();
+			if($dados) {
+				header('location:cadastro.php?id=email_existente');
+			} else {
+				$usuario->setNome($_POST['nome']);
+				$usuario->setEmail($_POST['email']);
+				$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
+	
+				$perfil = $_FILES["perfil"];
+				$usuario->setPerfil($perfil['name']);
+				$usuario->upload($perfil);
+    			// header("location:login.php");
 
 
-	$usuario->cadastrar();
+				$usuario->cadastrar();
 
     header('location:login.php');
+			}
+
+	
 
 }
 ?>

@@ -111,6 +111,24 @@ final class Projeto{
         //     return $resultado;
         // }
 
+        
+        public function listarTodos():array {
+            $sql = "SELECT id, titulo, resumo, descricao 
+            FROM projeto";
+        
+        
+                  try {
+                     $consulta = $this->conexao->prepare($sql);
+                     $consulta->execute();
+                     $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                 } catch (Exception $erro) {
+                     die("Erro: ". $erro->getMessage());
+                 }
+                 return $resultado;
+
+
+                }
+
         public function listarDetalhes():array {
             $sql = "SELECT id, titulo, resumo, descricao 
             FROM projeto WHERE usuario_id = :usuario_id";

@@ -39,6 +39,11 @@ ALTER TABLE profissao
 ADD CONSTRAINT fk_usuario_profissao
 FOREIGN KEY (profissao_id) REFERENCES profissao(id);
 ```
+```sql
+ALTER TABLE profissao
+ADD CONSTRAINT fk_profissao_categoria
+FOREIGN KEY (categoria_id) REFERENCES categoria(id);
+```
 
 - Criando tabela Projeto
 ```sql 

@@ -34,7 +34,7 @@ require "./vendor/autoload.php";
 					</div>
 					<div class="form-group mt-2">
 						<label for="senha">Senha</label>
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+						<input type="password" class="form-control" id="senha" name="senha" autocomplete="current-password" placeholder="Senha">
                      </div>
                     
                      <!-- 2 column grid layout for inline styling -->
@@ -88,7 +88,7 @@ require "./vendor/autoload.php";
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
 						if($dados['profissao_id'] !== null){
-							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['profissao_id']);
+							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $dados['profissao_id']);
                             header('location:perfil_principal.php?id=' . $_SESSION['id']);;
 								///echo 'errou';
 						} else {

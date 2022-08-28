@@ -73,7 +73,7 @@ if(isset($_POST['inserir'])) {
 
 			<div class="mb-3">
 				<label class="form-label" for="senha">Senha:</label>
-				<input class="form-control" type="password" id="senha" name="senha" required>
+				<input class="form-control" type="password" id="senha" name="senha"  minlength="8"  required>
 			</div>
 
 			<div class="mb-3">

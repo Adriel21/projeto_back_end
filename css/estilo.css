@@ -56,6 +56,63 @@ picture img {
         background: #fa1900;
     }
 
+    /* Configurações gerais da página feed.php */
+
+    .box-vagas {
+        
+        background: rgba(164, 210, 221, 0.5);
+        transition: 0.8s;
+    }
+
+    .coluna-vagas:hover {
+        box-shadow: 2px 4px #eb0000;
+        background: rgba(208, 247, 230, 0.219);
+        transition: 0.6s;
+    }
+
+    .card-vagas h3 {
+        font-weight: 500;
+        color: #021d40;
+        
+    }
+
+    .botao-feed {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
+    }
+
+    .botao-feed:hover {
+        background-color: #0650b1;
+        color: ghostwhite;
+    }
+
+    .menu-lateral {
+        background-color: #021d40;
+    }
+
+    .menu-lateral a {
+        font-weight: 500;
+        color: rgb(208, 208, 245);
+    }
+
+    .menu-lateral a:hover {
+        color: #fff;
+    }
+
+    .paginacao a{
+        color: #021057;
+    }
+
+    .paginacao a:hover {
+        color: #0650b1;
+    }
+
+
+    /* Fim das configurações gerais da página feed.php */
+
+
+
 /* Footer Configurações */
 .bg-marinho-footer {
     background: #021d40;

@@ -37,7 +37,7 @@ class Usuario {
 
 // testado e funcionando 
     public function listarUm():array {
-        $sql = "SELECT id, email, nome, perfil, categoria_id FROM usuario WHERE id = :id";
+        $sql = "SELECT id, email, nome, perfil, profissao_id FROM usuario WHERE id = :id";
     try {
         $consulta = $this->conexao->prepare($sql);
         $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);

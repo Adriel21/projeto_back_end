@@ -151,8 +151,15 @@ $listaDeNoticias = $projeto->listarDetalhes();
         <section class="projetos pt-3 pb-4">
         <h1>Meus Projetos</h1>
         <hr>
+        <?php if($_SESSION['profissao_id'] !== null) { ?>
+
+        <div>Teste</div>
+
+        <?php } else { ?>
         <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php">Cadastrar Projeto</a></button></div>
         <hr>
+
+        <?php } ?>
         <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
         <p class="mt-3">Filtrar por categoria:</p>
     <select class="ls-select">

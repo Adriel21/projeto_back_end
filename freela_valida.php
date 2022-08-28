@@ -23,8 +23,9 @@ $usuario->setId($_GET['id']);
 $usuario->setProfissaoId($dados['id']);
 $usuario->atualizarPr();
 // var_dump($profissao);
+$dadosDois = $usuario->listarUm();
 
 // $usuario->validaFreela();
-$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['profissao_id']);
+$sessao->loginDois($dadosDois['id'], $dadosDois['nome'], $dadosDois['email'], $dadosDois['perfil'], $dadosDois['profissao_id']);
 header('location:perfil_principal.php');
 

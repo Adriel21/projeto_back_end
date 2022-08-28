@@ -57,6 +57,8 @@ $listaDeNoticias = $projeto->listarDetalhes();
 
   <!-- Mobile Table -->
     <section class="text-center d-lg-none">
+
+        <!-- Perfil -->
           <section class="perfil pt-3 pb-3 mb-4">
             <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
               <p><strong><?=$_SESSION['nome']?></strong></p>
@@ -69,14 +71,19 @@ $listaDeNoticias = $projeto->listarDetalhes();
               <hr>
               <h2>Projetos Publicados:</h2>
           </section>
+        <!-- Perfil -->
 
           <section class="projetos pt-3 pb-4">
             <h1>Meus Projetos</h1>
-            <hr>
-              <div class="d-flex justify-content-center">
-                <button class="rounded-3 btn-projeto px-5 py-1 mt-2 text-decoration-none" type="button"><a href="projeto_insere.php" class="text-decoration-none">Cadastrar Projeto</a></button>
-              </div>
-            <hr>
+              <hr>
+                <div class="d-flex justify-content-center">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem deleniti facilis dolor aut cupiditate assumenda, impedit soluta, omnis possimus aliquam sequi dolores non necessitatibus. Alias aliquam dolorem quos tenetur? Assumenda rem blanditiis ipsum cum? Atque?
+                  </p>
+                  <button class="rounded-3 btn-projeto px-5 py-1 mt-2 text-decoration-none" type="button"><a href="projeto_insere.php" class="text-decoration-none">Cadastrar Projeto</a>
+                  </button>
+                </div>
+              <hr>
               <div class="ls-custom-select d-flex gap-4 align-items-center justify-content-center">
                 <p class="mt-3">Filtrar por categoria:</p>
                   <select class="ls-select">
@@ -103,16 +110,29 @@ $listaDeNoticias = $projeto->listarDetalhes();
     </section>
 
     <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
-                <h1 class="me-5">Meus Projetos</h1>
-                <hr>
-                <div class="d-flex justify-content-center text-decoration-none">
-                  <button class="rounded-3 btn-projeto px-5 py-1 mt-2" type="button">
-                    <a href="projeto_insere.php?id=<?=$_SESSION['id']?>">
-                      Cadastrar Projeto
-                    </a>
-                  </button>
-              </div>
-              <hr>
+    <div class="py-14 bg-dark">
+ <div class="container">
+   <div class="row">
+     <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
+       <span class="fs-4 text-warning ls-md text-uppercase
+         fw-semi-bold">get things done
+
+       </span>
+       <!-- heading  -->
+       <h2 class="display-3 mt-4 mb-3 text-white fw-bold">Just try it out! You’ll
+         fall in love</h2>
+         <!-- para  -->
+       <p class="lead text-white-50 px-lg-8 mb-6">Designed for modern
+         companies looking to launch
+         a simple, premium and modern website and apps.</p>
+       <a href="#" class="btn btn-primary">Try For Free</a>
+     </div>
+   </div>
+</div>
+</div>
+
+
+            <hr>
               
             <div class="ls-custom-select d-flex gap-4 align-items-center">
                   <p class="mt-3">Filtrar por categoria:</p>

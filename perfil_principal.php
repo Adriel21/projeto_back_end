@@ -220,7 +220,7 @@ $listaDeNoticias = $projeto->listarDetalhes();
         </section>
     </main>
 
-    <footer class="bg-marinho-footer text-center text-white mt-5">
+  <footer class="bg-marinho-footer text-center text-white mt-5">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->

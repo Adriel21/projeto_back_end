@@ -7,11 +7,9 @@ class Usuario {
     private string $nome;
     private string $email;
     private string $senha;
-    private string $profissao;
-    private string $descricao_profissao;
     private string $perfil;
-    private int $categoriaId;
     private string $telefone;
+    private int $profissaoId;
     
     private PDO $conexao;
 
@@ -69,14 +67,12 @@ class Usuario {
 
     //testado e funcionando 
     public function atualizar():void {
-        $sql = "UPDATE usuario SET profissao = :profissao, descricao_profissao = :descricao_profissao, categoria_id = :categoria_id WHERE id = :id";
+        $sql = "UPDATE usuario SET profissao_id = :profissao_id  WHERE id = :id";
 
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
-            $consulta->bindParam(":profissao", $this->profissao, PDO::PARAM_STR);
-            $consulta->bindParam(":descricao_profissao", $this->descricao_profissao, PDO::PARAM_STR);
-            $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
+            $consulta->bindParam(":profissao_id", $this->profissaoId, PDO::PARAM_STR);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: ". $erro->getMessage());
@@ -309,5 +305,25 @@ class Usuario {
     {
         $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
 
+    }
+
+    /**
+     * Get the value of profissaoId
+     */ 
+    public function getProfissaoId()
+    {
+        return $this->profissaoId;
+    }
+
+    /**
+     * Set the value of profissaoId
+     *
+     * @return  self
+     */ 
+    public function setProfissaoId($profissaoId)
+    {
+        $this->profissaoId = $profissaoId;
+
+        return $this;
     }
 }

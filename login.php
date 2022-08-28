@@ -87,8 +87,8 @@ require "./vendor/autoload.php";
 					// Verificação da senha e login
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
-						if($dados['categoria_id'] !== null){
-							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['categoria_id']);
+						if($dados['profissao_id'] !== null){
+							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['profissao_id']);
                             header('location:perfil_principal.php?id=' . $_SESSION['id']);;
 								///echo 'errou';
 						} else {

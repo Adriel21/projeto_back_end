@@ -2,7 +2,7 @@
 namespace Projeto;
 use PDO, Exception;
 
-final class Projeto{
+final class Profissao{
     private int $id;
     private string $titulo;
     private string $descricao;
@@ -17,7 +17,7 @@ final class Projeto{
     }
 
     public function cadastrar():void {
-        $sql = "INSERT INTO profissioanl(titulo, descricao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :usuario_id, :categoria_id)";
+        $sql = "INSERT INTO profissao(titulo, descricao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :usuario_id, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);

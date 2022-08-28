@@ -52,8 +52,8 @@ if(isset($_POST['inserir'])) {
         <label for="titulo">Título do Projeto</label>
         <input type="text" name="titulo">
         <hr>
-        <label for="resumo">Resumo do Projeto</label>
-        <input type="text" name="resumo">
+        <!-- <label for="resumo">Resumo do Projeto</label>
+        <input type="text" name="resumo"> -->
         <hr>
         <label for="descricao">Descrição do projeto</label>
         <input type="text" name="descricao">

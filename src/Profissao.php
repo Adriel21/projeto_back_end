@@ -31,6 +31,20 @@ final class Profissao{
         }
     }
 
+    public function listarUm():array {
+        $sql = "SELECT id, titulo, descricao, usuario_id, categoria_id FROM profissao WHERE usuario_id = :usuario_id";
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+        $consulta->execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+    return $resultado;
+}
+ 
+
 
     /**
      * Get the value of id
@@ -109,7 +123,6 @@ final class Profissao{
     {
         $this->usuarioId = $usuarioId;
 
-        return $this;
     }
 
     /**

@@ -73,7 +73,7 @@ require_once './inc/cabecalho-cadastro.php';
         <div class="col d-flex flex-column h-sm-100">
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
-                <div class="cabecalho-interno d-flex col-12 pb-3   justify-content-center">
+                <div class="cabecalho-interno d-flex col-12    justify-content-center">
                         <form class="d-flex p-1 ">
                             <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search">
                             <div class="ps-2">

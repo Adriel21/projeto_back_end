@@ -2,6 +2,7 @@
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
+use Projeto\Profissao;
 use Projeto\Projeto;
 
 require_once './vendor/autoload.php';
@@ -21,12 +22,17 @@ $sessao = new ControleDeAcesso;
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 if(isset($_POST['inserir'])) {
-    $projeto = new Projeto;
-	$projeto->setTitulo($_POST['titulo']);
-	$projeto->setResumo($_POST['resumo']);
-    $projeto->setDescricao($_POST['descricao']);
-    $projeto->setCategoriaId($_POST['categoria']);
-    $projeto->setUsuarioId($_GET['id']);
+    // $projeto = new Projeto;
+	// $projeto->setTitulo($_POST['titulo']);
+	// $projeto->setResumo($_POST['resumo']);
+    // $projeto->setDescricao($_POST['descricao']);
+    // $projeto->setCategoriaId($_POST['categoria']);
+    // $projeto->setUsuarioId($_GET['id']);
+    $profissao = new Profissao;
+    $profissao->setTitulo($_POST['titulo']);
+    $profissao->setDescricao($_POST['descricao']);
+    $profissao->setUsuarioId($_GET['id']);
+    $profissao->setCategoriaId($_POST['categoria']);
 
     // header("location:login.php");
 

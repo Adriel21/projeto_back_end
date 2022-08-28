@@ -66,7 +66,7 @@ class Usuario {
     }
 
     //testado e funcionando 
-    public function atualizar():void {
+    public function atualizarPr():void {
         $sql = "UPDATE usuario SET profissao_id = :profissao_id  WHERE id = :id";
 
         try {

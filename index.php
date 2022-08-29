@@ -59,7 +59,7 @@ require_once 'inc/cabecalho_externo.php'
         <h2 class="text-center text-muted">Cards Projetos</h2>
             <section class="container row row-cols-1 row-cols-md-3 g-4 m-auto my-5">
                 <div class="col">
-                    <div class="card h-100 shadow">
+                <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -69,27 +69,7 @@ require_once 'inc/cabecalho_externo.php'
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow">
-                    <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow">
-                    <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -99,7 +79,7 @@ require_once 'inc/cabecalho_externo.php'
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -109,7 +89,27 @@ require_once 'inc/cabecalho_externo.php'
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 border border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

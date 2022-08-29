@@ -10,47 +10,107 @@
 a {
     text-decoration: none;
 }
-/* Final configurações gerais */
 
-    /* Bold dos bottons */
-    .bold-button, h1, h2 {
-        font-weight: 600;
+/* configurações das imagens index */
+picture img {
+    width: 100%;
+}
+    .img-margin-nagativa {
+        margin-bottom: -40px;
+        position: relative;
     }
 
-    /* botton cards */
-    #teste a {
-        font-weight: 600;
+    /* button index */
+    button {
+        background: #021d40;
+        color: #fff;
+        border: none;
     }
-    /* final botton cards */
 
-
-/* Configurações da img gerais */
-.img-dois-avatar {
-    margin-top: -50px;
-    color: #021D40;
-}
-
-article, .btn-saibamais {
-    background: #05C7F2;
-}
-    /* Final img gerais */
-
-/* Button saiba configurações */
-.btn-marinho {
-    background: #021d40;
-    color: #ffffff
-}
-
-    .btn-marinho:hover {
+    button:hover {
         background: #021057;
-        color: #ffffff;
     }
 
-    .btn-saibamais:hover {
-        background: #05C7F2;
-        color: #ffffff;
+/* Tela de Cadastro usuario */
+    .bg-form{
+        background: #EAEAFF;
     }
-/* Final button saiba configurações */
+
+   .coluna-vagas {
+       border: 1px solid color(0, 0, 0, 50%);
+       border-radius: 4px;
+   }
+
+    .cadastro-bloco-azul-marinho {
+        width: 100%;
+        height: 150px;
+        background: #021d40;
+    }
+
+    .google-button {
+        background: #DB4A39;
+        border: none;
+    }
+
+    .google-button:hover{
+        background: #fa1900;
+    }
+
+    /* Configurações gerais da página feed.php */
+
+    .box-vagas {
+        
+        background: rgba(164, 210, 221, 0.5);
+        transition: 0.8s;
+    }
+
+    .coluna-vagas:hover {
+        box-shadow: 2px 4px rgba(000, 000, 000, 0.2);
+        background: rgba(208, 247, 230, 0.219);
+        transition: 0.5s;
+    }
+
+    .card-vagas h3 {
+        font-weight: 500;
+        color: #021d40;
+        
+    }
+
+    .botao-feed {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
+    }
+
+    .botao-feed:hover {
+        background-color: #0650b1;
+        color: ghostwhite;
+    }
+
+    .menu-lateral {
+        background-color: #021d40;
+    }
+
+    .menu-lateral a {
+        font-weight: 500;
+        color: rgb(208, 208, 245);
+    }
+
+    .menu-lateral a:hover {
+        color: #fff;
+    }
+
+    .paginacao a{
+        color: #021057;
+    }
+
+    .paginacao a:hover {
+        color: #0650b1;
+    }
+
+
+    /* Fim das configurações gerais da página feed.php */
+
 
 
 /* Footer Configurações */
@@ -58,19 +118,13 @@ article, .btn-saibamais {
     background: #021d40;
     color: #fff;
 }
-
-    /* segundo footer cor mais clara */
-    .bg-marinho-secondary-footer {
-        background: #02224D;
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .bg-marinho-secondary-footer a {
-        color: #fff;
-        text-decoration: none;
-    }
-    /* Final Footer Cor mais clara */
-
-
 /* Footer Configurações final */
+
+
+@media (min-width: 576px) {
+    .h-sm-100 {
+        height: 100%;
+    }
+}
+
+

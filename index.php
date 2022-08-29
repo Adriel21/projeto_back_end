@@ -7,7 +7,7 @@ require_once 'inc/cabecalho_externo.php'
     <!-- Primeiro Blaco -->
     <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-md-row">
             <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
-                <h1 class="display-4 fw-bold pe-lg-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, architecto.</h1>
+                <h1 class="display-4 fw-bold pe-lg-8">Encontre projetos, amplie sua rede e gere renda extra</h1>
                     <!-- text -->
                     <p class="mb-4 lead">
                         If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
@@ -32,7 +32,7 @@ require_once 'inc/cabecalho_externo.php'
     <section class="segna-bloco bg-primary py-2">
         <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-sm-row-reverse">
             <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
-                <h2 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design</h2>
+                <h2 class="text-white display-4 fw-bold pe-lg-8">Encontre profissionais diversos &amp; prontos para ajudarem a solucionar sua necessidade.</h2>
                     <!-- text -->
                     <p class="text-white mb-4 lead">
                         If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our

@@ -112,6 +112,17 @@ picture img {
 
     /* Fim das configurações gerais da página feed.php */
 
+    /* Cadastro atualiza */
+
+    .formulario-atualiza {
+        background: rgba(208, 247, 230, 0.219);
+    }
+
+    .cta-formulario-atualiza {
+        font-weight: 600;
+    }
+
+    /* Fim cadastro atualiza */
     
 
 

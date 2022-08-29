@@ -1,11 +1,13 @@
 <?php
 
+use Projeto\Projeto;
 use Projeto\Usuario;
 
 
-
-
+require_once './vendor/autoload.php';
 require_once './inc/cabecalho-cadastro.php';
+$projeto = new Projeto;
+$listaDeProjetos = $projeto->listarTodos();
 ?>
 
 
@@ -87,16 +89,16 @@ require_once './inc/cabecalho-cadastro.php';
 
             <main class="row overflow-auto border border-2 border-opacity-50 pb-2 rounded box-vagas">
 
-            
+            <?php foreach($listaDeProjetos as $projetos) { ?>
             <div class="col pt-4 card-vagas">
                 <div class="card w-77">
                     <div class="card-body coluna-vagas">
                     <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                         <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4">Oportunidade de emprego</h3>
+                        <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
                         <small>3 days ago</small>
                         </div>
-                        <p class="mb-1">Descrição do job de acordo com o pedido do cliente cadastrado.</p>
+                        <p class="mb-1"><?=$projetos['resumo']?></p>
                         <small>(Nome do cliente talvez.)</small>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
@@ -105,44 +107,7 @@ require_once './inc/cabecalho-cadastro.php';
                     </a>
                 </div>
                 </div>
-                <div class="col pt-4 ">
-                <div class="card w-77">
-                    <div class="card-body coluna-vagas">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-2">Oportunidade de emprego</h3>
-                        <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1">Descrição do job de acordo com o pedido do cliente cadastrado.</p>
-                        <small>(Nome do cliente talvez.)</small>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
-                        
-                        </div>
-                    </a>
-                </div>
-                </div>
-
-                <div class="col pt-4 ">
-                <div class="card w-77">
-                    <div class="card-body coluna-vagas">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-2">Oportunidade de emprego</h3>
-                        <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1">Descrição do job de acordo com o pedido do cliente cadastrado.</p>
-                        <small>(Nome do cliente talvez.)</small>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
-                        
-                        </div>
-                    </a>
-                </div>
-                </div>
-
-                    
-                </div>
+                <?php } ?>
             </main>
             <!-- Fim conteúdo das vagas -->
 

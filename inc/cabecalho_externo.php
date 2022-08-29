@@ -22,7 +22,7 @@
 <body>
     <header class="d-flex justify-content-around">
         <h1>
-            <img src="#" alt="logo" title="">
+            <img src="/img/logo-icone/logo_colajob-vetor-32.png" alt="logo" title="">
         </h1>
         <nav class="navbar">
             <ul>

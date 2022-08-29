@@ -25,6 +25,7 @@ picture img {
         background: #021d40;
         color: #fff;
         border: none;
+        font-weight: 600;
     }
 
     button:hover {
@@ -111,6 +112,18 @@ picture img {
 
     /* Fim das configurações gerais da página feed.php */
 
+    /* Cadastro atualiza */
+
+    .formulario-atualiza {
+        background: rgba(208, 247, 230, 0.219);
+    }
+
+    .cta-formulario-atualiza {
+        font-weight: 600;
+    }
+
+    /* Fim cadastro atualiza */
+    
 
 
 /* Footer Configurações */

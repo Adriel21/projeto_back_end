@@ -156,7 +156,7 @@ return $resultado;
 
             $temporario = $arquivo['tmp_name'];
 
-            $destino = "./imagem/".$nome;
+            $destino = "./fotos_de_perfil/".$nome;
 
             move_uploaded_file($temporario, $destino);
         }

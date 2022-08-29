@@ -24,7 +24,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
     <main class="mt-4 mb-4">
       <section class="text-center d-lg-none">
         <section class="perfil pt-3 pb-3 mb-4">
-          <img src="../imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
+          <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
           <button class="botao-perfil rounded-pill ">Editar Perfil</button>
           <hr>
@@ -66,7 +66,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
       
         <aside class="text-center d-lg-block d-none">
         <section class="perfil pt-3 pb-3 mb-4">
-          <img src="../imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
+          <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
           <button class="botao-perfil rounded-pill ">Editar Perfil</button>
           <hr>

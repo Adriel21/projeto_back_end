@@ -15,9 +15,12 @@ require_once 'inc/cabecalho_externo.php'
                     </p>
 
                 <div class="d-grid gap-2 col-4 mt-5 rounded">
-                    <button button class="rounded-5 py-2 border-none fs-5" type="button">
-                        Cadastra-se
-                    </button>
+                <button button class="rounded-3 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                            Cadastra-se
+                        </button> 
+                        <button button class="rounded-5 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                            Cadastra-se
+                        </button>
                 </div>
             </div>
 
@@ -40,7 +43,10 @@ require_once 'inc/cabecalho_externo.php'
                     </p>
 
                     <div class="d-grid gap-2 col-4 mt-5 rounded">
-                        <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                        <button button class="rounded-3 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                            Cadastra-se
+                        </button> 
+                        <button button class="rounded-5 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
                             Cadastra-se
                         </button>
                     </div>

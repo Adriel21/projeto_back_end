@@ -88,12 +88,12 @@ require "./vendor/autoload.php";
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
 						if($dados['profissao_id'] !== null){
-							$sessao->loginDois($dados['id'], $dados['email'], $dados['nome'], $dados['perfil'], $dados['profissao_id']);
-                            header('location:perfil_principal.php?id=' . $_SESSION['id']);;
+							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $dados['profissao_id']);
+                            header('location:perfil_freela.php?id=' . $_SESSION['id']);;
 								///echo 'errou';
 						} else {
 							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
-								header('location:perfil_principal.php?id=' . $_SESSION['id']);
+								header('location:perfil_freela.php?id=' . $_SESSION['id']);
                         }
 					} else {
 						header("location:login.php?senha_incorreta");

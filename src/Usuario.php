@@ -48,6 +48,34 @@ class Usuario {
     }
     return $resultado;
 }
+
+// testado e funcionando 
+public function listarFreela():array {
+    $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, profissao.titulo AS titulo, profissao.descricao AS descricao FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
+try {
+    $consulta = $this->conexao->prepare($sql);
+    $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+    $consulta->execute();
+    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+} catch (Exception $erro) {
+    die("Erro: ". $erro->getMessage());
+}
+return $resultado;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     // Testado e funcionando
     public function cadastrar():void {

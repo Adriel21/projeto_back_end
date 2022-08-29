@@ -32,8 +32,8 @@ public function login (int $id, string $nome, string $email, string $perfil, ): 
 public function loginDois (int $id, string $nome, string $email, string $perfil, int $profissaoId): void {
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
-    $_SESSION['perfil'] = $perfil;
     $_SESSION['email'] = $email;
+    $_SESSION['perfil'] = $perfil;
     $_SESSION['profissao_id'] = $profissaoId;
 }
 

@@ -98,23 +98,23 @@ final class Projeto{
         //     return $resultado;
         // }
 
-        // POR ENQUANTO, SEM USO
-        // public function listarTodos():array {
-        //     $sql = "SELECT id, titulo, resumo, descricao 
-        //     FROM projeto";
+        
+         public function listarTodos():array {
+             $sql = "SELECT id, titulo, resumo, descricao 
+            FROM projeto";
         
         
-        //           try {
-        //              $consulta = $this->conexao->prepare($sql);
-        //              $consulta->execute();
-        //              $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
-        //          } catch (Exception $erro) {
-        //              die("Erro: ". $erro->getMessage());
-        //          }
-        //          return $resultado;
+                   try {
+                      $consulta = $this->conexao->prepare($sql);
+                    $consulta->execute();
+                     $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                  } catch (Exception $erro) {
+                      die("Erro: ". $erro->getMessage());
+                  }
+                  return $resultado;
 
 
-        //         }
+                 }
 
 
         // Método para trazer detalhes da tabela Projeto através da associação entre a classe Usuario

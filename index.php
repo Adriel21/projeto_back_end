@@ -15,9 +15,9 @@ require_once 'inc/cabecalho_externo.php'
                     </p>
 
                 <div class="d-grid gap-2 col-4 mt-5 rounded">
-                    <button button class="rounded-5 py-2 border-none fs-5" type="button">
-                        Cadastra-se
-                    </button>
+                        <button button class="rounded-3 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                            Cadastre-se
+                        </button> 
                 </div>
             </div>
 
@@ -40,9 +40,9 @@ require_once 'inc/cabecalho_externo.php'
                     </p>
 
                     <div class="d-grid gap-2 col-4 mt-5 rounded">
-                        <button button class="rounded-5 py-2 border-none fs-5" type="button">
-                            Cadastra-se
-                        </button>
+                        <button button class="rounded-3 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                            Cadastre-se
+                        </button> 
                     </div>
             </div>
 
@@ -59,61 +59,61 @@ require_once 'inc/cabecalho_externo.php'
         <h2 class="text-center text-muted">Cards Projetos</h2>
             <section class="container row row-cols-1 row-cols-md-3 g-4 m-auto my-5">
                 <div class="col">
-                    <div class="card h-100 shadow">
+                <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow">
-                    <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow">
-                    <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 border border-0 shadow">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -129,15 +129,15 @@ require_once 'inc/cabecalho_externo.php'
                     <div>
                         <h1 class="text-white display-4 fw-bold pe-lg-8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
                         <!-- text -->
-                        <p class="text-white-50 mb-4 lead">
+                        <p class="text-white mb-4 lead">
                             If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
                             employee professional development and well-being.
                         </p>
                         <!-- btn -->
                         <div class="d-grid gap-2 col-4 mt-5 rounded">
-                            <button button class="rounded-5 py-2 border-none fs-5" type="button">
-                                Cadastra-se
-                            </button>
+                            <button button class="rounded-3 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                                Cadastre-se
+                            </button> 
                         </div>
                     </div>
                 </div>

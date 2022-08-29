@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto - back end</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/logo-icone/favicon.ico">
+
     <!-- Css includes -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -21,19 +24,16 @@
         <h1>
             <img src="#" alt="logo" title="">
         </h1>
-<?php 
-$users = ['Cliente', 'Freelancer'];?>
         <nav class="navbar">
             <ul>
-            <li class="btn btn-sm btn-outline-secondary mx-1" type="button">Logout</li>
-                <select class="btn btn-sm btn-outline-secondary mx-1" type="button">
-                    <option value="">Cadastro</option>
-                        <ul>
-                            <?php foreach($users as $user): ?>
-                                <li><a href="index.php?user=<?php echo $user; ?>"><?php echo $user; ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
-                </select>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <a class="px-1" href="login.php">
+                        <button type="button" class="btn btn-outline-primary">Login</button>
+                    </a>
+                    <a class="px-1" href="cadastro.php">
+                        <button type="button" class="btn btn-outline-primary">Cadastro</button>
+                    </a>
+                </div>
             </ul>
         </nav>
     </header>

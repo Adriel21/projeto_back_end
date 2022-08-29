@@ -11,7 +11,6 @@ $usuario = new Usuario;
 $usuario->setId($_SESSION['id']);
 $dadosFreela = $usuario->listarFreela();
 
-var_dump($dadosFreela);
 // if ($_SESSION['id'] == $dados['usuario_id']) {
 //   echo 'alo';
 // } else {
@@ -70,8 +69,8 @@ var_dump($dadosFreela);
               <p><strong><?=$_SESSION['nome']?></strong></p>
               
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button class="botao-perfil rounded-3" type="button"><a href="freela_insere.php?id=<?=$_SESSION['id']?>">teste</a></button>
-              <button class="botao-perfil rounded-3" type="button">Encontrar novos projetos</button>
+              <button class="botao-perfil rounded-3" type="button">Editar Perfil</button>
+              <button class="botao-perfil rounded-3" type="button">Encontrar Projetos</button>
             </div>
               
               <hr>

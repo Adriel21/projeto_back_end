@@ -68,7 +68,7 @@ $dadosFreela = $usuario->listarFreela();
               <p><strong><?=$_SESSION['nome']?></strong></p>
               
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button class="botao-perfil rounded-3" type="button">Editar Perfil</button>
+              <button class="botao-perfil rounded-3" type="button"><?=$_SESSION['profissao']?></button>
               <button class="botao-perfil rounded-3" type="button">Encontrar novos projetos</button>
             </div>
               

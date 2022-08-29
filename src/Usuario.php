@@ -51,7 +51,7 @@ class Usuario {
 
 // testado e funcionando 
 public function listarFreela():array {
-    $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, profissao.titulo AS titulo, profissao.descricao AS descricao FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
+    $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
 try {
     $consulta = $this->conexao->prepare($sql);
     $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);

@@ -25,8 +25,9 @@ final class ControleDeAcesso {
 public function login (int $id, string $nome, string $email, string $perfil, ): void {
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
-    $_SESSION['perfil'] = $perfil;
     $_SESSION['email'] = $email;
+    $_SESSION['perfil'] = $perfil;
+  
 }
 
 public function loginDois (int $id, string $nome, string $email, string $perfil, int $profissaoId): void {

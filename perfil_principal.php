@@ -151,9 +151,9 @@ $listaDeNoticias = $projeto->listarDetalhes();
         <section class="projetos pt-3 pb-4">
         <h1>Meus Projetos</h1>
         <hr>
-        <?php if($_SESSION['profissao_id'] !== null) { ?>
+        <?php if($_SESSION['profissao_id']) { ?>
 
-        <div>Teste</div>
+        <div><a href="./perfil_freela.php?id=<?=$_SESSION['id']?>">Teste</a></div>
 
         <?php } else { ?>
         <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php">Cadastrar Projeto</a></button></div>

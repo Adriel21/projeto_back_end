@@ -192,7 +192,7 @@ $usuario = new Usuario;
         <section class="perfil pt-3 pb-3 mb-4">
           <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
-          <button class="botao-perfil rounded-pill ">Editar Perfil</button>
+          <button class="botao-perfil rounded-pill "><a href="./perfil_principal.php">Editar Perfil</a></button>
           <hr>
           <h2><?=$dadosFreela['titulo']?></h2>
           <p><?=$dadosFreela['descricao']?></p>
@@ -207,7 +207,11 @@ $usuario = new Usuario;
         <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
           <h1 class="me-5">Meus Projetos</h1>
           <hr>
+          <?php if($dadosFreela['profissao_id'] !== null) { ?>
+            <p>teste</p>
+            <?php } else { ?>
           <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="freela_insere.php?id=<?=$_SESSION['id']?>">Cadastrar Projeto</a></button></div>
+          <?php } ?>
         <hr>
         <div class="ls-custom-select d-flex gap-4 align-items-center">
         <p class="mt-3">Filtrar por categoria:</p>

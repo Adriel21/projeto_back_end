@@ -13,7 +13,7 @@ final class Projeto{
 
     
    
-
+     // Classe Usuario instanciada dentro da classe Projeto através de Associação de classes
    
     public Usuario $usuario;
 
@@ -21,7 +21,7 @@ final class Projeto{
     
     public function __construct()
     {
-        /* No momento em que um objeto Noticia for instanciado
+        /* No momento em que um objeto Projeto for instanciado
         nas páginas, aproveitaremos para também instanciar um objeto
         Usuario e com isso acessar recursos desta classe. */
         $this->usuario = new Usuario;
@@ -31,21 +31,8 @@ final class Projeto{
         $this->conexao = $this->usuario->getConexao();
     }
 
-     // Testado e funcionando
-     public function listar():array {
-        $sql = "SELECT projeto.id, projeto.nome, projeto.imagem, projeto.descricao, projeto.cliente_id, categoria.nome AS categoria, cliente.nome AS cliente
-        FROM projeto LEFT JOIN categoria ON projeto.categoria_id = categoria.id LEFT JOIN cliente ON projeto.cliente_id = cliente.id ORDER BY id";
 
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->execute();
-            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
-        } catch (Exception $erro) {
-            die("Erro: ". $erro->getMessage());
-        }
-        return $resultado;
-    }
-
+    // Método para cadastrar projetos na base de dados
     public function cadastrar():void {
         $sql = "INSERT INTO projeto(titulo, resumo, descricao, usuario_id, categoria_id) VALUES(:titulo, :resumo, :descricao, :usuario_id, :categoria_id)";
         
@@ -62,26 +49,26 @@ final class Projeto{
         }
     }
 
-    // Testado e funcionando
-    public function upload(array $arquivo) {
-        $tiposAceitos = [
-            "image/png",
-            "image/jpeg",
-            "image/gif",
-            "image/svg+xml"
-        ];
+    // EM DECISÃO DE USO
+    // public function upload(array $arquivo) {
+    //     $tiposAceitos = [
+    //         "image/png",
+    //         "image/jpeg",
+    //         "image/gif",
+    //         "image/svg+xml"
+    //     ];
 
-        if(!in_array($arquivo['type'], $tiposAceitos)) {
-            die("<script>alert('formato válido');</script>");
-        }
-            $nome = $arquivo['name'];
+    //     if(!in_array($arquivo['type'], $tiposAceitos)) {
+    //         die("<script>alert('formato válido');</script>");
+    //     }
+    //         $nome = $arquivo['name'];
 
-            $temporario = $arquivo['tmp_name'];
+    //         $temporario = $arquivo['tmp_name'];
 
-            $destino = "./imagem/".$nome;
+    //         $destino = "./imagem/".$nome;
 
-            move_uploaded_file($temporario, $destino);
-        }
+    //         move_uploaded_file($temporario, $destino);
+    //     }
 
         //  public function listarDetalhes():array {
         //      $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, usuario.email AS email, usuario.perfil AS perfil FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id";
@@ -111,24 +98,26 @@ final class Projeto{
         //     return $resultado;
         // }
 
+        // POR ENQUANTO, SEM USO
+        // public function listarTodos():array {
+        //     $sql = "SELECT id, titulo, resumo, descricao 
+        //     FROM projeto";
         
-        public function listarTodos():array {
-            $sql = "SELECT id, titulo, resumo, descricao 
-            FROM projeto";
         
-        
-                  try {
-                     $consulta = $this->conexao->prepare($sql);
-                     $consulta->execute();
-                     $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
-                 } catch (Exception $erro) {
-                     die("Erro: ". $erro->getMessage());
-                 }
-                 return $resultado;
+        //           try {
+        //              $consulta = $this->conexao->prepare($sql);
+        //              $consulta->execute();
+        //              $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        //          } catch (Exception $erro) {
+        //              die("Erro: ". $erro->getMessage());
+        //          }
+        //          return $resultado;
 
 
-                }
+        //         }
 
+
+        // Método para trazer detalhes da tabela Projeto através da associação entre a classe Usuario
         public function listarDetalhes():array {
             $sql = "SELECT id, titulo, resumo, descricao 
             FROM projeto WHERE usuario_id = :usuario_id";
@@ -150,38 +139,28 @@ final class Projeto{
 
 
                 }
-    /**
-     * Get the value of id
-     */ 
+   
+
+
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * Set the value of id
-     *
-     * @return  self
-     */ 
+   
     public function setId($id)
     {
         $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
 
     }
 
-    /**
-     * Get the value of descricao
-     */ 
+   
     public function getDescricao()
     {
         return $this->descricao;
     }
 
-    /**
-     * Set the value of descricao
-     *
-     * @return  self
-     */ 
+  
     public function setDescricao(string $descricao)
     {
         $this->descricao = filter_var($descricao, FILTER_SANITIZE_SPECIAL_CHARS);
@@ -203,55 +182,37 @@ final class Projeto{
 
     }
 
-    /**
-     * Get the value of titulo
-     */ 
+   
     public function getTitulo()
     {
         return $this->titulo;
     }
 
-    /**
-     * Set the value of titulo
-     *
-     * @return  self
-     */ 
+ 
     public function setTitulo($titulo)
     {
         $this->titulo = filter_var($titulo, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-    /**
-     * Get the value of resumo
-     */ 
+    
     public function getResumo()
     {
         return $this->resumo;
     }
 
-    /**
-     * Set the value of resumo
-     *
-     * @return  self
-     */ 
+  
     public function setResumo($resumo)
     {
         $this->resumo = filter_var($resumo, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-    /**
-     * Get the value of usuarioId
-     */ 
+   
     public function getUsuarioId()
     {
         return $this->usuarioId;
     }
 
-    /**
-     * Set the value of usuarioId
-     *
-     * @return  self
-     */ 
+   
     public function setUsuarioId($usuarioId)
     {
         $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);

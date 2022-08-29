@@ -16,6 +16,8 @@ final class Profissao{
         $this->conexao = Banco::conecta();
     }
 
+
+    // Método para cadastrar perfil profissional
     public function cadastrar():void {
         $sql = "INSERT INTO profissao(titulo, descricao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :usuario_id, :categoria_id)";
         
@@ -31,6 +33,7 @@ final class Profissao{
         }
     }
 
+    // Método para trazer um perfil profissional 
     public function listarUm():array {
         $sql = "SELECT id, titulo, descricao, usuario_id, categoria_id FROM profissao WHERE usuario_id = :usuario_id";
     try {
@@ -46,118 +49,76 @@ final class Profissao{
  
 
 
-    /**
-     * Get the value of id
-     */ 
+   
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * Set the value of id
-     *
-     * @return  self
-     */ 
+   
     public function setId($id)
     {
-        $this->id = $id;
-
-        return $this;
+        $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
     }
 
-    /**
-     * Get the value of titulo
-     */ 
+
     public function getTitulo()
     {
         return $this->titulo;
     }
 
-    /**
-     * Set the value of titulo
-     *
-     * @return  self
-     */ 
+   
     public function setTitulo($titulo)
     {
-        $this->titulo = $titulo;
-
-        return $this;
+        $this->titulo = filter_var($titulo, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-    /**
-     * Get the value of descricao
-     */ 
+    
     public function getDescricao()
     {
         return $this->descricao;
     }
 
-    /**
-     * Set the value of descricao
-     *
-     * @return  self
-     */ 
+   
     public function setDescricao($descricao)
     {
-        $this->descricao = $descricao;
+        $this->descricao = filter_var($descricao, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
-    /**
-     * Get the value of usuarioId
-     */ 
+   
     public function getUsuarioId()
     {
         return $this->usuarioId;
     }
 
-    /**
-     * Set the value of usuarioId
-     *
-     * @return  self
-     */ 
+    
+  
     public function setUsuarioId($usuarioId)
     {
-        $this->usuarioId = $usuarioId;
+        $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
 
     }
 
-    /**
-     * Get the value of categoriaId
-     */ 
+   
     public function getCategoriaId()
     {
         return $this->categoriaId;
     }
 
-    /**
-     * Set the value of categoriaId
-     *
-     * @return  self
-     */ 
+   
     public function setCategoriaId($categoriaId)
     {
-        $this->categoriaId = $categoriaId;
-
-        return $this;
+        $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
     }
 
-    /**
-     * Get the value of conexao
-     */ 
+    
     public function getConexao()
     {
         return $this->conexao;
     }
 
-    /**
-     * Set the value of conexao
-     *
-     * @return  self
-     */ 
+  
     public function setConexao($conexao)
     {
         $this->conexao = $conexao;

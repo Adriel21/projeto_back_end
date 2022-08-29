@@ -15,11 +15,12 @@ class Usuario {
 
     
 
-    
+    // Método para conexão com o banco
     public function __construct()
     {
         $this->conexao = Banco::conecta();
     }
+
 
        // Testado e funcionando
        public function listar():array {
@@ -35,7 +36,7 @@ class Usuario {
         return $resultado;
     }
 
-// testado e funcionando 
+// método que tem como objetivo trazer um usuário, utilizando como parâmetro o ID
     public function listarUm():array {
         $sql = "SELECT id, email, nome, perfil, profissao_id FROM usuario WHERE id = :id";
     try {
@@ -49,7 +50,7 @@ class Usuario {
     return $resultado;
 }
 
-// testado e funcionando 
+// método que tem como objetivo trazer um usuário e, também, seu relacionamento através da chave estrangeria profissao_id usando join do sql
 public function listarFreela():array {
     $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
 try {
@@ -69,15 +70,8 @@ return $resultado;
 
 
 
-
-
-
-
-
-
-
     
-    // Testado e funcionando
+    //método para cadastro de usuários no banco
     public function cadastrar():void {
         $sql = "INSERT INTO usuario(nome, email, senha, perfil) VALUES(:nome, :email, :senha, :perfil)";
         
@@ -93,7 +87,7 @@ return $resultado;
         }
     }
 
-    //testado e funcionando 
+    //método que tem como objetivo atualizar/inserir o id da tabela profissao na coluna profissao_id da tabela usuario, criando assim, o relacionamento
     public function atualizarPr():void {
         $sql = "UPDATE usuario SET profissao_id = :profissao_id  WHERE id = :id";
 
@@ -131,6 +125,8 @@ return $resultado;
         }
     }
 
+
+        // Método que tem como objetivo verificar se o email informado existe na base de dados
         public function buscar() {
             $sql = "SELECT * FROM usuario WHERE email = :email";
             try {
@@ -144,7 +140,7 @@ return $resultado;
             return $resultado;
         }
 
-        // Testado e funcionando
+        // método para inserir e limitar as imagens na base de dados
     public function upload(array $arquivo) {
         $tiposAceitos = [
             "image/png",
@@ -273,67 +269,9 @@ return $resultado;
         $this->telefone = filter_var($telefone, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-    
 
 
 
-    
-     
-    public function getProfissao()
-    {
-        return $this->profissao;
-    }
-
-    /**
-     * Set the value of profissao
-     *
-     * @return  self
-     */ 
-    public function setProfissao($profissao)
-    {
-        $this->profissao = filter_var($profissao, FILTER_SANITIZE_SPECIAL_CHARS);
-
-
-    }
-
-    /**
-     * Get the value of descricao_profissao
-     */ 
-    public function getDescricao_profissao()
-    {
-        return $this->descricao_profissao;
-    }
-
-    /**
-     * Set the value of descricao_profissao
-     *
-     * @return  self
-     */ 
-    public function setDescricao_profissao($descricao_profissao)
-    {
-        $this->descricao_profissao = $descricao_profissao;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of categoriaId
-     */ 
-    public function getCategoriaId()
-    {
-        return $this->categoriaId;
-    }
-
-    /**
-     * Set the value of categoriaId
-     *
-     * @return  self
-     */ 
-    public function setCategoriaId($categoriaId)
-    {
-        $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
-
-    }
 
     /**
      * Get the value of profissaoId
@@ -350,8 +288,8 @@ return $resultado;
      */ 
     public function setProfissaoId($profissaoId)
     {
-        $this->profissaoId = $profissaoId;
+        $this->profissaoId = filter_var($profissaoId, FILTER_SANITIZE_NUMBER_INT);
 
-        return $this;
+      
     }
 }

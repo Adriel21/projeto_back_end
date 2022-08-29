@@ -13,6 +13,9 @@ final class Categoria {
         $this->conexao = Banco::conecta();
     }
 
+
+
+    // Método para trazer todas as categorias
     public function listar():array { 
         $sql = "SELECT id, nome FROM categoria ORDER BY nome";
         try {
@@ -25,6 +28,8 @@ final class Categoria {
         return $resultado;
     }
     
+
+    // Método para trazer apenas uma categoria
     public function listarUm():array {
         $sql = "SELECT nome FROM categoria WHERE id = :id";
 

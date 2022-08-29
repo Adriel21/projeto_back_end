@@ -2,13 +2,14 @@
 
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
+use Projeto\Usuario;
 
 require_once './vendor/autoload.php';
  require_once './inc/cabecalho_admin.php'; 
 $sessao = new ControleDeAcesso;
-$projeto = new Projeto;
-$projeto->usuario->setId($_SESSION['id']);
-$listaDeNoticias = $projeto->listarDetalhes();
+$usuario = new Usuario;
+$usuario->setId($_SESSION['id']);
+$dadosFreela = $usuario->listarFreela();
 // if ($_SESSION['id'] == $dados['usuario_id']) {
 //   echo 'alo';
 // } else {
@@ -49,8 +50,8 @@ $listaDeNoticias = $projeto->listarDetalhes();
             </div>
 
             <hr>
-           <h2>Projetos Publicados:</h2>
-          <p class="contador"><?=count($listaDeNoticias)?></p>
+           <h2><?=$dadosFreela['titulo']?></h2>
+          <!-- <p class="contador"></p> -->
       </section>
     </aside>
   <!-- Desktop Table -->
@@ -72,7 +73,7 @@ $listaDeNoticias = $projeto->listarDetalhes();
             </div>
               
               <hr>
-              <h2>Projetos Publicados:</h2>
+              <h2><?=$dadosFreela['titulo']?></h2>
           </section>
         <!-- Perfil mobile -->
 
@@ -116,20 +117,20 @@ $listaDeNoticias = $projeto->listarDetalhes();
                 </select>
             </div>
             
-            <?php foreach ($listaDeNoticias as $noticia) {  ?> 
+           
                 <div class="col-12 px-md-1 mt-2">
                     <div class="list-group">
                           <div class="list-group-item list-group-item-action">
-                            <h4 class="">Título: <?=$noticia['titulo']?></h4>
+                            <h4 class="">Título:</h4>
                               <span><strong>Data:</strong> 25/08/2022</span>
-                              <p><strong>Resumo do projeto:</strong> <?=$noticia['resumo']?></p>
+                              <p><strong>Resumo do projeto:</strong> </p>
                           <div class="d-flex justify-content-center">
                             <button class="botao-perfil rounded-3 px-5" type="button">Visualizar projeto</button>
                           </div>
                         </div>
                     </div>
                 </div>
-                      <?php } ?>
+                    
         </section>
           <!-- Conteudo mobile -->
 
@@ -171,20 +172,20 @@ $listaDeNoticias = $projeto->listarDetalhes();
                 </select>
             </div>
             
-            <?php foreach ($listaDeNoticias as $noticia) {  ?> 
+          
                 <div class="col-12 px-md-1 mt-2">
                     <div class="list-group">
                           <div class="list-group-item list-group-item-action">
-                            <h4 class="">Título: <?=$noticia['titulo']?></h4>
+                            <h4 class="">Título: </h4>
                               <span><strong>Data:</strong> 25/08/2022</span>
-                              <p><strong>Resumo do projeto:</strong> <?=$noticia['resumo']?></p>
+                              <p><strong>Resumo do projeto:</strong> </p>
                           <div class="d-flex justify-content-center">
                             <button class="botao-perfil rounded-3 px-5" type="button">Visualizar projeto</button>
                           </div>
                         </div>
                     </div>
                 </div>
-                      <?php } ?>
+                      
       </section>
     <!-- Mobile Table -->   
   </main>

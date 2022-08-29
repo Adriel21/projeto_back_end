@@ -30,7 +30,7 @@
                     <a class="px-1" href="loginDois.php">
                         <button type="button" class="btn btn-outline-primary">Login</button>
                     </a>
-                    <a class="px-1" href="cadastro.php">
+                    <a class="px-1" href="cadastroDois.php">
                         <button type="button" class="btn btn-outline-primary">Cadastro</button>
                     </a>
                 </div>

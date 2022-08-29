@@ -2,10 +2,9 @@
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
-use Projeto\Profissao;
 use Projeto\Projeto;
 
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
 // 	$usuario->setNome($_POST['nome']);
@@ -28,18 +27,19 @@ if(isset($_POST['inserir'])) {
     // $projeto->setDescricao($_POST['descricao']);
     // $projeto->setCategoriaId($_POST['categoria']);
     // $projeto->setUsuarioId($_GET['id']);
-    $profissao = new Profissao;
-    $profissao->setTitulo($_POST['titulo']);
-    $profissao->setDescricao($_POST['descricao']);
-    $profissao->setUsuarioId($_GET['id']);
-    $profissao->setCategoriaId($_POST['categoria']);
+    $projeto = new Projeto;
+    $projeto->setTitulo($_POST['titulo']);
+    $projeto->setResumo($_POST['resumo']);
+    $projeto->setDescricao($_POST['descricao']);
+    $projeto->setUsuarioId($_GET['id']);
+    $projeto->setCategoriaId($_POST['categoria']);
 
     // header("location:login.php");
 
 
 	$projeto->cadastrar();
 
-    header('location:projeto_valida.php?id=' . $_SESSION['id']);
+    header('location:perfil_principal.php?id=' . $_SESSION['id']);
 
 }
 

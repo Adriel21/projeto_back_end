@@ -8,10 +8,10 @@
     <title>Projeto - back end</title>
 
     <!-- Css includes -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- Css proprio -->
-    <link rel="stylesheet" href="css/estilo_interno.css">
+    <link rel="stylesheet" href="../css//estilo_interno.css">
 
     <!-- Icons Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">

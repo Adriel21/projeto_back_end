@@ -63,7 +63,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastre-se</button>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastre-se</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastre-se</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastre-se</button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ require_once 'inc/cabecalho_externo.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-3 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-3 p-2 px-4" type="button">Cadastre-se</button>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ require_once 'inc/cabecalho_externo.php'
                         </p>
                         <!-- btn -->
                         <div class="d-grid gap-2 col-4 mt-5 rounded">
-                            <button button class="rounded-3 py-2 border-none fs-5 text-uppercase font-weight-bold" type="button">
+                            <button button class="rounded-3 py-2 px-2 border-none fs-6 text-uppercase font-weight-bold" type="button">
                                 Cadastre-se
                             </button> 
                         </div>

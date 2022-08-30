@@ -7,7 +7,8 @@
 }
 
 .perfil img{
-    border-radius: 150px;
+    border-radius: 200%;
+    height: 135px;
 }
 
 .perfil p {

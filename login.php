@@ -13,7 +13,7 @@ require "./vendor/autoload.php";
 	<div class="container marketing shadow">
 		<div class="row featurette my-5 p-sm-5">
 
-			<div class="col-md-6 d-none d-md-block">
+			<div class="col-md-6 d-none d-md-block texto_de_fundo">
 				<h1 >XPTO.com</h1>
                     <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
                     <p class="text-start">Realize o login para uma melhor experiência</p>

@@ -79,7 +79,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
         </aside>
 
 
-        <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3">
+        <section class="projetos_desktop pt-3 pb-2 float-end d-none d-lg-block ps-3 me-3 mb-5">
           <h1 class="me-5">Meus Projetos</h1>
           <hr>
           <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="projeto_insere.php?id=<?=$_SESSION['id']?>">Cadastrar Projeto</a></button></div>

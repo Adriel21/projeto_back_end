@@ -100,7 +100,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
                         <h4 class="">Título: <?=$projetos['titulo']?></h4>
                           <span><strong>Data:</strong> 25/08/2022</span>
                           <p><strong>Resumo do projeto:</strong> <?=$projetos['resumo']?></p>
-                          <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button">Visualizar projeto</button></div>
+                          <div class="d-flex justify-content-center"><button class="rounded-pill btn-projeto px-5 py-1 mt-2" type="button"><a href="./detalhes_do_projeto.php?id=<?=$projetos['id']?>">Visualizar projeto</a></button></div>
                       </div>
                   </div>
               </div>
@@ -135,3 +135,4 @@ $listaDeProjetos = $projeto->listarDetalhes();
     <!-- Copyright -->
   </footer>
     
+

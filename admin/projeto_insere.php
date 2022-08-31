@@ -45,7 +45,7 @@ if(isset($_POST['inserir'])) {
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -81,4 +81,4 @@ if(isset($_POST['inserir'])) {
             <button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
     </form>
 </body>
-</html>
+</html> -->

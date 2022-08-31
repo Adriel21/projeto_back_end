@@ -117,6 +117,10 @@ picture img {
         color: #0650b1;
     }
 
+    .img-perfil {
+        width: 150px;
+        height: 150px;
+    }
 
     /* Fim das configurações gerais da página feed.php */
 

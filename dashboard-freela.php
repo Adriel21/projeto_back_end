@@ -12,18 +12,24 @@ $listaDeProjetos = $projeto->listarTodos();
 
 
 <!-- Menu Lado direito -->
-
 <div class="container-fluid overflow-hidden ">
     <div class=" row vh-100 overflow-auto">
         <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex sticky-top">
-            <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
-                <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
-                    <span class="fs-5"><img src="img/logo-icone/logo_colajob-vetor-32.png" alt="Logo da colajob"><span class="ps-1 d-none d-sm-inline text-white">colajob</span></span>
+            <div class="menu-lateral d-flex flex-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white bg-primary">
+                <a href="/" class="col-12 justify-content-center d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto text-decoration-none">
+                        <img src="./img/logo-icone/logo_colajob-vetor-32.png" class="bg-white" alt="Logo da colajob">
+                            <span class="ps-1 d-none d-sm-inline text-white">
+                                colajob
+                            </span>
                 </a>
 
-                <div class="col-sm-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                </div><!-- /.col-lg-4 -->
+                <div class="col-12 d-flex flex-column align-items-center">
+                    <img src="img/img-equipe-conversando.png" class="rounded-circle mb-3 img-perfil shadow" alt="Avatar">
+
+                    <h5 class="mb-2"><strong>John Doe</strong></h5>
+                    <p class="text-white">Web designer <span class="badge bg-black">PRO</span></p>
+                    <button class="col-8 btn btn-dark text-uppercase">atualizar Perfil</button>
+                </div>
 
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
@@ -75,7 +81,6 @@ $listaDeProjetos = $projeto->listarTodos();
         </div>
 
         <!-- Container das vagas inicio -->
-
         <div class="col d-flex flex-column h-sm-100">
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
@@ -89,9 +94,36 @@ $listaDeProjetos = $projeto->listarTodos();
                 </div>
             </nav> 
             <!-- Cabeçalho fim -->
+            
+            <!-- Call  -->
+            
+            <div class="bg-primary rounded my-2 py-2">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row align-items-center g-0">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <!-- heading -->
+                        <div>
+                        <h1 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design
+                        </h1>
+                        <!-- text -->
+                        <p class="text-white-50 mb-4 lead">
+                            If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                            employee professional development and well-being.
+                        </p>
+                        <!-- btn -->
+                        <a href="#" class="btn btn-dark">View opportunities</a>
+                        </div>
+                    </div>
+                    <!-- img -->
+                    <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
+                        <img src="../assets/images/hero/hero-img.png" alt="" class="img-fluid">
+                    </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Início conteúdo das vagas -->
-
             <main class="row overflow-auto border border-2 border-opacity-50 pb-2 rounded box-vagas">
 
             <?php foreach($listaDeProjetos as $projetos) { ?>
@@ -106,7 +138,7 @@ $listaDeProjetos = $projeto->listarTodos();
                         <p class="mb-1"><?=$projetos['resumo']?></p>
                         <small>(Nome do cliente talvez.)</small>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
+                        <button class="botao-feed btn   me-md-2" type="button">DETALHES</button>
                         
                         </div>
                     </a>

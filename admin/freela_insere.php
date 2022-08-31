@@ -5,7 +5,7 @@ use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
 use Projeto\Projeto;
 
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
 // 	$usuario->setNome($_POST['nome']);
@@ -25,6 +25,7 @@ if(isset($_POST['inserir'])) {
     $profissao = new Profissao;
 	$profissao->setTitulo($_POST['titulo']);
     $profissao->setDescricao($_POST['descricao']);
+    $profissao->setSituacao(1);
     $profissao->setCategoriaId($_POST['categoria']);
     $profissao->setUsuarioId($_GET['id']);
 

@@ -46,6 +46,12 @@ final class Profissao{
     }
     return $resultado;
 }
+
+// Método para atualizar dados do perfil
+public function atualizar():void {
+    $sql = "UPDATE titulo, descricao, categoria_id FROM profissao WHERE usuario_id = :usuario_id";
+    
+}
  
 
 

@@ -26,8 +26,7 @@ $dadosFreela = $usuario->listarFreela();
 
 ?>
 
-
-  <main class="my-4">
+  <main class=" my-4">
 
   <!-- Desktop Table perfil lateral -->
     <aside class="text-center d-lg-block d-none">

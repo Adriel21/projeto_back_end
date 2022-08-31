@@ -32,6 +32,22 @@ final class Projeto{
     }
 
 
+    //Nesse método aqui fazemos a listagem de um projeto 
+    public function listarUm():array {
+        $sql = "SELECT id, titulo, resumo, descricao, categoria_id FROM projeto WHERE id =:id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+         } catch (Exception $erro) {
+             die("Erro: ". $erro->getMessage());
+         }
+         return $resultado;
+    }
+
+
     // Método para cadastrar projetos na base de dados
     public function cadastrar():void {
         $sql = "INSERT INTO projeto(titulo, resumo, descricao, usuario_id, categoria_id) VALUES(:titulo, :resumo, :descricao, :usuario_id, :categoria_id)";
@@ -125,7 +141,7 @@ final class Projeto{
         
                   try {
                      $consulta = $this->conexao->prepare($sql);
-                     $consulta->bindValue(
+                     $consulta->bindValue( //Utilizamos bind value por motivo da associação de
                         ":usuario_id", 
                         $this->usuario->getId(), 
                         PDO::PARAM_INT
@@ -137,6 +153,36 @@ final class Projeto{
                  }
                  return $resultado;
 
+
+                }
+
+                public function atualizarProjeto(){
+                    $sql = "UPDATE projeto SET titulo = :titulo, resumo = :resumo, descricao = :descricao, categoria_id = :categoria_id WHERE id = :id";
+
+                    try {
+                        $consulta = $this->conexao->prepare($sql);
+                        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+                        $consulta->bindParam(':titulo', $this->titulo, PDO::PARAM_STR);
+                        $consulta->bindParam(':resumo', $this->resumo, PDO::PARAM_STR);
+                        $consulta->bindParam(':descricao', $this->descricao, PDO::PARAM_STR);
+                        $consulta->bindParam(':categoria_id', $this->categoriaId, PDO::PARAM_INT);
+                        $consulta->execute();
+                    } catch (Exception $erro) {
+                        die("Erro: ". $erro->getMessage());
+                    }
+                }
+
+                public function excluirProjeto():void {
+                    $sql = "DELETE FROM projeto WHERE id =:id";
+                    
+                    try {
+                        $consulta = $this->conexao->prepare($sql);
+                        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+                        
+                        $consulta->execute();
+                    } catch (Exception $erro) {
+                        die("Erro: ". $erro->getMessage());
+                    }
 
                 }
    

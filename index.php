@@ -152,4 +152,15 @@ require_once 'inc/cabecalho_externo.php'
 </main>
    
 
+<section aria-label="Formulário de contato">
+    <label for="nome">Digite seu nome: </label>
+    <input type="text" name="nome" placeholder="Ex: João...">
+    
+    <label for="email">Email: </label>
+    <input type="text" name="email" placeholder="Ex: contato@contato.com">
+    
+    <label for="email">Email: </label>
+    <input type="text" name="email" placeholder="Ex: contato@contato.com">
+</section>
+
 <?php require_once 'inc/footer_externo.php'; ?>

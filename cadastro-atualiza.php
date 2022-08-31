@@ -1,50 +1,9 @@
 <?php
 
-use Projeto\Categoria;
-use Projeto\ControleDeAcesso;
-use Projeto\Projeto;
+require_once "./vendor/autoload.php";
 
-require_once '../vendor/autoload.php';
-// if( isset($_POST['inserir']) ){
-// 	$usuario = new Usuario;
-// 	$usuario->setNome($_POST['nome']);
-// 	$usuario->setEmail($_POST['email']);
-// 	$usuario->setTipo($_POST['tipo']);
-// 	$usuario->setSenha(  $usuario->codificaSenha($_POST['senha'])  );
-// 	// echo $usuario->getSenha();
-
-// 	$usuario->inserir();
-// 	header("location:usuarios.php");
-// }
-$sessao = new ControleDeAcesso;
-
-$categoria = new Categoria;
-$listaDeCategorias = $categoria->listar();
-if(isset($_POST['inserir'])) {
-    // $projeto = new Projeto;
-	// $projeto->setTitulo($_POST['titulo']);
-	// $projeto->setResumo($_POST['resumo']);
-    // $projeto->setDescricao($_POST['descricao']);
-    // $projeto->setCategoriaId($_POST['categoria']);
-    // $projeto->setUsuarioId($_GET['id']);
-    $projeto = new Projeto;
-    $projeto->setTitulo($_POST['titulo']);
-    $projeto->setResumo($_POST['resumo']);
-    $projeto->setDescricao($_POST['descricao']);
-    $projeto->setUsuarioId($_GET['id']);
-    $projeto->setCategoriaId($_POST['categoria']);
-
-    // header("location:login.php");
-
-
-	$projeto->cadastrar();
-
-    header('location:perfil_principal.php?id=' . $_SESSION['id']);
-
-}
-
+require_once './inc/cabecalho_admin.php'; 
 ?>
-
 
 
 <!--criando formulario de cadastro -->
@@ -81,9 +40,3 @@ if(isset($_POST['inserir'])) {
 			</div>
 		</div>
 	</div>
-
-					
-					
-
-            <button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
-    

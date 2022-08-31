@@ -5,7 +5,8 @@ use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
 use Projeto\Projeto;
 
-require_once './vendor/autoload.php';
+require_once '../inc/cabecalho_admin.php';
+require_once '../vendor/autoload.php';
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
 // 	$usuario->setNome($_POST['nome']);
@@ -39,7 +40,48 @@ if(isset($_POST['inserir'])) {
 
 ?>
 
-<!DOCTYPE html>
+<div class="container col-md-12 col-sm-12 marketing shadow rounded">
+		<div class="row justify-content-center featurette my-5 p-sm-5">
+        <h1 class="ps-5 pt-2 py-2 cta-formulario-atualiza">Cadastrar projeto</h1>
+			<div class="col-12 col-md-8 col-sm-12  p-sm-4 p-4 ">
+				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
+					
+					
+					<div class="form-group pb-3  mt-2">
+						<label for="email" class="pb-1">Título do Projeto</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					</div>
+                    <div class="form-group pb-3 mt-2">
+						<label for="email" class="pb-1">Descrição do projeto</label>
+						<input type="email" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+					</div>
+					<div class="form-group  mt-2">
+						<label for="senha" class="pb-1">Descrição</label>
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+					</div>
+
+                    <label class="form-label" for="categoria">Categoria:</label>
+                <select class="form-select" name="categoria" id="categoria" required>
+					<option value=""></option>
+					
+					<?php foreach($listaDeCategorias as $categorias) { ?>
+					<option value="<?=$categorias['id']?>"> 
+						<?=$categorias['nome']?> 
+					</option>
+					<?php } ?>
+					
+				</select>
+			</div>
+					
+					<div class="pt-4 text-center">
+                    <button class="botao-feed btn bg-info text-dark" type="submit">CADASTRAR</button>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -52,8 +94,8 @@ if(isset($_POST['inserir'])) {
         <label for="titulo">Título do Projeto</label>
         <input type="text" name="titulo">
         <hr>
-        <!-- <label for="resumo">Resumo do Projeto</label>
-        <input type="text" name="resumo"> -->
+         <label for="resumo">Resumo do Projeto</label>
+        <input type="text" name="resumo"> 
         <hr>
         <label for="descricao">Descrição do projeto</label>
         <input type="text" name="descricao">
@@ -63,11 +105,7 @@ if(isset($_POST['inserir'])) {
                 <select class="form-select" name="categoria" id="categoria" required>
 					<option value=""></option>
 					
-					<?php foreach($listaDeCategorias as $categorias) { ?>
-					<option value="<?=$categorias['id']?>"> 
-						<?=$categorias['nome']?> 
-					</option>
-					<?php } ?>
+					
 					
 				</select>
 			</div>
@@ -75,4 +113,4 @@ if(isset($_POST['inserir'])) {
             <button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
     </form>
 </body>
-</html>
+</html> -->

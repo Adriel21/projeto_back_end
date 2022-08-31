@@ -8,7 +8,7 @@
     <title>Projeto - back end</title>
 
     <!-- Css includes -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- Css proprio -->
     <link rel="stylesheet" href="../css/estilo_interno.css">
@@ -32,7 +32,7 @@
 
 </head>
 <body>
-    <header class="d-flex justify-content-around">
+    <!-- <header class="d-flex justify-content-around">
     <h1><picture><img src="./logo_colajob.png" alt="" width="200" height="80"></picture></h1>
     <nav class="navbar navbar-expand-md text-center ">
             <div class="container mxe-md-5">
@@ -60,5 +60,5 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header> -->
   

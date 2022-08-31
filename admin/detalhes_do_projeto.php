@@ -4,6 +4,7 @@ use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
+require_once '../inc/cabecalho_admin.php';
 require_once '../vendor/autoload.php';
 
 $sessao = new ControleDeAcesso;
@@ -31,27 +32,28 @@ if(isset($_POST['atualizar'])) {
 ?>
 
 
+<div class="container col-md-12 col-sm-12 marketing shadow rounded">
+		<div class="row justify-content-center featurette my-5 p-sm-5">
+        <h1 class="ps-5 pt-2 py-2 cta-formulario-atualiza">Projetos</h1>
+			<div class="col-12 col-md-8 col-sm-12  p-sm-4 p-4 ">
+				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
+					
+					
+					<div class="form-group pb-3  mt-2">
+						<label for="email" class="pb-1">Titulo</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					</div>
+                    <div class="form-group pb-3 mt-2">
+						<label for="email" class="pb-1">Resumo</label>
+						<input type="email" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+					</div>
+					<div class="form-group  mt-2">
+						<label for="senha" class="pb-1">Descrição</label>
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+					</div>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Insere</title>
-</head>
-<body>
-    <form action="" method="POST">
-        <label for="titulo">Título do Projeto</label>
-        <input type="text" name="titulo">
-        <hr>
-        <label for="resumo">Resumo do Projeto</label>
-        <input type="text" name="resumo"> 
-        <hr>
-        <label for="descricao">Descrição do projeto</label>
-        <input type="text" name="descricao">
 
-        <div class="mb-3">
+                    <div class="mb-3">
                 <label class="form-label" for="categoria">Categoria:</label>
                 <select class="form-select" name="categoria" id="categoria" required>
 					<option value=""></option>
@@ -63,11 +65,16 @@ if(isset($_POST['atualizar'])) {
 					<?php } ?>
 					
 				</select>
-			</div>
 
-            <button class="btn btn-primary" id="inserir" name="atualizar"><i class="bi bi-save"></i> Inserir</button>
+                <button class="btn btn-primary" id="inserir" name="atualizar"><i class="bi bi-save"></i> Inserir</button>
             
             <button class="btn btn-primary" id="inserir" name="excluir"><i class="bi bi-save"></i> <a href="excluir_projeto.php?id=<?=$dados['id']?>">Excluir</a></button>
-    </form>
-</body>
-</html>
+			</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+        
+
+           

@@ -4,7 +4,7 @@ use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
 require_once '../vendor/autoload.php';
- require_once './inc/cabecalho_admin.php'; 
+ require_once '../inc/cabecalho_admin.php'; 
 $sessao = new ControleDeAcesso;
 $projeto = new Projeto;
 $projeto->usuario->setId($_SESSION['id']);
@@ -26,7 +26,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
         <section class="perfil pt-3 pb-3 mb-4">
           <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
-          <button class="botao-perfil rounded-pill ">Editar Perfil</button>
+          <a href="cadastro-atualiza.php">Editar Perfil</a>
           <hr>
           <h2>Projetos Publicados:</h2>
           <p class="contador"><?=count($listaDeProjetos)?></p>
@@ -68,7 +68,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
         <section class="perfil pt-3 pb-3 mb-4">
           <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
-          <button class="botao-perfil rounded-pill ">Editar Perfil</button>
+          <button class="botao-perfil rounded-pill "><a href="cadastro-atualiza.php"> Editar Perfil</a></button>
           <hr>
           <h2>Projetos Publicados:</h2>
           <p class="contador"><?=count($listaDeProjetos)?></p>

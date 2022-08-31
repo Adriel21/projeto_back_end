@@ -32,7 +32,7 @@ $dadosFreela = $usuario->listarFreela();
   <!-- Desktop Table perfil lateral -->
     <aside class="text-center d-lg-block d-none">
       <section class="perfil pt-3 pb-3 mb-4">
-        <img src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./imagem/<?=$_SESSION['perfil']?>" alt="" width="150">
             <p><strong><?=$_SESSION['nome']?></strong></p>
 
             <!-- estrelas -->

@@ -13,6 +13,7 @@ $listaDeCategorias = $categoria->listar();
 $projeto = new Projeto;
 $projeto->setId($_GET['id']);
 $dados = $projeto->listarUm();
+
 if(isset($_POST['atualizar'])) {
  
 	$projeto->setTitulo($_POST['titulo']);
@@ -40,16 +41,17 @@ if(isset($_POST['atualizar'])) {
 					
 					
 					<div class="form-group pb-3  mt-2">
-						<label for="email" class="pb-1">Titulo</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+						<label for="titulo" class="pb-1">Título</label>
+						<input value="<?=$dados['titulo']?>" type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto">
 					</div>
                     <div class="form-group pb-3 mt-2">
-						<label for="email" class="pb-1">Resumo</label>
-						<input type="email" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+						<label for="resumo" class="pb-1">Resumo</label>
+						<input value="<?=$dados['resumo']?>" type="text" class="form-control" id="resumo" name="resumo" placeholder="Resumo do projeto">
 					</div>
 					<div class="form-group  mt-2">
-						<label for="senha" class="pb-1">Descrição</label>
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+					<label for="descricao" class="pb-1">Descrição</label>
+						<textarea class="form-control" id="descricao" name="descricao" placeholder="Descrição do projeto"><?=$dados['descricao']?>
+						</textarea>
 					</div>
 
 
@@ -58,11 +60,15 @@ if(isset($_POST['atualizar'])) {
                 <select class="form-select" name="categoria" id="categoria" required>
 					<option value=""></option>
 					
-					<?php foreach($listaDeCategorias as $categorias) { ?>
-					<option value="<?=$categorias['id']?>"> 
-						<?=$categorias['nome']?> 
+					 
+					<option <?php if($dados['categoria'] == 'Design') echo "selected"?> value="Design"> 
+						Design 
 					</option>
-					<?php } ?>
+
+					<option <?php if($dados['categoria'] == 'Web, Software & Mobile') echo "selected"?> value="Web, Software & Mobile"> 
+					Web, Software & Mobile
+					</option>
+					
 					
 				</select>
 

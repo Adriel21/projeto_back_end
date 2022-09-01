@@ -57,20 +57,31 @@ if(isset($_POST['inserir'])) {
 					
 					
 					<div class="form-group pb-3  mt-2">
-						<label for="email" class="pb-1">Titulo</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+						<label for="titulo" class="pb-1">Titulo</label>
+						<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto">
 					</div>
                     <div class="form-group pb-3 mt-2">
-						<label for="email" class="pb-1">Resumo</label>
-						<input type="email" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+						<label for="resumo" class="pb-1">Resumo</label>
+						<input type="text" class="form-control" id="resumo" name="resumo" placeholder="Telefone">
 					</div>
+
+					<div class="form-group pb-3 mt-2">
+					<select name="categoria" class="form-select" id="categoria" class="pb-1" placeholder="Selecione a categoria do projeto">
+						<?php foreach($listaDeCategorias as $categoria) {?>
+					<option value="<?=$categoria['id']?>"><?=$categoria['nome']?></option>
+					<?php } ?>
+					</select>
+						
+					</div>
+
 					<div class="form-group  mt-2">
-						<label for="senha" class="pb-1">Descrição</label>
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+						<label for="descricao" class="pb-1">Descrição</label>
+						<textarea class="form-control" id="descricao" name="descricao" placeholder="Descreva o seu projeto">
+						</textarea>
 					</div>
 					
 					<div class="pt-4 text-center">
-                    <button class="botao-feed btn bg-info text-dark" type="submit">CADASTRAR</button>
+                    <button class="botao-feed btn bg-info text-dark" id="inserir" name="inserir" type="submit">CADASTRAR</button>
                     </div>
 				</form>
 			</div>

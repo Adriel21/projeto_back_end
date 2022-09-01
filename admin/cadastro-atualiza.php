@@ -1,8 +1,15 @@
 <?php
 
+use Projeto\Usuario;
+
 require_once "../vendor/autoload.php";
 
-require_once '../inc/cabecalho_admin.php'; 
+require_once '../inc/cabecalho_admin.php';
+
+$usuario = new Usuario;
+$usuario->setId($_GET['id']);
+$dados = $usuario->listarUm();
+var_dump($dados);
 ?>
 
 

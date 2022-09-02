@@ -62,7 +62,7 @@ if(isset($_POST['inserir'])) {
 					</div>
                     <div class="form-group pb-3 mt-2">
 						<label for="resumo" class="pb-1">Resumo</label>
-						<input type="text" class="form-control" id="resumo" name="resumo" placeholder="Telefone">
+						<input type="text" class="form-control" id="resumo" name="resumo" placeholder="Resumo">
 					</div>
 
 					<div class="form-group pb-3 mt-2">
@@ -76,7 +76,7 @@ if(isset($_POST['inserir'])) {
 
 					<div class="form-group  mt-2">
 						<label for="descricao" class="pb-1">Descrição</label>
-						<textarea class="form-control" id="descricao" name="descricao" placeholder="Descreva o seu projeto">
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto">
 						</textarea>
 					</div>
 					

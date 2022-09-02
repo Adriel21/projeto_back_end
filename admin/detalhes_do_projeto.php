@@ -13,7 +13,6 @@ $listaDeCategorias = $categoria->listar();
 $projeto = new Projeto;
 $projeto->setId($_GET['id']);
 $dados = $projeto->listarUm();
-
 if(isset($_POST['atualizar'])) {
  
 	$projeto->setTitulo($_POST['titulo']);
@@ -50,7 +49,7 @@ if(isset($_POST['atualizar'])) {
 					</div>
 					<div class="form-group  mt-2">
 					<label for="descricao" class="pb-1">Descrição</label>
-						<textarea class="form-control" id="descricao" name="descricao" placeholder="Descrição do projeto"><?=$dados['descricao']?>
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descrição do projeto"><?=$dados['descricao']?>
 						</textarea>
 					</div>
 
@@ -69,20 +68,17 @@ if(isset($_POST['atualizar'])) {
             </div>
 
                 
-				<div class=" container">
+				<div class="container form-check-reverse">
+				<div class="d-grid gap-2 d-md-block">
+				<button class=" botao-feed btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
+				<button class=" botao-excluir btn  text-white" id="inserir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>">EXCLUIR</a></button>
+				</div>
 
-						<div class="row justify-content-end">
-							<div class="col col-2 p-2">
-                            	<button class=" botao-feed   btn text-white" name="atualizar" id="atualizar" type="submit"><a href="perfil_principal.php">ATUALIZAR</a></button>
-							</div>
-							<div class="col col-2 p-2">
-                            	<button class="  botao-excluir   btn  text-white" id="inserir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>">EXCLUIR</a></button>
-							</div>
-						</div>
+						
 
                 </div>
            
-			</div>
+			
 				</form>
 			</div>
 		</div>

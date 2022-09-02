@@ -52,12 +52,10 @@ if(isset($_POST['inserir'])) {
 						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
 					</div>
                     <div class="form-group pb-3 mt-2">
-						<label for="email" class="pb-1">Descrição do projeto</label>
-						<input type="email" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
-					</div>
-					<div class="form-group  mt-2">
-						<label for="senha" class="pb-1">Descrição</label>
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+						
+						
+						<label for="descricao" class="form-label" >Descrição do projeto</label>
+  						<textarea class="form-control" id="descricao"  placeholder="Descrição do projeto"rows="10"></textarea>
 					</div>
 
                     <label class="form-label" for="categoria">Categoria:</label>
@@ -74,7 +72,7 @@ if(isset($_POST['inserir'])) {
 			</div>
 					
 					<div class="pt-4 text-center">
-                    <button class="botao-feed btn bg-info text-dark" type="submit">CADASTRAR</button>
+                    <button class="botao-feed btn" type="submit">CADASTRAR</button>
                     </div>
 				</form>
 			</div>

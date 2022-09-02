@@ -1,5 +1,5 @@
 <?php 
-require_once 'inc/cabecalho_externo.php'
+require_once 'inc/header.php'
 ?>
 
 <main class="container-sm-fluid marketing mt-5">

@@ -52,7 +52,7 @@ class Usuario {
 
 // método que tem como objetivo trazer um usuário e, também, seu relacionamento através da chave estrangeria profissao_id usando join do sql
 public function listarFreela():array {
-    $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
+    $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
 try {
     $consulta = $this->conexao->prepare($sql);
     $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);

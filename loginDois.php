@@ -81,21 +81,21 @@ require "./vendor/autoload.php";
 				//if($dados === false){ - Se dados for false(ou seja, não tem dados de nenhum usuário cadastrado)
 				if(!$dados) {
 					//echo "Não tem ninguém nessa bagaça!";
-					header("location:login.php?nao_encontrado");
+					header("location:loginDois.php?nao_encontrado");
 				} else {
 					// Verificação da senha e login
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
 						if($dados['profissao_id'] !== null){
 							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $dados['profissao_id']);
-                            header('location:./admin/perfil_principal.php?id=' . $_SESSION['id']);;
+                            header('location:./admin/dashboard-cliente.php?id=' . $_SESSION['id']);;
 								///echo 'errou';
 						} else {
 							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
-								header('location:./admin/perfil_principal.php?id=' . $_SESSION['id']);
+								header('location:./admin/dashboard-cliente.php?id=' . $_SESSION['id']);
                         }
 					} else {
-						header("location:login.php?senha_incorreta");
+						header("location:loginDois.php?senha_incorreta");
 					}
 				}
 				

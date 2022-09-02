@@ -68,7 +68,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
         <section class="perfil pt-3 pb-3 mb-4">
           <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
-          <button class="botao-perfil rounded-pill ">Editar Perfil</button>
+          <button class="botao-perfil rounded-pill "><a href="./dashboard-freela.php?id=<?=$_SESSION['id']?>">Editar Perfil</a></button>
           <hr>
           <h2>Projetos Publicados:</h2>
           <p class="contador"><?=count($listaDeProjetos)?></p>

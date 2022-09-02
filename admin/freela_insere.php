@@ -5,7 +5,7 @@ use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
 use Projeto\Projeto;
 
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
 // 	$usuario->setNome($_POST['nome']);

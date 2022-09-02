@@ -116,7 +116,7 @@ final class Projeto{
 
         
          public function listarTodos():array {
-             $sql = "SELECT id, titulo, resumo, descricao 
+             $sql = "SELECT id, titulo, resumo, descricao, categoria_id 
             FROM projeto";
         
         

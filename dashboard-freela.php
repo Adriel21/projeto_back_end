@@ -12,8 +12,8 @@ $listaDeProjetos = $projeto->listarTodos();
 
 
 <!-- Menu Lado direito -->
-<div class="container-fluid overflow-hidden ">
-    <div class=" row vh-100 overflow-auto">
+<main class="container-fluid overflow-hidden ">
+    <section class=" row vh-100 overflow-auto">
         <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex sticky-top">
             <div class="menu-lateral d-flex flex-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white bg-primary">
                 <a href="/" class="col-12 justify-content-center d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto text-decoration-none">
@@ -96,29 +96,23 @@ $listaDeProjetos = $projeto->listarTodos();
             <!-- Cabeçalho fim -->
             
             <!-- Call  -->
-            
             <div class="bg-primary rounded my-2 py-2">
                 <div class="container">
                     <!-- row -->
-                    <div class="row align-items-center g-0">
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <!-- heading -->
-                        <div>
-                        <h1 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design
-                        </h1>
-                        <!-- text -->
-                        <p class="text-white-50 mb-4 lead">
-                            If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
-                            employee professional development and well-being.
-                        </p>
-                        <!-- btn -->
-                        <a href="#" class="btn btn-dark">View opportunities</a>
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12 col-md-12 m-auto pb-3">
+                            <!-- heading -->
+                            <div>
+                                <h1 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design</h1>
+                                <!-- text -->
+                                <p class="text-white-50 mb-4 lead">
+                                    If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                                    employee professional development and well-being.
+                                </p>
+                                <!-- btn -->
+                                <a href="#" class="btn btn-dark">View opportunities</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- img -->
-                    <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
-                        <img src="../assets/images/hero/hero-img.png" alt="" class="img-fluid">
-                    </div>
                     </div>
                 </div>
             </div>
@@ -127,23 +121,24 @@ $listaDeProjetos = $projeto->listarTodos();
             <main class="row overflow-auto border border-2 border-opacity-50 pb-2 rounded box-vagas">
 
             <?php foreach($listaDeProjetos as $projetos) { ?>
-            <div class="col pt-4 card-vagas">
-                <div class="card w-77">
+            <div class="pt-4 card-vagas">
+                <div class="card w-100">
                     <div class="card-body coluna-vagas">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
-                        <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1"><?=$projetos['resumo']?></p>
-                        <small>(Nome do cliente talvez.)</small>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">DETALHES</button>
-                        
-                        </div>
-                    </a>
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
+                                <small>3 days ago</small>
+                            </div>
+
+                            <p class="mb-1"><?=$projetos['resumo']?></p>
+                            <small>(Nome do cliente talvez.)</small>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="botao-feed btn   me-md-2" type="button">DETALHES</button>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                </div>
+            </div>
                 <?php } ?>
             </main>
             <!-- Fim conteúdo das vagas -->
@@ -161,7 +156,9 @@ $listaDeProjetos = $projeto->listarTodos();
                 </ul>
             </nav>
             <!-- Fim da paginação das vagas -->
-
+        </div>
+    </section>
+</main>
         
 
                     

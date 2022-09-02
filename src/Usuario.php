@@ -38,7 +38,7 @@ class Usuario {
 
 // método que tem como objetivo trazer um usuário, utilizando como parâmetro o ID
     public function listarUm():array {
-        $sql = "SELECT id, email, nome, perfil, profissao_id FROM usuario WHERE id = :id";
+        $sql = "SELECT id, email, nome, perfil, senha, profissao_id FROM usuario WHERE id = :id";
     try {
         $consulta = $this->conexao->prepare($sql);
         $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
@@ -100,6 +100,23 @@ return $resultado;
             die("Erro: ". $erro->getMessage());
         }
     }
+
+    public function atualizarPerfil():void {
+        $sql = "UPDATE usuario SET nome = :nome, email = :email, senha = :senha, perfil = :perfil WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+
+    }
     
 
  
@@ -160,6 +177,29 @@ return $resultado;
 
             move_uploaded_file($temporario, $destino);
         }
+
+
+                // método para inserir e limitar as imagens na base de dados
+    public function uploadAtualiza(array $arquivo) {
+        $tiposAceitos = [
+            "image/png",
+            "image/jpeg",
+            "image/gif",
+            "image/svg+xml"
+        ];
+
+        if(!in_array($arquivo['type'], $tiposAceitos)) {
+            die("<script>alert('formato válido');</script>");
+        }
+            $nome = $arquivo['name'];
+
+            $temporario = $arquivo['tmp_name'];
+
+            $destino = "./fotos_de_perfil/".$nome;
+
+            move_uploaded_file($temporario, $destino);
+        }
+
 
 
   

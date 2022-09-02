@@ -57,4 +57,11 @@ public function logout():void {
     die(); // exit;
 }
 
+public function logoutAtualiza():void {
+    session_start();
+    session_destroy();
+    header("location:./perfil_valida.php?id=" . $_SESSION['id']);
+    die(); // exit;
+}
+
 }

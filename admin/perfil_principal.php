@@ -10,7 +10,11 @@ $projeto = new Projeto;
 $projeto->usuario->setId($_SESSION['id']);
 $listaDeProjetos = $projeto->listarDetalhes();
 
+// Criamos objeto para acessar os recursos de sessão PHP na classe ControleDeAcesso
 
+
+// Executamos verificaAcesso para checar se tem alguém logado
+ $sessao->verificaAcesso();
 // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
 // date_default_timezone_set('America/Sao_Paulo');
 // // CRIA UMA VARIAVEL E ARMAZENA A HORA ATUAL DO FUSO-HORÀRIO DEFINIDO (BRASÍLIA)
@@ -68,7 +72,7 @@ $listaDeProjetos = $projeto->listarDetalhes();
         <section class="perfil pt-3 pb-3 mb-4">
           <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="" width="150">
           <p><strong><?=$_SESSION['nome']?></strong></p>
-          <button class="botao-perfil rounded-pill "><a href="cadastro-atualiza.php"> Editar Perfil</a></button>
+          <button class="botao-perfil rounded-pill "><a href="cadastro-atualiza.php?id=<?=$_SESSION['id']?>"> Editar Perfil</a></button>
           <hr>
           <h2>Projetos Publicados:</h2>
           <p class="contador"><?=count($listaDeProjetos)?></p>

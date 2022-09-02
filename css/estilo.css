@@ -91,6 +91,20 @@ picture img {
         background-color: #021057;
     }
 
+    .botao-excluir {
+        font-weight: 600;
+        background-color: #da210ccc;
+        color: #fff;
+    }
+
+    .botao-excluir a {
+        color: #fff;
+    }
+
+    .botao-excluir:hover {
+        background-color: #ff1900;
+    }
+
     .botao-feed:hover {
         background-color: #0650b1;
         color: ghostwhite;

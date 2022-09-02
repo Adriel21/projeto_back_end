@@ -68,9 +68,20 @@ if(isset($_POST['atualizar'])) {
                 </select>
             </div>
 
-                <button class="btn btn-primary" id="inserir" name="atualizar"><i class="bi bi-save"></i> Inserir</button>
-            
-            <button class="btn btn-primary" id="inserir" name="excluir"><i class="bi bi-save"></i> <a href="excluir_projeto.php?id=<?=$dados['id']?>">Excluir</a></button>
+                
+				<div class=" container">
+
+						<div class="row justify-content-end">
+							<div class="col col-2 p-2">
+                            	<button class=" botao-feed   btn text-white" name="atualizar" id="atualizar" type="submit"><a href="perfil_principal.php">ATUALIZAR</a></button>
+							</div>
+							<div class="col col-2 p-2">
+                            	<button class="  botao-excluir   btn  text-white" id="inserir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>">EXCLUIR</a></button>
+							</div>
+						</div>
+
+                </div>
+           
 			</div>
 				</form>
 			</div>

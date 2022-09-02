@@ -7,7 +7,7 @@ use Projeto\Usuario;
 require "./vendor/autoload.php";
 ?>
 
-<?php require_once 'inc/cabecalho-cadastro.php' ?>
+<?php require_once 'inc/headerValidacao.php' ?>
 
 	<div class="container marketing shadow">
 		<div class="row featurette my-5 p-sm-5">
@@ -103,3 +103,4 @@ require "./vendor/autoload.php";
 			}
 		
 		?>
+		</body>

@@ -15,7 +15,7 @@ require_once 'inc/header.php'
                     </p>
 
                 <div class="d-grid gap-2 col-4 mt-5 rounded">
-                    <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                    <button button class="rounded-5 py-2 border-none fs-5 button-index" type="button">
                         Cadastra-se
                     </button>
                 </div>
@@ -29,7 +29,7 @@ require_once 'inc/header.php'
 
 
     <!-- Segundo Bloco -->
-    <section class="segna-bloco bg-primary py-2">
+    <section class="segna-bloco py-2" style="background-color: #0421B5;">
         <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-sm-row-reverse">
             <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
                 <h2 class="text-white display-4 fw-bold pe-lg-8">Encontre profissionais diversos &amp; prontos para ajudarem a solucionar sua necessidade.</h2>
@@ -40,7 +40,7 @@ require_once 'inc/header.php'
                     </p>
 
                     <div class="d-grid gap-2 col-4 mt-5 rounded">
-                        <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                        <button button class="rounded-5 py-2 border-none fs-5 button-index" type="button">
                             Cadastra-se
                         </button>
                     </div>
@@ -63,7 +63,7 @@ require_once 'inc/header.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4 button-index" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ require_once 'inc/header.php'
                     <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4 button-index" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ require_once 'inc/header.php'
                     <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4 button-index" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ require_once 'inc/header.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4 button-index" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ require_once 'inc/header.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4 button-index" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
@@ -113,14 +113,14 @@ require_once 'inc/header.php'
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <button class="rounded-5 p-2 px-4" type="button">Cadastra-se</button>
+                            <button class="rounded-5 p-2 px-4 button-index" type="button">Cadastra-se</button>
                         </div>
                     </div>
                 </div>
             </section>
     </section>
 
-    <section class="bg-primary">
+    <section class="" style="background-color: #0421B5;">
         <div class="container py-5">
             <!-- row -->
             <div class="row align-items-center g-0">
@@ -135,7 +135,7 @@ require_once 'inc/header.php'
                         </p>
                         <!-- btn -->
                         <div class="d-grid gap-2 col-4 mt-5 rounded">
-                            <button button class="rounded-5 py-2 border-none fs-5" type="button">
+                            <button button class="rounded-5 py-2 border-none fs-5 button-index" type="button">
                                 Cadastra-se
                             </button>
                         </div>

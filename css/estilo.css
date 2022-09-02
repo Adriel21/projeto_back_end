@@ -21,13 +21,13 @@ picture img {
     }
 
     /* button index */
-    button {
+    .button-index {
         background: #021d40;
         color: #fff;
         border: none;
     }
 
-    button:hover {
+    .button-index:hover {
         background: #021057;
     }
 

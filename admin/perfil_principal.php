@@ -4,7 +4,7 @@ use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
 require_once '../vendor/autoload.php';
- require_once '../inc/cabecalho_admin.php'; 
+ require_once '../inc/header.php'; 
 $sessao = new ControleDeAcesso;
 $projeto = new Projeto;
 $projeto->usuario->setId($_SESSION['id']);

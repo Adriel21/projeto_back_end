@@ -5,7 +5,7 @@ use Projeto\Usuario;
 
 
 require_once './vendor/autoload.php';
-require_once './inc/cabecalho-cadastro.php';
+require_once 'inc/header.php';
 $projeto = new Projeto;
 $listaDeProjetos = $projeto->listarTodos();
 ?>
@@ -13,7 +13,7 @@ $listaDeProjetos = $projeto->listarTodos();
 
 <!-- Menu Lado direito -->
 
-<div class="container-fluid overflow-hidden ">
+<div class="container-fluid ">
     <div class=" row vh-100 overflow-auto">
         <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex sticky-top">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">

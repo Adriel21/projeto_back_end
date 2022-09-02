@@ -54,23 +54,19 @@ if(isset($_POST['atualizar'])) {
 						</textarea>
 					</div>
 
-
-                    <div class="mb-3">
+					<div class="mb-3">
                 <label class="form-label" for="categoria">Categoria:</label>
                 <select class="form-select" name="categoria" id="categoria" required>
-					<option value=""></option>
-					
-					 
-					<option <?php if($dados['categoria'] == 'Design') echo "selected"?> value="Design"> 
-						Design 
+                    <option value=""></option>
+                   	<?php foreach($listaDeCategorias as $categorias) { ?>
+					<option 
+                    <?php if($dados['categoria_id'] === $categorias['id'] ) echo " selected " ?> 
+                    value="<?=$categorias['id']?>"> 
+						<?=$categorias['nome']?> 
 					</option>
-
-					<option <?php if($dados['categoria'] == 'Web, Software & Mobile') echo "selected"?> value="Web, Software & Mobile"> 
-					Web, Software & Mobile
-					</option>
-					
-					
-				</select>
+					<?php } ?>
+                </select>
+            </div>
 
                 <button class="btn btn-primary" id="inserir" name="atualizar"><i class="bi bi-save"></i> Inserir</button>
             

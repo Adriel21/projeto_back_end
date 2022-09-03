@@ -1,5 +1,6 @@
 <?php
 
+use Projeto\Categoria;
 use Projeto\Projeto;
 use Projeto\Usuario;
 
@@ -7,35 +8,39 @@ use Projeto\Usuario;
 require_once './vendor/autoload.php';
 require_once 'inc/header.php';
 $projeto = new Projeto;
-$listaDeProjetos = $projeto->listarTodos();
+
+if(!isset($_GET['id'])) {
+    $listaDeProjetos = $projeto->listarTodos();
+} else {
+    $projeto->setCategoriaId($_GET['id']);
+    $listaDeProjetos = $projeto->listarPorCategoria();
+}
+
+$categoria = new Categoria;
+$listaDeCategorias = $categoria->listar();
 ?>
 
 
-<!-- Menu Lado direito -->
-
-<div class="container-fluid ">
-    <div class=" row vh-100 overflow-auto">
-        <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex">
+<div class="container-fluid overflow-hidden sticky-top">
+    <div class=" row ">
+        <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex ">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
                 <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
-                    <span class="fs-5"><img src="img/logo-icone/logo_colajob-vetor-32.png" alt="Logo da colajob"><span class="ps-1 d-none d-sm-inline text-white">colajob</span></span>
+                    <span class="ps-1 d-none d-sm-inline text-white">Bem-Vindo!</span>
                 </a>
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
-                        </a>
-                    </li>
+                   
                     <li>
                          <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                            <i class="fs-5 "></i><span class="ms-1 d-none d-sm-inline">Freelancers</span> </a>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
-                                <span class="ms-1 d-none d-sm-inline">Categorias</span>
+                                <span class="ms-1 d-sm-inline">Categorias</span>
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    
-                                 <li><a class="dropdown-item" href="noticias-por-categoria.php?id="></a></li>
+                                  <?php foreach($listaDeCategorias as $categorias) { ?>  
+                                 <li><a class="dropdown-item text-black" href="feed.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a></li>
+                                 <?php } ?>
                              </ul> 
                             
                     </li>
@@ -43,20 +48,7 @@ $listaDeProjetos = $projeto->listarTodos();
                         <a href="#" class="nav-link px-sm-0 px-2">
                             <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </li>
+                    
                     <li>
                         <a href="#" class="nav-link px-sm-0 px-2">
                             <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
@@ -87,8 +79,6 @@ $listaDeProjetos = $projeto->listarTodos();
 
             <!-- Início conteúdo das vagas -->
 
-            <main class="row overflow-auto border border-2 border-opacity-50 pb-2 rounded box-vagas">
-
             <?php foreach($listaDeProjetos as $projetos) { ?>
             <div class="col pt-4 card-vagas">
                 <div class="card w-77">
@@ -99,7 +89,7 @@ $listaDeProjetos = $projeto->listarTodos();
                         <small>3 days ago</small>
                         </div>
                         <p class="mb-1"><?=$projetos['resumo']?></p>
-                        <small>(Nome do cliente talvez.)</small>
+                        <small>Autor do Projeto: <?=$projetos['nome']?></small>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
                         
@@ -108,7 +98,6 @@ $listaDeProjetos = $projeto->listarTodos();
                 </div>
                 </div>
                 <?php } ?>
-            </main>
             <!-- Fim conteúdo das vagas -->
 
             <!-- Páginação das vagas -->
@@ -124,23 +113,8 @@ $listaDeProjetos = $projeto->listarTodos();
                 </ul>
             </nav>
             <!-- Fim da paginação das vagas -->
-
-            <?php require_once "./inc/footer_externo.php"?>
+            </body>
+            <script src="./js/bootstrap.bundle.js"></script>
+            </html>
+           
         
-
-                    
-
-                
-
-     
-            
-        
-
-
-                        
-
-
-
-            
-
-               

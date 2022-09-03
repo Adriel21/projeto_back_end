@@ -116,8 +116,7 @@ final class Projeto{
 
         
          public function listarTodos():array {
-             $sql = "SELECT id, titulo, resumo, descricao 
-            FROM projeto";
+             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
         
         
                    try {
@@ -131,6 +130,27 @@ final class Projeto{
 
 
                  }
+
+
+        //Método para trazer todos os projetos de acordo com a categoria
+           
+        public function listarPorCategoria():array {
+            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id WHERE projeto.categoria_id = :categoria_id";
+       
+       
+                  try {
+                    $consulta = $this->conexao->prepare($sql);
+                    $consulta->bindParam(':categoria_id', $this->categoriaId, PDO::PARAM_INT);
+                   $consulta->execute();
+                    $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                 } catch (Exception $erro) {
+                     die("Erro: ". $erro->getMessage());
+                 }
+                 return $resultado;
+
+
+                }
+                
 
 
         // Método para trazer detalhes da tabela Projeto através da associação entre a classe Usuario

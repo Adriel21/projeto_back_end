@@ -9,11 +9,24 @@ require_once './vendor/autoload.php';
 require_once 'inc/header.php';
 $projeto = new Projeto;
 
+
+
 if(!isset($_GET['id'])) {
     $listaDeProjetos = $projeto->listarTodos();
-} else {
+} else if (isset($_GET['id'])){
     $projeto->setCategoriaId($_GET['id']);
     $listaDeProjetos = $projeto->listarPorCategoria();
+} 
+
+if(isset($_POST['buscar'])) { 
+ 
+    header('location:feed.php?busca' . $projeto->setTermo($_GET['busca']));
+  
+}
+
+if(isset($_GET['buscar'])){
+    $projeto->setTermo($_GET['busca']);
+    $listaDeProjetos = $projeto->busca();
 }
 
 $categoria = new Categoria;
@@ -21,9 +34,9 @@ $listaDeCategorias = $categoria->listar();
 ?>
 
 
-<div class="container-fluid overflow-hidden sticky-top">
+<div class="container-fluid overflow-hidden ">
     <div class=" row ">
-        <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex ">
+        <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
                 <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
                     <span class="ps-1 d-none d-sm-inline text-white">Bem-Vindo!</span>
@@ -32,10 +45,10 @@ $listaDeCategorias = $categoria->listar();
                    
                     <li>
                          <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 "></i><span class="ms-1 d-none d-sm-inline">Freelancers</span> </a>
+                            <i class="fs-5 "></i><span class="ms-1 d-none d-sm-inline text-light">Freelancers</span> </a>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
-                                <span class="ms-1 d-sm-inline">Categorias</span>
+                                <span class="ms-1 d-sm-inline text-light">Categorias</span>
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <?php foreach($listaDeCategorias as $categorias) { ?>  
@@ -67,10 +80,10 @@ $listaDeCategorias = $categoria->listar();
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
                 <div class="cabecalho-interno d-flex col-12    justify-content-center">
-                        <form class="d-flex p-1 ">
-                            <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search">
+                        <form class="d-flex p-1" action="feed.php" method="GET">
+                            <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">
-                            <button class="botao-feed ps-2 btn text-white" type="submit">BUSCAR</button>
+                            <button class="botao-feed ps-2 btn text-white" type="submit" name="buscar">BUSCAR</button>
                             </div>
                         </form>
                 </div>
@@ -79,7 +92,24 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Início conteúdo das vagas -->
 
+            <?php if(!isset($listaDeProjetos[0] ['categoria'])) { ?>
+
+                      <div class="col pt-4 card-vagas">
+                      <div class="card w-77">
+                          <div class="card-body coluna-vagas">
+                          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                              <h3 class="mb-1 pb-4 text-center">No momento, não existem notícias desta categoria</h3>
+                              </div>
+                              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            
+                              
+                              </div>
+                          </a>
+                      </div>
+            <?php } else { ?>
             <?php foreach($listaDeProjetos as $projetos) { ?>
+                
             <div class="col pt-4 card-vagas">
                 <div class="card w-77">
                     <div class="card-body coluna-vagas">
@@ -88,15 +118,15 @@ $listaDeCategorias = $categoria->listar();
                         <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
                         <small>3 days ago</small>
                         </div>
-                        <p class="mb-1"><?=$projetos['resumo']?></p>
-                        <small>Autor do Projeto: <?=$projetos['nome']?></small>
+                        <p class="mb-1"><?=$projetos['resumo'] ?? 'alo'?></p>
+                        <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
                         
                         </div>
                     </a>
                 </div>
-                </div>
+                <?php } ?>
                 <?php } ?>
             <!-- Fim conteúdo das vagas -->
 

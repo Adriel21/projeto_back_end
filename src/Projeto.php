@@ -9,6 +9,7 @@ final class Projeto{
     private string $descricao;
     private int $usuarioId;
     private int $categoriaId;
+    private string $termo;
     private PDO $conexao;
 
     
@@ -205,6 +206,22 @@ final class Projeto{
                     }
 
                 }
+
+
+                public function busca():array {
+                    $sql = "SELECT titulo, id, resumo FROM projeto WHERE titulo LIKE :termo OR resumo LIKE :termo";
+            
+                
+                    try {
+                        $consulta = $this->conexao->prepare($sql);
+                        $consulta->bindValue(":termo", '%'.$this->termo.'%', PDO::PARAM_STR);
+                        $consulta->execute();
+                        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                    } catch (Exception $erro) {
+                        die("Erro: ". $erro->getMessage());
+                    }
+                    return $resultado;
+                }
    
 
 
@@ -284,5 +301,25 @@ final class Projeto{
         $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
 
     
+    }
+
+    /**
+     * Get the value of termo
+     */ 
+    public function getTermo()
+    {
+        return $this->termo;
+    }
+
+    /**
+     * Set the value of termo
+     *
+     * @return  self
+     */ 
+    public function setTermo($termo)
+    {
+        $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
+
+
     }
 }

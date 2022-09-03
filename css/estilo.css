@@ -96,8 +96,14 @@ picture img {
         color: ghostwhite;
     }
 
+    @media screen and (min-width: 750px) {
+        .menu-lateral {
+            background-color: #0421B5;;
+            height: 100vh;
+        }    
+    }
     .menu-lateral {
-        background-color: #021d40;
+        background-color:#0421B5;;
     }
 
     .menu-lateral a {

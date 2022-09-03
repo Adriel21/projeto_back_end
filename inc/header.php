@@ -10,17 +10,17 @@
 
 
 <link rel="stylesheet" href="css/estilo.css">
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="../css/estilo_interno.css">
+<link rel="stylesheet" href="css/header.css">
+<!-- <link rel="stylesheet" href="/css/estilo_interno.css"> -->
 
 </head>
 <body>
     
 <header id="topo" class="border-bottom sticky-top">
 
-<nav class="navbar navbar-expand-lg  ">
+<nav class="navbar navbar-expand-lg">
   <div class="container limitador">
-    <h1 class="ms-n1"><a class="navbar-brand logo text-light" href="index.php">ColaJob</a></h1>
+    <h1 class="ms-n1"><a class="navbar-brand logo" href="index.php"><img src="./img/tecnologia.png" width="40"> Colajob</a></h1>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

@@ -1,5 +1,5 @@
 header{
-    background-color: #021057;
+    background-color: white;
 }
 
 .logo{
@@ -8,5 +8,10 @@ header{
 }
 
 .nav-link{
-    color: white;
+    /* color: #0421B5; */
+    color: black;
+}
+
+.nav-linl:hover{
+    color: blue !important;
 }

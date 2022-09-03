@@ -1,5 +1,5 @@
 <footer class="container-flex">
-        <img class="d-flex w-75 m-auto mt-5" src="img/img-job-anotacao.png" alt="banner tudo o que você precisa esta aqui">
+      
 
         <div class="align-center p-3 text-center bg-marinho-footer pt-5 img-dois-avatar">
             <h2>

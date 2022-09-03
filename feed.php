@@ -15,7 +15,7 @@ $listaDeProjetos = $projeto->listarTodos();
 
 <div class="container-fluid ">
     <div class=" row vh-100 overflow-auto">
-        <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex sticky-top">
+        <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
                 <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
                     <span class="fs-5"><img src="img/logo-icone/logo_colajob-vetor-32.png" alt="Logo da colajob"><span class="ps-1 d-none d-sm-inline text-white">colajob</span></span>
@@ -125,6 +125,7 @@ $listaDeProjetos = $projeto->listarTodos();
             </nav>
             <!-- Fim da paginação das vagas -->
 
+            <?php require_once "./inc/footer_externo.php"?>
         
 
                     

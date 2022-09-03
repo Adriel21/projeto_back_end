@@ -32,7 +32,7 @@ require_once 'inc/header.php'
     <section class="segna-bloco py-2" style="background-color: #0421B5;">
         <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-sm-row-reverse">
             <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
-                <h2 class="text-white display-4 fw-bold pe-lg-8">Encontre profissionais diversos &amp; prontos para ajudarem a solucionar sua necessidade.</h2>
+                <h2 class="text-white display-4 fw-bold pe-lg-8">Profissionais diversos prontos para te ajudar.</h2>
                     <!-- text -->
                     <p class="text-white mb-4 lead">
                         If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
@@ -152,15 +152,6 @@ require_once 'inc/header.php'
 </main>
    
 
-<section aria-label="Formulário de contato">
-    <label for="nome">Digite seu nome: </label>
-    <input type="text" name="nome" placeholder="Ex: João...">
-    
-    <label for="email">Email: </label>
-    <input type="text" name="email" placeholder="Ex: contato@contato.com">
-    
-    <label for="email">Email: </label>
-    <input type="text" name="email" placeholder="Ex: contato@contato.com">
-</section>
+
 
 <?php require_once 'inc/footer_externo.php'; ?>

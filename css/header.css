@@ -1,5 +1,6 @@
 header{
     background-color: white;
+    z-index: 9999 !important;
 }
 
 .logo{
@@ -15,3 +16,4 @@ header{
 .nav-linl:hover{
     color: blue !important;
 }
+

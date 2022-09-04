@@ -9,14 +9,11 @@ require_once './vendor/autoload.php';
 require_once 'inc/header.php';
 $projeto = new Projeto;
 
-
-
-if(!isset($_GET['id'])) {
-    $listaDeProjetos = $projeto->listarTodos();
-} else if (isset($_GET['id'])){
-    $projeto->setCategoriaId($_GET['id']);
-    $listaDeProjetos = $projeto->listarPorCategoria();
-} 
+if(!isset($_GET['busca'])) {
+    header('location:feed.php');
+}
+$projeto->setTermo($_GET['busca']);
+$resultados = $projeto->busca();
 
 
 
@@ -30,13 +27,13 @@ $listaDeCategorias = $categoria->listar();
         <div class="col-12 col-sm-3 col-xl-2 px-0 bg-light d-flex">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
                 <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
-                    <span class="d-none ps-1 d-sm-inline text-white">Bem-Vindo!</span>
+                    <span class="ps-1 d-none d-sm-inline text-white">Bem-Vindo!</span>
                 </a>
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
                     <li>
-                         <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="freelancers.php"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a>
+                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
+                            <i class="fs-5 "></i><span class="ms-1 d-none d-sm-inline text-light">Freelancers</span> </a>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
                                 <span class="ms-1 d-sm-inline text-light">Categorias</span>
@@ -49,7 +46,7 @@ $listaDeCategorias = $categoria->listar();
                              </ul> 
                             
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="#" class="nav-link px-sm-0 px-2">
                             <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
                     </li>
@@ -57,10 +54,10 @@ $listaDeCategorias = $categoria->listar();
                     <li>
                         <a href="#" class="nav-link px-sm-0 px-2">
                             <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-people"></i><span class="ms-lg-1  d-sm-inline">Customers</span> </a>
+                            <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
                     </li>
                 </ul>
             </div>
@@ -71,11 +68,11 @@ $listaDeCategorias = $categoria->listar();
         <div class="col d-flex flex-column h-sm-100">
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
-                <div class="cabecalho-interno d-flex col-12    justify-content-center">
+                <div class="cabecalho-interno d-flex col-12 justify-content-center">
                         <form class="d-flex p-1" action="resultados.php" method="GET">
                             <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">
-                            <button class="botao-feed ps-2 btn text-white" type="submit" >BUSCAR</button>
+                            <button class="botao-feed ps-2 btn text-white" type="submit">BUSCAR</button>
                             </div>
                         </form>
                 </div>
@@ -84,14 +81,14 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Início conteúdo das vagas -->
 
-            <?php if(!isset($listaDeProjetos[0] ['categoria'])) { ?>
+            <?php if(empty($resultados)) { ?>
 
                       <div class="col pt-4 card-vagas">
                       <div class="card w-77">
                           <div class="card-body coluna-vagas">
                           <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                               <div class="d-flex w-100 justify-content-between">
-                              <h3 class="mb-1 pb-4 text-center">No momento, não existem projetos desta categoria</h3>
+                              <h3 class="mb-1 pb-4 text-center">Nenhum resultado encontrado para essa busca</h3>
                               </div>
                               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             
@@ -100,18 +97,18 @@ $listaDeCategorias = $categoria->listar();
                           </a>
                       </div>
             <?php } else { ?>
-            <?php foreach($listaDeProjetos as $projetos) { ?>
+            <?php foreach($resultados as $resultado) { ?>
                 
             <div class="col pt-4 card-vagas">
                 <div class="card w-77">
                     <div class="card-body coluna-vagas">
                     <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                         <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
+                        <h3 class="mb-1 pb-4"><?=$resultado['titulo']?></h3>
                         <small>3 days ago</small>
                         </div>
-                        <p class="mb-1"><?=$projetos['resumo'] ?? 'alo'?></p>
-                        <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
+                        <p class="mb-1"><?=$resultado['resumo']?></p>
+                        <small>Autor do Projeto: <?=$resultado['usuario']?></small>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
                         

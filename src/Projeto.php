@@ -209,7 +209,7 @@ final class Projeto{
 
 
                 public function busca():array {
-                    $sql = "SELECT titulo, id, resumo FROM projeto WHERE titulo LIKE :termo OR resumo LIKE :termo";
+                    $sql = "SELECT projeto.titulo, projeto.id, projeto.resumo, usuario.nome AS usuario FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id WHERE titulo LIKE :termo OR resumo LIKE :termo";
             
                 
                     try {

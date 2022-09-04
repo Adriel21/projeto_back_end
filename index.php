@@ -16,7 +16,7 @@ require_once 'inc/header.php'
 
                 <div class="d-grid gap-2 col-4 mt-5 rounded">
                     <button button class="rounded-5 py-2 border-none fs-5 button-index" type="button">
-<a href="feed.php?projetos">Cadastra-se</a>                    </button>
+<a href="feed.php">Cadastra-se</a>                    </button>
                 </div>
             </div>
 

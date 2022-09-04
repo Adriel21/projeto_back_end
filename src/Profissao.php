@@ -49,6 +49,46 @@ final class Profissao{
     return $resultado;
 }
 
+public function listarTodos():array {
+    $sql = "SELECT profissao.id, profissao.titulo, profissao.descricao, profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, usuario.perfil AS perfil, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id";
+
+
+          try {
+             $consulta = $this->conexao->prepare($sql);
+           $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+         } catch (Exception $erro) {
+             die("Erro: ". $erro->getMessage());
+         }
+         return $resultado;
+
+
+        }
+
+
+
+
+public function listarPorCategoria():array {
+    $sql = "SELECT profissao.id, profissao.titulo, profissao.descricao, profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id WHERE profissao.categoria_id = :categoria_id";
+
+
+          try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':categoria_id', $this->categoriaId, PDO::PARAM_INT);
+           $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+         } catch (Exception $erro) {
+             die("Erro: ". $erro->getMessage());
+         }
+         return $resultado;
+
+
+        }
+        
+
+
+
+
 // Método para atualizar dados do perfil
 public function atualizarFreela():void {
     $sql = "UPDATE titulo, descricao, categoria_id FROM profissao WHERE usuario_id = :usuario_id";

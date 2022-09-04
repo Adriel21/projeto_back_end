@@ -98,9 +98,14 @@ picture img {
 
     @media screen and (min-width: 750px) {
         .menu-lateral {
-            background-color: #0421B5;;
-            height: 100vh;
+            background-color: #0421b5;;
+            height: 100vh; 
+             position: fixed; 
+             width: 17%;
+
         }    
+
+        
     }
     .menu-lateral {
         background-color:#0421B5;;

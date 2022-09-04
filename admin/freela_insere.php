@@ -25,7 +25,7 @@ if(isset($_POST['inserir'])) {
     $profissao = new Profissao;
 	$profissao->setTitulo($_POST['titulo']);
     $profissao->setDescricao($_POST['descricao']);
-    $profissao->setSituacao(1);
+    // $profissao->setSituacao(1);
     $profissao->setCategoriaId($_POST['categoria']);
     $profissao->setUsuarioId($_GET['id']);
 

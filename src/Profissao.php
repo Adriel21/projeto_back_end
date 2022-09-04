@@ -6,8 +6,8 @@ final class Profissao{
     private int $id;
     private string $titulo;
     private string $descricao;
-    private int $situacao;
     private int $usuarioId;
+    private string $termo;
     private int $categoriaId;
     private PDO $conexao;
 
@@ -20,13 +20,12 @@ final class Profissao{
 
     // Método para cadastrar perfil profissional
     public function cadastrar():void {
-        $sql = "INSERT INTO profissao(titulo, descricao, situacao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :situacao, :usuario_id, :categoria_id)";
+        $sql = "INSERT INTO profissao(titulo, descricao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :usuario_id, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":titulo", $this->titulo, PDO::PARAM_STR);
             $consulta->bindParam(":descricao", $this->descricao, PDO::PARAM_STR);
-            $consulta->bindParam(":situacao", $this->situacao, PDO::PARAM_INT);
             $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
             $consulta->execute();
@@ -69,7 +68,7 @@ public function listarTodos():array {
 
 
 public function listarPorCategoria():array {
-    $sql = "SELECT profissao.id, profissao.titulo, profissao.descricao, profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id WHERE profissao.categoria_id = :categoria_id";
+    $sql = "SELECT profissao.id, profissao.titulo, profissao.descricao, profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, usuario.perfil AS perfil, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id WHERE profissao.categoria_id = :categoria_id";
 
 
           try {
@@ -118,6 +117,24 @@ Public function desativarPerfil():void{
         die("Erro: ". $erro->getMessage());
     }
 }
+
+
+
+public function busca():array {
+    $sql = "SELECT profissao.titulo, profissao.id, profissao.descricao, usuario.nome AS nome, usuario.perfil AS perfil FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id WHERE titulo LIKE :termo OR descricao LIKE :termo";
+
+
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindValue(":termo", '%'.$this->termo.'%', PDO::PARAM_STR);
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+    return $resultado;
+}
+
 
 
 
@@ -202,22 +219,22 @@ Public function desativarPerfil():void{
         return $this;
     }
 
-    /**
-     * Get the value of situacao
-     */ 
-    public function getSituacao()
+
+
+    
+    
+    public function getTermo()
     {
-        return $this->situacao;
+        return $this->termo;
     }
 
-    /**
-     * Set the value of situacao
-     *
-     * @return  self
-     */ 
-    public function setSituacao($situacao)
+    
+
+    public function setTermo($termo)
     {
-        $this->situacao = filter_var($situacao, FILTER_SANITIZE_NUMBER_INT);
+        $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
+
+      
     }
 }
     ?>

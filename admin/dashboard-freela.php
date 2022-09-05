@@ -102,8 +102,8 @@ $dadosFreela = $usuario->listarFreela();
             <!-- Cabeçalho fim -->
             
             <!-- Call  -->
-            <div class="bg-primary rounded my-2 py-2 ms-2">
-                <div class="container">
+            <div class="bg-primary rounded my-2 py-2">
+                <div class="p-3">
                     <!-- row -->
                     <div class="row align-items-center g-0">
                         <div class="col-xl-12 col-lg-12 col-md-12">
@@ -131,23 +131,23 @@ $dadosFreela = $usuario->listarFreela();
             <!-- Início conteúdo das vagas -->
             <main class="row overflow-auto border border-2 border-opacity-50 pb-2 rounded box-vagas">
             <?php foreach($listaDeProjetos as $projetos) { ?>
-            <div class="col pt-4 card-vagas">
+            <div class="col-12 pt-4 card-vagas">
                 <div class="card w-77">
                     <div class="card-body coluna-vagas">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
-                        <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1"><?=$projetos['resumo']?></p>
-                        <small>(Nome do cliente talvez.)</small>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">DETALHES</button>
-                        
-                        </div>
-                    </a>
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1"><?=$projetos['resumo']?></p>
+                            <small>(Nome do cliente talvez.)</small>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="botao-feed btn   me-md-2" type="button">DETALHES</button>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                </div>
+            </div>
                 <?php } ?>
             
             </main>

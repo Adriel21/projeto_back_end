@@ -115,35 +115,35 @@ $dadosFreela = $usuario->listarFreela();
           
 
                  
-                    <?php if($dadosFreela['profissao_id'] === null) { ?>
+            <?php if($dadosFreela['profissao_id'] === null) { ?>
                   
-            <div class="bg-primary rounded my-2 py-2">
-                <div class="container">
-                    <!-- row -->
-                    <div class="row align-items-center g-0">
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <!-- heading -->
-                        <div>
-                        <h1 class="text-white display-4 fw-bold pe-lg-8">Gostaria de trabalhar como Freelancer em outros projetos?</h1>
-                        <!-- text -->
-                        <p class="text-white-50 mb-4 lead">
-                            Cadastre agora seu perfil profissional e tenha a oportunidade trabalhar em diversos projetos!
-                        </p>
+                <div class="bg-primary rounded my-2 py-2">
+                    <div class="p-3">
+                        <!-- row -->
+                        <div class="row align-items-center g-0">
+                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                <!-- heading -->
+                                <div>
+                                    <h1 class="text-white display-4 fw-bold pe-lg-8">Gostaria de trabalhar como Freelancer em outros projetos?</h1>
+                                    <!-- text -->
+                                    <p class="text-white-50 mb-4 lead">
+                                        Cadastre agora seu perfil profissional e tenha a oportunidade trabalhar em diversos projetos!
+                                    </p>
 
-                        <!-- btn -->
-                        <a href="./freela_insere.php?id=<?=$_SESSION['id']?>" class="btn btn-dark">Cadastrar Perfil Freelancer</a>
+                                    <!-- btn -->
+                                    <a href="./freela_insere.php?id=<?=$_SESSION['id']?>" class="btn btn-dark">Cadastrar Perfil Freelancer</a>
 
+                                </div>
+                            </div>
+                            
+                            <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
+                                <img src="../assets/images/hero/hero-img.png" alt="" class="img-fluid">
+                            </div>
                         </div>
                     </div>
-                    <!-- img -->
-                    <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
-                        <img src="../assets/images/hero/hero-img.png" alt="" class="img-fluid">
-                    </div>
-                    </div>
                 </div>
-            </div>
 
-                  <?php } else {  ?>
+            <?php } else {  ?>
 
                     <div class="bg-primary rounded my-2 py-2">
                 <div class="container">

@@ -130,11 +130,10 @@ require_once 'inc/header.php'
                 <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
                     <!-- heading -->
                     <div>
-                        <h1 class="text-white display-4 fw-bold pe-lg-8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                        <h1 class="text-white display-4 fw-bold pe-lg-8">Acreditamos no poder da tecnologia para ajudar pessoas.</h1>
                         <!-- text -->
-                        <p class="text-white-50 mb-4 lead">
-                            If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
-                            employee professional development and well-being.
+                        <p class="text-white mb-4 lead">
+                            Sabemos o quanto os tempos estão difíceis. Por isso, a Colajob possui como missão facilitar a busca por trabalhos, trazendo para o público a oportunidade de atuarem de uma das formas que mais vem crescendo ultimamente - como Freelancers.
                         </p>
                         <!-- btn -->
                         <div class="d-grid gap-2 col-6 col-sm-4 mt-5 rounded">

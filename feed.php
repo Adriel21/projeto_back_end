@@ -62,6 +62,7 @@ $listaDeCategorias = $categoria->listar();
                         <a href="#" class="nav-link px-sm-0 px-2">
                             <i class="fs-5 bi-people"></i><span class="ms-lg-1  d-sm-inline">Customers</span> </a>
                     </li>
+                   
                 </ul>
             </div>
         </div>

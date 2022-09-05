@@ -23,11 +23,12 @@ switch($pagina){
     break;
 
     case 'dashboard-freela.php':
-    case 'dashboard-cliente.php':
+    // case 'dashboard-cliente.php':
     // case 'noticia-atualiza.php':
 ?>
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/estilo.css">
+<link rel="stylesheet" href="css/dashboard-freela.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/estilo.css">
 
 
 <?php

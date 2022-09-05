@@ -102,29 +102,28 @@ $dadosFreela = $usuario->listarFreela();
             <!-- Cabeçalho fim -->
             
             <!-- Call  -->
-            
             <div class="bg-primary rounded my-2 py-2 ms-2">
                 <div class="container">
                     <!-- row -->
                     <div class="row align-items-center g-0">
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <!-- heading -->
-                        <div>
-                        <h1 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team &amp; shape the future of design
-                        </h1>
-                        <!-- text -->
-                        <p class="text-white-50 mb-4 lead">
-                            If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
-                            employee professional development and well-being.
-                        </p>
-                        <!-- btn -->
-                        <a href="#" class="btn btn-dark">View opportunities</a>
+                        <div class="col-xl-12 col-lg-12 col-md-12">
+                            <!-- heading -->
+                            <div>
+                                <h1 class="text-white display-4 fw-bold pe-lg-8">Join the Geeks team shape the future of design
+                                </h1>
+                                <!-- text -->
+                                <p class="text-white-50 mb-4 lead">
+                                    If you’re passionate and ready to dive in, we’d love to meet you. We’re committed to supporting our
+                                    employee professional development and well-being.
+                                </p>
+                                <!-- btn -->
+                                <a href="#" class="btn btn-dark">View opportunities</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- img -->
-                    <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
-                        <img src="../assets/images/hero/hero-img.png" alt="" class="img-fluid">
-                    </div>
+                        <!-- img -->
+                        <div class=" col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
+                            <img src="../assets/images/hero/hero-img.png" alt="" class="img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>

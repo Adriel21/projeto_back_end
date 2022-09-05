@@ -58,7 +58,11 @@ require_once 'inc/header.php'
                             <h5 class="card-title">Desenvolvedores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/desenvolvedores.jpg" alt="">
                             <p class="card-text">Aqui, você pode encontrar a ajuda necessária para desenvolver seu site ou aplicativo.</p>
-                            <button class="botao-feed btn   me-md-2" type="button">Ver Freelancers</button>
+                            <button class="botao-feed btn me-md-2" type="button">
+                                <a class="text-white" href="feed.php?id=1">    
+                                    Ver Freelancers
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>

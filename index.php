@@ -127,10 +127,10 @@ require_once 'inc/header.php'
   
 </main>
    
-<section class="" style="background-color: #0421B5;">
-        <div class="container py-5">
+<section class="segna-bloco py-2" style="background-color: #0421B5;">
+        <section class="container row featurette my-5 py-3 m-auto">
             <!-- row -->
-            <div class="row align-items-center g-0">
+            <div class="row align-items-center g-0 flex-column-reverse flex-sm-row">
                 <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
                     <!-- heading -->
                     <div>
@@ -150,7 +150,7 @@ require_once 'inc/header.php'
                     <img class="img-responsive m-auto" src="img/img-equipe-conversando.png" alt="" width="100%" height="100%">
                 </picture>
             </div>
-        </div>
+        </section>
     </section>
 
 

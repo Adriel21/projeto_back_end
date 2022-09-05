@@ -1,0 +1,19 @@
+header{
+    background-color: white;
+    z-index: 9999 !important;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-link{
+    /* color: #0421B5; */
+    color: black;
+}
+
+.nav-linl:hover{
+    color: blue !important;
+}
+

@@ -5,7 +5,7 @@ use Projeto\Profissao;
 use Projeto\Projeto;
 use Projeto\Usuario;
 
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 
 $sessao = new ControleDeAcesso;

@@ -21,13 +21,13 @@ picture img {
     }
 
     /* button index */
-    button {
+    .button-index {
         background: #021d40;
         color: #fff;
         border: none;
     }
 
-    button:hover {
+    .button-index:hover {
         background: #021057;
     }
 
@@ -96,8 +96,19 @@ picture img {
         color: ghostwhite;
     }
 
+    @media screen and (min-width: 750px) {
+        .menu-lateral {
+            background-color: #0421b5;;
+            height: 100vh; 
+             position: fixed; 
+             width: 17%;
+
+        }    
+
+        
+    }
     .menu-lateral {
-        background-color: #021d40;
+        background-color:#0421B5;;
     }
 
     .menu-lateral a {
@@ -117,6 +128,9 @@ picture img {
         color: #0650b1;
     }
 
+    .perfil_freela_feed{
+        border-radius: 300px;
+    }
 
     /* Fim das configurações gerais da página feed.php */
 

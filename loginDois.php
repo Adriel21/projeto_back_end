@@ -7,7 +7,7 @@ use Projeto\Usuario;
 require "./vendor/autoload.php";
 ?>
 
-<?php require_once 'inc/cabecalho-cadastro.php' ?>
+<?php require_once 'inc/headerValidacao.php' ?>
 
 	<div class="container marketing shadow">
 		<div class="row featurette my-5 p-sm-5">
@@ -92,7 +92,7 @@ require "./vendor/autoload.php";
 								///echo 'errou';
 						} else {
 							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
-								header('location:./admin/perfil_principal.php?id=' . $_SESSION['id']);
+								header('location:./admin/perfil_freela.php?id=' . $_SESSION['id']);
                         }
 					} else {
 						header("location:login.php?senha_incorreta");
@@ -103,3 +103,4 @@ require "./vendor/autoload.php";
 			}
 		
 		?>
+		</body>

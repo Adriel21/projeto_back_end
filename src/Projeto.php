@@ -9,6 +9,7 @@ final class Projeto{
     private string $descricao;
     private int $usuarioId;
     private int $categoriaId;
+    private string $termo;
     private PDO $conexao;
 
     
@@ -116,8 +117,7 @@ final class Projeto{
 
         
          public function listarTodos():array {
-             $sql = "SELECT id, titulo, resumo, descricao 
-            FROM projeto";
+             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
         
         
                    try {
@@ -131,6 +131,27 @@ final class Projeto{
 
 
                  }
+
+
+        //Método para trazer todos os projetos de acordo com a categoria
+           
+        public function listarPorCategoria():array {
+            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id WHERE projeto.categoria_id = :categoria_id";
+       
+       
+                  try {
+                    $consulta = $this->conexao->prepare($sql);
+                    $consulta->bindParam(':categoria_id', $this->categoriaId, PDO::PARAM_INT);
+                   $consulta->execute();
+                    $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                 } catch (Exception $erro) {
+                     die("Erro: ". $erro->getMessage());
+                 }
+                 return $resultado;
+
+
+                }
+                
 
 
         // Método para trazer detalhes da tabela Projeto através da associação entre a classe Usuario
@@ -184,6 +205,22 @@ final class Projeto{
                         die("Erro: ". $erro->getMessage());
                     }
 
+                }
+
+
+                public function busca():array {
+                    $sql = "SELECT projeto.titulo, projeto.id, projeto.resumo, usuario.nome AS usuario FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id WHERE titulo LIKE :termo OR resumo LIKE :termo";
+            
+                
+                    try {
+                        $consulta = $this->conexao->prepare($sql);
+                        $consulta->bindValue(":termo", '%'.$this->termo.'%', PDO::PARAM_STR);
+                        $consulta->execute();
+                        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                    } catch (Exception $erro) {
+                        die("Erro: ". $erro->getMessage());
+                    }
+                    return $resultado;
                 }
    
 
@@ -264,5 +301,25 @@ final class Projeto{
         $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
 
     
+    }
+
+    /**
+     * Get the value of termo
+     */ 
+    public function getTermo()
+    {
+        return $this->termo;
+    }
+
+    /**
+     * Set the value of termo
+     *
+     * @return  self
+     */ 
+    public function setTermo($termo)
+    {
+        $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
+
+
     }
 }

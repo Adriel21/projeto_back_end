@@ -28,6 +28,7 @@ final class Categoria {
         return $resultado;
     }
     
+    
 
     // Método para trazer apenas uma categoria
     public function listarUm():array {

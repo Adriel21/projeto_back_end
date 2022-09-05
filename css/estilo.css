@@ -21,16 +21,21 @@ picture img {
     }
 
     /* button index */
-    .botao-feed {
+    .botao_index {
         font-weight: 600;
         color: ghostwhite;
         background-color: #021057;
         border: none;
     }
 
-    .botao-feed:hover {
+    .botao_index:hover {
         background-color: #0650b1;
         color: ghostwhite;
+    }
+
+    .botao_index a{
+        color: white;
+        text-decoration: none;
     }
     
   

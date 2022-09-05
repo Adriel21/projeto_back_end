@@ -27,7 +27,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container limitador">
-    <h1 class="ms-n1"><a class="navbar-brand text-light" href="index.php">ColaJob</a></h1>
+  <h1 class="ms-n1"><a class="navbar-brand logo" href="index.php"><img src="./img/tecnologia.png" width="40"> Colajob</a></h1>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

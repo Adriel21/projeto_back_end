@@ -31,7 +31,7 @@ if(isset($_POST['inserir'])) {
 
 }
 ?>
-<?php require_once './inc/cabecalho-cadastro.php'; ?>
+<?php require_once './inc/headerValidacao.php'; ?>
 
 <!--criando formulario de cadastro -->
 	<div class="container marketing shadow">

@@ -50,7 +50,7 @@ require_once 'inc/header.php'
     <!-- cards Projetos -->
 
     <section class="mt-5">
-        <h2 class="text-center text-muted">Cards Projetos</h2>
+        <h2 class="text-center text-muted">Você pode encontrar aqui!</h2>
             <section class="container row row-cols-1 row-cols-md-3 g-4 m-auto my-5">
                 <div class="col">
                     <div class="card h-100 shadow">
@@ -112,7 +112,7 @@ require_once 'inc/header.php'
                         <div class="card-body">
                             <h5 class="card-title">Professores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/professores.jpg" alt="">
-                            <p class="card-text">Gostaria de algumas aulas de reforço? Que tal encontrar um professor para te ajudar?.</p>
+                            <p class="card-text">Gostaria de algumas aulas de reforço? Que tal encontrar um professor para te ajudar?</p>
                             <button class="botao-feed btn   me-md-2" type="button">Ver Freelancers</button>
                         </div>
                     </div>

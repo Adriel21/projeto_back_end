@@ -13,7 +13,7 @@ require_once 'inc/header.php'
                         Com a Colajob, você poderá encontrar muitos projetos que irão contribuir para o seu bolso e para ampliar seu portfólio. Aproveite a oportunidade e, veja se há algum que se encaixa com você!
                     </p>
 
-                <div class="d-grid gap-2 col-4 mt-5 rounded">
+                <div class="d-grid gap-2 col-6 col-sm-4 mt-5 rounded">
                 <button class="botao-feed btn me-md-2 p-2" type="button">Procurar Projetos</button>
                 </div>
             </div>
@@ -35,7 +35,7 @@ require_once 'inc/header.php'
                         Precisando de ajuda qualificada? Está no lugar certo. Na Colajob você pode conseguir quanta ajuda for necessária para concluir seus projetos.
                     </p>
 
-                    <div class="d-grid gap-2 col-4 mt-5 rounded">
+                    <div class="d-grid gap-2 col-6 col-sm-4 mt-5 rounded">
                     <button class="botao-feed btn me-md-2" type="button">Procurar Freelancers</button>
                     </div>
             </div>
@@ -137,8 +137,8 @@ require_once 'inc/header.php'
                             employee professional development and well-being.
                         </p>
                         <!-- btn -->
-                        <div class="d-grid gap-2 col-4 mt-5 rounded">
-                        <button class="botao-feed btn   me-md-2" type="button">Saiba Mais</button>
+                        <div class="d-grid gap-2 col-6 col-sm-4 mt-5 rounded">
+                            <button class="botao-feed btn me-md-2" type="button">Saiba Mais</button>
                         </div>
                     </div>
                 </div>

@@ -21,16 +21,19 @@ picture img {
     }
 
     /* button index */
-    .button-index {
-        background: #021d40;
-        color: #fff;
+    .botao-feed {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
         border: none;
     }
 
-    .button-index:hover {
-        background: #021057;
+    .botao-feed:hover {
+        background-color: #0650b1;
+        color: ghostwhite;
     }
-
+    
+  
 /* Tela de Cadastro usuario */
     .bg-form{
         background: #EAEAFF;

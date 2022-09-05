@@ -120,7 +120,7 @@ require_once 'inc/cabecalho_externo.php'
             </section>
     </section>
 
-    <section class="bg-primary">
+    <section class="bg-primary border-bottom border-dark">
         <div class="container py-5">
             <!-- row -->
             <div class="row align-items-center g-0">

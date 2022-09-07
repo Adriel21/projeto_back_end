@@ -35,7 +35,7 @@ $dados = $usuario->listarUm();
                     <div class="mt-2 mt-lg-3">
                       <h4><?=$_SESSION['nome']?> Bezerra</h4>
                       <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
-                                Publicar Projeto
+                                <a href="./projeto_insere.php">Publicar Projeto</a>
                             </button>
                     </div>
                   </div>

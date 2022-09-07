@@ -4,6 +4,7 @@ use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
+require_once '../inc/cabecalho_admin.php';
 require_once '../vendor/autoload.php';
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
@@ -31,7 +32,7 @@ if(isset($_POST['inserir'])) {
     $projeto->setTitulo($_POST['titulo']);
     $projeto->setResumo($_POST['resumo']);
     $projeto->setDescricao($_POST['descricao']);
-    $projeto->setUsuarioId($_GET['id']);
+    $projeto->setUsuarioId($_SESSION['id']);
     $projeto->setCategoriaId($_POST['categoria']);
 
     // header("location:login.php");
@@ -45,40 +46,50 @@ if(isset($_POST['inserir'])) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Insere</title>
-</head>
-<body>
-    <form action="" method="POST">
-        <label for="titulo">Título do Projeto</label>
-        <input type="text" name="titulo">
-        <hr>
-        <label for="resumo">Resumo do Projeto</label>
-        <input type="text" name="resumo">
-        <hr>
-        <label for="descricao">Descrição do projeto</label>
-        <input type="text" name="descricao">
 
-        <div class="mb-3">
-                <label class="form-label" for="categoria">Categoria:</label>
-                <select class="form-select" name="categoria" id="categoria" required>
-					<option value=""></option>
+
+<!--criando formulario de cadastro -->
+<div class="container col-md-12 col-sm-12 marketing shadow rounded">
+		<div class="row justify-content-center featurette my-5 p-sm-5">
+        <h1 class="ps-5 pt-2 py-2 cta-formulario-atualiza">Cadastrar projeto</h1>
+			<div class="col-12 col-md-8 col-sm-12  p-sm-4 p-4 ">
+				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
 					
-					<?php foreach($listaDeCategorias as $categorias) { ?>
-					<option value="<?=$categorias['id']?>"> 
-						<?=$categorias['nome']?> 
-					</option>
+					
+					<div class="form-group pb-3  mt-2">
+						<label for="titulo" class="pb-1">Titulo</label>
+						<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto">
+					</div>
+                    <div class="form-group pb-3 mt-2">
+						<label for="resumo" class="pb-1">Resumo</label>
+						<input type="text" class="form-control" id="resumo" name="resumo" placeholder="Resumo">
+					</div>
+
+					<div class="form-group pb-3 mt-2">
+					<select name="categoria" class="form-select" id="categoria" class="pb-1" placeholder="Selecione a categoria do projeto">
+						<?php foreach($listaDeCategorias as $categoria) {?>
+					<option value="<?=$categoria['id']?>"><?=$categoria['nome']?></option>
 					<?php } ?>
-					
-				</select>
-			</div>
+					</select>
+						
+					</div>
 
-            <button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
-    </form>
-</body>
-</html>
+					<div class="form-group  mt-2">
+						<label for="descricao" class="pb-1">Descrição</label>
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto">
+						</textarea>
+					</div>
+					
+					<div class="pt-4 text-end">
+                    <button class="botao-feed btn text-white" id="inserir" name="inserir" type="submit">CADASTRAR</button>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+					
+					
+
+            
+    

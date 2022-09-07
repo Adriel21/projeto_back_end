@@ -7,6 +7,7 @@ final class Projeto{
     private string $titulo;
     private string $resumo;
     private string $descricao;
+    private string $data;
     private int $usuarioId;
     private int $categoriaId;
     private string $termo;
@@ -51,13 +52,14 @@ final class Projeto{
 
     // Método para cadastrar projetos na base de dados
     public function cadastrar():void {
-        $sql = "INSERT INTO projeto(titulo, resumo, descricao, usuario_id, categoria_id) VALUES(:titulo, :resumo, :descricao, :usuario_id, :categoria_id)";
+        $sql = "INSERT INTO projeto(titulo, resumo, descricao, data, usuario_id, categoria_id) VALUES(:titulo, :resumo, :descricao, :data, :usuario_id, :categoria_id)";
         
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":titulo", $this->titulo, PDO::PARAM_STR);
             $consulta->bindParam(":resumo", $this->resumo, PDO::PARAM_STR);
             $consulta->bindParam(":descricao", $this->descricao, PDO::PARAM_STR);
+            $consulta->bindParam(":data", $this->data, PDO::PARAM_STR);
             $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
             $consulta->execute();
@@ -156,7 +158,7 @@ final class Projeto{
 
         // Método para trazer detalhes da tabela Projeto através da associação entre a classe Usuario
         public function listarDetalhes():array {
-            $sql = "SELECT id, titulo, resumo, descricao 
+            $sql = "SELECT id, titulo, resumo, descricao, data
             FROM projeto WHERE usuario_id = :usuario_id";
         
         
@@ -303,23 +305,34 @@ final class Projeto{
     
     }
 
-    /**
-     * Get the value of termo
-     */ 
+   
+    
+    
     public function getTermo()
     {
         return $this->termo;
     }
 
-    /**
-     * Set the value of termo
-     *
-     * @return  self
-     */ 
+ 
+
     public function setTermo($termo)
     {
         $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
 
 
+    }
+
+  
+
+    public function getData()
+    {
+        return $this->data;
+    }
+
+ 
+
+    public function setData($data)
+    {
+        $this->data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 }

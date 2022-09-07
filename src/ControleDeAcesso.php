@@ -53,7 +53,7 @@ public function loginTres (int $usuarioId, string $nome, string $email, string $
 public function logout():void {
     session_start();
     session_destroy();
-    header("location:./login.php?logout");
+    header("location:../index.php?logout");
     die(); // exit;
 }
 

@@ -1,8 +1,14 @@
 <?php 
-
-
       // Vendor
+
+use Projeto\ControleDeAcesso;
+
       require_once '../vendor/autoload.php';
+      $sessao = new ControleDeAcesso;
+
+      if(isset($_GET['sair'])) {
+        $sessao->logout();
+      }
 
 ?>
 
@@ -23,6 +29,7 @@
 <link rel="stylesheet" href="../css/header.css"> 
 <link rel="stylesheet" href="../css/dashboard_freelancer.css">
 <link rel="stylesheet" href="../css/estilo_forms.css">
+
 
 
 </head>
@@ -46,11 +53,17 @@
         
        
         <li class="nav-item">
-          <a class="nav-link" href="loginDois.php">Login</a>
+          <a class="nav-link" href="loginDois.php">Cadastrar Perfil Freelancer</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="cadastroDois.php">Cadastro</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Online
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="noticias-por-categoria.php">Editar Cadastro</a></li>
+            <li><a class="dropdown-item" href="dashboard_cliente.php?sair" name="sair" >Sair</a></li>
+          </ul>
         </li>
     </div>
   </div>

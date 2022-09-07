@@ -21,6 +21,7 @@ $sessao = new ControleDeAcesso;
 
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
+$hoje = date('y/m/d');
 if(isset($_POST['inserir'])) {
     // $projeto = new Projeto;
 	// $projeto->setTitulo($_POST['titulo']);
@@ -32,6 +33,7 @@ if(isset($_POST['inserir'])) {
     $projeto->setTitulo($_POST['titulo']);
     $projeto->setResumo($_POST['resumo']);
     $projeto->setDescricao($_POST['descricao']);
+	$projeto->setData($hoje);
     $projeto->setUsuarioId($_SESSION['id']);
     $projeto->setCategoriaId($_POST['categoria']);
 
@@ -40,7 +42,7 @@ if(isset($_POST['inserir'])) {
 
 	$projeto->cadastrar();
 
-    header('location:perfil_principal.php?id=' . $_SESSION['id']);
+    header('location:dashboard_cliente.php?id=' . $_SESSION['id']);
 
 }
 

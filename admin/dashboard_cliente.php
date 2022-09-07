@@ -5,6 +5,7 @@ require_once '../inc/headerInterno.php';
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 use Projeto\Usuario;
+use Projeto\Utilitarios;
 
 $sessao = new ControleDeAcesso;
 $projeto = new Projeto;
@@ -23,11 +24,9 @@ $dados = $usuario->listarUm();
 
 <main class="container">
     <section class="main-body">
-    
-         
-          <!-- /Breadcrumb -->
-          <div class="row ">
-            <div class="col-lg-4 col-sm-12 col-md-9 mb-3 mx-auto">
+
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-9 mb-3 mx-auto perfil">
               <div class="card ">
                 <div class="card-body ">
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-center gap-lg-2">
@@ -56,6 +55,9 @@ $dados = $usuario->listarUm();
                     <h6 class="text-center"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary"><a>https://www.linkedin.com/in</a></span>
                   </li>
+                  <li class="list-group-item text-end">
+                    <span class="text-secondary"><a href="redes_insere.php">Adicionar redes</a></span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -64,25 +66,26 @@ $dados = $usuario->listarUm();
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
-        
+                    <h2 class="text-center text-lg-start">Meus Projetos</h2>
+        <?php foreach ($listaDeProjetos as $projetos) { ?>
         <div class="col-12 px-md-1 mt-2">
                   <div class="list-group">
-                    <h2 class="text-center text-lg-start">Meus Projetos</h2>
+                   
                       <div class="list-group-item list-group-item-action">
-                        <h4 class="text-center text-lg-start">Título: </h4>
-                          <span class="text-center text-lg-start"><strong>Data:</strong> 25/08/2022</span>
-                          <p class="text-center text-lg-start"><strong>Resumo do projeto:</strong></p>
-                          <div class="text-lg-end text-center"><button class=" px-5 py-1 mt-2 botao_painel rounded-3" type="button"><a href="./detalhes_do_projeto.php?">Visualizar projeto</a></button></div>
+                        <h4 class="text-center text-lg-start">Título: <?=$projetos['titulo']?></h4>
+                          <span class="text-center text-lg-start"><strong>Data:</strong> <?=Utilitarios::formataData($projetos['data'])?></span>
+                          <p class="text-center text-lg-start"><strong>Resumo do projeto: </strong> <?= $projetos['resumo']?></p>
+                          <div class="text-lg-end text-center"><button class=" px-5 py-1 mt-2 botao_projetos rounded-3" type="button"><a href="./detalhes_do_projeto.php?">Visualizar projeto</a></button></div>
                       </div>
                   </div>
               </div>
-
-                        <div class="contact-info-section margin-40px-tb">
+            <?php } ?>
+                        <!-- <div class="contact-info-section margin-40px-tb">
                             <ul class="list-style9 no-margin">
 
-                                <li>
+                                <li> -->
 
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-5 col-5">
                                             <i class="fas fa-mobile-alt text-purple"></i>
                                             <strong class="margin-10px-left xs-margin-four-left text-purple">Phone:</strong>
@@ -101,11 +104,11 @@ $dados = $usuario->listarUm();
                                         </div>
                                         <div class="col-md-7 col-7">
                                             <p><a href="javascript:void(0)">addyour@emailhere</a></p>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    <!-- </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
               </div>
@@ -114,5 +117,7 @@ $dados = $usuario->listarUm();
     </section>
 </main>
         
+
+<script src="../js/bootstrap.bundle.min.js"></script>
 
                     

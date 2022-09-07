@@ -41,7 +41,8 @@ picture img {
   
 /* Tela de Cadastro usuario */
     .bg-form{
-        background: #EAEAFF;
+        /* background: #EAEAFF; */
+        background: white;
     }
 
    .coluna-vagas {
@@ -64,10 +65,13 @@ picture img {
         background: #fa1900;
     }
 
-    /* .marketing{
-        background-color: #021057;
-         color: white; 
-    } */
+    .titulo_login{
+        font-weight: bold;
+    }
+
+     /* .marketing{
+        box-shadow: initial;
+    }  */
 
     /* .marketing .texto_de_fundo{
         color: white;

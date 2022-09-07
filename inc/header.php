@@ -42,18 +42,6 @@
         <li class="nav-item">
           <a class="nav-link" href="cadastroDois.php">Cadastro</a>
         </li>
-
-        <!-- <li class="nav-item ">
-          <details>
-  <summary>Epcot</summary>
-  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</details>
-        </li> -->
-
-      <!-- <form autocomplete="off" class="d-flex" action="resultados.php" method="GET">
-        <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Pesquise aqui" name="busca">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">OK</button>
-      </form> -->
     </div>
   </div>
 </nav>

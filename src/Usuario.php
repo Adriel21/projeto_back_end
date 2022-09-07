@@ -87,6 +87,25 @@ return $resultado;
         }
     }
 
+
+    public function atualizarPerfil():void {
+        $sql = "UPDATE usuario SET nome = :nome, email = :email, senha = :senha, perfil = :perfil WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindParam(":senha", $this->senha, PDO::PARAM_STR);
+            $consulta->bindParam(":perfil", $this->perfil, PDO::PARAM_STR);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+
+    }
+    
+
     //método que tem como objetivo atualizar/inserir o id da tabela profissao na coluna profissao_id da tabela usuario, criando assim, o relacionamento
     public function atualizarPr():void {
         $sql = "UPDATE usuario SET profissao_id = :profissao_id  WHERE id = :id";

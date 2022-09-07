@@ -1,5 +1,9 @@
 <?php 
-$pagina = basename($_SERVER['PHP_SELF']);
+
+
+      // Vendor
+      require_once '../vendor/autoload.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -14,42 +18,12 @@ $pagina = basename($_SERVER['PHP_SELF']);
 
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-<!-- <link rel="stylesheet" href="css/estilo.css">
-<link rel="stylesheet" href="css/header.css"> -->
+<!-- 
+<link rel="stylesheet" href="css/estilo.css"> -->
+<link rel="stylesheet" href="../css/header.css"> 
+<link rel="stylesheet" href="../css/dashboard_freelancer.css">
 <!-- <link rel="stylesheet" href="/css/estilo_interno.css"> -->
 
-<?php 
-switch($pagina){
-  // Arquivos externos
-    case 'index.php':
-    case 'projetos.php':
-    case 'resultados_projetos.php':
-    case 'freelancers.php':
-    case 'resultados_freelancers.php':
-
-      // Vendor
-      
-    require_once './vendor/autoload.php';
-?>
-<link rel="stylesheet" href="css/estilo.css">
-<link rel="stylesheet" href="css/header.css">
-
-<?php
-    break;
-      // Arquivos internos
-    case 'dashboard_freelancer.php':
-
-      // Vendor
-      require_once '../vendor/autoload.php';
-?>
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="../css/dashboard_freelancer.css">
-
-<?php
-    break;
-}
-?>
 </head>
 <body>
     
@@ -57,7 +31,7 @@ switch($pagina){
 
 <nav class="navbar navbar-expand-lg">
   <div class="container limitador">
-    <h1 class="ms-n1"><a class="navbar-brand logo" href="index.php"><img src="./img/tecnologia.png" width="40"> Colajob</a></h1>
+    <h1 class="ms-n1"><a class="navbar-brand logo" href="../index.php"><img src="../img/tecnologia.png" width="40"> Colajob</a></h1>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -66,7 +40,7 @@ switch($pagina){
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.php">Home</a>
         </li>
         
        

@@ -39,9 +39,9 @@ $listaDeCategorias = $categoria->listar();
                                 <span class="ms-1 d-sm-inline text-light">Categorias</span>
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-black" href="feed.php">Todas as categorias</a></li>
+                            <li><a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a></li>
                                   <?php foreach($listaDeCategorias as $categorias) { ?>  
-                                 <li><a class="dropdown-item text-black" href="feed.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a></li>
+                                 <li><a class="dropdown-item text-black" href="projetos.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a></li>
                                  <?php } ?>
                              </ul> 
                             
@@ -69,7 +69,7 @@ $listaDeCategorias = $categoria->listar();
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
                 <div class="cabecalho-interno d-flex col-12 justify-content-center">
-                        <form class="d-flex p-1" action="resultados.php" method="GET">
+                        <form class="d-flex p-1" action="resultados_projetos.php" method="GET">
                             <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">
                             <button class="botao-feed ps-2 btn text-white" type="submit">BUSCAR</button>

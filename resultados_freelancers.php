@@ -34,7 +34,7 @@ $listaDeCategorias = $categoria->listar();
                    
                     <li>
                             <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="feed.php"><span class="ms-1 d-sm-inline text-light">Projetos</span></a>
+                            <a href="projetos.php"><span class="ms-1 d-sm-inline text-light">Projetos</span></a>
                             <li class="nav-item dropdown pb-1 pb-lg-0">
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
                                 <span class="ms-1 d-sm-inline text-light">Categorias</span>

@@ -6,7 +6,7 @@ use Projeto\Usuario;
 
 
 require_once '../vendor/autoload.php';
-require_once '../inc/cabecalho-cadastro.php';
+require_once '../inc/header.php';
 
 $sessao = new ControleDeAcesso;
 $projeto = new Projeto;

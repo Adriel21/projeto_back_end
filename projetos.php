@@ -4,8 +4,6 @@ use Projeto\Categoria;
 use Projeto\Projeto;
 use Projeto\Usuario;
 
-
-require_once './vendor/autoload.php';
 require_once 'inc/header.php';
 $projeto = new Projeto;
 

@@ -1,3 +1,7 @@
+<?php 
+$pagina = basename($_SERVER['PHP_SELF']);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br" class="h-100">
 <head>
@@ -11,10 +15,36 @@
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/estilo.css">
-<link rel="stylesheet" href="css/header.css">
+<!-- <link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/header.css"> -->
 <!-- <link rel="stylesheet" href="/css/estilo_interno.css"> -->
 
+<?php 
+switch($pagina){
+  // Arquivos externos
+    case 'index.php':
+    case 'projetos.php':
+    case 'resultados_projetos.php':
+    case 'freelancers.php':
+    case 'resultados_freelancers.php':
+
+      // Vendor
+      
+    require_once './vendor/autoload.php';
+?>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/header.css">
+
+<?php
+    break;
+      // Arquivos internos
+    case 'dashboard_freelancer.php':
+?>
+<link rel="stylesheet" href="../css/dashboard_freelancer.css">
+<?php
+    break;
+}
+?>
 </head>
 <body>
     

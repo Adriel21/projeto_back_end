@@ -5,7 +5,6 @@ use Projeto\Profissao;
 use Projeto\Usuario;
 
 
-require_once './vendor/autoload.php';
 require_once 'inc/header.php';
 $profissao = new Profissao;
 

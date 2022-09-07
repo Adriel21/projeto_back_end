@@ -18,11 +18,12 @@
 
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-<!-- 
-<link rel="stylesheet" href="css/estilo.css"> -->
+ 
+
 <link rel="stylesheet" href="../css/header.css"> 
 <link rel="stylesheet" href="../css/dashboard_freelancer.css">
-<!-- <link rel="stylesheet" href="/css/estilo_interno.css"> -->
+<link rel="stylesheet" href="../css/estilo_forms.css">
+
 
 </head>
 <body>

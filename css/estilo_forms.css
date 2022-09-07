@@ -1,0 +1,19 @@
+/* button dashboard */
+.botao_inserir {
+    font-weight: 600;
+    color: ghostwhite;
+    background-color: #021057;
+    border: none;
+    width: 208px;
+    font-size: 16px;
+}
+
+.botao_inserir:hover {
+    background-color: #0650b1;
+    color: ghostwhite;
+}
+
+/* .botao_perfil a{
+    color: white;
+    text-decoration: none;
+} */

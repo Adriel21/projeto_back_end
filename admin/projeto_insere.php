@@ -4,8 +4,8 @@ use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
-require_once '../inc/cabecalho_admin.php';
-require_once '../vendor/autoload.php';
+require_once '../inc/headerInterno.php';
+
 // if( isset($_POST['inserir']) ){
 // 	$usuario = new Usuario;
 // 	$usuario->setNome($_POST['nome']);
@@ -81,7 +81,7 @@ if(isset($_POST['inserir'])) {
 					</div>
 					
 					<div class="pt-4 text-end">
-                    <button class="botao-feed btn text-white" id="inserir" name="inserir" type="submit">CADASTRAR</button>
+                    <button class="botao_inserir btn text-white" id="inserir" name="inserir" type="submit">CADASTRAR</button>
                     </div>
 				</form>
 			</div>

@@ -179,6 +179,28 @@ return $resultado;
 
             move_uploaded_file($temporario, $destino);
         }
+        
+
+        // método para inserir e limitar as imagens na base de dados
+    public function uploadAtualiza(array $arquivo) {
+        $tiposAceitos = [
+            "image/png",
+            "image/jpeg",
+            "image/gif",
+            "image/svg+xml"
+        ];
+
+        if(!in_array($arquivo['type'], $tiposAceitos)) {
+            die("<script>alert('formato válido');</script>");
+        }
+            $nome = $arquivo['name'];
+
+            $temporario = $arquivo['tmp_name'];
+
+            $destino = "./fotos_de_perfil/".$nome;
+
+            move_uploaded_file($temporario, $destino);
+        }
 
 
   

@@ -80,7 +80,7 @@ if(isset($_POST['inserir'])) {
 						</textarea>
 					</div>
 					
-					<div class="pt-4 text-center">
+					<div class="pt-4 text-end">
                     <button class="botao-feed btn text-white" id="inserir" name="inserir" type="submit">CADASTRAR</button>
                     </div>
 				</form>

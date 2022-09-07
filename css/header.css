@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 header{
     background-color: white;
     z-index: 9999 !important;
+    font-family: 'Poppins';
 }
 
 .logo{

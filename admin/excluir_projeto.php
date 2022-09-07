@@ -13,4 +13,4 @@ $projeto->setId($_GET["id"]);
 
 $projeto->excluirProjeto();
 
-header('location:perfil_principal.php');
+header('location:dashboard_cliente.php');

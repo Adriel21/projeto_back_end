@@ -6,6 +6,8 @@ use Projeto\ControleDeAcesso;
       require_once '../vendor/autoload.php';
       $sessao = new ControleDeAcesso;
 
+      $sessao->verificaAcesso();
+      
       if(isset($_GET['sair'])) {
         $sessao->logout();
       }
@@ -19,7 +21,6 @@ use Projeto\ControleDeAcesso;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colajob</title>
-<!-- <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css"> -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 <!-- Bootstrap Icons -->
@@ -51,9 +52,12 @@ use Projeto\ControleDeAcesso;
           <a class="nav-link" aria-current="page" href="../index.php">Home</a>
         </li>
         
-       
         <li class="nav-item">
           <a class="nav-link" href="loginDois.php">Cadastrar Perfil Freelancer</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard_cliente.php">Perfil Cliente</a>
         </li>
 
         <li class="nav-item dropdown">

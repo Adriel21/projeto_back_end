@@ -75,7 +75,7 @@ $dados = $usuario->listarUm();
                         <h4 class="text-center text-lg-start">Título: <?=$projetos['titulo']?></h4>
                           <span class="text-center text-lg-start"><strong>Data:</strong> <?=Utilitarios::formataData($projetos['data'])?></span>
                           <p class="text-center text-lg-start"><strong>Resumo do projeto: </strong> <?= $projetos['resumo']?></p>
-                          <div class="text-lg-end text-center"><button class=" px-5 py-1 mt-2 botao_projetos rounded-3" type="button"><a href="./detalhes_do_projeto.php?">Visualizar projeto</a></button></div>
+                          <div class="text-lg-end text-center"><button class=" px-5 py-1 mt-2 botao_projetos rounded-3" type="button"><a href="./detalhes_do_projeto.php?id=<?=$projetos['id']?>">Visualizar projeto</a></button></div>
                       </div>
                   </div>
               </div>

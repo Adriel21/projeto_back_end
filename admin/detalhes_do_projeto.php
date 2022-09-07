@@ -4,7 +4,8 @@ use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
-require_once '../vendor/autoload.php';
+require_once '../inc/headerInterno.php';
+
 
 $sessao = new ControleDeAcesso;
 $categoria = new Categoria;
@@ -25,49 +26,62 @@ if(isset($_POST['atualizar'])) {
 
 	$projeto->atualizarProjeto();
 
-    header('location:perfil_principal.php?id=' . $_SESSION['id']);
+    header('location:dashboard_cliente.php?id=' . $_SESSION['id']);
 
 }
 ?>
 
 
+<div class="container col-md-12 col-sm-12 marketing shadow rounded">
+		<div class="row justify-content-center featurette my-5 p-sm-5">
+        <h1 class="ps-5 pt-2 py-2 cta-formulario-atualiza">Projetos</h1>
+			<div class="col-12 col-md-8 col-sm-12  p-sm-4 p-4 ">
+				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
+					
+					
+					<div class="form-group pb-3  mt-2">
+						<label for="titulo" class="pb-1">Título</label>
+						<input value="<?=$dados['titulo']?>" type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto">
+					</div>
+                    <div class="form-group pb-3 mt-2">
+						<label for="resumo" class="pb-1">Resumo</label>
+						<input value="<?=$dados['resumo']?>" type="text" class="form-control" id="resumo" name="resumo" placeholder="Resumo do projeto">
+					</div>
+					<div class="form-group  mt-2">
+					<label for="descricao" class="pb-1">Descrição</label>
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descrição do projeto"><?=$dados['descricao']?>
+						</textarea>
+					</div>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Insere</title>
-</head>
-<body>
-    <form action="" method="POST">
-        <label for="titulo">Título do Projeto</label>
-        <input type="text" name="titulo">
-        <hr>
-        <label for="resumo">Resumo do Projeto</label>
-        <input type="text" name="resumo"> 
-        <hr>
-        <label for="descricao">Descrição do projeto</label>
-        <input type="text" name="descricao">
-
-        <div class="mb-3">
+					<div class="mb-3">
                 <label class="form-label" for="categoria">Categoria:</label>
                 <select class="form-select" name="categoria" id="categoria" required>
-					<option value=""></option>
-					
-					<?php foreach($listaDeCategorias as $categorias) { ?>
-					<option value="<?=$categorias['id']?>"> 
+                    <option value=""></option>
+                   	<?php foreach($listaDeCategorias as $categorias) { ?>
+					<option 
+                    <?php if($dados['categoria_id'] === $categorias['id'] ) echo " selected " ?> 
+                    value="<?=$categorias['id']?>"> 
 						<?=$categorias['nome']?> 
 					</option>
 					<?php } ?>
-					
-				</select>
-			</div>
+                </select>
+            </div>
 
-            <button class="btn btn-primary" id="inserir" name="atualizar"><i class="bi bi-save"></i> Inserir</button>
-            
-            <button class="btn btn-primary" id="inserir" name="excluir"><i class="bi bi-save"></i> <a href="excluir_projeto.php?id=<?=$dados['id']?>">Excluir</a></button>
-    </form>
-</body>
-</html>
+                
+				<div class="container form-check-reverse">
+				<div class="d-grid gap-2 d-md-block">
+				<button class=" botao-feed btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
+				<button class=" botao-excluir btn  text-white" id="inserir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>">EXCLUIR</a></button>
+				</div>
+
+						
+
+                </div>
+           
+			
+				</form>
+			</div>
+		</div>
+	</div>
+
+        

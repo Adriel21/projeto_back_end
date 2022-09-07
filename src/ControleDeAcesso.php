@@ -16,9 +16,11 @@ final class ControleDeAcesso {
 
      if (!isset($_SESSION['id'])) {
          session_destroy();
-        header("location:../login.php");
+        header("location:../loginDois.php?acesso_negado");
         die();
              } }
+
+
 
 
 
@@ -54,6 +56,13 @@ public function logout():void {
     session_start();
     session_destroy();
     header("location:../index.php?logout");
+    die(); // exit;
+}
+
+public function logoutExterno():void {
+    session_start();
+    session_destroy();
+    header("location:index.php?logout");
     die(); // exit;
 }
 

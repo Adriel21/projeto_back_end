@@ -1,4 +1,4 @@
-/* button dashboard */
+/* botão do formulário de inserção de projeto*/
 .botao_inserir {
     font-weight: 600;
     color: ghostwhite;
@@ -13,7 +13,11 @@
     color: ghostwhite;
 }
 
-/* .botao_perfil a{
-    color: white;
-    text-decoration: none;
-} */
+/* Fim do forms de inserção do projeto */
+
+
+/* Forms de atualização e exclusão de projeto */
+
+
+
+/* Fim do forms de exclusão do projeto */

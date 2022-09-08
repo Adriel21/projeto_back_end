@@ -3,9 +3,7 @@
 use Projeto\ControleDeAcesso;
 use Projeto\Usuario;
 
-require_once "../vendor/autoload.php";
-
-require_once '../inc/cabecalho_admin.php';
+require_once '../inc/headerInterno.php';
 
 // Criamos objeto para acessar os recursos de sessão PHP na classe ControleDeAcesso
 $sessao = new ControleDeAcesso;
@@ -14,7 +12,7 @@ $sessao = new ControleDeAcesso;
  $sessao->verificaAcesso();
 
 $usuario = new Usuario;
-$usuario->setId($_GET['id']);
+$usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUm();
 // var_dump($dados);
 if(isset($_POST['atualizar'])) {
@@ -61,8 +59,8 @@ if(isset($_POST['atualizar'])) {
 				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
 
 				<!-- Campo de inserção de imagem -->
-				<div class="border-shadow img-vazia "><img src="/img/placeholder-img-vazio.png" id="img"
-					alt="" class="d-block mx-auto mb-3" width="140" height="170">	
+				<div class="border-shadow img-vazia "><img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" id="img"
+					alt="" class="d-block mx-auto mb-3 rounded-circle " width="150" height="170">	
 				</div>
 			<!-- Fim campo de inserção de imagem -->
 					

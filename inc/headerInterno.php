@@ -65,7 +65,7 @@ use Projeto\ControleDeAcesso;
             Online
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="noticias-por-categoria.php">Editar Cadastro</a></li>
+            <li><a class="dropdown-item" href="../admin/cadastro_atualiza.php">Editar Cadastro</a></li>
             <li><a class="dropdown-item" href="dashboard_cliente.php?sair" name="sair" >Sair</a></li>
           </ul>
         </li>

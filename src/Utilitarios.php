@@ -4,7 +4,7 @@ abstract class Utilitarios {
 
     // @autor: Marcelo
     public static function limitaCaractere($dados) {
-        return mb_strimwidth($dados, 0, 20, " ...");
+        return mb_strimwidth($dados, 0, 35, " ...");
     }
 
     public static function formataData(string $data):string {
@@ -21,4 +21,9 @@ abstract class Utilitarios {
         var_dump($dados);
         echo "</pre>";
     }
+
+    public static function limitaNome($dados) {
+        return mb_strimwidth($dados, 0, 20, "...");
+    }
+
 }

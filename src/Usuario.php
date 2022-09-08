@@ -50,6 +50,20 @@ class Usuario {
     return $resultado;
 }
 
+// método que tem como objetivo trazer um usuário, utilizando como parâmetro o email
+public function listarAceite():array {
+    $sql = "SELECT id, email, nome, perfil, profissao_id FROM usuario WHERE email = :email";
+try {
+    $consulta = $this->conexao->prepare($sql);
+    $consulta->bindParam(':email', $this->email, PDO::PARAM_STR);
+    $consulta->execute();
+    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+} catch (Exception $erro) {
+    die("Erro: ". $erro->getMessage());
+}
+return $resultado;
+}
+
 // método que tem como objetivo trazer um usuário e, também, seu relacionamento através da chave estrangeria profissao_id usando join do sql
 public function listarFreela():array {
     $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
@@ -333,4 +347,8 @@ return $resultado;
 
       
     }
+
+ 
 }
+
+

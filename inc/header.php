@@ -80,11 +80,11 @@ switch($pagina){
         
        
         <li class="nav-item">
-          <a class="nav-link" href="loginDois.php">Login</a>
+          <a class="nav-link" href="login.php">Login</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="cadastroDois.php">Cadastro</a>
+          <a class="nav-link" href="cadastro.php">Cadastro</a>
         </li>
     </div>
   </div>

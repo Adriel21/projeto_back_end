@@ -95,9 +95,13 @@ if(isset($_POST['atualizar'])) {
 
 					
 
-					<div class="pt-4 text-center">
+				<div class="pt-4 text-center">
                     <button class="botao-feed btn text-white" type="submit" name="atualizar">ATUALIZAR</button>
-                    </div>
+                </div>
+
+				<div class="pt-4 text-center">
+                    <button class="botao-feed btn text-white" type="submit" name="atualizar">Excluir Conta</button>
+                </div>
 				</form>
 
 				<script src="js.js"></script>

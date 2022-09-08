@@ -43,10 +43,10 @@ $dados = $usuario->listarUm();
     <section class="main-body">
 
           <div class="row">
-            <div class="col-lg-4 col-sm-12 col-md-9 mb-3 mx-auto perfil">
+            <div class="col-lg-5 col-sm-12 col-md-9 mb-3 mx-auto perfil">
               <div class="card ">
                 <div class="card-body ">
-                  <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-center gap-lg-2">
+                  <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
                     <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
                     <div class="mt-2 mt-lg-3">
                       <h4><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
@@ -77,7 +77,7 @@ $dados = $usuario->listarUm();
                     <?php if($redes['linkedin'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>" class="text-center text-lg-start"><?=$redes['instagram']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start"><?=$redes['linkedin']?></a></p>
                     </span>
                         <?php } ?>
                   </li>
@@ -85,7 +85,7 @@ $dados = $usuario->listarUm();
                     <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary">
                       <?php if($redes['instagram'] == "") { ?>   
-                         <p>https://www.instagram.com/exemplo/</p>
+                         <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p>
                         <?php } else  { ?>
                         <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>"><?=$redes['instagram']?></a></p>
                             
@@ -93,16 +93,21 @@ $dados = $usuario->listarUm();
                         <?php } ?>
                   </li>
                   <?php } else { ?>
-                    <h6><i class="bi bi-browser-chrome fs-4"></i> Website</h6>
-                    <span class="text-secondary">https://www.exemplo.com.br</span>
+                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
+                    <span class="text-secondary">
+                        <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
+                    </span>
                   </li>
                   <li class="list-group-item">
-                    <h6><i class="bi bi-linkedin fs-4"></i> linkdin</h6>
-                    <span class="text-secondary"><a href="" target="_blank"></a></span>
+                    <h6 class="text-center text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkedin</h6>
+                    <span class="text-secondary">
+                        <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
+                    </span>
                   </li>
                   <li class="list-group-item">
-                    <h6><i class="bi bi-instagram fs-4"></i> Instagram</h6>
-                    <span class="text-secondary"><a href="" target="_blank"></a></span>
+                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <span class="text-secondary"></span>
+                         <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
                   </li>
                   <?php } ?>
                   <li class="list-group-item text-center text-lg-end">
@@ -116,11 +121,12 @@ $dados = $usuario->listarUm();
               </div>
             </div>
 
-            <div class="col-md-9 mx-auto col-lg-8">
+            <div class="col-md-9 mx-auto col-lg-7">
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
                     <h2 class="text-center text-lg-start">Meus Projetos</h2>
+                    
 
         <?php if(empty($listaDeProjetos)) { ?>
             <div class="col-12 px-md-1 mt-2">
@@ -133,6 +139,7 @@ $dados = $usuario->listarUm();
               </div>
         <?php } ?>
         <?php foreach ($listaDeProjetos as $projetos) { ?>
+            
         <div class="col-12 px-md-1 mt-2">
                   <div class="list-group">
                    

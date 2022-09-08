@@ -69,9 +69,9 @@ if(isset($_POST['atualizar'])) {
 
                 
 				<div class="container form-check-reverse">
-				<div class="d-grid gap-2 d-md-block">
-				<button class=" botao-feed btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
-				<button class=" botao-excluir btn  text-white" id="inserir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>">EXCLUIR</a></button>
+				<div class="d-grid gap-5 d-md-block">
+				<button class=" botao_inserir btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
+				<button class=" botao_excluir btn  text-white" id="inserir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>">EXCLUIR</a></button>
 				</div>
 
 						

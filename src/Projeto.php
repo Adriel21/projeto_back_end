@@ -158,7 +158,7 @@ final class Projeto{
 
         // Método para trazer detalhes da tabela Projeto através da associação entre a classe Usuario
         public function listarDetalhes():array {
-            $sql = "SELECT id, titulo, resumo, descricao, data
+            $sql = "SELECT id, titulo, resumo, descricao, data, usuario_id
             FROM projeto WHERE usuario_id = :usuario_id";
         
         

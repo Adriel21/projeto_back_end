@@ -1,5 +1,6 @@
 <?php
 use Projeto\Usuario;
+use Projeto\Utilitarios;
 
 require_once './vendor/autoload.php';
 // if( isset($_POST['inserir']) ){
@@ -17,85 +18,99 @@ if(isset($_POST['inserir'])) {
     $usuario = new Usuario;
 	$usuario->setNome($_POST['nome']);
 	$usuario->setEmail($_POST['email']);
-	$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
+	$dados = $usuario->buscar();
+	if($dados['email'] === $_POST['email']) {
+		header('location:cadastro.php?email_existente');
+	} else { 
+	$verificao = Utilitarios::senhaValida($_POST['senha']);
+	$termos = $_POST['aceite'];
+
+	if($verificao and $termos === 'Aceite confirmado') {
+		$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
 	
-	$perfil = $_FILES["perfil"];
-	$usuario->setPerfil($perfil['name']);
-	$usuario->upload($perfil);
-    // header("location:login.php");
+		$perfil = $_FILES["perfil"];
+		$usuario->setPerfil($perfil['name']);
+		$usuario->upload($perfil);
+		// header("location:login.php");
+	
+	
+		 $usuario->cadastrar();
+	
+		 header('location:verificao_aceite.php?email=' . $_POST['email']);
+	} else if ($verificao === false) {
+		header('location:cadastro.php?formato_de_senha_inválido');
+	} else if ($termos !== "Aceite confirmado"){
+		header('location:cadastro.php?aceite_não_efetuado');
+	} 
 
-
-	$usuario->cadastrar();
-
-    header('location:login.php');
-
+	}
 }
+
+
+?>
+<?php require_once './inc/headerValidacao.php'; ?>
+
+<?php if(isset($_GET['formato_de_senha_inválido'])) {
+	$feedback = "A senha deve conter: [ABC, abc, 123, !@#$%&]";
+} else if (isset($_GET['aceite_não_efetuado'])) {
+	$feedback = 'Você deve aceitar os termos e a política de privacidade para prosseguir <i class="bi bi-exclamation-octagon"></i>';
+} else if (isset($_GET['email_existente'])) {
+	$feedback = 'Email já cadastrado <i class="bi bi-exclamation-octagon"></i>';
+}
+
 ?>
 
-<?php require_once './inc/cabecalho_externo.php'; ?>
+<!--criando formulario de cadastro -->
 
-
-<div class="row">
-	<article class="col-12 bg-white rounded shadow my-1 py-4">
-		
-		<h2 class="text-center">
-		Inserir novo usuário
-		</h2>
-				
-		<form enctype="multipart/form-data" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">
-
-			
-			<div class="mb-3">
-				<label class="form-label" for="nome">Nome:</label>
-				<input class="form-control" type="text" id="nome" name="nome" required>
+	<div class="container marketing shadow shadow-lg">
+	
+		<div class="row featurette my-5 p-sm-5">
+		<?php if(isset($feedback)){?>
+				<p class="my-2 alert alert-warning text-center">
+					<?=$feedback?>
+				</p>
+        <?php } ?>
+			<div class="col-lg-6 d-none d-lg-block">
+                    <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
+                    <p class="text-start">Realize o login para uma melhor experiência</p>
+					<img class="d-flex w-75 m-auto" src="img/img-pessoas-fazendo-cadastro.png">
 			</div>
 
-			<div class="mb-3">
-				<label class="form-label" for="email">E-mail:</label>
-				<input class="form-control" type="email" id="email" name="email" required>
+			<div class="col-12 col-lg-6 shadow-lg">
+				<form enctype="multipart/form-data" class="form-horizontal bg-form p-lg-3 p-4 rounded" action="" method="POST">
+					<div class="d-grid gap-2 text-center">
+                        <button class="btn btn-primary google-button" type="button">Google</button>
+                        <button class="btn btn-primary" type="button">LinkedIn</button>
+                        <p class="my-2">OU</p>
+                    </div>
+
+					<div class="form-group mt-2">
+						<label for="nome">Nome</label>
+						<input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+					</div>
+					<div class="form-group mt-2">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="exemplo@gmail.com" required>
+					</div>
+					<div class="form-group mt-2">
+						<label for="senha">Senha</label>
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Maiúsculas, Minúsculas, Números e !@#$%&"] minlength="8" required>
+					</div>
+					<div class="form-group mt-2">
+						<label for="perfil">Foto Perfil</label>
+						<input type="file" class="form-control" id="perfil" name="perfil" placeholder="Perfil"  accept="image/png, image/jpeg, image/gif, image/svg+xml" required>
+					</div>
+
+					<div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="Aceite confirmado" id="form2Example34"  name="aceite">
+                            <label class="form-check-label" for="form2Example34"><a href="">Termos de responsabilidade</a> | <a href="">Política de privacidade</a></label>
+                    </div>
+
+					<div class="d-grid gap-2 text-center">
+					    <button type="submit" class="btn btn-primary mt-3" id="inserir" name="inserir">Cadastrar</button>
+                        <a href="login.php">Você já está registrado? Login</a>
+                    </div>
+				</form>
 			</div>
-
-			<!-- <div class="mb-3">
-				<label class="form-label" for="telefone">Telefone:</label>
-				<input class="form-control" type="telefone" id="telefone" name="telefone" required>
-			</div> -->
-
-			<div class="mb-3">
-				<label class="form-label" for="senha">Senha:</label>
-				<input class="form-control" type="password" id="senha" name="senha" required>
-			</div>
-
-			<div class="mb-3">
-                <label class="form-label" for="imagem" class="form-label">Selecione uma imagem:</label>
-                <input required class="form-control" type="file" id="imagem" name="perfil"
-                accept="image/png, image/jpeg, image/gif, image/svg+xml">
-			</div>
-			
-
-            <!-- <div class="mb-3">
-                <label class="form-label" for="categoria">Categoria:</label>
-                <select class="form-select" name="tipo" id="categoria" required>
-                    <option value=""></option>
-					<option 
-                    value="Cliente"> 
-						Cliente
-					</option>
-
-					<option 
-                    value="Freelancer"> 
-						Freelancer
-					</option>
-
-					
-				
-                </select>
-            </div> -->
-			
-
-			<button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
-		</form>
-		
-	</article>
-</div>
-
-<?php require_once './inc/footer_externo.php'; ?>
+		</div>
+	</div>

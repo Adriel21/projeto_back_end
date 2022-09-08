@@ -56,7 +56,7 @@ require_once 'inc/cabecalho_externo.php'
     <!-- cards Projetos -->
 
     
-    <!-- <section class="mt-5">
+    <section class="mt-5">
         <h2 class="text-center text-muted">Cards Projetos</h2>
             <section class="container row row-cols-1 row-cols-md-3 g-4 m-auto my-5">
                 <div class="col">
@@ -118,7 +118,7 @@ require_once 'inc/cabecalho_externo.php'
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
     </section>
 
     <section class="bg-primary">

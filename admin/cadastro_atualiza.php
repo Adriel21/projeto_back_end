@@ -51,9 +51,9 @@ if(isset($_POST['atualizar'])) {
 
 <!--criando formulario de cadastro -->
 <div class="container col-md-12 col-sm-10 marketing shadow rounded">
-		<div class="row justify-content-center featurette my-5 p-sm-5">
+		<div class="row justify-content-center featurette my-5 ">
         <h1 class="ps-5 pt-2 py-2 cta-formulario-atualiza">Atualize seus dados</h1>
-			<div class="col-12 col-md-8 col-sm-12  p-sm-4 p-4 ">
+			<div class="col-12 col-lg-8 col-sm-12    ">
 			
 			
 				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
@@ -95,13 +95,11 @@ if(isset($_POST['atualizar'])) {
 
 					
 
-				<div class="pt-4 text-center">
-                    <button class="botao-feed btn text-white" type="submit" name="atualizar">ATUALIZAR</button>
-                </div>
-
-				<div class="pt-4 text-center">
-                    <button class="botao-feed btn text-white" type="submit" name="atualizar">Excluir Conta</button>
-                </div>
+			<div class="container form-check-reverse pe-0">
+				<div class="d-flex justify-content-lg-end justify-content-center gap-4 d-md-block ">
+				<button class=" botao_inserir btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
+				<button class="botao_excluir btn  text-white" id="excluir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>" class="excluir">EXCLUIR</a></button>
+				</div>
 				</form>
 
 				<script src="js.js"></script>

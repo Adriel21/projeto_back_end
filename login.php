@@ -68,7 +68,7 @@ if(isset($_GET['campos_obrigatorios'])) {
           
                     <div class="d-grid gap-2 text-center">
 					    <button type="submit" class="botao_index btn mt-3" name="entrar">Entra</button>
-                        <a href="cadastro.php">Ainda não criou sua conta? Cadastre-se</a>
+                        <a href="cadastro.php">Não possui cadastro? Cadastre-se</a>
                     </div>
 				</form>
 			</div>

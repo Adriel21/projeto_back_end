@@ -23,12 +23,12 @@ $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 $hoje = date('y/m/d');
 if(isset($_POST['inserir'])) {
-    // $projeto = new Projeto;
-	// $projeto->setTitulo($_POST['titulo']);
-	// $projeto->setResumo($_POST['resumo']);
-    // $projeto->setDescricao($_POST['descricao']);
-    // $projeto->setCategoriaId($_POST['categoria']);
-    // $projeto->setUsuarioId($_GET['id']);
+   
+	if($_POST['titulo'] === '' || $_POST['resumo'] === '' || $_POST['descricao'] === ''){
+		header('location:projeto_insere.php?preencha_todas_informacoes');
+	} else {
+
+	
     $projeto = new Projeto;
     $projeto->setTitulo($_POST['titulo']);
     $projeto->setResumo($_POST['resumo']);
@@ -43,6 +43,7 @@ if(isset($_POST['inserir'])) {
 	$projeto->cadastrar();
 
     header('location:dashboard_cliente.php?id=' . $_SESSION['id']);
+}
 
 }
 
@@ -60,11 +61,11 @@ if(isset($_POST['inserir'])) {
 					
 					<div class="form-group pb-3  mt-2">
 						<label for="titulo" class="pb-1">Titulo</label>
-						<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto">
+						<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto" required>
 					</div>
                     <div class="form-group pb-3 mt-2">
 						<label for="resumo" class="pb-1">Resumo</label>
-						<input type="text" class="form-control" id="resumo" name="resumo" placeholder="Resumo">
+						<input type="text" class="form-control" id="resumo" name="resumo" placeholder="Resumo" required>
 					</div>
 
 					<div class="form-group pb-3 mt-2">
@@ -78,7 +79,7 @@ if(isset($_POST['inserir'])) {
 
 					<div class="form-group  mt-2">
 						<label for="descricao" class="pb-1">Descrição</label>
-						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto">
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto" required>
 						</textarea>
 					</div>
 					

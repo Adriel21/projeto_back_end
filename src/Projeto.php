@@ -180,7 +180,7 @@ final class Projeto{
                 }
 
                 public function atualizarProjeto(){
-                    $sql = "UPDATE projeto SET titulo = :titulo, resumo = :resumo, descricao = :descricao, categoria_id = :categoria_id WHERE id = :id";
+                    $sql = "UPDATE projeto SET titulo = :titulo, resumo = :resumo, descricao = :descricao, data = :data, categoria_id = :categoria_id WHERE id = :id";
 
                     try {
                         $consulta = $this->conexao->prepare($sql);
@@ -188,6 +188,7 @@ final class Projeto{
                         $consulta->bindParam(':titulo', $this->titulo, PDO::PARAM_STR);
                         $consulta->bindParam(':resumo', $this->resumo, PDO::PARAM_STR);
                         $consulta->bindParam(':descricao', $this->descricao, PDO::PARAM_STR);
+                        $consulta->bindParam(':data', $this->data, PDO::PARAM_STR);
                         $consulta->bindParam(':categoria_id', $this->categoriaId, PDO::PARAM_INT);
                         $consulta->execute();
                     } catch (Exception $erro) {

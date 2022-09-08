@@ -17,7 +17,23 @@
 
 
 /* Forms de atualização e exclusão de projeto */
+.botao_excluir {
+    font-weight: 600;
+    background-color: #da210ccc;
+    border: none;
+    width: 208px;
+    font-size: 16px;
+}
 
+.botao_excluir:hover {
+    background-color: #e22e1acc;
+    color: ghostwhite;
+}
+
+.botao_excluir a {
+    text-decoration: none;
+    color: #fff;
+}
 
 
 /* Fim do forms de exclusão do projeto */

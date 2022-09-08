@@ -106,13 +106,13 @@ $dados = $usuario->listarUm();
                   </li>
                   <li class="list-group-item">
                     <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
-                    <span class="text-secondary"></span>
-                         <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
+                    <span class="text-secondary">
+                         <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p></span>
                   </li>
                   <?php } ?>
                   <li class="list-group-item text-center text-lg-end">
                   <?php if(isset($redes)) { ?>
-                    <span class="text-secondary"><a href="redes_atualiza.php">Atualizar redes</a></span>
+                    <span class="text-secondary"><a href="redes_atualiza.php">Editar redes</a></span>
                     <?php } else { ?>
                     <span class="text-secondary"><a href="redes_insere.php">Inserir redes</a></span>
                     <?php } ?>

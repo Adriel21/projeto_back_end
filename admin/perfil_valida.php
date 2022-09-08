@@ -19,9 +19,9 @@ $dados = $usuario->listarUm();
 
 if($dados['profissao_id'] !== null){
     $sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $dados['profissao_id']);
-    header('location:./perfil_principal.php?id=' . $_SESSION['id']);;
+    header('location:./dashboard_cliente.php?id=' . $_SESSION['id']);;
         ///echo 'errou';
 } else {
     $sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
-        header('location:./perfil_principal.php?id=' . $_SESSION['id']);
+        header('location:./dashboard_cliente.php?id=' . $_SESSION['id']);
 }

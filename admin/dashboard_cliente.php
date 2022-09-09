@@ -43,9 +43,9 @@ $dados = $usuario->listarUm();
     <section class="main-body">
 
           <div class="row">
-            <div class="col-md-4 col-sm-12 mb-3">
-              <div class="card">
-                <div class="card-body">
+            <div class="col-lg-5 col-sm-12 col-md-9 mb-3 mx-auto perfil">
+              <div class="card ">
+                <div class="card-body ">
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
                     <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
                     <div class="mt-2 mt-lg-3">

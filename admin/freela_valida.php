@@ -28,5 +28,5 @@ $dadosDois = $usuario->listarUm();
 // $usuario->validaFreela();
 // Passando parâmetros para a sessao ser iniciada com as novas informações
 $sessao->loginDois($dadosDois['id'], $dadosDois['nome'], $dadosDois['email'], $dadosDois['perfil'], $dadosDois['profissao_id']);
-header('location:perfil_freela.php?id=' . $_SESSION['id']);
+header('location:dashboard_cliente.php?id=' . $_SESSION['id']);
 

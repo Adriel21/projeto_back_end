@@ -1,12 +1,22 @@
 <?php
 
 use Projeto\ControleDeAcesso;
+use Projeto\Usuario;
+
 require_once './vendor/autoload.php';
 $pagina = basename($_SERVER['PHP_SELF']);
 $sessao = new ControleDeAcesso;
 if(isset($_GET['sair'])) {
   $sessao->logoutExterno();
 }
+
+if(isset($_SESSION['id'])){
+  $usuario = new Usuario;
+  $usuario->setId($_SESSION['id']);
+  $dadosFreela = $usuario->listarFreela();
+}
+
+
 
 ?>
 
@@ -23,40 +33,8 @@ if(isset($_GET['sair'])) {
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-<!-- <link rel="stylesheet" href="css/estilo.css">
-<link rel="stylesheet" href="css/header.css"> -->
-<!-- <link rel="stylesheet" href="/css/estilo_interno.css"> -->
-
-<?php 
-switch($pagina){
-  // Arquivos externos
-    case 'index.php':
-    case 'projetos.php':
-    case 'resultados_projetos.php':
-    case 'freelancers.php':
-    case 'resultados_freelancers.php':
-
-      // Vendor
-      
-    require_once './vendor/autoload.php';
-?>
 <link rel="stylesheet" href="css/estilo.css">
 <link rel="stylesheet" href="css/header.css">
-
-<?php
-    break;
-      // Arquivos internos
-    case 'dashboard_freelancer.php':
-
-      // Vendor
-      require_once '../vendor/autoload.php';
-?>
-
-
-<?php
-    break;
-}
-?>
 </head>
 <body>
     
@@ -105,9 +83,15 @@ switch($pagina){
         </li>
         
        
-        <li class="nav-item">
-          <a class="nav-link" href="../admin/freela_insere.php">Cadastrar Perfil Freelancer</a>
+        <?php if($dadosFreela['profissao_id'] !== null) { ?>
+          <li class="nav-item">
+          <a class="nav-link" href="freelancer_insere.php">Visualizar Perfil Freelancer</a>
         </li>
+       <?php } else { ?>
+        <li class="nav-item">
+          <a class="nav-link" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
+        </li>
+        <?php } ?>
 
         <li class="nav-item">
           <a class="nav-link" href="admin/dashboard_cliente.php">Perfil Cliente</a>

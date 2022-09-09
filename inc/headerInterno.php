@@ -2,6 +2,7 @@
       // Vendor
 
 use Projeto\ControleDeAcesso;
+use Projeto\Usuario;
 
       require_once '../vendor/autoload.php';
       $sessao = new ControleDeAcesso;
@@ -12,6 +13,10 @@ use Projeto\ControleDeAcesso;
         $sessao->logout();
       }
 
+      $usuario = new Usuario;
+      $usuario->setId($_SESSION['id']);
+      $dadosFreela = $usuario->listarFreela();
+    
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +57,15 @@ use Projeto\ControleDeAcesso;
           <a class="nav-link" aria-current="page" href="../index.php">Home</a>
         </li>
         
-        <li class="nav-item">
-          <a class="nav-link" href="loginDois.php">Cadastrar Perfil Freelancer</a>
+        <?php if($dadosFreela['profissao_id'] !== null) { ?>
+          <li class="nav-item">
+          <a class="nav-link" href="freelancer_insere.php">Visualizar Perfil Freelancer</a>
         </li>
-
+       <?php } else { ?>
+        <li class="nav-item">
+          <a class="nav-link" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
+        </li>
+        <?php } ?>
         <li class="nav-item">
           <a class="nav-link" href="dashboard_cliente.php">Perfil Cliente</a>
         </li>

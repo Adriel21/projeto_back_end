@@ -43,7 +43,7 @@ $dados = $usuario->listarUm();
     <section class="main-body">
 
           <div class="row">
-            <div class="col-lg-5 col-sm-12 col-md-9 mb-3 mx-auto perfil">
+            <div class="col-lg-4 col-sm-12 col-md-9 mb-3 mx-auto perfil">
               <div class="card ">
                 <div class="card-body ">
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
@@ -121,7 +121,7 @@ $dados = $usuario->listarUm();
               </div>
             </div>
 
-            <div class="col-md-9 mx-auto col-lg-7">
+            <div class="col-md-8 mx-auto col-lg-7">
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">

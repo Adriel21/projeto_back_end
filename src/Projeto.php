@@ -210,6 +210,20 @@ final class Projeto{
 
                 }
 
+                public function excluirTodosProjetos():void {
+                    $sql = "DELETE FROM projeto WHERE usuario_id =:usuario_id";
+                    
+                    try {
+                        $consulta = $this->conexao->prepare($sql);
+                        $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+                        
+                        $consulta->execute();
+                    } catch (Exception $erro) {
+                        die("Erro: ". $erro->getMessage());
+                    }
+
+                }
+
 
                 public function busca():array {
                     $sql = "SELECT projeto.titulo, projeto.id, projeto.resumo, usuario.nome AS usuario FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id WHERE titulo LIKE :termo OR resumo LIKE :termo";

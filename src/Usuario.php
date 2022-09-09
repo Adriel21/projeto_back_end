@@ -38,7 +38,7 @@ class Usuario {
 
 // método que tem como objetivo trazer um usuário, utilizando como parâmetro o ID
     public function listarUm():array {
-        $sql = "SELECT id, email, nome, perfil, profissao_id FROM usuario WHERE id = :id";
+        $sql = "SELECT id, email, nome, perfil, profissao_id, senha FROM usuario WHERE id = :id";
     try {
         $consulta = $this->conexao->prepare($sql);
         $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
@@ -133,6 +133,22 @@ return $resultado;
             die("Erro: ". $erro->getMessage());
         }
     }
+
+
+    public function excluirCadastro():void {
+        $sql = "DELETE FROM usuario WHERE id =:id";
+        
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+            
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+
+    }
+
     
 
  

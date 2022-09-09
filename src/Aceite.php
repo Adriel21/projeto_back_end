@@ -4,7 +4,7 @@ use PDO, Exception;
 
 
 final class Aceite{
-    private int $int;
+    private int $id;
     private string $confirmacao;
     private string $periodo;
     private int $usuarioId;
@@ -35,84 +35,84 @@ final class Aceite{
     }
     
 
+    public function excluirAceite():void {
+        $sql = "DELETE FROM aceite WHERE usuario_id = :usuario_id";
+        
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+            
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
 
-    /**
-     * Get the value of int
-     */ 
-    public function getInt()
-    {
-        return $this->int;
     }
 
-    /**
-     * Set the value of int
-     *
-     * @return  self
-     */ 
-    public function setInt($int)
-    {
-        $this->int = $int;
 
-        return $this;
+
+
+
+   
+    public function getId()
+    {
+        return $this->id;
     }
 
-    /**
-     * Get the value of confirmacao
-     */ 
+  
+    public function setId($id)
+    {
+        $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
+
+    }
+  
+
+
     public function getConfirmacao()
     {
         return $this->confirmacao;
     }
 
-    /**
-     * Set the value of confirmacao
-     *
-     * @return  self
-     */ 
+  
+
+
     public function setConfirmacao($confirmacao)
     {
-        $this->confirmacao = $confirmacao;
+        $this->confirmacao = filter_var($confirmacao, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
-    /**
-     * Get the value of periodo
-     */ 
+   
+
+
     public function getPeriodo()
     {
         return $this->periodo;
     }
 
-    /**
-     * Set the value of periodo
-     *
-     * @return  self
-     */ 
+   
+    
+
     public function setPeriodo($periodo)
     {
-        $this->periodo = $periodo;
-
-        return $this;
+        $this->periodo = filter_var($periodo, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-    /**
-     * Get the value of usuarioId
-     */ 
+  
+
     public function getUsuarioId()
     {
         return $this->usuarioId;
     }
 
-    /**
-     * Set the value of usuarioId
-     *
-     * @return  self
-     */ 
+  
+
+
     public function setUsuarioId($usuarioId)
     {
-        $this->usuarioId = $usuarioId;
+        $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
 
-        return $this;
     }
+
+
 }

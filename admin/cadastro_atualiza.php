@@ -98,11 +98,14 @@ if(isset($_POST['atualizar'])) {
 			<div class="container form-check-reverse pe-0">
 				<div class="d-flex justify-content-lg-end justify-content-center gap-4 d-md-block ">
 				<button class=" botao_inserir btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
-				<button class="botao_excluir btn  text-white" id="excluir" type="submit"><a href="excluir_projeto.php?id=<?=$dados['id']?>" class="excluir">EXCLUIR</a></button>
+				<button class="botao_excluir btn  text-white" id="excluir" type="submit"><a href="cadastro_exclui.php" class="excluir">EXCLUIR</a></button>
 				</div>
 				</form>
 
-				<script src="js.js"></script>
+				
 			</div>
 		</div>
 	</div>
+<script src="js/confirm.js"></script>
+</body>
+</html>

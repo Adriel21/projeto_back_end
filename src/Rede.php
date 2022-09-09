@@ -3,6 +3,7 @@ namespace Projeto;
 use PDO, Exception;
 
 final class Rede{
+    private int $id;
     private string $website;
     private string $linkedin;
     private string $instagram;
@@ -82,6 +83,20 @@ final class Rede{
 
     }
 
+    public function excluirRede():void {
+        $sql = "DELETE FROM rede WHERE usuario_id =:usuario_id";
+        
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+            
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+
+    }
+
 
     // Busca binária
     // public function  binary_search( $array,  $item,  $begin,  $end) {
@@ -102,6 +117,19 @@ final class Rede{
             
     // }
 
+     
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    
+    public function setId($id)
+    {
+        $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
+
+    }
+
 
     public function getWebsite()
     {
@@ -113,9 +141,8 @@ final class Rede{
 
     public function setWebsite($website)
     {
-        $this->website = $website;
+        $this->website = filter_var($website, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
    
@@ -129,9 +156,8 @@ final class Rede{
     
     public function setLinkedin($linkedin)
     {
-        $this->linkedin = $linkedin;
+        $this->linkedin = filter_var($linkedin, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
     /**
@@ -149,53 +175,40 @@ final class Rede{
      */ 
     public function setInstagram($instagram)
     {
-        $this->instagram = $instagram;
+        $this->instagram = filter_var($instagram, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
-    /**
-     * Get the value of github
-     */ 
+   
+
     public function getGithub()
     {
         return $this->github;
     }
 
-    /**
-     * Set the value of github
-     *
-     * @return  self
-     */ 
+   
     public function setGithub($github)
     {
-        $this->github = $github;
+        $this->github = filter_var($github, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
     }
 
-    /**
-     * Get the value of behance
-     */ 
+     
     public function getBehance()
     {
         return $this->behance;
     }
 
-    /**
-     * Set the value of behance
-     *
-     * @return  self
-     */ 
+  
     public function setBehance($behance)
     {
-        $this->behance = $behance;
+        $this->behance = filter_var($behance, FILTER_SANITIZE_SPECIAL_CHARS);
 
-        return $this;
+
     }
-    /**
-     * Get the value of usuarioId
-     */ 
+ 
+
+
     public function getUsuarioId()
     {
         return $this->usuarioId;
@@ -208,10 +221,13 @@ final class Rede{
      */ 
     public function setUsuarioId($usuarioId)
     {
-        $this->usuarioId = $usuarioId;
+        $this->usuarioId = filter_var($usuarioId, FILTER_SANITIZE_NUMBER_INT);
 
-        return $this;
+
+
     }
+
+
     }
 
  

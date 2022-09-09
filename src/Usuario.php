@@ -133,10 +133,25 @@ return $resultado;
             die("Erro: ". $erro->getMessage());
         }
     }
+    
 
 
     public function excluirCadastro():void {
         $sql = "DELETE FROM usuario WHERE id =:id";
+        
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+            
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+
+    }
+
+    public function excluirGeral():void {
+        $sql = "DELETE FROM usuario INNER JOIN profissao ON usuario.profissao_id = profissao.id WHERE id = :id";
         
         try {
             $consulta = $this->conexao->prepare($sql);

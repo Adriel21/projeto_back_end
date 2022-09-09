@@ -52,17 +52,17 @@ if(isset($_SESSION['id'])){
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link btn botao_index text-white" aria-current="page" href="index.php">Home</a>
         </li>
         
        
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link btn botao_index text-white" href="login.php">Login</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="cadastro.php">Cadastro</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link btn botao_index text-white" href="cadastro.php">Cadastro</a>
         </li>
     </div>
   </div>
@@ -78,27 +78,27 @@ if(isset($_SESSION['id'])){
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+        <li class="nav-item m-1">
+          <a class="nav-link btn btn-primary text-white px-3" aria-current="page" href="index.php">Home</a>
         </li>
         
        
         <?php if($dadosFreela['profissao_id'] !== null) { ?>
-          <li class="nav-item">
-          <a class="nav-link" href="freelancer_insere.php">Visualizar Perfil Freelancer</a>
-        </li>
+          <li class="nav-item m-1">
+            <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Visualizar Perfil Freelancer</a>
+          </li>
        <?php } else { ?>
-        <li class="nav-item">
-          <a class="nav-link" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
+        <li class="nav-item m-1">
+          <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
         </li>
         <?php } ?>
 
-        <li class="nav-item">
-          <a class="nav-link" href="admin/dashboard_cliente.php">Perfil Cliente</a>
+        <li class="nav-item m-1">
+          <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_cliente.php">Perfil Cliente</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item m-1 dropdown">
+          <a class="nav-link btn btn-primary text-white px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Online
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

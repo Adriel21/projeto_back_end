@@ -30,7 +30,7 @@ abstract class Utilitarios {
         return preg_match('/[a-z]/', $senha) // tem pelo menos uma letra minúscula
          && preg_match('/[A-Z]/', $senha) // tem pelo menos uma letra maiúscula
          && preg_match('/[0-9]/', $senha) // tem pelo menos um número
-         && preg_match('/^[\w$@#%&!]{6,}$/', $senha); // tem 6 ou mais caracteres
+         && preg_match('/^[\w$@#%&!]{8,}$/', $senha); // tem 6 ou mais caracteres
     }
 
 }

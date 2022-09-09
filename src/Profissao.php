@@ -137,6 +137,22 @@ public function busca():array {
 
 
 
+public function excluirFreela():void {
+    $sql = "DELETE FROM profissao WHERE usuario_id =:usuario_id";
+    
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+        
+        $consulta->execute();
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+
+}
+
+
+
 
 
 

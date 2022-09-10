@@ -5,30 +5,14 @@ use Projeto\ControleDeAcesso;
 use Projeto\Rede;
 
 require_once '../inc/headerInterno.php';
+$validacao = $_GET['perfil'];
 
-// if( isset($_POST['inserir']) ){
-// 	$usuario = new Usuario;
-// 	$usuario->setNome($_POST['nome']);
-// 	$usuario->setEmail($_POST['email']);
-// 	$usuario->setTipo($_POST['tipo']);
-// 	$usuario->setSenha(  $usuario->codificaSenha($_POST['senha'])  );
-// 	// echo $usuario->getSenha();
-
-// 	$usuario->inserir();
-// 	header("location:usuarios.php");
-// }
 $sessao = new ControleDeAcesso;
 
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 $hoje = date('y/m/d');
 if(isset($_POST['inserir'])) {
-    // $projeto = new Projeto;
-	// $projeto->setTitulo($_POST['titulo']);
-	// $projeto->setResumo($_POST['resumo']);
-    // $projeto->setDescricao($_POST['descricao']);
-    // $projeto->setCategoriaId($_POST['categoria']);
-    // $projeto->setUsuarioId($_GET['id']);
     $rede = new Rede;
     $rede->setWebsite($_POST['website']);
     $rede->setLinkedin($_POST['linkedin']);
@@ -55,7 +39,7 @@ if(isset($_POST['inserir'])) {
         <h1 class="ps-5 pt-2 py-2 cta-formulario-atualiza">Inserir redes</h1>
 			<div class="col-12 col-md-8 col-sm-12  p-sm-4 p-4 ">
 				<form enctype="multipart/form-data" class="formulario-atualiza form-horizontal bg-form  p-sm-5 p-5 my-1 rounded" action="" method="POST">
-					
+					<?php  if($validacao = 'cliente'){ ?>
                 <div class="form-group pb-3 mt-2">
 						<label for="website" class="pb-1">Website</label>
 						<div class="input-group">
@@ -80,6 +64,8 @@ if(isset($_POST['inserir'])) {
                              <input type="text" class="form-control" id="inputPassword4" placeholder="https://www.instagram.com/usuario/" name="instagram">
                         </div>
 					</div>
+                    <?php } else {?>
+                         
 
 					
 					<div class="pt-4 text-end">

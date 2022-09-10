@@ -16,7 +16,7 @@ final class ControleDeAcesso {
 
      if (!isset($_SESSION['id'])) {
          session_destroy();
-        header("location:../loginDois.php?acesso_negado");
+        header("location:../login.php?acesso_negado");
         die();
              } }
 
@@ -50,6 +50,11 @@ public function loginTres (int $usuarioId, string $nome, string $email, string $
   
 }
 
+
+public function confirmaExcluir(int $id, string $confirme){
+    $_SESSION['id'] = $id;
+    $_SESSION['confirme'] = $confirme;
+}
 
 
 

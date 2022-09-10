@@ -70,14 +70,14 @@ if(isset($_POST['inserir'])) {
 					<?=$feedback?>
 				</p>
         <?php } ?>
-			<div class="col-lg-6 d-none d-lg-block">
-                    <h4 class="text-start">Entre na XPTO, e contemple nossos beneficíos</h4>
-                    <p class="text-start">Realize o login para uma melhor experiência</p>
+			<div class="col-md-6 d-none d-lg-block pt-5">
+                    <h4 class="text-start titulo_cadastro">Junte-se a nossa rede!</h4>
+                    <p class="text-start">Realize o cadastro para uma melhor experiência</p>
 					<img class="d-flex w-75 m-auto" src="img/img-pessoas-fazendo-cadastro.png">
 			</div>
 
-			<div class="col-12 col-lg-6 shadow-lg">
-				<form enctype="multipart/form-data" class="form-horizontal bg-form p-lg-3 p-4 rounded" action="" method="POST">
+			<div class="ccol-12 col-lg-6 p-sm-3 p-4">
+				<form enctype="multipart/form-data" class="form-horizontal shadow-lg bg-form shadow p-sm-5 p-3 rounded" action="" method="POST">
 					<div class="d-grid gap-2 text-center">
                         <button class="btn btn-primary google-button" type="button">Google</button>
                         <button class="btn btn-primary" type="button">LinkedIn</button>

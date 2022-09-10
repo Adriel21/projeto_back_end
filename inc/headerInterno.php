@@ -59,7 +59,7 @@ use Projeto\Usuario;
         
         <?php if($dadosFreela['profissao_id'] !== null) { ?>
           <li class="active nav-item mx-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Visualizar Perfil Freelancer</a>
+          <a class="nav-link btn btn-primary text-white px-3" href="dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
         </li>
        <?php } else { ?>
         <li class="active nav-item mx-1">

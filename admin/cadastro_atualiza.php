@@ -2,6 +2,7 @@
 
 use Projeto\ControleDeAcesso;
 use Projeto\Usuario;
+use Projeto\Utilitarios;
 
 require_once '../inc/headerInterno.php';
 
@@ -22,11 +23,17 @@ if(isset($_POST['atualizar'])) {
 	if( empty($_POST['senha']) ){
 		$usuario->setSenha( $dados['senha'] );
 	} else {
-		/* Caso contrário, se o usuário digitou alguma coisa
+		$verificacao = Utilitarios::senhaValida($_POST['senha']);
+		if($verificacao) {
+			/* Caso contrário, se o usuário digitou alguma coisa
 		no campo senha, precisaremos verificar o que foi digitado */
 		$usuario->setSenha(  
-			$usuario->verificaSenha($_POST['senha'], $dados['senha'])
-		);
+			$usuario->verificaSenha($_POST['senha'], $dados['senha']));
+		} else {
+			header('location:cadastro_atualiza.php?formato_de_senha_inválido');
+		}
+		
+		
 	}
 
   // Se o campo imagem estiver vazio, então significa que o usuário NÃO QUER TROCAR DE IMAGEM. Ou seja, vamos manter a imagem existente
@@ -98,7 +105,7 @@ if(isset($_POST['atualizar'])) {
 			<div class="container form-check-reverse pe-0">
 				<div class="d-flex justify-content-lg-end justify-content-center gap-4 d-md-block ">
 				<button class=" botao_inserir btn text-white" name="atualizar" id="atualizar" type="submit">ATUALIZAR</button>
-				<button class="botao_excluir btn  text-white" id="excluir" type="submit"><a href="cadastro_exclui.php" class="excluir">EXCLUIR</a></button>
+				<button class="botao_excluir btn  text-white" id="excluir" type="submit"><a href="confirma_exclui.php" class="excluir">EXCLUIR</a></button>
 				</div>
 				</form>
 

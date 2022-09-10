@@ -44,12 +44,12 @@ $dados = $usuario->listarUm();
 
           <div class="row">
             <div class="col-lg-5 col-sm-12 col-md-9 mb-3 mx-auto perfil">
-              <div class="card ">
+              <div class="card">
                 <div class="card-body ">
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
                     <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
                     <div class="mt-2 mt-lg-3">
-                      <h4><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
+                      <h4 class=""><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
                       <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
                                 <a href="./projeto_insere.php">Publicar Projeto</a>
                             </button>
@@ -112,9 +112,9 @@ $dados = $usuario->listarUm();
                   <?php } ?>
                   <li class="list-group-item text-center text-lg-end">
                   <?php if(isset($redes)) { ?>
-                    <span class="text-secondary"><a href="redes_atualiza.php">Editar redes</a></span>
+                    <span class="text-secondary"><a href="redes_atualiza.php?perfil=cliente">Editar redes</a></span>
                     <?php } else { ?>
-                    <span class="text-secondary"><a href="redes_insere.php">Inserir redes</a></span>
+                    <span class="text-secondary"><a href="redes_insere.php?perfil= cliente">Inserir redes</a></span>
                     <?php } ?>
                   </li>
                 </ul>
@@ -125,7 +125,7 @@ $dados = $usuario->listarUm();
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
-                    <h2 class="text-center text-lg-start">Meus Projetos</h2>
+                    <h2 class="text-center text-lg-start titulo_projetos">Meus Projetos</h2>
                     
 
         <?php if(empty($listaDeProjetos)) { ?>

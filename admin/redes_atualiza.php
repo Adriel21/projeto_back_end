@@ -67,6 +67,22 @@ if(isset($_POST['atualizar'])) {
                         </div>
 					</div>
 
+                    <div class="form-group pb-3 mt-2">
+						<label for="website" class="pb-1">Github</label>
+						<div class="input-group">
+                            <div class="input-group-text bg-transparent aleatorio"><i class="bi bi-github"></i></div>
+                             <input type="text" class="form-control" id="inputPassword4" placeholder="https://github.com/exemplo" name="github"  value="<?=$redes['instagram']?>">
+                        </div>
+					</div>
+
+                    <div class="form-group pb-3 mt-2">
+						<label for="website" class="pb-1">Behance</label>
+						<div class="input-group">
+                            <div class="input-group-text bg-transparent aleatorio"><i class="bi bi-behance"></i></div>
+                             <input type="text" class="form-control" id="inputPassword4" placeholder="https://www.behance.net/exemplo" name="behance"  value="<?=$redes['instagram']?>">
+                        </div>
+					</div>
+
 					
 					<div class="pt-4 text-end">
                     <button class="botao_inserir btn text-white" id="inserir" name="atualizar" type="submit">ATUALIZAR</button>

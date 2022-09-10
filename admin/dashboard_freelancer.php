@@ -2,13 +2,19 @@
 
 require_once '../inc/headerInterno.php';
 
-use Projeto\Projeto;
-use Projeto\Usuario;
+use Projeto\Rede;
+use Projeto\Utilitarios;
+
+$rede = new Rede;
+$listaDeRedes = $rede->listarRedes();
+$rede->setUsuarioId($_SESSION['id']);
+foreach ($listaDeRedes as $teste){
+  if(($teste['usuario_id'] === $_SESSION['id'])){
+      $redes = $rede->listarUm();
+  } 
+}
 
 
-
-$projeto = new Projeto;
-$listaDeProjetos = $projeto->listarTodos();
 ?>
 
 
@@ -17,91 +23,128 @@ $listaDeProjetos = $projeto->listarTodos();
 
 <main class="container">
     <section class="main-body">
-    
-         
-          <!-- /Breadcrumb -->
+
           <div class="row">
-            <div class="col-md-4 col-sm-12 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-                    <div class="mt-3">
-                      <h4>John Doe</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button button class="rounded-3 py-1 px-5 my-1 border-none fs-6" type="button">
-                                Atualizar cadastro
-                            </button>
-                            <button button class="rounded-3 py-1 px-5 my-1 border-none fs-6" type="button">
-                                Atualizar perfil profissional
+            <div class="col-lg-5 col-sm-12 col-md-9 mb-3 mx-auto perfil">
+              <div class="card ">
+                <div class="card-body ">
+                  <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
+                    <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
+                    <div class="mt-2 mt-lg-3">
+                      <h4 class="nome"><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
+                      <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
+                                <a href="./projeto_insere.php">Perfil Freelancer</a>
                             </button>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card mt-3 shadow">
+
+            <div class="card mt-3 shadow">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 class="text-center"><i class="bi bi-browser-chrome fs-4"></i> Website</h6>
-                    <span class="text-secondary">https://bootdey.com</span>
+                  <li class="list-group-item ">
+                    <?php if(isset($redes)) { ?>
+                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4"></i> Website</h6>
+                    <span class="text-secondary">
+                        <?php if($redes['website'] == "") { ?>   
+                         <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
+                        <?php } else  { ?>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['website']?>" class="text-center text-lg-start"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
+                    </span>
+                        <?php } ?>
                   </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 class="text-center"><i class="bi bi-github fs-4"></i> Github</h6>
-                    <span class="text-secondary">bootdey</span>
+                  <li class="list-group-item">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkdin</h6>
+                    <span class="text-secondary">
+                    <?php if($redes['linkedin'] == "") { ?>   
+                         <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
+                        <?php } else  { ?>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start"><?=$redes['linkedin']?></a></p>
+                    </span>
+                        <?php } ?>
                   </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 class="text-center"><i class="bi bi-linkedin fs-4"></i> linkdin</h6>
-                    <span class="text-secondary">https://www.linkedin.com/in/</span>
+                  <li class="list-group-item">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <span class="text-secondary">
+                      <?php if($redes['instagram'] == "") { ?>   
+                         <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p>
+                        <?php } else  { ?>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>"><?=$redes['instagram']?></a></p>
+                            
+                    </span>
+                        <?php } ?>
+                    </li>
+
+                  <li class="list-group-item">
+                      <h6 class="text-center text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
+                    <span class="text-secondary">
+                        <?php if($redes['github'] == "") { ?>   
+                         <p class="text-center text-lg-start">https://github.com/exemplo</p>
+                        <?php } else  { ?>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['github']?>"><?=$redes['github']?></a></p>
+                            
+                    </span>
+                        <?php } ?>
                   </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 class="text-center"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
-                    <span class="text-secondary"><a>https://www.linkedin.com/in</a></span>
+
+                  <li class="list-group-item">
+                      <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
+                    <span class="text-secondary">
+                        <?php if($redes['github'] == "") { ?>   
+                         <p class="text-center text-lg-start">https://www.behance.net/exemplo</p>
+                        <?php } else  { ?>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['behance']?>"><?=$redes['behance']?></a></p>
+                            
+                    </span>
+                        <?php } ?>
                   </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 class="text-center"><i class="bi bi-behance fs-4"></i> Behance</h6>
-                    <span class="text-secondary">bootdey</span>
+      
+                  <?php } else { ?>
+                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
+                    <span class="text-secondary">
+                        <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
+                    </span>
+                  </li>
+                  <li class="list-group-item">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkedin</h6>
+                    <span class="text-secondary">
+                        <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
+                    </span>
+                  </li>
+                  <li class="list-group-item">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <span class="text-secondary">
+                         <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p></span>
+                  </li>
+                  <li class="list-group-item">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
+                    <span class="text-secondary">
+                         <p class="text-center text-lg-start">https://github.com/exemplo</p></span>
+                  </li>
+                  <li class="list-group-item">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
+                    <span class="text-secondary">
+                         <p class="text-center text-lg-start">https://www.behance.net/exemplo</p></span>
+                  </li>
+                  <?php } ?>
+                  <li class="list-group-item text-center text-lg-end">
+                  <?php if(isset($redes)) { ?>
+                    <span class="text-secondary"><a href="redes_atualiza.php?perfil=freelancer">Editar redes</a></span>
+                    <?php } else { ?>
+                    <span class="text-secondary"><a href="redes_insere.php?perfil=freelancer">Inserir redes</a></span>
+                    <?php } ?>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-9 mx-auto col-lg-7">
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
-                        <h4 class="font-size38 sm-font-size32 xs-font-size30">Buckle Giarza</h4>
-                        <p class="no-margin-bottom">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum voluptatem.</p>
-                        <div class="contact-info-section margin-40px-tb">
-                            <ul class="list-style9 no-margin">
-
-                                <li>
-
-                                    <div class="row">
-                                        <div class="col-md-5 col-5">
-                                            <i class="fas fa-mobile-alt text-purple"></i>
-                                            <strong class="margin-10px-left xs-margin-four-left text-purple">Phone:</strong>
-                                        </div>
-                                        <div class="col-md-7 col-7">
-                                            <p>(+44) 123 456 789</p>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-5 col-5">
-                                            <i class="fas fa-envelope text-pink"></i>
-                                            <strong class="margin-10px-left xs-margin-four-left text-pink">Email:</strong>
-                                        </div>
-                                        <div class="col-md-7 col-7">
-                                            <p><a href="javascript:void(0)">addyour@emailhere</a></p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <h4 class="font-size38 sm-font-size32 xs-font-size30"><?=$dadosFreela['titulo']?></h4>
+                        <p class="no-margin-bottom"><?=$dadosFreela['descricao']?></p>
                     </div>
                 </div>
               </div>

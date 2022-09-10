@@ -69,6 +69,11 @@ picture img {
         font-weight: bold;
     }
 
+    .titulo_cadastro{
+        font-weight: bold;
+        font-size: 35px;
+    }
+
      /* .marketing{
         box-shadow: initial;
     }  */

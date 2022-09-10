@@ -3,6 +3,7 @@
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
+use Projeto\Usuario;
 
 require_once '../vendor/autoload.php';
 
@@ -10,19 +11,28 @@ $sessao = new ControleDeAcesso;
 
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
-if(isset($_POST['inserir'])) {
-    $profissao = new Profissao;
-	$profissao->setTitulo($_POST['titulo']);
-    $profissao->setDescricao($_POST['descricao']);
-    $profissao->setCategoriaId($_POST['categoria']);
-    $profissao->setUsuarioId($_SESSION['id']);
+$usuario = new Usuario;
+$usuario->setId($_SESSION['id']);
+$dados = $usuario->listarUm();
 
+if($dados['profissao_id'] === null) {
+	if(isset($_POST['inserir'])) {
+		$profissao = new Profissao;
+		$profissao->setTitulo($_POST['titulo']);
+		$profissao->setDescricao($_POST['descricao']);
+		$profissao->setCategoriaId($_POST['categoria']);
+		$profissao->cadastrar();
+		$exibir = $profissao->ultimoId();
+		// var_dump($exibir); teste 
+		$usuario->setProfissaoId($exibir[0]);
+		$usuario->atualizarPr();
 
-
-	$profissao->cadastrar();
-
-    header('location:freela_valida.php?id=' . $_SESSION['id']);
-
+		header('location:freela_valida.php');
+	}
+		
+		
+} else {
+		header('location:dashboard_cliente.php');
 }
 
 ?>

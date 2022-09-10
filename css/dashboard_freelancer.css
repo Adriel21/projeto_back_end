@@ -88,4 +88,7 @@ body{
 
 /*  Fim das configurações de botões*/
 
-/* Bloco de perfil */
+/* Titulo do campo de projetos */
+.titulo_projetos, .nome{
+    font-weight: bold;
+}

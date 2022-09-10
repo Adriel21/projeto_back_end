@@ -19,19 +19,34 @@ final class Profissao{
 
 
     // Método para cadastrar perfil profissional
-    public function cadastrar():void {
-        $sql = "INSERT INTO profissao(titulo, descricao, usuario_id, categoria_id) VALUES(:titulo, :descricao, :usuario_id, :categoria_id)";
+    public function cadastrar() {
+        $sql = "INSERT INTO profissao(titulo, descricao, categoria_id) VALUES(:titulo, :descricao, :categoria_id)";
+      
         
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":titulo", $this->titulo, PDO::PARAM_STR);
             $consulta->bindParam(":descricao", $this->descricao, PDO::PARAM_STR);
-            $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
+            // $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
             $consulta->bindParam(":categoria_id", $this->categoriaId, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: ". $erro->getMessage());
         }
+    }
+
+    public function ultimoId() {
+        $query_sql = "SELECT LAST_INSERT_ID()";
+
+        try {
+           
+            $consultaDois = $this->conexao->prepare($query_sql);
+            $consultaDois->execute();
+            $resultado = $consultaDois->fetch((PDO::FETCH_DEFAULT));
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+        return $resultado;
     }
 
     // Método para trazer um perfil profissional 
@@ -138,11 +153,11 @@ public function busca():array {
 
 
 public function excluirFreela():void {
-    $sql = "DELETE FROM profissao WHERE usuario_id =:usuario_id";
+    $sql = "DELETE FROM profissao WHERE id =:id";
     
     try {
         $consulta = $this->conexao->prepare($sql);
-        $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
         
         $consulta->execute();
     } catch (Exception $erro) {

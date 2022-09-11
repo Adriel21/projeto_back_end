@@ -64,7 +64,7 @@ if($dados['profissao_id'] === null) {
 
 					<div class="form-group  mt-2">
 						<label for="descricao" class="pb-1">Descrição</label>
-						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto" required>
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto" minlength="150" required>
 						</textarea>
 					</div>
 
@@ -72,7 +72,7 @@ if($dados['profissao_id'] === null) {
 
 					
 
-			<div class="container form-check-reverse pe-0">
+			<div class="container form-check-reverse pe-0 mt-3">
 				<div class="d-flex justify-content-lg-end justify-content-center gap-4 d-md-block ">
 				<button class=" botao_inserir btn text-white" name="inserir" id="inserir" type="submit">CADASTRAR</button>
 				

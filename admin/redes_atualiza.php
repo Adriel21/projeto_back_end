@@ -15,21 +15,30 @@ $rede = new Rede;
 $rede->setUsuarioId($_SESSION['id']);
 $redes = $rede->listarUm();
 if(isset($_POST['atualizar'])) {
-    $rede = new Rede;
-    $rede->setWebsite($_POST['website']);
-    $rede->setLinkedin($_POST['linkedin']);
-    $rede->setInstagram($_POST['instagram']);
-    $rede->setGithub($_POST['github']);
-    $rede->setBehance($_POST['behance']);
-    $rede->setUsuarioId($_SESSION['id']);
+    if($validacao === "freelancer") {
+        $rede = new Rede;
+        $rede->setWebsite($_POST['website']);
+        $rede->setLinkedin($_POST['linkedin']);
+        $rede->setInstagram($_POST['instagram']);
+        $rede->setGithub($_POST['github']);
+        $rede->setBehance($_POST['behance']);
+        $rede->setUsuarioId($_SESSION['id']);
+    } else if($validacao === "cliente"){
+        $rede = new Rede;
+        $rede->setWebsite($_POST['website']);
+        $rede->setLinkedin($_POST['linkedin']);
+        $rede->setInstagram($_POST['instagram']);
+        $rede->setUsuarioId($_SESSION['id']);
+    }
+    
 
 
     // header("location:login.php");
 
-    if($dadosFreela['profissao_id'] !== null){
-        $rede->atualizarPerfil();
-    } else {
+    if($dadosFreela['profissao_id'] !== null and $validacao === "freelancer"){
         $rede->atualizarPerfilCompleto();
+    } else {
+        $rede->atualizarPerfil();
     }
 
 

@@ -92,3 +92,16 @@ body{
 .titulo_projetos, .nome{
     font-weight: bold;
 }
+
+.titulo_projetos{
+    margin-left: 13px;
+}
+
+/* fim do campo projetos */
+
+/* titulo do campo de freelancer descrição */
+.titulo_freelancer{
+    font-weight: bold;
+    font-size: 35px;
+}
+

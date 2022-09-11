@@ -125,7 +125,7 @@ $dados = $usuario->listarUm();
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
-                    <h2 class="text-center text-lg-start titulo_projetos">Meus Projetos</h2>
+                    <h2 class="text-lg-start titulo_projetos">Meus Projetos</h2>
                     
 
         <?php if(empty($listaDeProjetos)) { ?>
@@ -133,7 +133,7 @@ $dados = $usuario->listarUm();
                   <div class="list-group">
                    
                       <div class="list-group-item list-group-item-action">
-                        <h4 class="text-center text-lg-start">Não há projetos cadastrados no momento</h4>
+                        <h4 class="text-lg-start">Não há projetos cadastrados no momento</h4>
                       </div>
                   </div>
               </div>
@@ -144,10 +144,10 @@ $dados = $usuario->listarUm();
                   <div class="list-group">
                    
                       <div class="list-group-item list-group-item-action">
-                        <h4 class="text-center text-lg-start">Título: <?=$projetos['titulo']?></h4>
-                          <p class="text-center text-lg-start mt-3 mt-lg-0"><strong>Data:</strong> <?=Utilitarios::formataData($projetos['data'])?></p>
-                          <p class="text-center text-lg-start"><strong>Resumo do projeto: </strong> <?= $projetos['resumo']?></p>
-                          <div class="text-lg-end text-center"><button class=" px-5 py-1 mt-2 botao_projetos rounded-3" type="button"><a href="./detalhes_do_projeto.php?id=<?=$projetos['id']?>">Visualizar projeto</a></button></div>
+                        <h4 class="text-lg-start">Título: <?=$projetos['titulo']?></h4>
+                          <p class="text-lg-start mt-3 mt-lg-0"><strong>Data:</strong> <?=Utilitarios::formataData($projetos['data'])?></p>
+                          <p class="text-lg-start"><strong>Resumo do projeto: </strong> <?= $projetos['resumo']?></p>
+                          <div class="text-lg-end"><button class=" px-5 py-1 mt-2 botao_projetos rounded-3" type="button"><a href="./detalhes_do_projeto.php?id=<?=$projetos['id']?>">Visualizar projeto</a></button></div>
                       </div>
                   </div>
               </div>

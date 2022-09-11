@@ -113,12 +113,22 @@ picture img {
         color: ghostwhite;
     }
 
-    @media screen and (min-width: 750px) {
+    /* @media screen and (min-width: 600px){
         .menu-lateral {
             background-color: #0421b5;;
             height: 100vh; 
+            position: fixed; 
+            width: 50%;
+
+        }    
+    } */
+
+    @media screen and (min-width: 750px) {
+        .menu-lateral {
+            background-color: #0421b5;
+            height: 100vh; 
              position: fixed; 
-             width: 17%;
+             width: 18%;
 
         }    
 

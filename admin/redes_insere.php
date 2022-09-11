@@ -18,18 +18,24 @@ if(isset($_POST['inserir'])) {
     $rede->setWebsite($_POST['website']);
     $rede->setLinkedin($_POST['linkedin']);
     $rede->setInstagram($_POST['instagram']);
-    $rede->setGithub($_POST['github']);
-    $rede->setBehance($_POST['behance']);
+    if(!isset($_POST['github'])){
+        $rede->setGithub('');
+    } else {
+        $rede->setGithub($_POST['github']);
+    }
+
+    if(!isset($_POST['behance'])){
+        $rede->setBehance('');
+    } else {
+        $rede->setBehance($_POST['behance']);
+    }
+
     $rede->setUsuarioId($_SESSION['id']);
 
    
     
-    
-    if($dadosFreela['profissao_id'] !== null){
-        $rede->inserirCompleto();
-    } else {
-        $rede->inserirComum();
-    }
+    $rede->inserirCompleto();
+  
 	
 
     if($validacao === "cliente") { 

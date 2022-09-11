@@ -111,8 +111,8 @@ $listaDeCategorias = $categoria->listar();
                         </div>
                         <p class="mb-1"><?=$projetos['resumo'] ?? 'alo'?></p>
                         <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">QUERO ME CANDIDATAR</button>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 mt-lg-0">
+                        <button class="botao-feed btn   me-md-2" type="button"><a href="projeto.php?id=<?=$projetos['id']?>">VISUALIZAR PROJETO</a></button>
                         
                         </div>
                     </a>
@@ -120,6 +120,44 @@ $listaDeCategorias = $categoria->listar();
                 <?php } ?>
                 <?php } ?>
             <!-- Fim conteúdo das vagas -->
+
+            <!-- modal início -->
+
+             
+  <div class="modal fade campoModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Termos de uso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <ul>
+        <li>Não será permitido a utilização do site para fins de vendas de produtos, mesmo de livros. Caso a prática seja identificada,
+          a conta será imeditamanete banida.
+        </li>
+        <hr>
+        <li>A LivroSolto preza pela honestidade e respeito, portanto, caso alguma troca ou doação sejam acordados e esse não seja devidamente cumprido,
+          nos vemos no direito de suspender a conta pelo prazo de 3 dias úteis.
+        </li>
+        <hr>
+        <li>A LivroSolto condena qualquer prática criminosa de preconceito, racisco, homofobia e assédio. Caso algum desses comportamentos sejam identificados, a LivroSolto
+          se encontrará no direito de banir a conta permanentemente e repassar o ocorrido para autoridades.
+        </li>
+        <hr>
+        <li>Não será tolerado contas com identidade fraudulentas. A consequência para tal caso, será o banimento imediato.</li>
+        <hr>
+        <li>Para todos usuários solicitamos o respeito, a honestidade e compromisso.</li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- fim modal -->
 
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">

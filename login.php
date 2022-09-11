@@ -101,7 +101,7 @@ if(isset($_GET['campos_obrigatorios'])) {
 						$sessao = new ControleDeAcesso;
 						if($dados['profissao_id'] !== null){
 							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $dados['profissao_id']);
-                            header('location:./admin/dashboard_cliente.php?id=' . $_SESSION['id']);;
+                            header('location:./admin/dashboard_cliente.php?id=' . $_SESSION['id']);
 								///echo 'errou';
 						} else {
 							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);

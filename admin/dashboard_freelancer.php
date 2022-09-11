@@ -33,7 +33,7 @@ foreach ($listaDeRedes as $teste){
                     <div class="mt-2 mt-lg-3">
                       <h4 class="nome"><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
                       <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
-                                <a href="./projeto_insere.php">Perfil Freelancer</a>
+                                <a href="freelancer_atualiza.php">Perfil Freelancer</a>
                             </button>
                     </div>
                   </div>
@@ -143,7 +143,7 @@ foreach ($listaDeRedes as $teste){
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
-                        <h4 class="font-size38 sm-font-size32 xs-font-size30"><?=$dadosFreela['titulo']?></h4>
+                        <h4 class="font-size38 sm-font-size32 xs-font-size30 titulo_freelancer"><?=$dadosFreela['titulo']?></h4>
                         <p class="no-margin-bottom"><?=$dadosFreela['descricao']?></p>
                     </div>
                 </div>

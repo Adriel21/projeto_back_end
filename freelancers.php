@@ -117,7 +117,7 @@ $listaDeCategorias = $categoria->listar();
                        
                        
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="botao-feed btn   me-md-2" type="button">Visualizar Perfil</button>
+                        <button class="botao-feed btn   me-md-2" type="button">VISUALIZAR FREELANCER</button>
                         
                         </div>
                     </a>

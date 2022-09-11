@@ -105,11 +105,11 @@ final class Profissao{
 
 // Método para atualizar dados do perfil
 public function atualizarFreela():void {
-    $sql = "UPDATE titulo, descricao, categoria_id FROM profissao WHERE usuario_id = :usuario_id";
+    $sql = "UPDATE profissao SET titulo = :titulo, descricao = :descricao, categoria_id = :categoria_id WHERE id = :id";
 
     try {
         $consulta = $this->conexao->prepare($sql);
-        $consulta->bindParam(':usuario_id', $this->usuarioId, PDO::PARAM_INT);
+        $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
         $consulta->bindParam(':titulo', $this->titulo, PDO::PARAM_STR);
         $consulta->bindParam(':descricao', $this->descricao, PDO::PARAM_STR);
         $consulta->bindParam(':categoria_id', $this->categoriaId, PDO::PARAM_INT);

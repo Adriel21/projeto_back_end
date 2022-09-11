@@ -49,6 +49,21 @@ final class Projeto{
          return $resultado;
     }
 
+    public function listarProjetoComDetalhes(){
+        $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.categoria_id, projeto.usuario_id, usuario.nome AS nome, usuario.perfil AS perfil FROM projeto RIGHT JOIN usuario ON projeto.usuario_id = usuario.id WHERE projeto.id =:id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+         } catch (Exception $erro) {
+             die("Erro: ". $erro->getMessage());
+         }
+         return $resultado;
+    }
+    
+
 
     // Método para cadastrar projetos na base de dados
     public function cadastrar():void {

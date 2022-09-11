@@ -88,7 +88,11 @@ if(isset($_POST['atualizar'])) {
 			</div>
 		</div>
         <script src="js/confirm.js"></script>
+		<script src="../js/bootstrap.bundle.js"></script>
 	</div>
+	
+    
+  
 
     
 

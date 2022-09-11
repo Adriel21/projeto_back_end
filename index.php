@@ -59,10 +59,7 @@ require_once 'inc/header.php'
                             <h5 class="card-title fw-semibold">Desenvolvedores</h5>
                             <img class="card-img-top mb-3" src="img/cards_index/desenvolvedores.jpg" alt="">
                             <p class="card-text">Aqui, você pode encontrar a ajuda necessária para desenvolver seu site ou aplicativo.</p>
-                            <button class="botao_index btn me-md-2" type="button">
-                                <a class="text-white" href="feed.php?id=1">
-                                    Ver Freelancers
-                                </a>
+                            <a href="freelancers.php?id=1"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                             </button>
                         </div>
                     </div>
@@ -74,7 +71,7 @@ require_once 'inc/header.php'
                             <h5 class="card-title fw-semibold">Designers</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/designers.jpg" alt="">
                             <p class="card-text">Encontre designers incriveis para construirem a identidade que você deseja.</p>
-                            <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
+                            <a href="freelancers.php?id=2"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +82,7 @@ require_once 'inc/header.php'
                             <h5 class="card-title fw-semibold">Redatores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/redatores.jpg" alt="">
                             <p class="card-text">Precisando de alguém que elabore conteúdo para você? Que tal buscar um redator?</p>
-                            <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
+                            <a href="freelancers.php?id=5"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +93,7 @@ require_once 'inc/header.php'
                             <h5 class="card-title fw-semibold">Fotógrafos</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/fotografos.jpg" alt="">
                             <p class="card-text">Um bom fotógrafo pode te auxiliar a registrar momentos importantes da sua vida.</p>
-                            <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
+                            <a href="freelancers.php?id=7"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +104,7 @@ require_once 'inc/header.php'
                             <h5 class="card-title fw-semibold">Consultores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/consultores.jpg" alt="">
                             <p class="card-text">Uma boa consultoria pode ajudar o seu negócio a alcançar o objetivo que deseja.</p>
-                            <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
+                            <a href="freelancers.php?id=6"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +115,7 @@ require_once 'inc/header.php'
                             <h5 class="card-title fw-semibold">Professores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/professores.jpg" alt="">
                             <p class="card-text">Gostaria de algumas aulas de reforço? Que tal encontrar um professor para te ajudar?</p>
-                            <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
+                            <a href="freelancers.php?id=4"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                         </div>
                     </div>
                 </div>
@@ -140,10 +137,7 @@ require_once 'inc/header.php'
                         <p class="text-white mb-4 lead">
                           Objetivamos ajudar pessoas a terem a oportunidade de atuarem de uma das formas que mais vem crescendo ultimamente - como Freelancers.
                         </p>
-                        <!-- btn -->
-                        <div class="d-grid gap-2 col-8 col-sm-4 col-md-6 mt-5 rounded">
-                            <button class="botao_index btn me-md-2" type="button">Saiba Mais</button>
-                        </div>
+        
                     </div>
                 </div>
                 <!-- img -->

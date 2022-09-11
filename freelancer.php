@@ -133,6 +133,31 @@ $listaDeCategorias = $categoria->listar();
                     </span>
                         <?php } ?>
                   </li>
+                  <hr>
+                  <li class="list-group-item ps-0">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
+                    <span class="text-secondary">
+                      <?php if($rede['github'] == "") { ?>   
+                         <p class="text-lg-start">https://github.com/exemplo</p>
+                        <?php } else  { ?>
+                        <p class="text-lg-start"><a href="<?=$rede['github']?>" target="_blank"><?=$rede['github']?></a></p>
+                            
+                    </span>
+                        <?php } ?>
+                  </li>
+                 <hr>
+                 <li class="list-group-item ps-0">
+                    <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
+                    <span class="text-secondary">
+                      <?php if($rede['instagram'] == "") { ?>   
+                         <p class="text-lg-start">https://www.instagram.com/exemplo/</p>
+                        <?php } else  { ?>
+                        <p class="text-lg-start"><a href="<?=$rede['instagram']?>" target="_blank"><?=$rede['instagram']?></a></p>
+                            
+                    </span>
+                        <?php } ?>
+                  </li>
+                 
                  
                   <?php } else { ?>
                 <li class="list-group-item ps-0">

@@ -24,17 +24,16 @@ $listaDeCategorias = $categoria->listar();
     <div class=" row ">
         <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex" style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
-                <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
-                    <span class="ps-1 d-none d-sm-inline text-white">Bem-Vindo!</span>
+                 <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
                 </a>
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
                     <li>
                     <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="freelancers.php"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
+                            <a href="freelancers.php" class="fs-6 bi-people"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
-                                <span class="ms-1 d-sm-inline text-light">Categorias</span>
+                                <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-filter-square"></i>
+                                <span class="ms-1 d-sm-inline text-light fs-6 ">Categorias</span>
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a></li>
@@ -44,19 +43,10 @@ $listaDeCategorias = $categoria->listar();
                              </ul> 
                             
                     </li>
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                    <li class="mt-5 d-none d-lg-block">
+                        <p><img src="img/img-pessoas-fazendo-cadastro.png" alt="" width="200"></p>
                     </li>
                     
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -88,8 +78,8 @@ $listaDeCategorias = $categoria->listar();
             <?php } else { ?>
             <?php foreach($resultados as $resultado) { ?>
                 
-            <div class="col pt-4 card-vagas ms-3">
-                <div class="card w-77">
+            <div class="col pt-4 card-vagas ms-sm-3 ms-1">
+                <div class="card w-100">
                     <div class="card-body coluna-vagas">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                             <div class="d-flex w-100 justify-content-between">

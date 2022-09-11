@@ -20,7 +20,7 @@ $listaDeCategorias = $categoria->listar();
 ?>
 
 
-<div class="container-fluid overflow-hidden sticky-top">
+<div class="container-fluid overflow-hidden">
     <div class=" row ">
         <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex " style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
@@ -30,11 +30,12 @@ $listaDeCategorias = $categoria->listar();
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
                     <li>
-                         <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="freelancers.php"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
-                                <span class="ms-1 d-sm-inline text-light">Categorias</span>
+                        <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
+                            <a href="projetos.php" class="fs-6 bi bi-cash-coin"><span class="ms-1 d-sm-inline text-light">Projetos</span></a>
+                            </li>
+                            <li class="nav-item dropdown pb-1 pb-lg-0">
+                                <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-filter-square"></i>
+                                <span class="ms-1 d-sm-inline text-light fs-6">Categorias</span>
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a></li>
@@ -44,20 +45,11 @@ $listaDeCategorias = $categoria->listar();
                              </ul> 
                             
                     </li>
-                    <!-- <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
+
+                    <li class="mt-5 d-none d-lg-block">
+                        <p><img src="img/img-pessoas-sinalizando.png" alt="" width="200"></p>
                     </li>
-                    
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-                    </li> -->
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-people"></i><span class="ms-lg-1  d-sm-inline">Customers</span> </a>
-                    </li>
-                   
+
                 </ul>
             </div>
         </div>
@@ -68,7 +60,7 @@ $listaDeCategorias = $categoria->listar();
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
                 <div class="cabecalho-interno d-flex col-12    justify-content-center">
-                        <form class="d-flex p-1" action="resultados_projetos.php" method="GET">
+                        <form class="d-flex p-1" action="resultados_freelancers.php" method="GET">
                             <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">
                             <button class="botao-busca ps-2 btn text-white" type="submit" >BUSCAR</button>

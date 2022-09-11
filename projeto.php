@@ -29,11 +29,12 @@ $listaDeCategorias = $categoria->listar();
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
                     <li>
+                    <li>
                          <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="freelancers.php"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
+                            <a href="freelancers.php" class="fs-6 bi-people"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fs-5 bi bi-filter-square"></i>
-                                <span class="ms-1 d-sm-inline text-light">Categorias</span>
+                                <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-filter-square"></i>
+                                <span class="ms-1 d-sm-inline text-light fs-6 ">Categorias</span>
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a></li>
@@ -43,18 +44,9 @@ $listaDeCategorias = $categoria->listar();
                              </ul> 
                             
                     </li>
-                    <!-- <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-                    </li> -->
-                    <li>
-                        <a href="#" class="nav-link px-sm-0 px-2">
-                            <i class="fs-5 bi-people"></i><span class="ms-lg-1  d-sm-inline">Customers</span> </a>
+
+                    <li class="mt-5 d-none d-lg-block">
+                        <p><img src="img/img-pessoas-fazendo-cadastro.png" alt="" width="200"></p>
                     </li>
                    
                 </ul>
@@ -66,7 +58,7 @@ $listaDeCategorias = $categoria->listar();
         <div class="col d-flex flex-column h-sm-100">
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
-                <div class="cabecalho-interno d-flex col-12    justify-content-center">
+                <div class="cabecalho-interno d-flex col-12  justify-content-center">
                         <form class="d-flex p-1" action="resultados_projetos.php" method="GET">
                             <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">

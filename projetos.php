@@ -22,13 +22,12 @@ $listaDeCategorias = $categoria->listar();
 ?>
 
 
-<div class="container-fluid overflow-hidden sticky-top">
-    <div class=" row ">
-        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex" style="background-color: #0421b5;">
+<div class="container-fluid overflow-hidden">
+    <div class="row">
+        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex me-2 me-lg-0" style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
-                <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
-                    <span class="d-none ps-1 d-sm-inline text-white">Bem-Vindo!</span>
-                </a>
+                    <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
+            
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
                     <li>
@@ -44,10 +43,14 @@ $listaDeCategorias = $categoria->listar();
                                  <li><a class="dropdown-item text-black" href="projetos.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a></li>
                                  <?php } ?>
                              </ul> 
-                            
+                           
+                    </li>
+                    <li class="mt-5 d-none d-lg-block">
+                        <p><img src="img/img-pessoas-fazendo-cadastro.png" alt="" width="200"></p>
                     </li>
                     
                 </ul>
+                
             </div>
         </div>
 
@@ -56,9 +59,9 @@ $listaDeCategorias = $categoria->listar();
         <div class="col d-flex flex-column h-sm-100">
             <!-- Cabeçalho inicio -->
             <nav class="navbar container-fluid ">
-                <div class="cabecalho-interno d-flex col-12    justify-content-center">
+                <div class="cabecalho-interno d-flex col-12 justify-content-center">
                         <form class="d-flex p-1" action="resultados_projetos.php" method="GET">
-                            <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
+                        <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">
                             <button class="botao-busca ps-2 btn text-white" type="submit" >BUSCAR</button>
                             </div>
@@ -78,7 +81,7 @@ $listaDeCategorias = $categoria->listar();
             <?php } else { ?>
             <?php foreach($listaDeProjetos as $projetos) { ?>
                 
-            <div class="col pt-4 card-vagas ms-3">
+            <div class="col pt-4 card-vagas ms-sm-3 ms-1">
                 <div class="card w-100">
                     <div class="card-body coluna-vagas">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">

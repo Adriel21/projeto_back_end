@@ -85,11 +85,11 @@ if(isset($_SESSION['id'])){
        
         <?php if($dadosFreela['profissao_id'] !== null) { ?>
           <li class="nav-item m-1">
-            <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Visualizar Perfil Freelancer</a>
+            <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
           </li>
        <?php } else { ?>
         <li class="nav-item m-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
+          <a class="nav-link btn btn-primary text-white px-3" href="admin/freelancer_insere.php">Cadastrar Perfil Freelancer</a>
         </li>
         <?php } ?>
 

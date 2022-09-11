@@ -9,15 +9,19 @@ class Usuario {
     private string $senha;
     private string $perfil;
     private string $telefone;
+    private string $termo;
     private int $profissaoId;
     
     private PDO $conexao;
 
     
-
+    public Profissao $profissao;
     // Método para conexão com o banco
     public function __construct()
     {
+
+        $this->profissao = new Profissao;
+
         $this->conexao = Banco::conecta();
     }
 
@@ -78,6 +82,49 @@ try {
 return $resultado;
 }
 
+
+public function listarTodosFreela():array{
+    $sql = "SELECT usuario.id, usuario.nome AS nome, usuario.perfil AS perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario RIGHT JOIN profissao ON usuario.profissao_id = profissao.id";
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+    return $resultado;
+}
+
+
+public function listarPorCategoria():array{
+    $sql = "SELECT usuario.id, usuario.nome AS nome, usuario.perfil AS perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario LEFT JOIN profissao ON usuario.profissao_id = profissao.id WHERE profissao.categoria_id = :categoria_id";
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindValue(':categoria_id', $this->profissao->getCategoriaId(), PDO::PARAM_INT);
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+    return $resultado;
+}
+
+
+
+
+public function busca():array {
+    $sql = "SELECT usuario.nome AS nome, usuario.perfil AS perfil, profissao.titulo AS titulo, profissao.id, profissao.descricao AS descricao FROM usuario RIGHT JOIN profissao ON usuario.profissao_id = profissao.id WHERE titulo LIKE :termo OR descricao LIKE :termo";
+
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindValue(":termo", '%'.$this->termo.'%', PDO::PARAM_STR);
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Erro: ". $erro->getMessage());
+    }
+    return $resultado;
+}
 
 
 
@@ -375,6 +422,20 @@ return $resultado;
     public function setProfissaoId($profissaoId)
     {
         $this->profissaoId = filter_var($profissaoId, FILTER_SANITIZE_NUMBER_INT);
+
+      
+    }
+
+    public function getTermo()
+    {
+        return $this->termo;
+    }
+
+    
+
+    public function setTermo($termo)
+    {
+        $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
 
       
     }

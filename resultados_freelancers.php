@@ -1,18 +1,17 @@
 <?php
 
 use Projeto\Categoria;
-use Projeto\Profissao;
 use Projeto\Usuario;
 
 require_once 'inc/header.php';
-$profissao = new Profissao;
+$usuario = new Usuario;
 
 
 if(!isset($_GET['busca'])) {
     header('location:feed.php');
 }
-$profissao->setTermo($_GET['busca']);
-$resultados = $profissao->busca();
+$usuario->setTermo($_GET['busca']);
+$resultados = $usuario->busca();
 
 
 

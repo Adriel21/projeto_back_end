@@ -6,15 +6,16 @@ use Projeto\Usuario;
 
 
 require_once 'inc/header.php';
+$usuario = new Usuario;
+$validaFreela = $usuario->listarTodosFreela();
 $profissao = new Profissao;
 
 
-
 if(!isset($_GET['id'])) {
-    $listaDeFreelancers = $profissao->listarTodos();
+    $listaDeFreelancers = $usuario->listarTodosFreela();
 } else if (isset($_GET['id'])){
-    $profissao->setCategoriaId($_GET['id']);
-    $listaDeFreelancers = $profissao->listarPorCategoria();
+    $usuario->profissao->setCategoriaId($_GET['id']);
+    $listaDeFreelancers = $usuario->listarPorCategoria();
 } 
 
 
@@ -100,7 +101,7 @@ $listaDeCategorias = $categoria->listar();
                       </div>
             <?php } else { ?>
             <?php foreach($listaDeFreelancers as $freelancers) { ?>
-                
+            <?php if ($freelancers['profissao_id'] !== null) { ?>
             <div class="col pt-4 card-vagas">
                 <div class="card w-77">
                     <div class="card-body coluna-vagas">
@@ -121,6 +122,7 @@ $listaDeCategorias = $categoria->listar();
                         </div>
                     </a>
                 </div>
+                <?php } ?>
                 <?php } ?>
                 <?php } ?>
             <!-- Fim conteúdo das vagas -->

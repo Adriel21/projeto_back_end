@@ -27,7 +27,7 @@ foreach ($listaDeRedes as $teste){
           <div class="row">
             <div class="col-lg-5 col-sm-12 col-md-9 mb-3 mx-auto perfil">
               <div class="card ">
-                <div class="card-body ">
+                <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
                     <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
                     <div class="mt-2 mt-lg-3">
@@ -50,7 +50,7 @@ foreach ($listaDeRedes as $teste){
                         <?php if($redes['website'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['website']?>" class="text-center text-lg-start"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['website']?>" class="text-center text-lg-start" target="_blank"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
                     </span>
                         <?php } ?>
                   </li>
@@ -60,7 +60,7 @@ foreach ($listaDeRedes as $teste){
                     <?php if($redes['linkedin'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start"><?=$redes['linkedin']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start" target="_blank"><?=$redes['linkedin']?></a></p>
                     </span>
                         <?php } ?>
                   </li>
@@ -70,7 +70,7 @@ foreach ($listaDeRedes as $teste){
                       <?php if($redes['instagram'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>"><?=$redes['instagram']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>" target="_blank"><?=$redes['instagram']?></a></p>
                             
                     </span>
                         <?php } ?>
@@ -82,7 +82,7 @@ foreach ($listaDeRedes as $teste){
                         <?php if($redes['github'] == "") { ?>   
                          <p class="text-center text-lg-start">https://github.com/exemplo</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['github']?>"><?=$redes['github']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['github']?>" target="_blank"><?=$redes['github']?></a></p>
                             
                     </span>
                         <?php } ?>
@@ -94,7 +94,7 @@ foreach ($listaDeRedes as $teste){
                         <?php if($redes['github'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.behance.net/exemplo</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['behance']?>"><?=$redes['behance']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['behance']?>" target="_blank"><?=$redes['behance']?></a></p>
                             
                     </span>
                         <?php } ?>

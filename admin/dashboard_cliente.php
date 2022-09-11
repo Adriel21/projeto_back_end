@@ -67,7 +67,7 @@ $dados = $usuario->listarUm();
                         <?php if($redes['website'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['website']?>" class="text-center text-lg-start"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['website']?>" class="text-center text-lg-start" target="_blank"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
                     </span>
                         <?php } ?>
                   </li>
@@ -77,7 +77,7 @@ $dados = $usuario->listarUm();
                     <?php if($redes['linkedin'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start"><?=$redes['linkedin']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start" target="_blank"><?=$redes['linkedin']?></a></p>
                     </span>
                         <?php } ?>
                   </li>
@@ -87,7 +87,7 @@ $dados = $usuario->listarUm();
                       <?php if($redes['instagram'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>"><?=$redes['instagram']?></a></p>
+                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>" target="_blank"><?=$redes['instagram']?></a></p>
                             
                     </span>
                         <?php } ?>
@@ -114,7 +114,7 @@ $dados = $usuario->listarUm();
                   <?php if(isset($redes)) { ?>
                     <span class="text-secondary"><a href="redes_atualiza.php?perfil=cliente">Editar redes</a></span>
                     <?php } else { ?>
-                    <span class="text-secondary"><a href="redes_insere.php?perfil= cliente">Inserir redes</a></span>
+                    <span class="text-secondary"><a href="redes_insere.php?perfil=cliente">Inserir redes</a></span>
                     <?php } ?>
                   </li>
                 </ul>

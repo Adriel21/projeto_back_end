@@ -67,6 +67,24 @@ final class Rede{
      }
 
 
+     public function inserirCompleto(){
+        $sql = "INSERT INTO rede(website, linkedin, instagram, github, behance, usuario_id) VALUES(:website, :linkedin, :instagram, :github, :behance, :usuario_id)";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":website", $this->website, PDO::PARAM_STR);
+            $consulta->bindParam(":linkedin", $this->linkedin, PDO::PARAM_STR);
+            $consulta->bindParam(":instagram", $this->instagram, PDO::PARAM_STR);
+            $consulta->bindParam(":github", $this->github, PDO::PARAM_STR);
+            $consulta->bindParam(":behance", $this->behance, PDO::PARAM_STR);
+            $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+     }
+
+
      public function atualizarPerfil():void {
         $sql = "UPDATE rede SET website = :website, linkedin = :linkedin, instagram = :instagram WHERE usuario_id = :usuario_id";
 
@@ -75,6 +93,24 @@ final class Rede{
             $consulta->bindParam(":website", $this->website, PDO::PARAM_STR);
             $consulta->bindParam(":linkedin", $this->linkedin, PDO::PARAM_STR);
             $consulta->bindParam(":instagram", $this->instagram, PDO::PARAM_STR);
+            $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: ". $erro->getMessage());
+        }
+
+    }
+
+    public function atualizarPerfilCompleto():void {
+        $sql = "UPDATE rede SET website = :website, linkedin = :linkedin, instagram = :instagram, github = :github, behance = :behance WHERE usuario_id = :usuario_id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":website", $this->website, PDO::PARAM_STR);
+            $consulta->bindParam(":linkedin", $this->linkedin, PDO::PARAM_STR);
+            $consulta->bindParam(":instagram", $this->instagram, PDO::PARAM_STR);
+            $consulta->bindParam(":github", $this->github, PDO::PARAM_STR);
+            $consulta->bindParam(":behance", $this->behance, PDO::PARAM_STR);
             $consulta->bindParam(":usuario_id", $this->usuarioId, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {

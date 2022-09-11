@@ -49,7 +49,7 @@ $dados = $usuario->listarUm();
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
                     <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
                     <div class="mt-2 mt-lg-3">
-                      <h4 class=""><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
+                      <h4 class="nome"><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
                       <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
                                 <a href="./projeto_insere.php">Publicar Projeto</a>
                             </button>

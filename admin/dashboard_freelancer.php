@@ -91,7 +91,7 @@ foreach ($listaDeRedes as $teste){
                   <li class="list-group-item">
                       <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
                     <span class="text-secondary">
-                        <?php if($redes['github'] == "") { ?>   
+                        <?php if($redes['behance'] == "") { ?>   
                          <p class="text-center text-lg-start">https://www.behance.net/exemplo</p>
                         <?php } else  { ?>
                         <p class="text-center text-lg-start"><a href="<?=$redes['behance']?>" target="_blank"><?=$redes['behance']?></a></p>

@@ -82,6 +82,6 @@ if($dados['profissao_id'] === null) {
 			</div>
 		</div>
 	</div>
-<script src="js/confirm.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
 </body>
 </html>

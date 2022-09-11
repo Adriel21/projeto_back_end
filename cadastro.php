@@ -107,7 +107,7 @@ if(isset($_POST['inserir'])) {
                     </div>
 
 					<div class="d-grid gap-2 text-center">
-					    <button type="submit" class="btn btn-primary mt-3" id="inserir" name="inserir">Cadastrar</button>
+					    <button type="submit" class="btn botao_index mt-3" id="inserir" name="inserir">Cadastrar</button>
                         <a href="login.php">Já possui cadastro? Login</a>
                     </div>
 				</form>

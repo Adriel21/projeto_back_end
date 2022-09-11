@@ -134,5 +134,5 @@ if(isset($_POST['inserir'])) {
 		</div>
 	</div>
 
-					
+<script src="../js/bootstrap.bundle.min.js"></script>					
 					

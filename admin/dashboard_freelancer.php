@@ -153,7 +153,7 @@ foreach ($listaDeRedes as $teste){
     </section>
 </main>
         
-
+<script src="../js/bootstrap.bundle.min.js"></script>
                     
 
                 

@@ -1,9 +1,8 @@
 <?php
-
+ob_start();
 use Projeto\Categoria;
 use Projeto\Projeto;
-use Projeto\Usuario;
-
+use Projeto\Utilitarios;
 require_once 'inc/header.php';
 $projeto = new Projeto;
 
@@ -25,7 +24,7 @@ $listaDeCategorias = $categoria->listar();
 
 <div class="container-fluid overflow-hidden sticky-top">
     <div class=" row ">
-        <div class="col-12 col-sm-3 col-xl-2 px-0 bg-light d-flex">
+        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex" style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
                 <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
                     <span class="d-none ps-1 d-sm-inline text-white">Bem-Vindo!</span>
@@ -74,7 +73,7 @@ $listaDeCategorias = $categoria->listar();
                         <form class="d-flex p-1" action="resultados_projetos.php" method="GET">
                             <input class="form-control " type="search" placeholder="Digite o que procura" aria-label="Search" name="busca">
                             <div class="ps-2">
-                            <button class="botao-feed ps-2 btn text-white" type="submit" >BUSCAR</button>
+                            <button class="botao-busca ps-2 btn text-white" type="submit" >BUSCAR</button>
                             </div>
                         </form>
                 </div>
@@ -84,80 +83,39 @@ $listaDeCategorias = $categoria->listar();
             <!-- Início conteúdo das vagas -->
 
             <?php if(!isset($listaDeProjetos[0] ['categoria'])) { ?>
-
-                      <div class="col pt-4 card-vagas">
-                      <div class="card w-77">
-                          <div class="card-body coluna-vagas">
-                          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                              <div class="d-flex w-100 justify-content-between">
-                              <h3 class="mb-1 pb-4 text-center">No momento, não existem projetos desta categoria</h3>
-                              </div>
-                              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            
-                              
-                              </div>
-                          </a>
-                      </div>
+                
+                    <script>alert("No momento, não existem projetos desta categoria");</script> 
+                    <script>window.location.href = "projetos.php";</script>
+                    
+                
             <?php } else { ?>
             <?php foreach($listaDeProjetos as $projetos) { ?>
                 
-            <div class="col pt-4 card-vagas">
-                <div class="card w-77">
+            <div class="col pt-4 card-vagas ms-3">
+                <div class="card w-100">
                     <div class="card-body coluna-vagas">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
-                        <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1"><?=$projetos['resumo'] ?? 'alo'?></p>
-                        <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 mt-lg-0">
-                        <button class="botao-feed btn   me-md-2" type="button"><a href="projeto.php?id=<?=$projetos['id']?>">VISUALIZAR PROJETO</a></button>
-                        
-                        </div>
-                    </a>
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            
+                            <div class="d-flex w-100 justify-content-between">
+                                <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
+                                <small><?=Utilitarios::formataData($projetos['data'])?></small>
+                            </div>
+
+                            <p class="mb-1"><?=$projetos['resumo'] ?? 'alo'?></p>
+                            <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 mt-lg-0">
+                            <a href="projeto.php?id=<?=$projetos['id']?>"><button class="botao-feed  btn me-md-2 px-5" type="button">VISUALIZAR PROJETO</button></a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+            </div>
                 <?php } ?>
                 <?php } ?>
             <!-- Fim conteúdo das vagas -->
 
-            <!-- modal início -->
-
-             
-  <div class="modal fade campoModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Termos de uso</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <ul>
-        <li>Não será permitido a utilização do site para fins de vendas de produtos, mesmo de livros. Caso a prática seja identificada,
-          a conta será imeditamanete banida.
-        </li>
-        <hr>
-        <li>A LivroSolto preza pela honestidade e respeito, portanto, caso alguma troca ou doação sejam acordados e esse não seja devidamente cumprido,
-          nos vemos no direito de suspender a conta pelo prazo de 3 dias úteis.
-        </li>
-        <hr>
-        <li>A LivroSolto condena qualquer prática criminosa de preconceito, racisco, homofobia e assédio. Caso algum desses comportamentos sejam identificados, a LivroSolto
-          se encontrará no direito de banir a conta permanentemente e repassar o ocorrido para autoridades.
-        </li>
-        <hr>
-        <li>Não será tolerado contas com identidade fraudulentas. A consequência para tal caso, será o banimento imediato.</li>
-        <hr>
-        <li>Para todos usuários solicitamos o respeito, a honestidade e compromisso.</li>
-      </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- fim modal -->
+            
 
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">

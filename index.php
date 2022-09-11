@@ -14,7 +14,7 @@ require_once 'inc/header.php'
                     </p>
 
                 <div class="d-grid gap-2 col-8 col-sm-4 col-md-6 mt-5 rounded">
-                <button class="botao_index btn me-md-2 p-2" type="button"><a href="projetos.php">Procurar Projetos</a></button>
+                <a href="projetos.php"><button class="botao_index btn me-md-2 p-2 px-5" type="button">Procurar Projetos</button></a>
                 </div>
             </div>
 
@@ -25,7 +25,6 @@ require_once 'inc/header.php'
         </picture>
     </section>
     <!-- Primeiro finalizado -->
-
 
     <!-- Segundo Bloco -->
     <section class="segna-bloco py-2" style="background-color: #0421B5;">
@@ -38,7 +37,7 @@ require_once 'inc/header.php'
                     </p>
 
                     <div class="d-grid gap-2 col-8 col-sm-4 col-md-6 mt-5 rounded">
-                    <button class="botao_index btn me-md-2" type="button"><a href="freelancers.php">Procurar Freelancers</a></button>
+                    <a href="freelancers.php"><button class="botao_index btn me-md-2 px-5" type="button">Procurar Freelancers</button></a>
                     </div>
             </div>
               <!-- img -->

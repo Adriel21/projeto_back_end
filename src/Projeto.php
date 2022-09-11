@@ -134,7 +134,7 @@ final class Projeto{
 
         
          public function listarTodos():array {
-             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
+             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
         
         
                    try {
@@ -153,7 +153,7 @@ final class Projeto{
         //Método para trazer todos os projetos de acordo com a categoria
            
         public function listarPorCategoria():array {
-            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id WHERE projeto.categoria_id = :categoria_id";
+            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id WHERE projeto.categoria_id = :categoria_id";
        
        
                   try {
@@ -241,7 +241,7 @@ final class Projeto{
 
 
                 public function busca():array {
-                    $sql = "SELECT projeto.titulo, projeto.id, projeto.resumo, usuario.nome AS usuario FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id WHERE titulo LIKE :termo OR resumo LIKE :termo";
+                    $sql = "SELECT projeto.titulo, projeto.id, projeto.resumo, projeto.data, usuario.nome AS usuario FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id WHERE titulo LIKE :termo OR resumo LIKE :termo";
             
                 
                     try {

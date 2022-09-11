@@ -106,9 +106,17 @@ picture img {
         font-weight: 600;
         color: ghostwhite;
         background-color: #021057;
+        width: 270px;
     }
 
-    .botao-feed:hover {
+    .botao-busca {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
+        width: 100%;
+    }
+
+    .botao-feed:hover, .botao-busca:hover {
         background-color: #0650b1;
         color: ghostwhite;
     }
@@ -135,7 +143,7 @@ picture img {
         
     }
     .menu-lateral {
-        background-color:#0421B5;;
+        background-color:#0421B5;
     }
 
     .menu-lateral a {

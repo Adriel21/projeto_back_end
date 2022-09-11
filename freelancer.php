@@ -1,18 +1,19 @@
 <?php
 
 use Projeto\Categoria;
-use Projeto\Projeto;
 use Projeto\Rede;
+use Projeto\Usuario;
 use Projeto\Utilitarios;
 
 require_once 'inc/header.php';
-$projeto = new Projeto;
 
 
-$projeto->setId($_GET['id']);
-$detalhesDoProjeto = $projeto->listarProjetoComDetalhes();
+$usuario = new Usuario;
+$usuario->setId($_GET['id']);
+$detalhesDoFreelancer = $usuario->listarFreela();
+
 $redes = new Rede;
-$redes->setUsuarioId($detalhesDoProjeto['usuario_id']);
+$redes->setUsuarioId($detalhesDoFreelancer['id']);
 $rede = $redes->listarUm();
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
@@ -84,13 +85,17 @@ $listaDeCategorias = $categoria->listar();
             <div class="col pt-4 card-vagas ms-3">
                 <div class="card w-100">
                     <div class="card-body coluna-vagas">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4"><?=$detalhesDoProjeto['titulo']?></h3>
-                        <small><?=Utilitarios::formataData($detalhesDoProjeto['data'])?></small>
-                        </div>
-                        <p class="mb-3"><strong>Resumo:</strong> <?=$detalhesDoProjeto['resumo']?></p>
-                        <p class="mb-3"><strong>Descrição:</strong> <?=$detalhesDoProjeto['descricao']?></p>
-                        <small>Autor do Projeto: <?=$detalhesDoProjeto['nome']?></small>
+                    <div class="d-flex w-100 gap-3">
+                                
+                                <img class="perfil_freela_feed" src="fotos_de_perfil/<?=$detalhesDoFreelancer['perfil']?>" alt="" width="100" height="100">
+                                
+                                <div>
+                                    <h3 class="mb-2"><?=$detalhesDoFreelancer['titulo']?></h3>
+                                    <h5 class="mb-3"><?=$detalhesDoFreelancer['nome']?></h5>
+                                </div>
+                            </div>
+                       
+                        <p class="mb-3 mt-3"><strong>Descrição:</strong> <?=$detalhesDoFreelancer['descricao']?></p>
                         <hr>
                 <div class="mt-3">
                 <ul class=" list-group-flush ps-0">

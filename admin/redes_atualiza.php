@@ -138,4 +138,4 @@ if(isset($_POST['atualizar'])) {
 	</div>
 
 					
-					
+<script src="../js/bootstrap.bundle.min.js"></script>					

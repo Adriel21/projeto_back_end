@@ -19,3 +19,8 @@ header{
 .nav-linl:hover{
     color: blue !important;
 }
+
+nav ul li a:active {
+    background: black;
+    color: azure;
+}

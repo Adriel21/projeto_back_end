@@ -30,6 +30,9 @@
     <script src="js/bootstrap.bundle.js"></script>
 
     <!-- Active - ou seja, menu de select onde o usuario está -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
     <script src="js/active.js"></script>
 </body>
 </html>

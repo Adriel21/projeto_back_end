@@ -22,9 +22,11 @@ a {
     font-weight: normal;
     font-style: normal;
   }
+
   .a {
-      text decoration: none;
+      text-decoration: none;
   }
+
   .cabecalho > header,
   .codrops-top {
     font-family: 'Lato', Arial, sans-serif;
@@ -126,6 +128,7 @@ a {
     }
   
   }
+
   *,
   *:after,
   *::before {
@@ -154,10 +157,6 @@ a {
   nav a:focus {
     outline: none;
   }
-  
-  
-  
-  
   
   /* Effect 21: borders slight translate */
   .cl-effect-21 a {

@@ -33,9 +33,9 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            <div class="collapse navbar-collapse row justify-content-md-end justify-content-sm-end justify-content-center"
+                <div class="collapse navbar-collapse row justify-content-md-end justify-content-sm-end justify-content-center"
                     id="navbarSupportedContent">
-                    <div class=" cl-effect-21">
+                    <div class="cl-effect-21">
                         <ul class="navbar-nav justify-content-end">
                             <li class="nav-item">
                                 <a class="" aria-current="page" href="index.php"

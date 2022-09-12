@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 require_once '../vendor/autoload.php';
 
@@ -14,3 +15,4 @@ $projeto->setId($_GET["id"]);
 $projeto->excluirProjeto();
 
 header('location:dashboard_cliente.php');
+ob_flush(); 

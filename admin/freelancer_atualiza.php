@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
@@ -101,6 +102,6 @@ if(isset($_POST['atualizar'])) {
 
 					
 					
-
+<?php ob_flush() ?>
             
     

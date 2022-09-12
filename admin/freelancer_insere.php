@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
@@ -85,3 +86,5 @@ if($dados['profissao_id'] === null) {
 <script src="../js/bootstrap.bundle.js"></script>
 </body>
 </html>
+
+<?php ob_flush() ?>

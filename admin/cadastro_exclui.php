@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\Aceite;
 use Projeto\ControleDeAcesso;
@@ -56,6 +57,6 @@ if($dados['profissao_id'] !== null) {
 }
 
 
-
+ ob_flush();
 
 

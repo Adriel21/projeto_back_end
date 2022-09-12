@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\ControleDeAcesso;
 use Projeto\Usuario;
@@ -20,3 +21,4 @@ $dadosDois = $usuario->listarUm();
 $sessao->loginDois($dadosDois['id'], $dadosDois['nome'], $dadosDois['email'], $dadosDois['perfil'], $dadosDois['profissao_id']);
 header('location:dashboard_cliente.php?id=' . $_SESSION['id']);
 
+ob_flush();

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
@@ -77,3 +78,5 @@ if(isset($_POST['inserir'])) {
     </form>
 </body>
 </html>
+
+<?php ob_flush() ?>

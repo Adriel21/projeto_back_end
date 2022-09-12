@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 require_once '../inc/headerInterno.php';
 
@@ -191,5 +192,5 @@ $dados = $usuario->listarUm();
         
 
 <script src="../js/bootstrap.bundle.min.js"></script>
-
+<?php ob_flush() ?>
                     

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\ControleDeAcesso;
 use Projeto\Usuario;
@@ -25,3 +26,6 @@ if($dados['profissao_id'] !== null){
     $sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
         header('location:./dashboard_cliente.php?id=' . $_SESSION['id']);
 }
+
+
+ ob_flush();

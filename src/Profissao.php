@@ -18,6 +18,8 @@ final class Profissao{
     }
 
 
+    
+
     // Método para cadastrar perfil profissional
     public function cadastrar() {
         $sql = "INSERT INTO profissao(titulo, descricao, categoria_id) VALUES(:titulo, :descricao, :categoria_id)";

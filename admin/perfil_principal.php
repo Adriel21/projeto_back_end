@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
@@ -136,3 +137,4 @@ $listaDeProjetos = $projeto->listarDetalhes();
   </footer>
     
 
+  <?php ob_flush() ?>

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
@@ -132,3 +133,4 @@ $usuario = new Usuario;
     <!-- Copyright -->
   </footer>
     
+  <?php ob_flush() ?>

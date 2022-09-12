@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 use Projeto\ControleDeAcesso;
 use Projeto\Usuario;
@@ -12,3 +13,5 @@ $dados = $usuario->listarUm();
 
 $sessao->confirmaExcluir($dados['id'], 'confirma');
 header('location:cadastro_exclui.php');
+
+ob_flush(); 

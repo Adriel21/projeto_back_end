@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 use Projeto\ControleDeAcesso;
 use Projeto\Usuario;
 use Projeto\Utilitarios;
@@ -116,3 +116,4 @@ if(isset($_POST['atualizar'])) {
 <script src="js/confirm.js"></script>
 </body>
 </html>
+<?php ob_flush() ?>

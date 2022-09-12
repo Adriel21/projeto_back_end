@@ -7,12 +7,12 @@ use Projeto\Usuario;
 
 require "vendor/autoload.php";
 
-if(isset($_GET['campos_obrigatorios'])) {
-	$feedback = 'Você deve preencher todos os campos <i class="bi bi-exclamation-octagon"></i>';
+if(isset($_GET['campo_obrigatorio'])) {
+	$feedback = 'Você deve preencher o campo <i class="bi bi-exclamation-octagon"></i>';
 } else if (isset($_GET['nao_encontrado'])) {
 	$feedback = 'Email informado não está cadastrado <i class="bi bi-exclamation-octagon"></i>';
-} else if (isset($_GET['dados_incorretos'])) {
-	$feedback = 'Dados informados estão incorretos <i class="bi bi-exclamation-octagon"></i>';
+} else if (isset($_GET['senha_enviada'])) {
+	$feedbackpositivo = 'Verifique sua caixa de entrada, spam e lixo eletrÔnico <i class="bi bi-check-circle"></i>';
 }
 
 
@@ -26,7 +26,11 @@ if(isset($_GET['campos_obrigatorios'])) {
 				<p class="my-2 alert alert-warning text-center">
 					<?=$feedback?>
 				</p>
-      		  <?php } ?>
+      		  <?php } if(isset($feedbackpositivo)) { ?>
+                <p class="my-2 alert alert—check text-center">
+					<?=$feedbackpositivo?>
+				</p>
+                <?php } ?>
 			<div class="col-md-6 d-none d-lg-block pt-5">
 			
                     <h2 class="text-start titulo_login">Juntos, podemos fazer mais!</h2>
@@ -87,11 +91,12 @@ if(isset($_GET['campos_obrigatorios'])) {
                 $recuperaEmail = $_POST['email'];
 
                 $to = $recuperaEmail;
-                $subject = 'Teste de envio de email';
-                $message = 'Olá, sua nova senha é' . $recuperar;
+                $subject = utf8_decode('Recuperação de senha');
+                $message = utf8_decode('Olá, sua nova senha para acesso a Colajob é: ' . $recuperar);
                 $headers = 'From: colajob@sunioweb.com.br';
 
                 mail($to, $subject, $message, $headers);
+                header ("location:recuperaSenha.php?senha_enviada");
 
                 }
             }

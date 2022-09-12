@@ -2,6 +2,7 @@
 namespace Projeto;
 use PDO, Exception;
 
+
 final class Projeto{
     private int $id;
     private string $titulo;
@@ -254,6 +255,7 @@ final class Projeto{
                     }
                     return $resultado;
                 }
+
    
 
 
@@ -364,5 +366,13 @@ final class Projeto{
     public function setData($data)
     {
         $this->data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+
+    /**
+     * Get the value of conexao
+     */ 
+    public function getConexao()
+    {
+        return $this->conexao;
     }
 }

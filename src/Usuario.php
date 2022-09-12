@@ -68,6 +68,8 @@ try {
 return $resultado;
 }
 
+
+
 // método que tem como objetivo trazer um usuário e, também, seu relacionamento através da chave estrangeria profissao_id usando join do sql
 public function listarFreela():array {
     $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
@@ -83,6 +85,8 @@ return $resultado;
 }
 
 
+
+
 public function listarTodosFreela():array{
     $sql = "SELECT usuario.id, usuario.nome AS nome, usuario.perfil AS perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario RIGHT JOIN profissao ON usuario.profissao_id = profissao.id";
     try {
@@ -94,6 +98,8 @@ public function listarTodosFreela():array{
     }
     return $resultado;
 }
+
+
 
 
 public function listarPorCategoria():array{

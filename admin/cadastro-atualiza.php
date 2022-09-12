@@ -64,6 +64,9 @@ if(isset($_POST['atualizar'])) {
 				<div class="border-shadow img-vazia "><img src="/img/placeholder-img-vazio.png" id="img"
 					alt="" class="d-block mx-auto mb-3" width="140" height="170">	
 				</div>
+				<!-- <label class="picture" for="picture-usuario" tabIndex="0">
+					<span class="picture__image"></span>
+				</label> -->
 			<!-- Fim campo de inserção de imagem -->
 					
 				<div class="form-group mt-2">
@@ -93,6 +96,7 @@ if(isset($_POST['atualizar'])) {
             <div class="mb-3">
                 <label for="imagem" class="form-label">Caso queira mudar, selecione outra imagem:</label>
                 <input class="form-control" type="file" name="upload" accept="image/png, image/jpeg, image/gif, image/svg+xml" id="upload">
+			<!-- <input type="file" name="picture-usuario" id="picture-usuario"> -->
             </div>
 
 					

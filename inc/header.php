@@ -50,7 +50,7 @@ if(isset($_SESSION['id'])){
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item m-1 active">
           <a class="nav-link btn text-uppercase fw-semibold" aria-current="page" href="index.php">Home</a>
@@ -64,26 +64,7 @@ if(isset($_SESSION['id'])){
           <a class="nav-link btn text-uppercase fw-semibold" href="cadastro.php">Cadastro</a>
         </li>
       </ul>
-    </nav> -->
-
-      <div class="collapse navbar-collapse row justify-content-md-end justify-content-sm-end justify-content-center" id="navbarSupportedContent">
-        <div class="cl-effect-21">
-          <ul class="navbar-nav justify-content-end">
-            <li class="nav-item">
-              <a class="" aria-current="page" href="index.php" alt="Página inicial">Início</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="" href="login.php" alt="Entrar na conta">Login</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="" href="cadastro.php" alt="Cadastrar conta">Cadastro</a>
-            </li>
-          </ul>               
-        </div>  
-      </div>
-
+    </nav>
   </div>
 </section>
 <?php } else { ?>

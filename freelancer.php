@@ -24,9 +24,7 @@ $listaDeCategorias = $categoria->listar();
     <div class=" row ">
         <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex " style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
-                <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto  text-decoration-none">
-                    <span class="d-none ps-1 d-sm-inline text-white">Bem-Vindo!</span>
-                </a>
+                <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
                     <li>

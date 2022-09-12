@@ -42,7 +42,7 @@ if(isset($_SESSION['id'])){
 
 <header id="topo" class="border-bottom sticky-top">
 <?php if (!isset($_SESSION['id'])) { ?>
-<nav class="navbar navbar-expand-lg">
+<section class="navbar navbar-expand-lg">
   <div class="container limitador">
     <h1 class="ms-n1"><a class="navbar-brand logo" href="index.php"><img src="img/tecnologia.png" width="40"> Colajob</a></h1>
 
@@ -51,22 +51,37 @@ if(isset($_SESSION['id'])){
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-1">
+      <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item m-1 active">
           <a class="nav-link btn botao_index text-white" aria-current="page" href="index.php">Home</a>
         </li>
-        
-       
-        <li class="nav-item mx-1">
+
+        <li class="nav-item m-1">
           <a class="nav-link btn botao_index text-white" href="login.php">Login</a>
         </li>
 
-        <li class="nav-item mx-1">
+        <li class="nav-item m-1">
           <a class="nav-link btn botao_index text-white" href="cadastro.php">Cadastro</a>
         </li>
+      </ul> -->
+
+      <ul class="nav nav-pills ms-auto mb-2 mb-lg-0" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link btn text-white" href="index.php"><button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button></a>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+          <a class="nav-link btn text-white" href="login.php"><button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Login</button></a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link btn text-white" href="cadastro.php"><button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Cadastro</button></a>
+        </li>
+      </ul>
+
     </div>
   </div>
-</nav>
+</section>
 <?php } else { ?>
   <nav class="navbar navbar-expand-lg">
   <div class="container limitador">

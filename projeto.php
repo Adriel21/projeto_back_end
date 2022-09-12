@@ -45,9 +45,9 @@ $listaDeCategorias = $categoria->listar();
                             
                     </li>
 
-                    <li class="mt-5 d-none d-lg-block">
+                    <!-- <li class="mt-5 d-none d-lg-block">
                         <p><img src="img/img-pessoas-fazendo-cadastro.png" alt="" width="200"></p>
-                    </li>
+                    </li> -->
                    
                 </ul>
             </div>

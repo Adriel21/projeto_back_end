@@ -20,20 +20,37 @@
 
 </head>
 <body>
-    <header class="d-flex justify-content-around">
-        <h1>
-            <img src="#" alt="logo" title="">
-        </h1>
-        <nav class="navbar">
-            <ul>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <a class="px-1" href="loginDois.php">
-                        <button type="button" class="btn btn-outline-primary">Login</button>
-                    </a>
-                    <a class="px-1" href="cadastroDois.php">
-                        <button type="button" class="btn btn-outline-primary">Cadastro</button>
-                    </a>
+    <!-- Header, aqui está sendo criado o header e todas as suas configurações visuais -->
+<header class="justify-content-around cabecalho color-7">
+
+    <!-- aqui está o menu dentro do header onde configuramos os elementos dentro do cabeçalho -->
+    <nav class="navbar navbar-expand-md text-center ">
+        <!-- Abaixo temos todas as configurações/classes que permitem o menu estar 100% responsivo -->
+            <div class="container md-5">
+                <h1 class="logo-menu"><img src="./img/logo-icone/tecnologia.png" alt="logo projeto colajob" width="50" height="46"> <strong>Colajob</strong> </h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse row justify-content-md-end justify-content-sm-end justify-content-center"
+                    id="navbarSupportedContent">
+                    <div class=" cl-effect-21">
+                        <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="" aria-current="page" href="index.php"
+                                    alt="Página inicial">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="" href="login.php" alt="Entrar na conta">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="" href="cadastro.php" alt="Cadastrar conta">Cadastro</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
                 </div>
-            </ul>
+            </div>
         </nav>
     </header>

@@ -1,10 +1,32 @@
+<?php $pagina = basename($_SERVER['PHP_SELF']); ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto - back end</title>
+    <?php 
+    switch($pagina){
+      case 'login.php':
+     ?>
+    <title>Login - Colajob</title>
+    <?php 
+    break;
+
+    case 'cadastro.php':
+    ?>
+    <title>Cadastro - Colajob</title>
+    <?php 
+    break;
+    
+    case 'recuperaSenha.php':
+    ?>
+    <title>Recuperar senha</title>
+    <?php 
+    break;
+    }
+    ?>
 
     <!-- Css includes -->
     <link rel="stylesheet" href="css/bootstrap.min.css">

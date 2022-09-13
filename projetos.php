@@ -72,14 +72,17 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Início conteúdo das vagas -->
 
-            <?php if(!isset($listaDeProjetos[0] ['categoria_id'])) { ?>
+        <?php if(!isset($listaDeProjetos[0] ['categoria_id']) && !empty($listaDeProjetos)) { ?>
                 
-                    <script>alert("No momento, não existem projetos desta categoria");</script> 
-                    <script>window.location.href = "projetos.php";</script>
-                    
+                <script>alert("No momento, não existem projetos desta categoria");</script> 
+                <script>window.location.href = "projetos.php";</script>
                 
-            <?php } else { ?>
-            <?php foreach($listaDeProjetos as $projetos) { ?>
+            
+        <?php } else if (empty($listaDeProjetos)) { ?>
+                <script>alert("No momento, não há nenhum projeto cadastrado");</script> 
+                <script>window.location.href = "index.php";</script>
+        <?php } else { ?>
+        <?php foreach($listaDeProjetos as $projetos) { ?>
                 
             <div class="col pt-4 card-vagas ms-sm-3 ms-1">
                 <div class="card w-100">

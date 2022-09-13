@@ -2,19 +2,20 @@
 require_once 'inc/header.php'
 ?>
 
-<main class="container-sm-fluid marketing mt-5">
+<main class="container-md-fluid marketing">
 
     <!-- Primeiro Blaco -->
-    <section class="container row featurette my-5 py-3 m-auto flex-column-reverse flex-lg-row">
-            <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
+    <section class="container row my-5 py-3 m-auto flex-column-reverse flex-lg-row">
+            
+            <div class="col-xl-6 col-lg-6 col-md-12 my-auto">
                 <h1 class="display-4 fw-bold pe-lg-8">Encontre projetos, amplie sua rede e gere renda extra.</h1>
                     <!-- text -->
                     <p class="mb-4 lead">
                         Com a Colajob, você poderá encontrar muitos projetos que irão contribuir para o seu bolso e para ampliar seu portfólio. Aproveite a oportunidade e, veja se há algum que se encaixa com você!
                     </p>
 
-                <div class="d-grid gap-2 col-8 col-sm-4 col-md-6 mt-5 rounded">
-                <a href="projetos.php"><button class="botao_index btn me-md-2 p-2 px-5" type="button">Procurar Projetos</button></a>
+                <div class="d-grid gap-2 col-8 col-md-6 col-lg-6 mt-5 rounded">
+                    <a href="projetos.php"><button class="botao_index btn me-md-2 w-100 p-2 px-4" type="button">Procurar Projetos</button></a>
                 </div>
             </div>
 
@@ -36,8 +37,8 @@ require_once 'inc/header.php'
                         Precisando de ajuda qualificada? Está no lugar certo. Na Colajob você pode conseguir quanta ajuda for necessária para concluir seus projetos.
                     </p>
 
-                    <div class="d-grid gap-2 col-8 col-sm-4 col-md-6 mt-5 rounded">
-                    <a href="freelancers.php"><button class="botao_index btn me-md-2 px-5" type="button">Procurar Freelancers</button></a>
+                    <div class="d-grid gap-1 col-8 col-md-6 col-lg-6 mt-5 rounded">
+                        <a href="freelancers.php"><button class="botao_index btn me-md-2 w-100 p-2 px-4" type="button">Procurar Freelancers</button></a>
                     </div>
             </div>
               <!-- img -->

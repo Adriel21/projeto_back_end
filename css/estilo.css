@@ -146,6 +146,11 @@ picture img {
 
         }    
 
+        .backlateral{
+            background-color: #0421b5;
+            height: 100vh; 
+        }
+
         
     }
     .menu-lateral {

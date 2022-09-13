@@ -23,28 +23,34 @@ $listaDeCategorias = $categoria->listar();
 
 
 <div class="container-fluid overflow-hidden">
-    <div class="row">
-        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex me-2 me-lg-0" style="background-color: #0421b5;">
+    <div class=" row ">
+        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex" style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
-                    <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
-            
+                <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
-                    <li>
-                         <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="freelancers.php" class="fs-6 bi-people"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
+                        <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
+                            <a href="freelancers.php" class="fs-6 bi-people"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a>
+                        </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-filter-square"></i>
                                 <span class="ms-1 d-sm-inline text-light fs-6 ">Categorias</span>
                                 </a>
+                            </li>
+
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a></li>
-                                  <?php foreach($listaDeCategorias as $categorias) { ?>  
-                                 <li><a class="dropdown-item text-black" href="projetos.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a></li>
-                                 <?php } ?>
-                             </ul> 
-                           
-                    </li>
+                            
+                                <li>
+                                    <a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a>
+                                </li>
+
+                                    <?php foreach($listaDeCategorias as $categorias) { ?>  
+                                    <li>
+                                        <a class="dropdown-item text-black" href="projetos.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a>
+                                    </li>
+                                    <?php } ?>
+                            </ul> 
                     <!-- <li class="mt-5 d-none d-lg-block">
                         <p><img src="img/img-pessoas-fazendo-cadastro.png" alt="" width="200"></p>
                     </li> -->
@@ -94,7 +100,7 @@ $listaDeCategorias = $categoria->listar();
                                 <small><?=Utilitarios::formataData($projetos['data'])?></small>
                             </div>
 
-                            <p class="mb-1"><?=Utilitarios::limitaResumo($projetos['resumo'])?></p>
+                            <p class="mb-1 word"><?=Utilitarios::limitaResumo($projetos['resumo'])?></p>
                             <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 mt-lg-0">
@@ -126,5 +132,8 @@ $listaDeCategorias = $categoria->listar();
             </body>
             <script src="./js/bootstrap.bundle.js"></script>
             </html>
+
+
+            
            
         

@@ -97,7 +97,7 @@ if(isset($_POST['atualizar'])) {
 
             <div class="mb-3">
                 <label for="imagem" class="form-label">Caso queira mudar, selecione outra imagem:</label>
-                <input class="form-control" type="file" name="upload" accept="image/png, image/jpeg, image/gif, image/svg+xml" id="upload">
+                <input class="form-control" type="file" name="perfil" accept="image/png, image/jpeg, image/gif, image/svg+xml" id="upload">
             </div>
 
 					

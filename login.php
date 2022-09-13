@@ -106,13 +106,14 @@ if(isset($_GET['campos_obrigatorios'])) {
 							if($profissoes['usuario_id'] === $dados['id']) {
 						
 							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $profissoes['usuario_id']);
-                            header('location:./admin/dashboard_cliente.php?id=' . $_SESSION['id']);
-								///echo 'errou';
-						} else if ($profissoes['usuario_id'] !== $dados['id']){
+                            header('location:admin/dashboard_cliente.php');
+							} }	 
+
+						
 							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
-								header('location:./admin/dashboard_cliente.php');
-                        }
-					}
+								header('location:admin/dashboard_cliente.php');
+                        
+					
 					
 					} else {
 						 header("location:login.php?dados_incorretos");
@@ -123,6 +124,6 @@ if(isset($_GET['campos_obrigatorios'])) {
 				// Utilitarios::dump($dados);
 			}
 		
-			ob_flush();
+			
 		?>
 		</body>

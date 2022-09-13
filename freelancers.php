@@ -76,11 +76,17 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Início conteúdo das vagas -->
 
-            <?php if(!isset($listaDeFreelancers[0] ['categoria'])) { ?>
-                    <script>alert("No momento, não existem projetos desta categoria");</script> 
-                    <script>window.location.href = "freelancers.php";</script>
-            <?php } else { ?>
-            <?php foreach($listaDeFreelancers as $freelancers) { ?>
+            <?php if(!isset($listaDeFreelancers[0] ['categoria_id']) && !empty($listaDeFreelancers)) { ?>
+                
+                <script>alert("No momento, não existem freelancer desta categoria");</script> 
+                <script>window.location.href = "projetos.php";</script>
+                
+            
+        <?php } else if (empty($listaDeFreelancers)) { ?>
+                <script>alert("No momento, não há nenhum freelancer cadastrado");</script> 
+                <script>window.location.href = "index.php";</script>
+        <?php } else { ?>
+        <?php foreach($listaDeFreelancers as $freelancers) { ?>
          
             <div class="col pt-4 card-vagas ms-sm-3 ms-1">
                 <div class="card w-100">

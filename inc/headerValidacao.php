@@ -1,4 +1,7 @@
-<?php $pagina = basename($_SERVER['PHP_SELF']); ?>
+<?php 
+ob_start();
+$pagina = basename($_SERVER['PHP_SELF']); 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

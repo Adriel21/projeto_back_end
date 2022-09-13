@@ -192,5 +192,5 @@ $dados = $usuario->listarUm();
         
 
 <script src="../js/bootstrap.bundle.min.js"></script>
-<?php ob_flush() ?>
+<?php ob_flush(); ?>
                     

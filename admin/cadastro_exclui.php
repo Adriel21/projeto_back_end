@@ -12,37 +12,32 @@ require_once '../vendor/autoload.php';
 
 
 $sessao = new ControleDeAcesso;
-if(isset($_SESSION['confirme'])) {
+if(isset($_GET['confirme'])) {
 
 
-$usuario = new Usuario;
-$usuario->setId($_SESSION['id']);
-$dados = $usuario->listarUm();
+
 $projeto = new Projeto;
 $projeto->setUsuarioId($_SESSION['id']);
 $rede = new Rede;
 $rede->setUsuarioId($_SESSION['id']);
 $aceite = new Aceite;
 $aceite->setUsuarioId($_SESSION['id']);
+$profissao = new Profissao;
+$profissao->setUsuarioId($_SESSION['id']);
 
-if($dados['profissao_id'] !== null) {
-    $profissao = new Profissao;
-    $profissao->setId($dados['profissao_id']);
-    $projeto->excluirTodosProjetos();
-    $rede->excluirRede();
-    $aceite->excluirAceite();
-    $usuario->excluirCadastro();
+
     $profissao->excluirFreela();
-    $sessao->logout();
-    header('location:../index.php');
-} else {
     $projeto->excluirTodosProjetos();
     $rede->excluirRede();
     $aceite->excluirAceite();
-    $usuario->excluirCadastro();
-    $sessao->logout();
-    header('location:../index.php');
-}
+  
+
+header('location:usuario_exclui.php');
+    
+  
+  
+ 
+
 
 
 

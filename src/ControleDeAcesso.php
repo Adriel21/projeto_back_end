@@ -3,7 +3,7 @@ namespace Projeto;
 use PDO, Exception;
 
 final class ControleDeAcesso {
-    public Usuario $usuario;
+   
     public function __construct() {
         if( !isset($_SESSION) ){
             session_start();
@@ -24,7 +24,8 @@ final class ControleDeAcesso {
 
 
 
-public function login (int $id, string $nome, string $email, string $perfil, ): void {
+public function login (int $id, string $nome, string $email, string $perfil): void {
+    session_start();
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['email'] = $email;
@@ -32,12 +33,13 @@ public function login (int $id, string $nome, string $email, string $perfil, ): 
   
 }
 
-public function loginDois (int $id, string $nome, string $email, string $perfil, int $profissaoId): void {
+public function loginDois (int $id, string $nome, string $email, string $perfil, int $usuarioId): void {
+    session_start();
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['email'] = $email;
     $_SESSION['perfil'] = $perfil;
-    $_SESSION['profissao_id'] = $profissaoId;
+    $_SESSION['usuario_id'] = $usuarioId;
 }
 
 public function loginTres (int $usuarioId, string $nome, string $email, string $perfil, int $categoriaId, string $titulo): void {
@@ -51,10 +53,17 @@ public function loginTres (int $usuarioId, string $nome, string $email, string $
 }
 
 
-public function confirmaExcluir(int $id, string $confirme){
+public function confirmaExcluirUm(int $id, string $confirme, int $usuarioId){
+    $_SESSION['id'] = $id;
+    $_SESSION['confirme'] = $confirme;
+    $_SESSION['usuario_id'] = $usuarioId;
+}
+
+public function confirmaExcluirDois(int $id, string $confirme){
     $_SESSION['id'] = $id;
     $_SESSION['confirme'] = $confirme;
 }
+
 
 
 

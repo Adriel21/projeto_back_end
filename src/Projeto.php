@@ -51,7 +51,7 @@ final class Projeto{
     }
 
     public function listarProjetoComDetalhes(){
-        $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.categoria_id, projeto.usuario_id, usuario.nome AS nome, usuario.perfil AS perfil FROM projeto RIGHT JOIN usuario ON projeto.usuario_id = usuario.id WHERE projeto.id =:id";
+        $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.categoria_id, projeto.usuario_id, usuario.nome AS nome, usuario.perfil AS perfil FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id WHERE projeto.id =:id";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -135,7 +135,7 @@ final class Projeto{
 
         
          public function listarTodos():array {
-             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
+             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto RIGHT JOIN usuario ON projeto.usuario_id = usuario.id RIGHT JOIN categoria ON projeto.categoria_id = categoria.id";
         
         
                    try {
@@ -154,7 +154,7 @@ final class Projeto{
         //Método para trazer todos os projetos de acordo com a categoria
            
         public function listarPorCategoria():array {
-            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id WHERE projeto.categoria_id = :categoria_id";
+            $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto RIGHT JOIN usuario ON projeto.usuario_id = usuario.id RIGHT JOIN categoria ON projeto.categoria_id = categoria.id WHERE projeto.categoria_id = :categoria_id";
        
        
                   try {

@@ -9,32 +9,54 @@ use Projeto\Usuario;
 require_once '../vendor/autoload.php';
 
 $sessao = new ControleDeAcesso;
-
-$categoria = new Categoria;
-$listaDeCategorias = $categoria->listar();
+$profissao = new Profissao;
 $usuario = new Usuario;
 $usuario->setId($_SESSION['id']);
-$dados = $usuario->listarUm();
+$dadoUsuario = $usuario->listarUm();
 
-if($dados['profissao_id'] === null) {
-	if(isset($_POST['inserir'])) {
-		$profissao = new Profissao;
-		$profissao->setTitulo($_POST['titulo']);
-		$profissao->setDescricao($_POST['descricao']);
-		$profissao->setCategoriaId($_POST['categoria']);
-		$profissao->cadastrar();
-		$exibir = $profissao->ultimoId();
-		// var_dump($exibir); teste 
-		$usuario->setProfissaoId($exibir[0]);
-		$usuario->atualizarPr();
+$listaDeProfissoes = $profissao->listar();
 
-		header('location:freela_valida.php');
-	}
+foreach($listaDeProfissoes as $profissoes){
+	if($profissoes['usuario_id'] === $dadoUsuario['id']){
+		$sessao->logout();
+	} else {
+	}}
+		if(isset($_SESSION['usuario_id'])){
+			header('location:dashboard_freelancer.php');
+		} else { 
+		}
+		$categoria = new Categoria;
+		$listaDeCategorias = $categoria->listar();
+		$usuario = new Usuario;
+		$usuario->setId($_SESSION['id']);
+		$dados = $usuario->listarUm();
+		
+		 
+			if(isset($_POST['inserir'])) {
+				foreach($listaDeProfissoes as $profissoes){
+					if($profissoes['usuario_id'] === $dadoUsuario['id']){
+						$sessao->logout();
+					} } 
+				$profissao->setTitulo($_POST['titulo']);
+				$profissao->setDescricao($_POST['descricao']);
+				$profissao->setCategoriaId($_POST['categoria']);
+				$profissao->setUsuarioId($_SESSION['id']);
+				$profissao->cadastrar();
+			
+		
+				header('location:freela_valida.php');
+					} 
+			
+			
+				
+			
+	
+
+
+
 		
 		
-} else {
-		header('location:dashboard_cliente.php');
-}
+
 
 ?>
 <?php require_once '../inc/headerInterno.php';?>

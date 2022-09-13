@@ -1,6 +1,7 @@
 <?php
 
 use Projeto\ControleDeAcesso;
+use Projeto\Profissao;
 use Projeto\Usuario;
 
 require_once './vendor/autoload.php';
@@ -10,11 +11,8 @@ if(isset($_GET['sair'])) {
   $sessao->logoutExterno();
 }
 
-if(isset($_SESSION['id'])){
-  $usuario = new Usuario;
-  $usuario->setId($_SESSION['id']);
-  $dadosFreela = $usuario->listarFreela();
-}
+$profissao = new Profissao;
+$dadosProfissao = $profissao->listar();
 
 
 
@@ -82,16 +80,16 @@ if(isset($_SESSION['id'])){
           <a class="nav-link btn btn-primary text-white px-3" aria-current="page" href="index.php">Home</a>
         </li>
         
-       
-        <?php if($dadosFreela['profissao_id'] !== null) { ?>
+        <?php if(isset($_SESSION['usuario_id'])) { ?>
           <li class="nav-item m-1">
-            <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
-          </li>
-       <?php } else { ?>
-        <li class="nav-item m-1">
+          <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
+        </li> 
+        <?php } else { ?>
+        <li class="active nav-item m-1">
           <a class="nav-link btn btn-primary text-white px-3" href="admin/freelancer_insere.php">Cadastrar Perfil Freelancer</a>
         </li>
-        <?php } ?>
+        <?php }  ?>
+        
 
         <li class="nav-item m-1">
           <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_cliente.php">Perfil Cliente</a>

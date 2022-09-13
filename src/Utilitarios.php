@@ -7,6 +7,10 @@ abstract class Utilitarios {
         return mb_strimwidth($dados, 0, 35, " ...");
     }
 
+    public static function limitaResumo($dados) {
+        return mb_strimwidth($dados, 0, 90, " ...");
+    }
+
     public static function formataData(string $data):string {
         return date("d/m/Y", strtotime($data));
     }

@@ -42,7 +42,7 @@ class Usuario {
 
 // método que tem como objetivo trazer um usuário, utilizando como parâmetro o ID
     public function listarUm():array {
-        $sql = "SELECT id, email, nome, perfil, profissao_id, senha FROM usuario WHERE id = :id";
+        $sql = "SELECT id, email, nome, perfil, senha FROM usuario WHERE id = :id";
     try {
         $consulta = $this->conexao->prepare($sql);
         $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
@@ -56,7 +56,7 @@ class Usuario {
 
 // método que tem como objetivo trazer um usuário, utilizando como parâmetro o email
 public function listarAceite():array {
-    $sql = "SELECT id, email, nome, perfil, profissao_id FROM usuario WHERE email = :email";
+    $sql = "SELECT id, email, nome, perfil FROM usuario WHERE email = :email";
 try {
     $consulta = $this->conexao->prepare($sql);
     $consulta->bindParam(':email', $this->email, PDO::PARAM_STR);
@@ -70,34 +70,9 @@ return $resultado;
 
 
 
-// método que tem como objetivo trazer um usuário e, também, seu relacionamento através da chave estrangeria profissao_id usando join do sql
-public function listarFreela():array {
-    $sql = "SELECT usuario.id, usuario.email, usuario.nome, usuario.perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario LEFT JOIN profissao ON  usuario.profissao_id = profissao.id WHERE usuario.id = :id";
-try {
-    $consulta = $this->conexao->prepare($sql);
-    $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
-    $consulta->execute();
-    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-} catch (Exception $erro) {
-    die("Erro: ". $erro->getMessage());
-}
-return $resultado;
-}
 
 
 
-
-public function listarTodosFreela():array{
-    $sql = "SELECT usuario.id, usuario.nome AS nome, usuario.perfil AS perfil, usuario.profissao_id AS profissao_id, profissao.titulo AS titulo, profissao.descricao AS descricao, profissao.categoria_id AS categoria FROM usuario RIGHT JOIN profissao ON usuario.profissao_id = profissao.id";
-    try {
-        $consulta = $this->conexao->prepare($sql);
-        $consulta->execute();
-        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
-    } catch (Exception $erro) {
-        die("Erro: ". $erro->getMessage());
-    }
-    return $resultado;
-}
 
 
 
@@ -446,19 +421,6 @@ public function busca():array {
       
     }
 
-    public function getTermo()
-    {
-        return $this->termo;
-    }
-
-    
-
-    public function setTermo($termo)
-    {
-        $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
-
-      
-    }
 
  
 }

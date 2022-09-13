@@ -1,6 +1,7 @@
 <?php
 
 use Projeto\Categoria;
+use Projeto\Profissao;
 use Projeto\Rede;
 use Projeto\Usuario;
 use Projeto\Utilitarios;
@@ -8,13 +9,26 @@ use Projeto\Utilitarios;
 require_once 'inc/header.php';
 
 
-$usuario = new Usuario;
-$usuario->setId($_GET['id']);
-$detalhesDoFreelancer = $usuario->listarFreela();
+$profissao = new Profissao;
+$profissao->setId($_GET['id']);
+$detalhesDoFreelancer = $profissao->listarFreela();
+// $validaRede = $detalhesDoFreelancer['usuario_id'];
 
 $redes = new Rede;
-$redes->setUsuarioId($detalhesDoFreelancer['id']);
-$rede = $redes->listarUm();
+$redes->setUsuarioId($detalhesDoFreelancer['usuario_id']);
+
+$todasRedes = $redes->listarRedes();
+
+foreach($todasRedes as $todas){
+    if($todas['usuario_id'] === $detalhesDoFreelancer['usuario_id']){
+        $redes->setUsuarioId($detalhesDoFreelancer['usuario_id']);
+
+    $rede = $redes->listarUm();
+    }
+}
+
+
+
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 ?>
@@ -85,7 +99,7 @@ $listaDeCategorias = $categoria->listar();
                                 </div>
                             </div>
                        
-                        <p class="mb-3 mt-3"><strong>Descrição:</strong> <?=$detalhesDoFreelancer['descricao']?></p>
+                        <p class="mb-3 mt-3 word"><strong>Descrição:</strong> <?=$detalhesDoFreelancer['descricao']?></p>
                         <hr>
                 <div class="mt-3">
                 <ul class=" list-group-flush ps-0">

@@ -72,7 +72,7 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Início conteúdo das vagas -->
 
-            <?php if(!isset($listaDeProjetos[0] ['categoria'])) { ?>
+            <?php if(!isset($listaDeProjetos[0] ['categoria_id'])) { ?>
                 
                     <script>alert("No momento, não existem projetos desta categoria");</script> 
                     <script>window.location.href = "projetos.php";</script>
@@ -91,7 +91,7 @@ $listaDeCategorias = $categoria->listar();
                                 <small><?=Utilitarios::formataData($projetos['data'])?></small>
                             </div>
 
-                            <p class="mb-1"><?=$projetos['resumo'] ?? 'alo'?></p>
+                            <p class="mb-1"><?=Utilitarios::limitaResumo($projetos['resumo'])?></p>
                             <small>Autor do Projeto: <?=$projetos['nome'] ?? 'alo'?></small>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 mt-lg-0">

@@ -36,7 +36,7 @@ if(isset($_POST['atualizar'])) {
 
     // header("location:login.php");
 
-    if($dadosFreela['profissao_id'] !== null and $validacao === "freelancer"){
+    if(isset($_SESSION['usuario_id']) and $validacao === "freelancer"){
         $rede->atualizarPerfilCompleto();
     } else {
         $rede->atualizarPerfil();

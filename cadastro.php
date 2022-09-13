@@ -36,7 +36,7 @@ if(isset($_POST['inserir'])) {
 	
 		 $usuario->cadastrar();
 	
-		 header('location:verificao_aceite.php?email=' . $_POST['email']);
+		header('location:verificao_aceite.php?email=' . $_POST['email']);
 	} else if ($verificao === false) {
 		header('location:cadastro.php?formato_de_senha_inválido');
 	} else if ($termos !== "Aceite confirmado"){

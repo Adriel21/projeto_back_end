@@ -2,6 +2,7 @@
 ob_start();
 
 use Projeto\ControleDeAcesso;
+use Projeto\Profissao;
 use Projeto\Usuario;
 
 require "./vendor/autoload.php";
@@ -87,6 +88,8 @@ if(isset($_GET['campos_obrigatorios'])) {
 	
 					// Buscando um usuário no banco a partir do e-mail
 					$dados = $usuario->buscar();
+					$profissao = new Profissao;
+					$dadosProfissao = $profissao->listar();
 				
 				// Capturamos o email informado
 			
@@ -99,14 +102,18 @@ if(isset($_GET['campos_obrigatorios'])) {
 					// Verificação da senha e login
 					if(password_verify($_POST['senha'], $dados['senha']) ) {
 						$sessao = new ControleDeAcesso;
-						if($dados['profissao_id'] !== null){
-							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $dados['profissao_id']);
+						foreach($dadosProfissao as $profissoes){
+							if($profissoes['usuario_id'] === $dados['id']) {
+						
+							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $profissoes['usuario_id']);
                             header('location:./admin/dashboard_cliente.php?id=' . $_SESSION['id']);
 								///echo 'errou';
-						} else {
+						} else if ($profissoes['usuario_id'] !== $dados['id']){
 							$sessao->login($dados['id'], $dados['nome'], $dados['email'], $dados['perfil']);
 								header('location:./admin/dashboard_cliente.php');
                         }
+					}
+					
 					} else {
 						 header("location:login.php?dados_incorretos");
 					}

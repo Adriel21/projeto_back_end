@@ -12,8 +12,15 @@ $projeto = new Projeto;
 $projeto->setId($_GET['id']);
 $detalhesDoProjeto = $projeto->listarProjetoComDetalhes();
 $redes = new Rede;
-$redes->setUsuarioId($detalhesDoProjeto['usuario_id']);
-$rede = $redes->listarUm();
+$todasRedes = $redes->listarRedes();
+foreach($todasRedes as $todas){
+    if($todas['usuario_id'] === $detalhesDoProjeto['usuario_id']){
+        $redes->setUsuarioId($detalhesDoProjeto['usuario_id']);
+
+    $rede = $redes->listarUm();
+    }
+}
+
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 ?>
@@ -80,8 +87,8 @@ $listaDeCategorias = $categoria->listar();
                         <h3 class="mb-1 pb-4"><?=$detalhesDoProjeto['titulo']?></h3>
                         <small><?=Utilitarios::formataData($detalhesDoProjeto['data'])?></small>
                         </div>
-                        <p class="mb-3"><strong>Resumo:</strong> <?=$detalhesDoProjeto['resumo']?></p>
-                        <p class="mb-3"><strong>Descrição:</strong> <?=$detalhesDoProjeto['descricao']?></p>
+                        <p class="mb-3 word"><strong>Resumo:</strong> <?=$detalhesDoProjeto['resumo']?></p>
+                        <p class="mb-3 word"><strong>Descrição:</strong> <?=$detalhesDoProjeto['descricao']?></p>
                         <small>Autor do Projeto: <?=$detalhesDoProjeto['nome']?></small>
                         <hr>
                 <div class="mt-3">

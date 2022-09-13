@@ -2,6 +2,7 @@
       // Vendor
 
 use Projeto\ControleDeAcesso;
+use Projeto\Profissao;
 use Projeto\Usuario;
 
       require_once '../vendor/autoload.php';
@@ -13,9 +14,15 @@ use Projeto\Usuario;
         $sessao->logout();
       }
 
-      $usuario = new Usuario;
-      $usuario->setId($_SESSION['id']);
-      $dadosFreela = $usuario->listarFreela();
+      $profissao = new Profissao;
+      $dadosProfissao = $profissao->listar();
+      if(isset($_SESSION['usuario_id'])){
+        $profissao->setUsuarioId($_SESSION['usuario_id']);
+        $listarFreela = $profissao->listarUm();
+      }
+
+      
+     
     
 ?>
 
@@ -57,15 +64,15 @@ use Projeto\Usuario;
           <a class="nav-link btn btn-primary text-white px-3 text-white" aria-current="page" href="../index.php">Home</a>
         </li>
         
-        <?php if($dadosFreela['profissao_id'] !== null) { ?>
+       <?php if(isset($_SESSION['usuario_id'])) { ?>
           <li class="active nav-item mx-1">
           <a class="nav-link btn btn-primary text-white px-3" href="dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
-        </li>
-       <?php } else { ?>
+        </li> 
+        <?php } else { ?>
         <li class="active nav-item mx-1">
           <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
         </li>
-        <?php } ?>
+        <?php }  ?>
         <li class="active nav-item mx-1">
           <a class="nav-link btn btn-primary text-white px-3" href="dashboard_cliente.php">Perfil Cliente</a>
         </li>

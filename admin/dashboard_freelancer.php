@@ -15,6 +15,9 @@ foreach ($listaDeRedes as $teste){
   } 
 }
 
+$profissao->setUsuarioId($_SESSION['usuario_id']);
+$listarFreela = $profissao->listarUm();
+
 
 ?>
 
@@ -144,8 +147,8 @@ foreach ($listaDeRedes as $teste){
               <div class="card mb-3 shadow">
                 <div class="card-body">
                     <div class="team-single-text padding-50px-left sm-no-padding-left">
-                        <h4 class="font-size38 sm-font-size32 xs-font-size30 titulo_freelancer"><?=$dadosFreela['titulo']?></h4>
-                        <p class="no-margin-bottom"><?=$dadosFreela['descricao']?></p>
+                        <h4 class="font-size38 sm-font-size32 xs-font-size30 titulo_freelancer"><?=$listarFreela['titulo']?></h4>
+                        <p class="no-margin-bottom"><?=$listarFreela['descricao']?></p>
                     </div>
                 </div>
               </div>

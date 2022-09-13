@@ -24,7 +24,7 @@ $sessao = new ControleDeAcesso;
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
 $profissao = new Profissao;
-$profissao->setId($_SESSION['profissao_id']);
+$profissao->setUsuarioId($_SESSION['usuario_id']);
 
 if(isset($_POST['atualizar'])) {
    
@@ -62,7 +62,7 @@ if(isset($_POST['atualizar'])) {
 					
 					<div class="form-group pb-3  mt-2">
 						<label for="titulo" class="pb-1">Titulo</label>
-						<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto" value="<?=$dadosFreela['titulo']?>" required>
+						<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo do projeto" value="<?=$listarFreela['titulo']?>" required>
 					</div>
 
                 <div class="mb-3">
@@ -71,7 +71,7 @@ if(isset($_POST['atualizar'])) {
                     <option value=""></option>
                    	<?php foreach($listaDeCategorias as $categorias) { ?>
 					<option 
-                    <?php if($dadosFreela['categoria'] === $categorias['id'] ) echo " selected " ?> 
+                    <?php if($listarFreela['categoria_id'] === $categorias['id'] ) echo " selected " ?> 
                     value="<?=$categorias['id']?>"> 
 						<?=$categorias['nome']?> 
 					</option>
@@ -81,7 +81,7 @@ if(isset($_POST['atualizar'])) {
 
                     <div class="form-group mt-2 mb-4">
 					<label for="descricao" class="pb-1">Descrição</label>
-						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descrição do projeto" minlength="250"><?=$dadosFreela['descricao']?>
+						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descrição do projeto" minlength="250"><?=$listarFreela['descricao']?>
 						</textarea>
 					</div>
 

@@ -3,19 +3,20 @@
 use Projeto\Categoria;
 use Projeto\Profissao;
 use Projeto\Usuario;
+use Projeto\Utilitarios;
 
 
 require_once 'inc/header.php';
-$usuario = new Usuario;
-$validaFreela = $usuario->listarTodosFreela();
+// $usuario = new Usuario;
+// $validaFreela = $usuario->listarTodosFreela();
 $profissao = new Profissao;
 
 
 if(!isset($_GET['id'])) {
-    $listaDeFreelancers = $usuario->listarTodosFreela();
+    $listaDeFreelancers = $profissao->listarTodos();
 } else if (isset($_GET['id'])){
-    $usuario->profissao->setCategoriaId($_GET['id']);
-    $listaDeFreelancers = $usuario->listarPorCategoria();
+    $profissao->setCategoriaId($_GET['id']);
+    $listaDeFreelancers = $profissao->listarPorCategoria();
 } 
 
 
@@ -80,7 +81,7 @@ $listaDeCategorias = $categoria->listar();
                     <script>window.location.href = "freelancers.php";</script>
             <?php } else { ?>
             <?php foreach($listaDeFreelancers as $freelancers) { ?>
-            <?php if ($freelancers['profissao_id'] !== null) { ?>
+         
             <div class="col pt-4 card-vagas ms-sm-3 ms-1">
                 <div class="card w-100">
                     <div class="card-body coluna-vagas">
@@ -92,7 +93,7 @@ $listaDeCategorias = $categoria->listar();
                                 <div>
                                     <h3 class="mb-2"><?=$freelancers['titulo']?></h3>
                                     <h5 class="mb-3"><?=$freelancers['nome']?></h5>
-                                    <p class="d-none d-lg-inline"><strong>Resumo:</strong> <?=$freelancers['descricao']?></p>
+                                    <p class="d-none d-lg-inline"><strong>Resumo:</strong> <?=Utilitarios::limitaResumo($freelancers['descricao'])?></p>
                                 </div>
                                 
                             </div>
@@ -110,7 +111,9 @@ $listaDeCategorias = $categoria->listar();
             </div>
                 <?php } ?>
                 <?php } ?>
-                <?php } ?>
+
+
+            
             <!-- Fim conteúdo das vagas -->
 
             <!-- Páginação das vagas -->
@@ -129,5 +132,3 @@ $listaDeCategorias = $categoria->listar();
             </body>
             <script src="./js/bootstrap.bundle.js"></script>
             </html>
-           
-        

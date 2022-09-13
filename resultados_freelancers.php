@@ -10,8 +10,8 @@ $usuario = new Usuario;
 if(!isset($_GET['busca'])) {
     header('location:feed.php');
 }
-$usuario->setTermo($_GET['busca']);
-$resultados = $usuario->busca();
+$profissao->setTermo($_GET['busca']);
+$resultados = $profissao->busca();
 
 
 

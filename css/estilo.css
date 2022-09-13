@@ -120,6 +120,13 @@ picture img {
         color: ghostwhite;
     }
 
+    .word {
+        width: 100%;
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+    }
+
     /* @media screen and (min-width: 600px){
         .menu-lateral {
             background-color: #0421b5;;

@@ -7,7 +7,7 @@ require_once 'inc/header.php'
     <!-- Primeiro Blaco -->
     <section class="container row my-5 py-3 m-auto flex-column-reverse flex-lg-row">
             
-            <div class="col-xl-6 col-lg-6 col-md-12 my-auto">
+            <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
                 <h1 class="display-4 fw-bold pe-lg-8">Encontre projetos, amplie sua rede e gere renda extra.</h1>
                     <!-- text -->
                     <p class="mb-4 lead">

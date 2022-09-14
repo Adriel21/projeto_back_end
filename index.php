@@ -22,7 +22,7 @@ require_once 'inc/header.php'
     
           <!-- img -->
         <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-1">
-          <img class="img-responsive m-auto" src="img/img-pessoas-sinalizando.png" alt="" width="100%" height="100%">
+          <img class="img-responsive m-auto" src="img/img-compress/img-pessoas-sinalizando-800.png" alt="" width="100%" height="100%">
         </picture>
     </section>
     <!-- Primeiro finalizado -->
@@ -43,7 +43,7 @@ require_once 'inc/header.php'
             </div>
               <!-- img -->
             <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-1">
-              <img class="img-responsive m-auto" src="img/img-pessoas-olhando-celular.png" alt="" width="100%" height="100%">
+              <img class="img-responsive m-auto" src="img/img-compress/img-pessoas-olhando-celular-800.png" alt="" width="100%" height="100%">
             </picture>
         </section>
     </section>
@@ -143,7 +143,7 @@ require_once 'inc/header.php'
                 </div>
                 <!-- img -->
                 <picture class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-1">
-                    <img class="img-responsive m-auto" src="img/img-equipe-conversando.png" alt="" width="100%" height="100%">
+                    <img class="img-responsive m-auto" src="img/img-compress/img-equipe-conversando-tratada-800.png" alt="" width="100%" height="100%">
                 </picture>
             </div>
         </section>

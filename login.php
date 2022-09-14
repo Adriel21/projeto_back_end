@@ -31,7 +31,7 @@ if(isset($_GET['campos_obrigatorios'])) {
 			
                     <h2 class="text-start titulo_login">Juntos, podemos fazer mais!</h2>
                     <p class="text-start">Realize o login para uma melhor experiência.</p>
-					<img class="d-flex w-50 m-auto" src="img/img-mexendo-no-celular.png">
+					<img class="d-flex w-50 m-auto" src="img/img-compress/img-mexendo-no-celular-800.png">
 			</div>
 
 			<div class="col-12 col-lg-6 p-sm-3 p-4">

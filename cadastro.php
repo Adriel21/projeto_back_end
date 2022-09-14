@@ -73,7 +73,7 @@ if(isset($_POST['inserir'])) {
 			<div class="col-md-6 d-none d-lg-block pt-5">
                     <h4 class="text-start titulo_cadastro">Junte-se a nossa rede!</h4>
                     <p class="text-start">Realize o cadastro para uma melhor experiência</p>
-					<img class="d-flex w-75 m-auto" src="img/img-pessoas-fazendo-cadastro.png">
+					<img class="d-flex w-75 m-auto" src="img/img-compress/img-pessoas-fazendo-cadastro-800.png">
 			</div>
 
 			<div class="ccol-12 col-lg-6 p-sm-3 p-4">

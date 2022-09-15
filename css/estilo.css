@@ -11,12 +11,6 @@ a {
     text-decoration: none;
 }
 
-.bg-colors {
-    background-image: linear-gradient(to bottom, #0421b5, #6457cb, #9a8dde, #ccc5f0, #ffffff);
-
-    /* background-image: linear-gradient(to bottom, #0421b5, #5449c5, #7f72d5, #a69be3, #ccc5f0, #ddd8f5, #eeebfa, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff); */
-}
-
 /* configurações das imagens index */
 picture img {
     width: 100%;

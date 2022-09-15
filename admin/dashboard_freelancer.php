@@ -10,7 +10,7 @@ $rede = new Rede;
 $listaDeRedes = $rede->listarRedes();
 $rede->setUsuarioId($_SESSION['id']);
 foreach ($listaDeRedes as $teste){
-  if(($teste['usuario_id'] === $_SESSION['id'])){
+  if(($teste['usuario_id'] == $_SESSION['id'])){
       $redes = $rede->listarUm();
   } 
 }

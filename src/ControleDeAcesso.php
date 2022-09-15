@@ -1,6 +1,6 @@
 <?php
 namespace Projeto;
-use PDO, Exception;
+
 
 final class ControleDeAcesso {
    
@@ -25,7 +25,6 @@ final class ControleDeAcesso {
 
 
 public function login (int $id, string $nome, string $email, string $perfil): void {
-    session_start();
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['email'] = $email;
@@ -34,7 +33,6 @@ public function login (int $id, string $nome, string $email, string $perfil): vo
 }
 
 public function loginDois (int $id, string $nome, string $email, string $perfil, int $usuarioId): void {
-    session_start();
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['email'] = $email;
@@ -42,15 +40,7 @@ public function loginDois (int $id, string $nome, string $email, string $perfil,
     $_SESSION['usuario_id'] = $usuarioId;
 }
 
-public function loginTres (int $usuarioId, string $nome, string $email, string $perfil, int $categoriaId, string $titulo): void {
-    $_SESSION['usuario_id'] = $usuarioId;
-    $_SESSION['nome'] = $nome;
-    $_SESSION['perfil'] = $perfil;
-    $_SESSION['email'] = $email;
-    $_SESSION['categoria_id'] = $categoriaId;
-    $_SESSION['titulo'] = $titulo;
-  
-}
+
 
 
 public function confirmaExcluirUm(int $id, string $confirme, int $usuarioId){
@@ -81,11 +71,6 @@ public function logoutExterno():void {
     die(); // exit;
 }
 
-//public function logoutAtualiza():void {
- //   session_start();
- //   session_destroy();
-  //  header("location:./perfil_valida.php?id=" . $_SESSION['id']);
-  //  die(); // exit;
-//}
+
 
 }

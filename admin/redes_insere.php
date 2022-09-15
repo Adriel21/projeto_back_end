@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
@@ -136,4 +136,4 @@ if(isset($_POST['inserir'])) {
 	</div>
 
 <script src="../js/bootstrap.bundle.min.js"></script>					
-<?php ob_flush() ?>					
+				

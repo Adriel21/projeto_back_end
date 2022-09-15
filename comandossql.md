@@ -11,9 +11,7 @@ CREATE TABLE usuario(
     nome VARCHAR (45) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
-    telefone VARCHAR(20),
-    perfil varchar(45),
-    profissao_id INT NOT NULL
+    perfil varchar(45)
 );
 ```
 - Criando a tabela de Profissao
@@ -26,6 +24,15 @@ CREATE TABLE profissao(
     categoria_id TINYINT NOT NULL
 );
 ```
+
+- Criando a tabela Categoria
+```sql 
+CREATE TABLE categoria(
+    id TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL
+);
+```
+
 ## Relacionamento da tabela de Profissão e Usuario
 
 ---
@@ -44,13 +51,7 @@ FOREIGN KEY (categoria_id) REFERENCES categoria(id);
 ```
 
 ---
-- Criando a tabeka categoria
-```sql 
-CREATE TABLE categoria(
-    id TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL
-);
-```
+
 ---
 - Criando tabela Projeto
 ```sql 
@@ -58,12 +59,14 @@ CREATE TABLE projeto(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(45) NOT NULL,
     resumo VARCHAR(150) NOT NULL,
+    data DATE NOT NULL,
     descricao VARCHAR(1000) NULL,
     usuario_id INT NOT NULL,
     categoria_id TINYINT NOT NULL
 );
 ```
 
+## Relacionamento da tabela de Projeto e Usuario
 ```sql
 ALTER TABLE projeto
 ADD CONSTRAINT fk_projeto_usuario
@@ -71,6 +74,7 @@ FOREIGN KEY (usuario_id) REFERENCES usuario(id);
 
 ```
 
+## Relacionamento da tabela de Projeto e Categoria
 ```sql
 ALTER TABLE projeto
 ADD CONSTRAINT fk_projeto_categoria
@@ -90,9 +94,30 @@ CREATE TABLE rede(
     usuario_id INT NOT NULL
 );
 ```
+
+## Relacionamento da tabela de Rede e Usuario
 ```sql
 ALTER TABLE rede
 ADD CONSTRAINT fk_rede_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+
+```
+
+---
+- Criando tabela Aceite
+```sql
+CREATE TABLE aceite(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    confirmacao VARCHAR(15) NOT NULL,
+    periodo DATETIME NOT NULL,
+   	usuario_id int NOT NULL
+);
+```
+
+## Relacionamento da tabela de Aceite e Usuario
+```sql
+ALTER TABLE aceite
+ADD CONSTRAINT fk_aceite_usuario
 FOREIGN KEY (usuario_id) REFERENCES usuario(id);
 
 ```

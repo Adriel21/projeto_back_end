@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;

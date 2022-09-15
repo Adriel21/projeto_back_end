@@ -52,7 +52,7 @@ require_once 'inc/header.php'
     <!-- cards Projetos -->
     <section>
         <h2 class="display-4 fw-bold pe-lg-8 text-center pt-5">Você pode encontrar aqui!</h2>
-            <section class="container row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 m-auto mt-3 mb-5">
+            <section class="container row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 m-auto mt-3 pb-5">
                
                 <div class="col">
                     <div class="card h-100">

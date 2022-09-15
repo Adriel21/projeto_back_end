@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 
 use Projeto\Categoria;
 use Projeto\ControleDeAcesso;
@@ -22,7 +22,7 @@ foreach($listaDeProfissoes as $profissoes){
 	} else {
 	}}
 		if(isset($_SESSION['usuario_id'])){
-			header('location:dashboard_freelancer.php');
+			$sessao->logout();
 		} else { 
 		}
 		$categoria = new Categoria;

@@ -60,15 +60,15 @@ if(isset($_GET['campos_obrigatorios'])) {
                         </div> -->
                         </div>
 
-                        <div class="col">
+                        <div>
 							<!-- Simple link -->
-							<a href="recuperaSenha.php">Esqueceu a senha?</a>
+							<p class="text-start text-lg-end"><a href="recuperaSenha.php">Esqueceu a senha?</a></p>
                         </div>
                     </div>
 
           
                     <div class="d-grid gap-2 text-center">
-					    <button type="submit" class="botao_index btn mt-3" name="entrar">Entra</button>
+					    <button type="submit" class="botao_index btn mt-1" name="entrar">Entrar</button>
                         <a href="cadastro.php">Não possui cadastro? Cadastre-se</a>
                     </div>
 				</form>

@@ -7,6 +7,9 @@ use Projeto\ControleDeAcesso;
 use Projeto\Projeto;
 
 $sessao = new ControleDeAcesso;
+
+$sessao->verificaAcesso();
+
 $projeto = new Projeto;
 
 

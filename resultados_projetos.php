@@ -71,10 +71,20 @@ $listaDeCategorias = $categoria->listar();
 
             <?php if(empty($resultados)) { ?>
                 
-                <script>
-                alert("Nenhum resultado encontrado para essa busca"); 
-                window.location.href = "projetos.php";
-                </script>
+                <div class="col pt-4 card-vagas ms-md-3">
+                      <div class="card w-77">
+                          <div class="card-body coluna-vagas">
+                          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                              <h3 class="mb-1 pb-4 text-center text-lg-start word">Nenhum resultado encontrado para essa busca</h3>
+                              </div>
+                              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            
+                              
+                              </div>
+                          </a>
+                      </div>
+                      
             <?php } else { ?>
             <?php foreach($resultados as $resultado) { ?>
                 
@@ -83,12 +93,12 @@ $listaDeCategorias = $categoria->listar();
                     <div class="card-body coluna-vagas">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                             <div class="d-flex w-100 justify-content-between">
-                                <h3 class="mb-1 pb-4"><?=$resultado['titulo']?></h3>
+                                <h3 class="mb-1 pb-4 word"><?=$resultado['titulo']?></h3>
                                 <small><?=Utilitarios::formataData($resultado['data'])?></small>
                             </div>
                           
-                            <p class="mb-1"><?=$resultado['resumo']?></p>
-                            <small>Autor do Projeto: <?=$resultado['usuario']?></small>
+                            <p class="mb-1 word"><?=$resultado['resumo']?></p>
+                            <small class="word">Autor do Projeto: <?=$resultado['usuario']?></small>
                           
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                               <a href="projeto.php?id=<?=$resultado['id']?>"><button class="botao-feed btn   me-md-2" type="button">VISUALIZAR PROJETO</button></a>

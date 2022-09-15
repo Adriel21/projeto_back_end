@@ -1,0 +1,430 @@
+[12-Sep-2022 23:48:37 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:48:53 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:50:37 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:50:38 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:51:24 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:51:30 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:51:33 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[12-Sep-2022 23:51:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Undefined constant "ob_start" in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:2
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 2
+[13-Sep-2022 00:30:12 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(15): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:30:15 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:30:19 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:30:22 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:30:25 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(15): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:30:28 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:30:58 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(15): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:31:01 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:31:13 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(15): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:31:14 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 00:31:18 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Usuario::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:54
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(34): Projeto\Usuario->listarUm()
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 54
+[13-Sep-2022 09:00:42 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 09:00:42 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 09:59:25 America/Fortaleza] PHP Warning:  Undefined array key "profissao_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/perfil_valida.php on line 21
+[13-Sep-2022 10:50:01 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 10:50:01 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 10:53:27 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 10:53:27 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 10:53:32 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 10:53:32 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 10:53:37 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 10:53:37 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 11:49:33 America/Fortaleza] PHP Warning:  Undefined array key "usuario_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_freelancer.php on line 18
+[13-Sep-2022 11:49:33 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Profissao::$usuarioId of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php:256
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_freelancer.php(18): Projeto\Profissao->setUsuarioId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php on line 256
+[13-Sep-2022 11:49:51 America/Fortaleza] PHP Warning:  Undefined array key "usuario_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_freelancer.php on line 18
+[13-Sep-2022 11:49:51 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Profissao::$usuarioId of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php:256
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_freelancer.php(18): Projeto\Profissao->setUsuarioId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php on line 256
+[13-Sep-2022 11:52:18 America/Fortaleza] PHP Warning:  Undefined array key "usuario_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_freelancer.php on line 18
+[13-Sep-2022 11:52:18 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Profissao::$usuarioId of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php:256
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_freelancer.php(18): Projeto\Profissao->setUsuarioId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php on line 256
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:20 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:23 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:25 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:26 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:27 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:52:56 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:13 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:20 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:29 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:32 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Undefined variable $dadosDois in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Undefined variable $dados in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21
+[13-Sep-2022 11:53:34 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::loginDois(): Argument #1 ($id) must be of type int, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 21 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:36
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(21): Projeto\ControleDeAcesso->loginDois(NULL, NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 36
+[13-Sep-2022 11:54:32 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 11:54:32 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 11:55:00 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php on line 14
+[13-Sep-2022 11:55:00 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Cannot assign string to property Projeto\Usuario::$id of type int in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php:304
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freelancer_insere.php(14): Projeto\Usuario->setId(NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Usuario.php on line 304
+[13-Sep-2022 16:43:08 America/Fortaleza] PHP Warning:  Undefined array key "profissao_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/perfil_valida.php on line 21
+[13-Sep-2022 16:44:16 America/Fortaleza] PHP Warning:  Undefined array key "profissao_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/perfil_valida.php on line 21
+[13-Sep-2022 16:44:31 America/Fortaleza] PHP Warning:  Undefined array key "profissao_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/perfil_valida.php on line 21
+[13-Sep-2022 16:47:55 America/Fortaleza] PHP Warning:  Undefined array key "profissao_id" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/perfil_valida.php on line 21
+[13-Sep-2022 17:15:51 America/Fortaleza] PHP Parse error:  Unclosed '{' on line 19 in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 119
+[13-Sep-2022 17:15:57 America/Fortaleza] PHP Parse error:  Unclosed '{' on line 19 in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 119
+[13-Sep-2022 17:15:59 America/Fortaleza] PHP Parse error:  Unclosed '{' on line 19 in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 119
+[13-Sep-2022 20:30:36 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\Profissao::listarUm(): Return value must be of type array, bool returned in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php:77
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php(21): Projeto\Profissao->listarUm()
+#1 /home1/suniow89/colajobnew.sunioweb.com.br/admin/dashboard_cliente.php(4): require_once('/home1/suniow89...')
+#2 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/Profissao.php on line 77
+[13-Sep-2022 20:44:12 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php:28) in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 52
+[13-Sep-2022 21:00:02 America/Fortaleza] PHP Warning:  Undefined array key "nome" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:02 America/Fortaleza] PHP Warning:  Undefined array key "email" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:02 America/Fortaleza] PHP Warning:  Undefined array key "perfil" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:02 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::login(): Argument #2 ($nome) must be of type string, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:27
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php(28): Projeto\ControleDeAcesso->login(1, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 27
+[13-Sep-2022 21:00:06 America/Fortaleza] PHP Warning:  Undefined array key "nome" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:06 America/Fortaleza] PHP Warning:  Undefined array key "email" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:06 America/Fortaleza] PHP Warning:  Undefined array key "perfil" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:06 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::login(): Argument #2 ($nome) must be of type string, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:27
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php(28): Projeto\ControleDeAcesso->login(1, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 27
+[13-Sep-2022 21:00:07 America/Fortaleza] PHP Warning:  Undefined array key "nome" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:07 America/Fortaleza] PHP Warning:  Undefined array key "email" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:07 America/Fortaleza] PHP Warning:  Undefined array key "perfil" in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28
+[13-Sep-2022 21:00:07 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Projeto\ControleDeAcesso::login(): Argument #2 ($nome) must be of type string, null given, called in /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php on line 28 and defined in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php:27
+Stack trace:
+#0 /home1/suniow89/colajobnew.sunioweb.com.br/admin/freela_valida.php(28): Projeto\ControleDeAcesso->login(1, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home1/suniow89/colajobnew.sunioweb.com.br/src/ControleDeAcesso.php on line 27
+[13-Sep-2022 23:11:36 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[13-Sep-2022 23:11:49 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[13-Sep-2022 23:28:01 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[13-Sep-2022 23:28:22 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[13-Sep-2022 23:29:02 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[13-Sep-2022 23:32:45 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 00:15:01 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 00:15:12 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 00:15:43 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 40
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 46
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 52
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 58
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 64
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 70
+[14-Sep-2022 00:46:33 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 76
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 40
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 46
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 52
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 58
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 64
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 70
+[14-Sep-2022 00:46:37 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 76
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 40
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 46
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 52
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 58
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 64
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 70
+[14-Sep-2022 00:46:40 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 76
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 40
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 46
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 52
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 58
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 64
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 70
+[14-Sep-2022 00:46:43 America/Fortaleza] PHP Warning:  Undefined variable $pagina in /home1/suniow89/colajobnew.sunioweb.com.br/inc/headerInterno.php on line 76
+[14-Sep-2022 01:36:54 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 01:39:43 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 01:48:48 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23
+[14-Sep-2022 09:27:21 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home1/suniow89/colajobnew.sunioweb.com.br/admin/cadastro_atualiza.php on line 23

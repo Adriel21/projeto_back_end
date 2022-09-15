@@ -1,11 +1,12 @@
 <?php 
-      // Vendor
+
 
 use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
 use Projeto\Usuario;
 
       require_once '../vendor/autoload.php';
+      $pagina = basename($_SERVER['PHP_SELF']);
       $sessao = new ControleDeAcesso;
 
       $sessao->verificaAcesso();
@@ -32,11 +33,86 @@ use Projeto\Usuario;
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colajob</title>
+
+
+
+<?php 
+    switch($pagina){
+      case 'dashboard_cliente.php':
+     ?>
+    <title>Dashboard Cliente</title>
+    <?php 
+    break;
+
+     case 'dashboard_freelancer.php':
+    ?>
+    <title>Dashboard Freelancer</title>
+    <?php 
+    break;
+    
+    case 'cadastro_atualiza.php':
+    ?>
+    <title>Atualizar Cadastro</title>
+    <?php 
+    break;
+    
+    case 'projeto_insere.php':
+    ?>
+     <title>Cadastrar Projeto</title>
+    <?php 
+    break;
+    
+    case 'detalhes_do_projeto.php':
+    ?>
+    <title>Atualizar Projeto</title>
+    <?php 
+    break;
+    
+    case 'freelancer_insere.php':
+    ?>
+    <title>Cadastrar Perfil Freelancer</title>
+    <?php 
+    break;
+    
+    case 'freelancer_atualiza.php':
+     ?>
+    <title>Atualizar Perfil Freelancer</title>
+     <?php 
+    break;
+    
+    case 'redes_insere.php':
+    ?>
+    <title>Inserir Redes</title>
+     <?php 
+    break;
+    
+    case 'redes_atualiza.php':
+    ?>
+    <title>Atualizar Redes</title>
+     <?php 
+    break;
+    }
+    ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
  
 
 <link rel="stylesheet" href="../css/header.css"> 
@@ -61,24 +137,24 @@ use Projeto\Usuario;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="active nav-item mx-1">
-          <a class="nav-link btn btn-primary text-white px-3 text-white" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" aria-current="page" href="../index.php">Home</a>
         </li>
         
        <?php if(isset($_SESSION['usuario_id'])) { ?>
           <li class="active nav-item mx-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" href="dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
         </li> 
         <?php } else { ?>
         <li class="active nav-item mx-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" href="freelancer_insere.php">Cadastrar Perfil Freelancer</a>
         </li>
         <?php }  ?>
         <li class="active nav-item mx-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="dashboard_cliente.php">Perfil Cliente</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" href="dashboard_cliente.php">Perfil Cliente</a>
         </li>
 
         <li class="active nav-item mx-1 dropdown">
-          <a class="nav-link btn btn-primary text-white px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link btn text-uppercase fw-semibold px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Online
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

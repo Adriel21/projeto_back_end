@@ -80,16 +80,16 @@ $listaDeCategorias = $categoria->listar();
 
 
                 
-            <div class="col pt-4 card-vagas ms-3">
+            <div class="col pt-4 card-vagas ms-lg-3">
                 <div class="card w-100">
                     <div class="card-body coluna-vagas">
                         <div class="d-flex w-100 justify-content-between">
-                        <h3 class="mb-1 pb-4"><?=$detalhesDoProjeto['titulo']?></h3>
+                        <h3 class="mb-1 pb-4 word"><?=$detalhesDoProjeto['titulo']?></h3>
                         <small><?=Utilitarios::formataData($detalhesDoProjeto['data'])?></small>
                         </div>
                         <p class="mb-3 word"><strong>Resumo:</strong> <?=$detalhesDoProjeto['resumo']?></p>
                         <p class="mb-3 word"><strong>Descrição:</strong> <?=$detalhesDoProjeto['descricao']?></p>
-                        <small>Autor do Projeto: <?=$detalhesDoProjeto['nome']?></small>
+                        <small class="word">Autor do Projeto: <?=$detalhesDoProjeto['nome']?></small>
                         <hr>
                 <div class="mt-3">
                 <ul class=" list-group-flush ps-0">
@@ -117,7 +117,7 @@ $listaDeCategorias = $categoria->listar();
                   </li>
                   <hr>
                   <li class="list-group-item ps-0">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary">
                       <?php if($rede['instagram'] == "") { ?>   
                          <p class="text-lg-start">https://www.instagram.com/exemplo/</p>
@@ -130,7 +130,7 @@ $listaDeCategorias = $categoria->listar();
                  
                   <?php } else { ?>
                 <li class="list-group-item ps-0">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
                     <span class="text-secondary">
                         <p class="text-lg-start">https://www.exemplo.com.br</p>
                     </span>

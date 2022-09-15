@@ -86,12 +86,12 @@ $listaDeCategorias = $categoria->listar();
 
 
                 
-            <div class="col pt-4 card-vagas ms-3">
+            <div class="col pt-4 card-vagas ms-lg-3">
                 <div class="card w-100">
                     <div class="card-body coluna-vagas">
                     <div class="d-flex w-100 gap-3">
                                 
-                                <img class="perfil_freela_feed" src="fotos_de_perfil/<?=$detalhesDoFreelancer['perfil']?>" alt="" width="100" height="100">
+                                <img class="perfil_freela_feed" src="fotos_de_perfil/<?=$detalhesDoFreelancer['perfil']?>" alt="">
                                 
                                 <div>
                                     <h3 class="mb-2"><?=$detalhesDoFreelancer['titulo']?></h3>
@@ -127,7 +127,7 @@ $listaDeCategorias = $categoria->listar();
                   </li>
                   <hr>
                   <li class="list-group-item ps-0">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary">
                       <?php if($rede['instagram'] == "") { ?>   
                          <p class="text-lg-start">https://www.instagram.com/exemplo/</p>
@@ -139,7 +139,7 @@ $listaDeCategorias = $categoria->listar();
                   </li>
                   <hr>
                   <li class="list-group-item ps-0">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
                     <span class="text-secondary">
                       <?php if($rede['github'] == "") { ?>   
                          <p class="text-lg-start">https://github.com/exemplo</p>
@@ -151,12 +151,12 @@ $listaDeCategorias = $categoria->listar();
                   </li>
                  <hr>
                  <li class="list-group-item ps-0">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
                     <span class="text-secondary">
                       <?php if($rede['instagram'] == "") { ?>   
-                         <p class="text-lg-start">https://www.instagram.com/exemplo/</p>
+                         <p class="text-lg-start">https://www.behance.net/exemplo</p>
                         <?php } else  { ?>
-                        <p class="text-lg-start"><a href="<?=$rede['instagram']?>" target="_blank"><?=$rede['instagram']?></a></p>
+                        <p class="text-lg-start"><a href="<?=$rede['behance']?>" target="_blank"><?=$rede['behance']?></a></p>
                             
                     </span>
                         <?php } ?>
@@ -165,7 +165,7 @@ $listaDeCategorias = $categoria->listar();
                  
                   <?php } else { ?>
                 <li class="list-group-item ps-0">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
                     <span class="text-secondary">
                         <p class="text-lg-start">https://www.exemplo.com.br</p>
                     </span>
@@ -182,6 +182,17 @@ $listaDeCategorias = $categoria->listar();
                     <h6 class="text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary">
                          <p class="text-lg-start">https://www.instagram.com/exemplo/</p></span>
+                  </li>
+                   <li class="list-group-item ps-0">
+                    <h6 class="text-lg-start"><i class="bi bi-github fs-4"></i> Instagram</h6>
+                    <span class="text-secondary">
+                         <p class="text-lg-start">https://github.com/exemplo</p></span>
+                  </li>
+                  <hr>
+                   <li class="list-group-item ps-0">
+                    <h6 class="text-lg-start"><i class="bi bi-behance fs-4"></i> Instagram</h6>
+                    <span class="text-secondary">
+                         <p class="text-lg-start">https://www.behance.net/exemplo</p></span>
                   </li>
                   <?php } ?>
                 </div>

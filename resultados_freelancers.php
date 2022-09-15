@@ -2,6 +2,7 @@
 
 use Projeto\Categoria;
 use Projeto\Usuario;
+use Projeto\Utilitarios;
 
 require_once 'inc/header.php';
 $usuario = new Usuario;
@@ -72,29 +73,38 @@ $listaDeCategorias = $categoria->listar();
 
             <?php if(empty($resultados)) { ?>
 
-                <script>
-                alert("Nenhum resultado encontrado para essa busca"); 
-                window.location.href = "freelancers.php";
-                </script>
-
+                     
+                      <div class="col pt-4 card-vagas ms-md-3">
+                      <div class="card w-77">
+                          <div class="card-body coluna-vagas">
+                          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                              <h3 class="mb-1 pb-4 text-center text-lg-start word">Nenhum resultado encontrado para essa busca</h3>
+                              </div>
+                              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            
+                              
+                              </div>
+                          </a>
+                      </div>
             <?php } else { ?>
             <?php foreach($resultados as $resultado) { ?>
                 
-            <div class="col pt-4 card-vagas ms-3">
+            <div class="col pt-4 card-vagas ms-lg-3 ms-1">
                 <div class="card w-77">
                     <div class="card-body coluna-vagas">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                             
                             <div class="d-flex w-100 gap-3">
-                                <img class="perfil_freela_feed" src="fotos_de_perfil/<?=$resultado['perfil']?>" alt="" width="100" height="100">
+                                <img class="perfil_freela_feed" src="fotos_de_perfil/<?=$resultado['perfil']?>" alt="">
                                 <div>
-                                    <h3 class="mb-2"><?=$resultado['titulo']?></h3>
-                                    <h5 class="mb-3"><?=$resultado['nome']?></h5>
-                                    <p class="d-none d-lg-inline"><strong>Resumo:</strong> <?=$resultado['descricao']?></p>
+                                    <h3 class="mb-2 word"><?=$resultado['titulo']?></h3>
+                                    <h5 class="mb-3 word"><?=$resultado['nome']?></h5>
+                                    <p class="d-none d-lg-inline word"><strong>Resumo:</strong> <?=Utilitarios::limitaResumo($resultado['descricao'])?></p>
                                 </div>
                             </div>
                             <div class="mt-4 mb-2">
-                                <p class="d-inline d-lg-none mt-3"><strong>Resumo:</strong> <?=$resultado['descricao']?></p>
+                                <p class="d-inline d-lg-none word mt-3"><strong>Resumo:</strong> <?=Utilitarios::limitaResumo($resultado['descricao'])?></p>
                             </div>
 
                             

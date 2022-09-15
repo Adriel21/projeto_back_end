@@ -23,34 +23,28 @@ $listaDeCategorias = $categoria->listar();
 
 
 <div class="container-fluid overflow-hidden">
-    <div class=" row ">
-        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex" style="background-color: #0421b5;">
+    <div class="row">
+        <div class="col-12 col-sm-3 col-xl-2 px-0 d-flex me-2 me-lg-0" style="background-color: #0421b5;">
             <div class="menu-lateral d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-dark">
-                <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
+                    <span class="d-none ps-1 d-sm-inline text-white pb-sm-3 mb-md-0 me-md-auto  ">Bem-Vindo!</span>
+            
                 <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
                    
-                        <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                            <a href="freelancers.php" class="fs-6 bi-people"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a>
-                        </li>
-
+                    <li>
+                         <li data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
+                            <a href="freelancers.php" class="fs-6 bi-people"><span class="ms-1 d-sm-inline text-light">Freelancers</span></a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle nav-link px-sm-0 px-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-filter-square"></i>
                                 <span class="ms-1 d-sm-inline text-light fs-6 ">Categorias</span>
                                 </a>
-                            </li>
-
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            
-                                <li>
-                                    <a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a>
-                                </li>
-
-                                    <?php foreach($listaDeCategorias as $categorias) { ?>  
-                                    <li>
-                                        <a class="dropdown-item text-black" href="projetos.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a>
-                                    </li>
-                                    <?php } ?>
-                            </ul> 
+                            <li><a class="dropdown-item text-black" href="projetos.php">Todas as categorias</a></li>
+                                  <?php foreach($listaDeCategorias as $categorias) { ?>  
+                                 <li><a class="dropdown-item text-black" href="projetos.php?id=<?=$categorias['id']?>"><?=$categorias['nome']?></a></li>
+                                 <?php } ?>
+                             </ul> 
+                           
+                    </li>
                     <!-- <li class="mt-5 d-none d-lg-block">
                         <p><img src="img/img-pessoas-fazendo-cadastro.png" alt="" width="200"></p>
                     </li> -->
@@ -78,16 +72,22 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Início conteúdo das vagas -->
 
-        <?php if(!isset($listaDeProjetos[0] ['categoria_id']) && !empty($listaDeProjetos)) { ?>
-                
-                <script>alert("No momento, não existem projetos desta categoria");</script> 
-                <script>window.location.href = "projetos.php";</script>
-                
-            
-        <?php } else if (empty($listaDeProjetos)) { ?>
-                <script>alert("No momento, não há nenhum projeto cadastrado");</script> 
-                <script>window.location.href = "index.php";</script>
-        <?php } else { ?>
+       <?php if(!isset($listaDeProjetos[0] ['categoria'])) { ?>
+
+                      <div class="col pt-4 card-vagas ms-md-3">
+                      <div class="card w-77">
+                          <div class="card-body coluna-vagas">
+                          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                              <h3 class="mb-1 pb-4 text-center text-lg-start word">No momento, não existem Projetos dessa categoria</h3>
+                              </div>
+                              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            
+                              
+                              </div>
+                          </a>
+                      </div>
+            <?php } else { ?>
         <?php foreach($listaDeProjetos as $projetos) { ?>
                 
             <div class="col pt-4 card-vagas ms-sm-3 ms-1">
@@ -96,7 +96,7 @@ $listaDeCategorias = $categoria->listar();
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                             
                             <div class="d-flex w-100 justify-content-between">
-                                <h3 class="mb-1 pb-4"><?=$projetos['titulo']?></h3>
+                                <h3 class="mb-1 pb-4 word"><?=$projetos['titulo']?></h3>
                                 <small><?=Utilitarios::formataData($projetos['data'])?></small>
                             </div>
 
@@ -132,8 +132,5 @@ $listaDeCategorias = $categoria->listar();
             </body>
             <script src="./js/bootstrap.bundle.js"></script>
             </html>
-
-
-            
            
         

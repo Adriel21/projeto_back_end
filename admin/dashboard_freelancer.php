@@ -33,7 +33,7 @@ $listarFreela = $profissao->listarUm();
               <div class="card ">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center flex-lg-row text-lg-start justify-content-start gap-lg-2">
-                    <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="rounded-circle" width="100">
+                    <img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" alt="Admin" class="perfil_freela_feed" width="100" height="100">
                     <div class="mt-2 mt-lg-3">
                       <h4 class="nome"><?=Utilitarios::limitaNome($_SESSION['nome'])?></h4>
                       <button button class="rounded-3 botao_perfil py-1 px-5 my-1 border-none fs-6" type="button">
@@ -49,90 +49,90 @@ $listarFreela = $profissao->listarUm();
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item ">
                     <?php if(isset($redes)) { ?>
-                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4"></i> Website</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-browser-chrome fs-4"></i> Website</h6>
                     <span class="text-secondary">
                         <?php if($redes['website'] == "") { ?>   
-                         <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
+                         <p class="text-lg-start">https://www.exemplo.com.br</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['website']?>" class="text-center text-lg-start" target="_blank"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
+                        <p class="text-lg-start"><a href="<?=$redes['website']?>" class="text-lg-start" target="_blank"><?=Utilitarios::limitaCaractere($redes['website'])?></a></p>
                     </span>
                         <?php } ?>
                   </li>
                   <li class="list-group-item">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkdin</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkdin</h6>
                     <span class="text-secondary">
                     <?php if($redes['linkedin'] == "") { ?>   
-                         <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
+                         <p class="text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start" target="_blank"><?=$redes['linkedin']?></a></p>
+                        <p class="text-lg-start"><a href="<?=$redes['linkedin']?>" class="text-center text-lg-start" target="_blank"><?=$redes['linkedin']?></a></p>
                     </span>
                         <?php } ?>
                   </li>
                   <li class="list-group-item">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary">
                       <?php if($redes['instagram'] == "") { ?>   
-                         <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p>
+                         <p class="text-lg-start">https://www.instagram.com/exemplo/</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['instagram']?>" target="_blank"><?=$redes['instagram']?></a></p>
+                        <p class="text-lg-start"><a href="<?=$redes['instagram']?>" target="_blank"><?=$redes['instagram']?></a></p>
                             
                     </span>
                         <?php } ?>
                     </li>
 
                   <li class="list-group-item">
-                      <h6 class="text-center text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
+                      <h6 class="text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
                     <span class="text-secondary">
                         <?php if($redes['github'] == "") { ?>   
-                         <p class="text-center text-lg-start">https://github.com/exemplo</p>
+                         <p class="text-lg-start">https://github.com/exemplo</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['github']?>" target="_blank"><?=$redes['github']?></a></p>
+                        <p class="text-lg-start"><a href="<?=$redes['github']?>" target="_blank"><?=$redes['github']?></a></p>
                             
                     </span>
                         <?php } ?>
                   </li>
 
                   <li class="list-group-item">
-                      <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
+                      <h6 class="text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
                     <span class="text-secondary">
                         <?php if($redes['behance'] == "") { ?>   
-                         <p class="text-center text-lg-start">https://www.behance.net/exemplo</p>
+                         <p class="text-lg-start">https://www.behance.net/exemplo</p>
                         <?php } else  { ?>
-                        <p class="text-center text-lg-start"><a href="<?=$redes['behance']?>" target="_blank"><?=$redes['behance']?></a></p>
+                        <p class="text-lg-start"><a href="<?=$redes['behance']?>" target="_blank"><?=$redes['behance']?></a></p>
                             
                     </span>
                         <?php } ?>
                   </li>
       
                   <?php } else { ?>
-                    <h6 class="text-center text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-browser-chrome fs-4 "></i> Website</h6>
                     <span class="text-secondary">
-                        <p class="text-center text-lg-start">https://www.exemplo.com.br</p>
+                        <p class="text-lg-start">https://www.exemplo.com.br</p>
                     </span>
                   </li>
                   <li class="list-group-item">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkedin</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-linkedin fs-4"></i> linkedin</h6>
                     <span class="text-secondary">
-                        <p class="text-center text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
+                        <p class="text-lg-start">https://www.linkedin.com/in/exemplo-bba342852</p>
                     </span>
                   </li>
                   <li class="list-group-item">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-instagram fs-4"></i> Instagram</h6>
                     <span class="text-secondary">
-                         <p class="text-center text-lg-start">https://www.instagram.com/exemplo/</p></span>
+                         <p class="text-lg-start">https://www.instagram.com/exemplo/</p></span>
                   </li>
                   <li class="list-group-item">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-github fs-4"></i> Github</h6>
                     <span class="text-secondary">
-                         <p class="text-center text-lg-start">https://github.com/exemplo</p></span>
+                         <p class="text-lg-start">https://github.com/exemplo</p></span>
                   </li>
                   <li class="list-group-item">
-                    <h6 class="text-center text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
+                    <h6 class="text-lg-start"><i class="bi bi-behance fs-4"></i> Behance</h6>
                     <span class="text-secondary">
-                         <p class="text-center text-lg-start">https://www.behance.net/exemplo</p></span>
+                         <p class="text-lg-start">https://www.behance.net/exemplo</p></span>
                   </li>
                   <?php } ?>
-                  <li class="list-group-item text-center text-lg-end">
+                  <li class="list-group-item text-start text-lg-end">
                   <?php if(isset($redes)) { ?>
                     <span class="text-secondary"><a href="redes_atualiza.php?perfil=freelancer">Editar redes</a></span>
                     <?php } else { ?>

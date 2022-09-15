@@ -8,7 +8,7 @@ abstract class Utilitarios {
     }
 
     public static function limitaResumo($dados) {
-        return mb_strimwidth($dados, 0, 90, " ...");
+        return mb_strimwidth($dados, 0, 130, " ...");
     }
 
     public static function formataData(string $data):string {

@@ -242,7 +242,7 @@ public function busca():array {
         ];
 
         if(!in_array($arquivo['type'], $tiposAceitos)) {
-            die("<script>alert('formato válido');</script>");
+            die("<script>alert('formato inválido');</script>");
         }
             $nome = $arquivo['name'];
 
@@ -264,13 +264,13 @@ public function busca():array {
         ];
 
         if(!in_array($arquivo['type'], $tiposAceitos)) {
-            die("<script>alert('formato válido');</script>");
+            die("<script>alert('formato inválido');</script>");
         }
             $nome = $arquivo['name'];
 
             $temporario = $arquivo['tmp_name'];
 
-            $destino = "./fotos_de_perfil/".$nome;
+            $destino = "../fotos_de_perfil/".$nome;
 
             move_uploaded_file($temporario, $destino);
         }

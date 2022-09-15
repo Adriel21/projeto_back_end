@@ -1,18 +1,10 @@
 <?php
+ob_start();
 use Projeto\Usuario;
 use Projeto\Utilitarios;
 
-require_once './vendor/autoload.php';
-// if( isset($_POST['inserir']) ){
-// 	$usuario = new Usuario;
-// 	$usuario->setNome($_POST['nome']);
-// 	$usuario->setEmail($_POST['email']);
-// 	$usuario->setTipo($_POST['tipo']);
-// 	$usuario->setSenha(  $usuario->codificaSenha($_POST['senha'])  );
-// 	// echo $usuario->getSenha();
-
-// 	$usuario->inserir();
-// 	header("location:usuarios.php");
+require_once 'vendor/autoload.php';
+("location:usuarios.php");
 // }
 if(isset($_POST['inserir'])) {
     $usuario = new Usuario;
@@ -73,7 +65,7 @@ if(isset($_POST['inserir'])) {
 			<div class="col-md-6 d-none d-lg-block pt-5">
                     <h4 class="text-start titulo_cadastro">Junte-se a nossa rede!</h4>
                     <p class="text-start">Realize o cadastro para uma melhor experiência</p>
-					<img class="d-flex w-75 m-auto" src="img/img-compress/img-pessoas-fazendo-cadastro-800.png">
+				    <img class="d-flex w-75 m-auto" src="img/img-compress/img-pessoas-fazendo-cadastro-800.png">
 			</div>
 
 			<div class="ccol-12 col-lg-6 p-sm-3 p-4">

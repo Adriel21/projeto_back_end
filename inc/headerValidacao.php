@@ -9,6 +9,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <?php 
     switch($pagina){
       case 'login.php':
@@ -54,9 +55,6 @@ $pagina = basename($_SERVER['PHP_SELF']);
   <div class="container limitador">
   <h1 class="ms-n1"><a class="navbar-brand logo" href="index.php"><img src="./img/tecnologia.png" width="40"> Colajob</a></h1>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   </div>
 </nav>
 

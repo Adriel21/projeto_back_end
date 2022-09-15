@@ -126,6 +126,8 @@ picture img {
         word-wrap: break-word; 
         word-break: break-word;
     }
+    
+
 
     /* @media screen and (min-width: 600px){
         .menu-lateral {
@@ -145,11 +147,6 @@ picture img {
              width: 18%;
 
         }    
-
-        .backlateral{
-            background-color: #0421b5;
-            height: 100vh; 
-        }
 
         
     }
@@ -175,7 +172,11 @@ picture img {
     }
 
     .perfil_freela_feed{
-        border-radius: 300px;
+        min-height:100px;
+        min-width:105px;
+        max-height:100px;
+        max-width:105px;
+        border-radius: 20px;
     }
 
     /* Fim das configurações gerais da página feed.php */

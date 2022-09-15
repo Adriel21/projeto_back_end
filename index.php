@@ -7,7 +7,7 @@ require_once 'inc/header.php'
     <!-- Primeiro Blaco -->
     <section class="container row my-5 py-3 m-auto flex-column-reverse flex-lg-row">
             
-            <div class="col-xl-6 col-lg-6 col-md-12 m-auto">
+            <div class="col-xl-6 col-lg-6 col-md-12 my-auto">
                 <h1 class="display-4 fw-bold pe-lg-8">Encontre projetos, amplie sua rede e gere renda extra.</h1>
                     <!-- text -->
                     <p class="mb-4 lead">
@@ -50,42 +50,36 @@ require_once 'inc/header.php'
     <!-- Final  Segundo bloco -->
 
     <!-- cards Projetos -->
-    <section class="bg-colors">
-        <h2 class="display-4 fw-bold pe-lg-8 text-center text-white pt-5">Você pode encontrar aqui!</h2>
-            <section class="container row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 m-auto mt-3 pb-5">
-               
+
+    <section class="mt-5">
+        <h2 class="display-4 fw-bold pe-lg-8 text-center">Você pode encontrar aqui!</h2>
+            <section class="container row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-auto mt-3 mb-5">
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body h-100">
                             <h5 class="card-title fw-semibold">Desenvolvedores</h5>
                             <img class="card-img-top mb-3" src="img/cards_index/desenvolvedores.jpg" alt="">
                             <p class="card-text">Aqui, você pode encontrar a ajuda necessária para desenvolver seu site ou aplicativo.</p>
-                            
-                                <a href="freelancers.php?id=1">
-                                    <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
-                                </a>
+                            <a href="freelancers.php?id=1"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body h-100">
                             <h5 class="card-title fw-semibold">Designers</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/designers.jpg" alt="">
                             <p class="card-text">Encontre designers incriveis para construirem a identidade que você deseja.</p>
-    
-                            <a href="freelancers.php?id=2">
-                                <button class="botao_index btn me-md-2" type="button">Ver Freelancers</button>
-                            </a>
-                            </div>
+                            <a href="freelancers.php?id=2"><button class="botao_index btn me-md-2" type="button">Ver Freelancers</button></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body h-100">
                             <h5 class="card-title fw-semibold">Redatores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/redatores.jpg" alt="">
                             <p class="card-text">Precisando de alguém que elabore conteúdo para você? Que tal buscar um redator?</p>
@@ -96,7 +90,7 @@ require_once 'inc/header.php'
 
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body h-100">
                             <h5 class="card-title fw-semibold">Fotógrafos</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/fotografos.jpg" alt="">
                             <p class="card-text">Um bom fotógrafo pode te auxiliar a registrar momentos importantes da sua vida.</p>
@@ -107,7 +101,7 @@ require_once 'inc/header.php'
 
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body h-100">
                             <h5 class="card-title fw-semibold">Consultores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/consultores.jpg" alt="">
                             <p class="card-text">Uma boa consultoria pode ajudar o seu negócio a alcançar o objetivo que deseja.</p>
@@ -118,7 +112,7 @@ require_once 'inc/header.php'
 
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body h-100">
                             <h5 class="card-title fw-semibold">Professores</h5>
                             <img class="card-img-top mb-2" src="img/cards_index/professores.jpg" alt="">
                             <p class="card-text">Gostaria de algumas aulas de reforço? Que tal encontrar um professor para te ajudar?</p>

@@ -24,8 +24,8 @@ final class ControleDeAcesso {
 
 
 
-public function login (int $id, string $nome, string $email, string $perfil):void {
-    
+public function login (int $id, string $nome, string $email, string $perfil): void {
+    session_start();
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['email'] = $email;
@@ -33,8 +33,8 @@ public function login (int $id, string $nome, string $email, string $perfil):voi
   
 }
 
-public function loginDois (int $id, string $nome, string $email, string $perfil, int $usuarioId):void {
-    
+public function loginDois (int $id, string $nome, string $email, string $perfil, int $usuarioId): void {
+    session_start();
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
     $_SESSION['email'] = $email;
@@ -81,11 +81,11 @@ public function logoutExterno():void {
     die(); // exit;
 }
 
-public function logoutAtualiza():void {
-    session_start();
-    session_destroy();
-    header("location:./perfil_valida.php?id=" . $_SESSION['id']);
-    die(); // exit;
-}
+//public function logoutAtualiza():void {
+ //   session_start();
+ //   session_destroy();
+  //  header("location:./perfil_valida.php?id=" . $_SESSION['id']);
+  //  die(); // exit;
+//}
 
 }

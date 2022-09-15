@@ -19,7 +19,10 @@ $dados = $usuario->listarUm();
 if(isset($_POST['atualizar'])) {
 	$usuario->setNome($_POST['nome']);
 	$usuario->setEmail($_POST['email']);
-
+    $dadosBusca = $usuario->buscar();
+	if($dadosBusca['email'] === $_POST['email'] && $dados['email'] !== $dadosBusca['email']) {
+		header('location:cadastro_atualiza.php?email_existente'); 
+	} else {
 	if( empty($_POST['senha']) ){
 		$usuario->setSenha( $dados['senha'] );
 	} else {
@@ -41,17 +44,16 @@ if(isset($_POST['atualizar'])) {
 	$usuario->setPerfil($_POST['perfil-existente']);
 } else {
 	// Senão, então, pegamos a referência (nome e extensão) da nova imagem e fazemos o processo de upload e envio desta referência para o objeto (usando o setter)
-	$usuario->uploadAtualiza($_FILES['perfil']);
-	$usuario->setPerfil($_FILES['perfil'] ['name']);
+	    $usuario->uploadAtualiza($_FILES['perfil']);
+        $usuario->setPerfil($_FILES['perfil'] ['name']);
 }
 	
 	// Função atualiza perfil, para atualizar dados gerais de cadastro da tabela usuario
 	$usuario->atualizarPerfil();
 
 	// Função que irá destruir a sessão atual e encaminhar para o arquivo perfil_valida.php, onde será feito uma nova validação e criado uma nova sessão
-	$sessao->logoutAtualiza();
-
-
+	header('location:freela_valida.php');
+	}
 }
 ?>
 
@@ -67,7 +69,7 @@ if(isset($_POST['atualizar'])) {
 
 				<!-- Campo de inserção de imagem -->
 				<div class="border-shadow img-vazia "><img src="../fotos_de_perfil/<?=$_SESSION['perfil']?>" id="img"
-					alt="" class="d-block mx-auto mb-3 rounded-circle " width="150" height="170">	
+					alt="" class="d-block mx-auto mb-3  perfil_freela_atualiza" width="150" height="170">	
 				</div>
 			<!-- Fim campo de inserção de imagem -->
 					
@@ -80,10 +82,7 @@ if(isset($_POST['atualizar'])) {
 						<label for="email" class="pb-1">Email</label>
 						<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?=$dados['email']?>">
 					</div>
-                    <div class="form-group pb-3 mt-2">
-						<label for="email" class="pb-1">Telefone</label>
-						<input type="email" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
-					</div>
+                   
 					<div class="form-group  mt-2">
 						<label for="senha" class="pb-1">Senha</label>
 						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
@@ -114,6 +113,7 @@ if(isset($_POST['atualizar'])) {
 		</div>
 	</div>
 <script src="js/confirm.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
 </body>
 </html>
-<?php ob_flush() ?>
+<?php  ob_end_flush();  ?>

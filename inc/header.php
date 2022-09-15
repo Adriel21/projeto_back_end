@@ -4,7 +4,7 @@ use Projeto\ControleDeAcesso;
 use Projeto\Profissao;
 use Projeto\Usuario;
 
-require_once './vendor/autoload.php';
+require_once 'vendor/autoload.php';
 $pagina = basename($_SERVER['PHP_SELF']);
 $sessao = new ControleDeAcesso;
 if(isset($_GET['sair'])) {
@@ -24,7 +24,36 @@ $dadosProfissao = $profissao->listar();
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colajob</title>
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+<?php 
+    switch($pagina){
+      case 'index.php':
+     ?>
+    <title>Home - Colajob</title>
+    <?php 
+    break;
+
+    case 'freelancers.php':
+    case 'freelancer.php':
+    case 'resultados_freelancers.php':
+    ?>
+    <title>Freelancers</title>
+    <?php 
+    break;
+    
+    case 'projetos.php':
+    case 'projeto.php':
+    case 'resultados_projetos.php':
+    ?>
+    <title>Projetos</title>
+    <?php 
+    break;
+    }
+    ?>
+
+
+
 <!-- <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css"> -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -77,26 +106,26 @@ $dadosProfissao = $profissao->listar();
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item m-1">
-          <a class="nav-link btn btn-primary text-white px-3" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" aria-current="page" href="index.php">Home</a>
         </li>
         
         <?php if(isset($_SESSION['usuario_id'])) { ?>
           <li class="nav-item m-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" href="admin/dashboard_freelancer.php">Visualizar Perfil Freelancer</a>
         </li> 
         <?php } else { ?>
         <li class="active nav-item m-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="admin/freelancer_insere.php">Cadastrar Perfil Freelancer</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" href="admin/freelancer_insere.php">Cadastrar Perfil Freelancer</a>
         </li>
         <?php }  ?>
         
 
         <li class="nav-item m-1">
-          <a class="nav-link btn btn-primary text-white px-3" href="admin/dashboard_cliente.php">Perfil Cliente</a>
+          <a class="nav-link btn text-uppercase fw-semibold px-3" href="admin/dashboard_cliente.php">Perfil Cliente</a>
         </li>
 
         <li class="nav-item m-1 dropdown">
-          <a class="nav-link btn btn-primary text-white px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link btn text-uppercase fw-semibold px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Online
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

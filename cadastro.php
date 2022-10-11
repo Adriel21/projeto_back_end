@@ -19,7 +19,7 @@ if(isset($_POST['inserir'])) {
 
 	if($verificao and $termos === 'Aceite confirmado') {
 		$usuario->setSenha($usuario->codificaSenha($_POST['senha'])  );
-	
+	 
 		$perfil = $_FILES["perfil"];
 		$usuario->setPerfil($perfil['name']);
 		$usuario->upload($perfil);

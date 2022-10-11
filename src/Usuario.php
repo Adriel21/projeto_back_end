@@ -288,6 +288,8 @@ public function busca():array {
             die ("Erro: ". $erro->getMessage());
         } return $novaSenha;
     }
+
+   
     
        
   

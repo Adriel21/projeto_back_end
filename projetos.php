@@ -16,6 +16,21 @@ if(!isset($_GET['id'])) {
 } 
 
 
+$quantia = $projeto->nav();
+
+if(isset($_GET['pg'])) { 
+    $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
+} else {
+    $capture = '';
+}
+
+
+$pg = ($capture == '' ? 1 : $capture);
+
+
+
+
+
 
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
@@ -114,20 +129,58 @@ $listaDeCategorias = $categoria->listar();
                 <?php } ?>
             <!-- Fim conteúdo das vagas -->
 
-            
+            <!-- Verifica a navegação da página anterior -->
+            <?php
+                if ($pg == 1) {
+                    $anterior = 1;
+                } else {
+                    $anterior = $pg - 1;
+                }
 
+                // Verifica a navegação da página próxima
+                if($pg == $quantia) {
+                    $proxima = $quantia;
+                } else {
+                    $proxima = $pg + 1;
+                }
+            ?>
+
+            <?php if(isset($listaDeProjetos[0] ['categoria'])) { ?>
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">
+            
                 <ul class="pt-2 pagination justify-content-end align-items-end paginacao">
-                    <li class="page-item disabled"><a class="page-link">Anterior</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <?php if($anterior) { ?>
+                    <li class="page-item disabled"><a class="page-link" href="projetos.php?pg=<?=$anterior?>">Anterior</a></li>
+                    <?php } else { ?>
+                    <li class="page-item"><a class="page-link" href="projetos.php?pg=<?=$anterior?>">Anterior</a></li>
+                    <?php } ?>
+                    <!-- Indices limitando na apresentação de 4 indices anteriores ao ativo -->
+                    <?php for($i = $pg - 4; $i <= $pg - 1; $i++) { 
+                        if($i >= 1) {?>
+                    <li class="page-item"><a class="page-link" href="projetos.php?pg=<?=$i?>"><?=$i?></a></li>
+                    <?php } }  ?>
+
+                    <?php for($j = $pg + 1; $j <= $pg + 4; $j++) { 
+                        if($j <= $quantia) { ?>
+                    <li class="page-item"><a class="page-link" href="projetos.php?pg=<?=$j?>"><?=$j?></a></li>
+                    <?php } }  
+                        if($proxima == $quantia) {
+                    ?>
+
                     <li class="page-item">
-                    <a class="page-link" href="#">Próxima</a>
+                    <a class="page-link disabled" href="projetos.php?pg=<?=$proxima?>">Próxima</a>
                     </li>
+                  
+                    <?php } else {  ?>
+                    <li class="page-item">
+                    <a class="page-link" href="projetos.php?pg=<?=$proxima?>">Próxima</a>
+                    </li>
+
+                    <?php } } ?>
                 </ul>
             </nav>
+        
             <!-- Fim da paginação das vagas -->
             </body>
             <script src="./js/bootstrap.bundle.js"></script>

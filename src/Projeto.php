@@ -135,12 +135,28 @@ final class Projeto{
 
         
          public function listarTodos():array {
-             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
+            if(isset($_GET['pg'])) { 
+                $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
+            } else {
+                $capture = '';
+            }
+          
+
+            $pg = ($capture == '' ? 1 : $capture);
+            // var_dump($pg);
+            $limit = 6;
+            $start = ($pg * $limit) - $limit;
+            // var_dump($start);
+
+             $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id LIMIT $start, $limit";
         
         
                    try {
-                      $consulta = $this->conexao->prepare($sql);
+                    $consulta = $this->conexao->prepare($sql);
                     $consulta->execute();
+                  
+
+
                      $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
                   } catch (Exception $erro) {
                       die("Erro: ". $erro->getMessage());
@@ -149,6 +165,40 @@ final class Projeto{
 
 
                  }
+
+                 public function nav() {
+                    
+                    if(isset($_GET['pg'])) { 
+                        $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
+                    } else {
+                        $capture = '';
+                    }
+                  
+        
+                    $pg = ($capture == '' ? 1 : $capture);
+                    // var_dump($pg);
+                    $limit = 6;
+                   
+                    // var_dump($start);
+                     $sql = "SELECT projeto.id, projeto.titulo, projeto.resumo, projeto.descricao, projeto.data, projeto.usuario_id, projeto.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM projeto LEFT JOIN usuario ON projeto.usuario_id = usuario.id LEFT JOIN categoria ON projeto.categoria_id = categoria.id";
+                    
+                
+                           try {
+                            $consulta = $this->conexao->prepare($sql);
+                            $consulta->execute();
+                            $lines = $consulta->rowCount();
+
+                            $quantia = ceil($lines/$limit);
+        
+        
+                             $resultado = $quantia;
+                          } catch (Exception $erro) {
+                              die("Erro: ". $erro->getMessage());
+                          }
+                          return $resultado;
+        
+        
+                         }
 
 
         //Método para trazer todos os projetos de acordo com a categoria

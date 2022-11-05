@@ -131,15 +131,19 @@ $listaDeCategorias = $categoria->listar();
 
             <!-- Verifica a navegação da página anterior -->
             <?php
+            $valorAnterior = 0;
                 if ($pg == 1) {
                     $anterior = 1;
+                    $valorAnterior = 1;
                 } else {
                     $anterior = $pg - 1;
                 }
 
                 // Verifica a navegação da página próxima
+                $proximoValor = 0;
                 if($pg == $quantia) {
                     $proxima = $quantia;
+                    $proximoValor = $quantia;
                 } else {
                     $proxima = $pg + 1;
                 }
@@ -150,7 +154,7 @@ $listaDeCategorias = $categoria->listar();
             <nav aria-label="Page navigation example">
             
                 <ul class="pt-2 pagination justify-content-end align-items-end paginacao">
-                    <?php if($anterior) { ?>
+                    <?php if($valorAnterior == 1) { ?>
                     <li class="page-item disabled"><a class="page-link" href="projetos.php?pg=<?=$anterior?>">Anterior</a></li>
                     <?php } else { ?>
                     <li class="page-item"><a class="page-link" href="projetos.php?pg=<?=$anterior?>">Anterior</a></li>
@@ -165,7 +169,7 @@ $listaDeCategorias = $categoria->listar();
                         if($j <= $quantia) { ?>
                     <li class="page-item"><a class="page-link" href="projetos.php?pg=<?=$j?>"><?=$j?></a></li>
                     <?php } }  
-                        if($proxima == $quantia) {
+                        if($proximoValor == $quantia) {
                     ?>
 
                     <li class="page-item">

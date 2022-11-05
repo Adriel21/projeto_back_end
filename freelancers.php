@@ -20,6 +20,20 @@ if(!isset($_GET['id'])) {
 } 
 
 
+$quantia = $profissao->nav();
+
+if(isset($_GET['pg'])) { 
+    $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
+} else {
+    $capture = '';
+}
+
+
+$pg = ($capture == '' ? 1 : $capture);
+
+
+
+
 
 $categoria = new Categoria;
 $listaDeCategorias = $categoria->listar();
@@ -127,18 +141,62 @@ $listaDeCategorias = $categoria->listar();
             
             <!-- Fim conteúdo das vagas -->
 
+           <!-- Verifica a navegação da página anterior -->
+           <?php
+            $valorAnterior = 0;
+                if ($pg == 1) {
+                    $anterior = 1;
+                    $valorAnterior = 1;
+                } else {
+                    $anterior = $pg - 1;
+                }
+
+                // Verifica a navegação da página próxima
+                $proximoValor = 0;
+                if($pg == $quantia) {
+                    $proxima = $quantia;
+                    $proximoValor = $quantia;
+                } else {
+                    $proxima = $pg + 1;
+                }
+            ?>
+
+            <?php if(isset($listaDeFreelancers[0] ['categoria'])) { ?>
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">
+            
                 <ul class="pt-2 pagination justify-content-end align-items-end paginacao">
-                    <li class="page-item disabled"><a class="page-link">Anterior</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <?php if($valorAnterior == 1) { ?>
+                    <li class="page-item disabled"><a class="page-link" href="freelancers.php?pg=<?=$anterior?>">Anterior</a></li>
+                    <?php } else { ?>
+                    <li class="page-item"><a class="page-link" href="freelancers.php?pg=<?=$anterior?>">Anterior</a></li>
+                    <?php } ?>
+                    <!-- Indices limitando na apresentação de 4 indices anteriores ao ativo -->
+                    <?php for($i = $pg - 4; $i <= $pg - 1; $i++) { 
+                        if($i >= 1) {?>
+                    <li class="page-item"><a class="page-link" href="freelancers.php?pg=<?=$i?>"><?=$i?></a></li>
+                    <?php } }  ?>
+
+                    <?php for($j = $pg + 1; $j <= $pg + 4; $j++) { 
+                        if($j <= $quantia) { ?>
+                    <li class="page-item"><a class="page-link" href="freelancers.php?pg=<?=$j?>"><?=$j?></a></li>
+                    <?php } }  
+                        if($proximoValor == $quantia) {
+                    ?>
+
                     <li class="page-item">
-                    <a class="page-link" href="#">Próxima</a>
+                    <a class="page-link disabled" href="freelancers.php?pg=<?=$proxima?>">Próxima</a>
                     </li>
+                  
+                    <?php } else {  ?>
+                    <li class="page-item">
+                    <a class="page-link" href="freelancers.php?pg=<?=$proxima?>">Próxima</a>
+                    </li>
+
+                    <?php } } ?>
                 </ul>
             </nav>
+        
             <!-- Fim da paginação das vagas -->
             </body>
             <script src="./js/bootstrap.bundle.js"></script>

@@ -94,7 +94,20 @@ return $resultado;
 
 
 public function listarTodos():array {
-    $sql = "SELECT profissao.id, profissao.titulo, profissao.descricao, profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, usuario.perfil AS perfil, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id";
+    if(isset($_GET['pg'])) { 
+        $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
+    } else {
+        $capture = '';
+    }
+  
+
+    $pg = ($capture == '' ? 1 : $capture);
+    // var_dump($pg);
+    $limit = 6;
+    $start = ($pg * $limit) - $limit;
+    // var_dump($start);
+
+    $sql = "SELECT profissao.id, profissao.titulo, profissao.descricao, profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, usuario.perfil AS perfil, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id LIMIT $start, $limit";
 
 
           try {
@@ -198,6 +211,40 @@ public function excluirFreela():void {
     }
 
 }
+
+public function nav() {
+                    
+    if(isset($_GET['pg'])) { 
+        $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
+    } else {
+        $capture = '';
+    }
+  
+
+    $pg = ($capture == '' ? 1 : $capture);
+    // var_dump($pg);
+    $limit = 6;
+   
+    // var_dump($start);
+     $sql = "SELECT profissao.id, profissao.titulo,  profissao.descricao,  profissao.usuario_id, profissao.categoria_id, usuario.nome AS nome, categoria.nome AS categoria FROM profissao LEFT JOIN usuario ON profissao.usuario_id = usuario.id LEFT JOIN categoria ON profissao.categoria_id = categoria.id";
+    
+
+           try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->execute();
+            $lines = $consulta->rowCount();
+
+            $quantia = ceil($lines/$limit);
+
+
+             $resultado = $quantia;
+          } catch (Exception $erro) {
+              die("Erro: ". $erro->getMessage());
+          }
+          return $resultado;
+
+
+         }
 
 
 

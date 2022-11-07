@@ -164,6 +164,8 @@ $listaDeCategorias = $categoria->listar();
                 }
             ?>
 
+            <?php if(isset($_GET['id'])) { ?>
+
             <?php if(isset($listaDeFreelancers[0] ['categoria'])) { ?>
             <?php if(count($contandoFreelancers) < 7) { ?>
                 <p>Não há mais Freelancers</p>
@@ -201,7 +203,7 @@ $listaDeCategorias = $categoria->listar();
                     <a class="page-link" href="freelancers.php?pg=<?=$proxima?>">Próxima</a>
                     </li>
 
-                    <?php } } } ?>
+                    <?php } } } }?>
                 </ul>
             </nav>
         

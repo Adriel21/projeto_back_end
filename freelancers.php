@@ -162,6 +162,10 @@ $listaDeCategorias = $categoria->listar();
             ?>
 
             <?php if(isset($listaDeFreelancers[0] ['categoria'])) { ?>
+
+                <?php if(count($listaDeFreelancers) < 7) { ?>
+
+                <?php } else { ?>
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">
             
@@ -193,7 +197,7 @@ $listaDeCategorias = $categoria->listar();
                     <a class="page-link" href="freelancers.php?pg=<?=$proxima?>">Próxima</a>
                     </li>
 
-                    <?php } } ?>
+                    <?php } } } ?>
                 </ul>
             </nav>
         

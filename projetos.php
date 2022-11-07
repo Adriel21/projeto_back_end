@@ -150,6 +150,8 @@ $listaDeCategorias = $categoria->listar();
             ?>
 
             <?php if(isset($listaDeProjetos[0] ['categoria'])) { ?>
+           
+           
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">
             
@@ -181,7 +183,7 @@ $listaDeCategorias = $categoria->listar();
                     <a class="page-link" href="projetos.php?pg=<?=$proxima?>">Próxima</a>
                     </li>
 
-                    <?php } } ?>
+                    <?php }  } ?>
                 </ul>
             </nav>
         

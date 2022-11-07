@@ -17,6 +17,7 @@ if(!isset($_GET['id'])) {
 
 
 $quantia = $projeto->nav();
+$contandoProjetos = $projeto->contagem();
 
 if(isset($_GET['pg'])) { 
     $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
@@ -103,13 +104,17 @@ $listaDeCategorias = $categoria->listar();
                           </a>
                       </div>
             <?php } else { ?>
+        <?php if(isset($_GET['id'])) { ?>
+        <h2 class="ms-1 ms-sm-3 mt-2 word"><?=count($listaDeProjetos)?> resultados encontrados para essa categoria.</h2>
+        <?php } ?>
         <?php foreach($listaDeProjetos as $projetos) { ?>
                 
             <div class="col pt-4 card-vagas ms-sm-3 ms-1">
                 <div class="card w-100">
+                
                     <div class="card-body coluna-vagas">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                            
+                           
                             <div class="d-flex w-100 justify-content-between">
                                 <h3 class="mb-1 pb-4 word"><?=$projetos['titulo']?></h3>
                                 <small><?=Utilitarios::formataData($projetos['data'])?></small>
@@ -149,8 +154,13 @@ $listaDeCategorias = $categoria->listar();
                 }
             ?>
 
+            <?php if(isset($_GET['id'])) { ?>
+               
+            <?php } else { ?> 
             <?php if(isset($listaDeProjetos[0] ['categoria'])) { ?>
-           
+            <?php if(count($contandoProjetos) < 7) { ?>
+                <p>Não há mais projetos</p>
+            <?php } else { ?>
            
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">
@@ -183,7 +193,7 @@ $listaDeCategorias = $categoria->listar();
                     <a class="page-link" href="projetos.php?pg=<?=$proxima?>">Próxima</a>
                     </li>
 
-                    <?php }  } ?>
+                    <?php } } } }?>
                 </ul>
             </nav>
         

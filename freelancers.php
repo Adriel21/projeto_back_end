@@ -21,6 +21,7 @@ if(!isset($_GET['id'])) {
 
 
 $quantia = $profissao->nav();
+$contandoFreelancers = $profissao->contagem();
 
 if(isset($_GET['pg'])) { 
     $capture = filter_input(INPUT_GET, 'pg', FILTER_SANITIZE_URL);
@@ -89,7 +90,9 @@ $listaDeCategorias = $categoria->listar();
             <!-- Cabeçalho fim -->
 
             <!-- Início conteúdo das vagas -->
-
+            <?php if(isset($_GET['id'])) { ?>
+                <h2 class="ms-1 ms-sm-3 mt-2 word"><?=count($listaDeFreelancers)?> resultados encontrados para essa categoria.</h2>
+            <?php } ?>
              <?php if(!isset($listaDeFreelancers[0] ['categoria'])) { ?>
 
                       <div class="col pt-4 card-vagas ms-md-3">
@@ -141,8 +144,8 @@ $listaDeCategorias = $categoria->listar();
             
             <!-- Fim conteúdo das vagas -->
 
-           <!-- Verifica a navegação da página anterior -->
-           <?php
+            <!-- Verifica a navegação da página anterior -->
+            <?php
             $valorAnterior = 0;
                 if ($pg == 1) {
                     $anterior = 1;
@@ -162,10 +165,11 @@ $listaDeCategorias = $categoria->listar();
             ?>
 
             <?php if(isset($listaDeFreelancers[0] ['categoria'])) { ?>
+            <?php if(count($contandoFreelancers) < 7) { ?>
+                <p>Não há mais Freelancers</p>
 
-                <?php if(count($listaDeFreelancers) < 7) { ?>
-
-                <?php } else { ?>
+            <?php } else { ?>
+           
             <!-- Páginação das vagas -->
             <nav aria-label="Page navigation example">
             

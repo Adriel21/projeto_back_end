@@ -133,6 +133,23 @@ final class Projeto{
         //     return $resultado;
         // }
 
+
+        // Função que será utilizada apenas para fins de contagem
+        public function contagem():array {
+            $sql = "SELECT id from projeto";
+
+            try {
+
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+         } catch (Exception $erro) {
+             die("Erro: ". $erro->getMessage());
+         }
+         return $resultado;
+        }
+
+
         
          public function listarTodos():array {
             if(isset($_GET['pg'])) { 

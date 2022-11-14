@@ -33,7 +33,7 @@ if(isset($_POST['inserir'])) {
     $projeto = new Projeto;
     $projeto->setTitulo($_POST['titulo']);
     $projeto->setResumo($_POST['resumo']);
-    $projeto->setDescricao($_POST['descricao']);
+    $projeto->setDescricao(nl2br($_POST['descricao']));
 	$projeto->setData($hoje);
     $projeto->setUsuarioId($_SESSION['id']);
     $projeto->setCategoriaId($_POST['categoria']);
@@ -81,6 +81,7 @@ if(isset($_POST['inserir'])) {
 					<div class="form-group  mt-2">
 						<label for="descricao" class="pb-1">Descrição</label>
 						<textarea class="form-control" id="descricao" name="descricao" rows="10" placeholder="Descreva o seu projeto" required>
+							
 						</textarea>
 					</div>
 					

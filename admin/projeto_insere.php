@@ -33,7 +33,7 @@ if(isset($_POST['inserir'])) {
     $projeto = new Projeto;
     $projeto->setTitulo($_POST['titulo']);
     $projeto->setResumo($_POST['resumo']);
-    $projeto->setDescricao(nl2br($_POST['descricao']));
+    $projeto->setDescricao($_POST['descricao']);
 	$projeto->setData($hoje);
     $projeto->setUsuarioId($_SESSION['id']);
     $projeto->setCategoriaId($_POST['categoria']);

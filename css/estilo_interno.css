@@ -1,91 +1,91 @@
-/* Css main início */
-.perfil{
-    border: 1px solid hsl(0, 0%, 0%, 50%);
-    max-width: 90%;
-    margin: 0 auto;
-    border-radius: 12px;
-}
-
-.perfil img{
-    border-radius: 200%;
-    height: 135px;
-}
-
-.perfil p {
-    font-size: 25px;
-    color: #021D40;;
-}
-
-.perfil h2{
-    font-size: 19px;
-}
-
-.perfil .contador{
-    background-color: #021D40;
-    color: white;
-    width: 70px;
-    margin: 0 auto;
-    border-radius: 5px;
-}
-
-.botao-perfil{
-    background-color: #021D40;
-    color: white;
-    border: none;
-    padding: 9px;
-    width: 150px;
-}
-
-/* Projetos */
-.projetos{
-    border: 1px solid hsl(0, 0%, 0%, 50%);
-    max-width: 90%;
-    margin: 0 auto;
-    border-radius: 12px;
-}
-
-.projetos h1{
-    font-size: 24px;
-}
-
-.btn-projeto{
-    background-color: #021D40;
-    color: white;
-    border: none;
-    padding: 9px;
-    width: 250px;
-}
-
-
-/* Fim projetos */
-/* Fim do css main início */
-
-/* Css do menu lateral */
-aside{
-    width: 23%;
-    margin: 0; padding: 0;
-    float: left;
-}
-
-.projetos_desktop{
-    width: 75%;
-    border: 1px solid hsl(0, 0%, 0%, 50%);
-    border-radius: 12px;
-}
-
-
-/* fim do css da barra lateral */
-
-
-/* Footer Configurações */
-.bg-marinho-footer {
-    background: #021d40;
-    color: #fff;
-    clear: both;
-}
-/* Footer Configurações final */
-
-
-footer{
-    margin-top: 4000px !important;
-}
+/* Css main início */
+.perfil{
+    border: 1px solid hsl(0, 0%, 0%, 50%);
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.perfil img{
+    border-radius: 200%;
+    height: 135px;
+}
+
+.perfil p {
+    font-size: 25px;
+    color: #021D40;;
+}
+
+.perfil h2{
+    font-size: 19px;
+}
+
+.perfil .contador{
+    background-color: #021D40;
+    color: white;
+    width: 70px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.botao-perfil{
+    background-color: #021D40;
+    color: white;
+    border: none;
+    padding: 9px;
+    width: 150px;
+}
+
+/* Projetos */
+.projetos{
+    border: 1px solid hsl(0, 0%, 0%, 50%);
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.projetos h1{
+    font-size: 24px;
+}
+
+.btn-projeto{
+    background-color: #021D40;
+    color: white;
+    border: none;
+    padding: 9px;
+    width: 250px;
+}
+
+
+/* Fim projetos */
+/* Fim do css main início */
+
+/* Css do menu lateral */
+aside{
+    width: 23%;
+    margin: 0; padding: 0;
+    float: left;
+}
+
+.projetos_desktop{
+    width: 75%;
+    border: 1px solid hsl(0, 0%, 0%, 50%);
+    border-radius: 12px;
+}
+
+
+/* fim do css da barra lateral */
+
+
+/* Footer Configurações */
+.bg-marinho-footer {
+    background: #021d40;
+    color: #fff;
+    clear: both;
+}
+/* Footer Configurações final */
+
+
+footer{
+    margin-top: 4000px !important;
+}

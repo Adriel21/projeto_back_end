@@ -8,11 +8,13 @@ use Projeto\Usuario;
 require "./vendor/autoload.php";
 
 if(isset($_GET['campos_obrigatorios'])) {
-	$feedback = 'Você deve preencher todos os campos <i class="bi bi-exclamation-octagon"></i>';
+	$feedback = '<p class="my-2 alert alert-warning text-center">Você deve preencher todos os campos <i class="bi bi-exclamation-octagon"></i></p>';
 } else if (isset($_GET['nao_encontrado'])) {
-	$feedback = 'Email informado não está cadastrado <i class="bi bi-exclamation-octagon"></i>';
+	$feedback = '<p class="my-2 alert alert-warning text-center">Email informado não está cadastrado <i class="bi bi-exclamation-octagon"></i></p>';
 } else if (isset($_GET['dados_incorretos'])) {
-	$feedback = 'Dados informados estão incorretos <i class="bi bi-exclamation-octagon"></i>';
+	$feedback = '<p class="my-2 alert alert-warning text-center">Dados informados estão incorretos <i class="bi bi-exclamation-octagon"></i></p>';
+} else if (isset($_GET['cadastro_efetuado'])) {
+    	$feedback = '<p class="my-2 alert alert-success text-center">Cadastro Confirmado <i class="bi bi-check-octagon"></i></p>';
 }
 
 
@@ -23,9 +25,9 @@ if(isset($_GET['campos_obrigatorios'])) {
 	<div class="container marketing shadow shadow-lg">
 		<div class="row featurette my-5 p-sm-5">
 			<?php if(isset($feedback)){?>
-				<p class="my-2 alert alert-warning text-center">
+
 					<?=$feedback?>
-				</p>
+				
       		  <?php } ?>
 			<div class="col-md-6 d-none d-lg-block pt-5">
 			
@@ -105,7 +107,7 @@ if(isset($_GET['campos_obrigatorios'])) {
 						foreach($dadosProfissao as $profissoes){
 							if($profissoes['usuario_id'] === $dados['id']) {
 						
-							$sessao->loginDois($dados['id'], $dados['nome'], $dados['email'], $dados['perfil'], $profissoes['usuario_id']);
+							$sessao->loginDois($dados['id'], $dados['nome'], $dados['perfil'], $dados['email'], $profissoes['usuario_id']);
                             header('location:admin/dashboard_cliente.php');
 							} }	 
 

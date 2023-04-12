@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-header{
-    background-color: white;
-    z-index: 9998 !important;
-    font-family: 'Poppins';
-}
-
-.logo{
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.nav-link{
-    /* color: #0421B5; */
-    color: black;
-}
-
-.nav-linl:hover{
-    color: blue !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+header{
+    background-color: white;
+    z-index: 9998 !important;
+    font-family: 'Poppins';
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-link{
+    /* color: #0421B5; */
+    color: black;
+}
+
+.nav-linl:hover{
+    color: blue !important;
+}

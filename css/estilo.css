@@ -1,198 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-/* Configurações gerais */
-*,::after, ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
-
-a {
-    text-decoration: none;
-}
-
-/* configurações das imagens index */
-picture img {
-    width: 100%;
-}
-    .img-margin-nagativa {
-        margin-bottom: -40px;
-        position: relative;
-    }
-
-    /* button index */
-    .botao_index {
-        font-weight: 600;
-        color: ghostwhite;
-        background-color: #021057;
-        border: none;
-    }
-
-    .botao_index:hover {
-        background-color: #0650b1;
-        color: ghostwhite;
-    }
-
-    .botao_index a{
-        color: white;
-        text-decoration: none;
-    }
-  
-/* Tela de Cadastro usuario */
-    .bg-form{
-        /* background: #EAEAFF; */
-        background: white;
-    }
-
-   .coluna-vagas {
-       border: 1px solid color(0, 0, 0, 50%);
-       border-radius: 4px;
-   }
-
-    .cadastro-bloco-azul-marinho {
-        width: 100%;
-        height: 150px;
-        background: #021d40;
-    }
-
-    .google-button {
-        background: #DB4A39;
-        border: none;
-    }
-
-    .google-button:hover{
-        background: #fa1900;
-    }
-
-    .titulo_login{
-        font-weight: bold;
-    }
-
-    .titulo_cadastro{
-        font-weight: bold;
-        font-size: 35px;
-    }
-
-     /* .marketing{
-        box-shadow: initial;
-    }  */
-
-    /* .marketing .texto_de_fundo{
-        color: white;
-    } */
-
-    /* Configurações gerais da página feed.php */
-
-    .box-vagas {
-        
-        background: rgba(164, 210, 221, 0.5);
-        transition: 0.8s;
-    }
-
-    .coluna-vagas:hover {
-        box-shadow: 2px 4px rgba(000, 000, 000, 0.2);
-        background: rgba(208, 247, 230, 0.219);
-        transition: 0.5s;
-    }
-
-    .card-vagas h3 {
-        font-weight: 500;
-        color: #021d40;
-        
-    }
-
-    .botao-feed {
-        font-weight: 600;
-        color: ghostwhite;
-        background-color: #021057;
-        width: 270px;
-    }
-
-    .botao-busca {
-        font-weight: 600;
-        color: ghostwhite;
-        background-color: #021057;
-        width: 100%;
-    }
-
-    .botao-feed:hover, .botao-busca:hover {
-        background-color: #0650b1;
-        color: ghostwhite;
-    }
-
-    .word {
-        width: 100%;
-        overflow-wrap: break-word;  
-        word-wrap: break-word; 
-        word-break: break-word;
-    }
-    
-
-
-    /* @media screen and (min-width: 600px){
-        .menu-lateral {
-            background-color: #0421b5;;
-            height: 100vh; 
-            position: fixed; 
-            width: 50%;
-
-        }    
-    } */
-
-    @media screen and (min-width: 750px) {
-        .menu-lateral {
-            background-color: #0421b5;
-            height: 100vh; 
-             position: fixed; 
-             width: 18%;
-
-        }    
-
-        
-    }
-    .menu-lateral {
-        background-color:#0421B5;
-    }
-
-    .menu-lateral a {
-        font-weight: 500;
-        color: rgb(208, 208, 245);
-    }
-
-    .menu-lateral a:hover {
-        color: #fff;
-    }
-
-    .paginacao a{
-        color: #021057;
-    }
-
-    .paginacao a:hover {
-        color: #0650b1;
-    }
-
-    .perfil_freela_feed{
-        min-height:100px;
-        min-width:105px;
-        max-height:100px;
-        max-width:105px;
-        border-radius: 20px;
-    }
-
-    /* Fim das configurações gerais da página feed.php */
-
-
-
-/* Footer Configurações */
-.bg-marinho-footer {
-    background: #021d40;
-    color: #fff;
-}
-/* Footer Configurações final */
-
-
-@media (min-width: 576px) {
-    .h-sm-100 {
-        height: 100%;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* Configurações gerais */
+*,::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+a {
+    text-decoration: none;
+}
+
+/* configurações das imagens index */
+picture img {
+    width: 100%;
+}
+    .img-margin-nagativa {
+        margin-bottom: -40px;
+        position: relative;
+    }
+
+    /* button index */
+    .botao_index {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
+        border: none;
+    }
+
+    .botao_index:hover {
+        background-color: #0650b1;
+        color: ghostwhite;
+    }
+
+    .botao_index a{
+        color: white;
+        text-decoration: none;
+    }
+  
+/* Tela de Cadastro usuario */
+    .bg-form{
+        /* background: #EAEAFF; */
+        background: white;
+    }
+
+   .coluna-vagas {
+       border: 1px solid color(0, 0, 0, 50%);
+       border-radius: 4px;
+   }
+
+    .cadastro-bloco-azul-marinho {
+        width: 100%;
+        height: 150px;
+        background: #021d40;
+    }
+
+    .google-button {
+        background: #DB4A39;
+        border: none;
+    }
+
+    .google-button:hover{
+        background: #fa1900;
+    }
+
+    .titulo_login{
+        font-weight: bold;
+    }
+
+    .titulo_cadastro{
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+     /* .marketing{
+        box-shadow: initial;
+    }  */
+
+    /* .marketing .texto_de_fundo{
+        color: white;
+    } */
+
+    /* Configurações gerais da página feed.php */
+
+    .box-vagas {
+        
+        background: rgba(164, 210, 221, 0.5);
+        transition: 0.8s;
+    }
+
+    .coluna-vagas:hover {
+        box-shadow: 2px 4px rgba(000, 000, 000, 0.2);
+        background: rgba(208, 247, 230, 0.219);
+        transition: 0.5s;
+    }
+
+    .card-vagas h3 {
+        font-weight: 500;
+        color: #021d40;
+        
+    }
+
+    .botao-feed {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
+        width: 270px;
+    }
+
+    .botao-busca {
+        font-weight: 600;
+        color: ghostwhite;
+        background-color: #021057;
+        width: 100%;
+    }
+
+    .botao-feed:hover, .botao-busca:hover {
+        background-color: #0650b1;
+        color: ghostwhite;
+    }
+
+    .word {
+        width: 100%;
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+    }
+    
+
+
+    /* @media screen and (min-width: 600px){
+        .menu-lateral {
+            background-color: #0421b5;;
+            height: 100vh; 
+            position: fixed; 
+            width: 50%;
+
+        }    
+    } */
+
+    @media screen and (min-width: 750px) {
+        .menu-lateral {
+            background-color: #0421b5;
+            height: 100vh; 
+             position: fixed; 
+             width: 18%;
+
+        }    
+
+        
+    }
+    .menu-lateral {
+        background-color:#0421B5;
+    }
+
+    .menu-lateral a {
+        font-weight: 500;
+        color: rgb(208, 208, 245);
+    }
+
+    .menu-lateral a:hover {
+        color: #fff;
+    }
+
+    .paginacao a{
+        color: #021057;
+    }
+
+    .paginacao a:hover {
+        color: #0650b1;
+    }
+
+    .perfil_freela_feed{
+        min-height:100px;
+        min-width:105px;
+        max-height:100px;
+        max-width:105px;
+        border-radius: 20px;
+    }
+
+    /* Fim das configurações gerais da página feed.php */
+
+
+
+/* Footer Configurações */
+.bg-marinho-footer {
+    background: #021d40;
+    color: #fff;
+}
+/* Footer Configurações final */
+
+
+@media (min-width: 576px) {
+    .h-sm-100 {
+        height: 100%;
+    }
 }
